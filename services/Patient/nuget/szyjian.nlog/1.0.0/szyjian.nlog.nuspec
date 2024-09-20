@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Szyjian.NLog</id>
+    <version>1.0.0</version>
+    <authors>Szyjian.NLog</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="NLog.Targets.ElasticSearch" version="7.6.0" exclude="Build,Analyzers" />
+        <dependency id="NLog.Web.AspNetCore" version="4.13.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

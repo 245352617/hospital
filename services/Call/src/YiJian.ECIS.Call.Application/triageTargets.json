@@ -1,0 +1,25 @@
+{
+  "TriageTargets": [
+    {
+      "Code": "TriageDirection_001",
+      "Name": "死亡"
+    },
+    {
+      "Code": "TriageDirection_002",
+      "Name": "留观区"
+    },
+    {
+      "Code": "TriageDirection_003",
+      "Name": "抢救区"
+    },
+    {
+      "Code": "TriageDirection_004",
+      "Name": "专科",
+      "IsSync": true // 是否同步
+    },
+    {
+      "Code": "TriageDirection_005",
+      "Name": "特护病房"
+    }
+  ]
+}

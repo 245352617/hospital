@@ -1,0 +1,144 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Health.Report</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>YiJian.Health.Report-c2d31439-b723-48e2-b061-5ebd7aeb6010</UserSecretsId>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <AssemblyName>YiJian.Health.Report.HttpApi.Host</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CS1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="IGeekFan.AspNetCore.Knife4jUI" Version="0.0.11" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.0.0" />
+	  <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+	  <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+	  <PackageReference Include="IdentityModel" Version="5.1.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="6.0.14" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14" />
+	  <PackageReference Include="SkyAPM.Agent.AspNetCore" Version="2.1.0" />
+	  <PackageReference Include="Volo.Abp.Autofac" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.Swashbuckle" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="6.0.3" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.Health.Report.HttpApi\YiJian.Health.Report.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.Health.Report.Application\YiJian.Health.Report.Application.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.Health.Report.EntityFrameworkCore\YiJian.Health.Report.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+    <Content Remove="wwwroot\App_Data\Test.frx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Fody" Version="6.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="wwwroot\App_Data\Barcode.frx" />
+    <_ContentIncludedByDefault Remove="wwwroot\App_Data\Master-Detail.frx" />
+    <_ContentIncludedByDefault Remove="wwwroot\App_Data\nwind.xml" />
+    <_ContentIncludedByDefault Remove="wwwroot\App_Data\Simple List.frx" />
+    <_ContentIncludedByDefault Remove="wwwroot\App_Data\Test.frx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Fonts\HOLOMDL2.TTF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\SIMSUN.TTC">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\simsun.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\DepartmentAndPatient\DepartmentAndPatientDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\DepartmentAndPatient\DepartmentAndPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\DoctorAndPatient\DoctorAndPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\DoctorAndPatient\DoctorDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\EmergencyroomAndDeathPatient\EmergencyroomAndDeathPatientDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\EmergencyroomAndDeathPatient\EmergencyroomAndDeathPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\EmergencyroomAndDeathPatient\EmergencyroomAndPatientDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\EmergencyroomAndDeathPatient\EmergencyroomAndPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\EmergencyroomAndPatient\EmergencyroomAndPatientDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\EmergencyroomAndPatient\EmergencyroomAndPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\LevelAndPatient\LevelAndPatientDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\LevelAndPatient\LevelAndPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\NurseAndPatient\NurseAndPatientTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\NurseAndPatient\NurseDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\PatientDetailTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\Statisticses\AdmissionRecord.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

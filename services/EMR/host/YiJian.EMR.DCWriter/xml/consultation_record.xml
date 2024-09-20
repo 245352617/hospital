@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XTextDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EditorVersionString="1.2023.9.4">
+   <XElements>
+      <Element xsi:type="XTextHeader">
+         <InnerID>6</InnerID>
+         <ID>divXTextDocumentHeaderElement</ID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="1">
+               <InnerID>338</InnerID>
+               <Text>北京大学</Text>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="2">
+               <InnerID>339</InnerID>
+               <Text>深圳医院</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>31</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="3">
+               <InnerID>340</InnerID>
+               <Text>会诊记录 </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>38</InnerID>
+            </Element>
+            <Element xsi:type="XTextTable" NumOfRows="2" NumOfColumns="4">
+               <InnerID>40</InnerID>
+               <ID>1</ID>
+               <XElements>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>45</InnerID>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <InnerID>341</InnerID>
+                                 <Text>患者姓名：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="5">
+                                 <InnerID>53</InnerID>
+                                 <ID>patientName</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>patientInfo</DataSource>
+                                    <BindingPath>patientName</BindingPath>
+                                 </ValueBinding>
+                                 <ContentReadonly>False</ContentReadonly>
+                                 <BorderElementColor />
+                                 <Name>患者姓名</Name>
+                                 <BackgroundText>患者姓名</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>54</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>1</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <InnerID>342</InnerID>
+                                 <Text>性别:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="5">
+                                 <InnerID>60</InnerID>
+                                 <ID>field19</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>patientInfo</DataSource>
+                                    <BindingPath>sexName</BindingPath>
+                                 </ValueBinding>
+                                 <ContentReadonly>False</ContentReadonly>
+                                 <BorderElementColor />
+                                 <BackgroundText>性别</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <InnerID>343</InnerID>
+                                 <Text> </Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>62</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>2</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <InnerID>344</InnerID>
+                                 <Text>年龄：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="5">
+                                 <InnerID>68</InnerID>
+                                 <ID>age</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>patientInfo</DataSource>
+                                    <BindingPath>age</BindingPath>
+                                 </ValueBinding>
+                                 <ContentReadonly>False</ContentReadonly>
+                                 <BorderElementColor />
+                                 <BackgroundText>年龄</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>69</InnerID>
+                              </Element>
+                           </XElements>
+                           <GridLine>
+                              <Visible>true</Visible>
+                              <ColorValue>#FFFFFF</ColorValue>
+                           </GridLine>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>3</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <InnerID>345</InnerID>
+                                 <Text>门诊号：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="5">
+                                 <InnerID>76</InnerID>
+                                 <ID>visitNo</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>patientInfo</DataSource>
+                                    <BindingPath>visitNo</BindingPath>
+                                 </ValueBinding>
+                                 <ContentReadonly>False</ContentReadonly>
+                                 <BorderElementColor />
+                                 <Name>门诊号</Name>
+                                 <BackgroundText>门诊号</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>77</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                     </XElements>
+                     <SpecifyHeight>85</SpecifyHeight>
+                  </Element>
+                  <Element xsi:type="XTextTableRow">
+                     <InnerID>78</InnerID>
+                     <XElements>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>4</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <InnerID>346</InnerID>
+                                 <Text>科室：急诊科</Text>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>87</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>5</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="6">
+                                 <InnerID>347</InnerID>
+                                 <Text>床号:</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="6">
+                                 <InnerID>93</InnerID>
+                                 <ID>bed</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>patientInfo</DataSource>
+                                    <BindingPath>bed</BindingPath>
+                                 </ValueBinding>
+                                 <ContentReadonly>False</ContentReadonly>
+                                 <BorderElementColor />
+                                 <BackgroundText>床号</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>94</InnerID>
+                              </Element>
+                           </XElements>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>6</InnerID>
+                           <XElements>
+                              <Element xsi:type="XString" StyleIndex="5">
+                                 <InnerID>348</InnerID>
+                                 <Text>电话：</Text>
+                              </Element>
+                              <Element xsi:type="XInputField" StyleIndex="5">
+                                 <InnerID>100</InnerID>
+                                 <ID>field22</ID>
+                                 <EnableValueValidate>true</EnableValueValidate>
+                                 <ValueBinding>
+                                    <DataSource>patientInfo</DataSource>
+                                    <BindingPath>ContactsPhone</BindingPath>
+                                 </ValueBinding>
+                                 <ContentReadonly>False</ContentReadonly>
+                                 <BorderElementColor />
+                                 <Name>患者电话</Name>
+                                 <BackgroundText>患者电话</BackgroundText>
+                              </Element>
+                              <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                                 <InnerID>101</InnerID>
+                              </Element>
+                           </XElements>
+                           <ColSpan>2</ColSpan>
+                        </Element>
+                        <Element xsi:type="XTextTableCell" StyleIndex="4">
+                           <InnerID>103</InnerID>
+                        </Element>
+                     </XElements>
+                  </Element>
+               </XElements>
+               <Columns>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>41</InnerID>
+                     <Width>526.759949</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>42</InnerID>
+                     <Width>320.759918</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>43</InnerID>
+                     <Width>377.748535</Width>
+                  </Element>
+                  <Element xsi:type="XTextTableColumn">
+                     <InnerID>44</InnerID>
+                     <Width>800.7287</Width>
+                  </Element>
+               </Columns>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>104</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextBody">
+         <InnerID>42</InnerID>
+         <ID>divDocumentBody_0</ID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>349</InnerID>
+               <Text>初步诊断：</Text>
+            </Element>
+            <Element xsi:type="XInputField" StyleIndex="6">
+               <InnerID>120</InnerID>
+               <ID>diagnoseName</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>patientInfo</DataSource>
+                  <BindingPath>diagnoseName</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <BorderElementColor />
+               <Name>诊断</Name>
+               <BackgroundText>诊断</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>121</InnerID>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>123</InnerID>
+               <Deleteable>false</Deleteable>
+               <Name>申请时间</Name>
+               <Width>350</Width>
+               <Height>57.03124</Height>
+               <Text>申请时间      </Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>124</InnerID>
+               <ID>consultationApplyTime</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>medicalInfo</DataSource>
+                  <BindingPath>consultationApplyTime</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XInputField">
+                     <InnerID>125</InnerID>
+                     <ID>datetime17</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <BorderElementColor />
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy年MM月dd日 HH时mm分</Format>
+                     </DisplayFormat>
+                     <BackgroundText>yyyy年MM月dd日 HH时mm分</BackgroundText>
+                     <FieldSettings>
+                        <EditStyle>DateTimeWithoutSecond</EditStyle>
+                     </FieldSettings>
+                  </Element>
+               </XElements>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>会诊申请时间</Name>
+               <BackgroundText>会诊申请时间</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>126</InnerID>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>128</InnerID>
+               <ID>label4</ID>
+               <Deleteable>false</Deleteable>
+               <Name>会诊科室</Name>
+               <Width>200</Width>
+               <Height>57.03124</Height>
+               <Text>会诊科室</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>129</InnerID>
+               <ID>consultationDept</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>medicalInfo</DataSource>
+                  <BindingPath>consultationDept</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <InnerID>355</InnerID>
+                     <Text>（）</Text>
+                  </Element>
+               </XElements>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>会诊科室</Name>
+               <InnerValue>（）</InnerValue>
+               <BackgroundText>会诊科室</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>350</InnerID>
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>133</InnerID>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>135</InnerID>
+               <Deleteable>false</Deleteable>
+               <Name>申请时间</Name>
+               <Width>350</Width>
+               <Height>57.03124</Height>
+               <Text>会诊类别      </Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>136</InnerID>
+               <ID>consultationCategory</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>medicalInfo</DataSource>
+                  <BindingPath>consultationCategory</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XTextCheckBox" StyleIndex="6">
+                     <InnerID>137</InnerID>
+                     <ID>1</ID>
+                     <Name>急会诊</Name>
+                     <Caption>急会诊</Caption>
+                     <Width>221.999985</Width>
+                     <Height>57.03125</Height>
+                     <GroupName>急会诊</GroupName>
+                  </Element>
+                  <Element xsi:type="XTextCheckBox" StyleIndex="6">
+                     <InnerID>138</InnerID>
+                     <ID>1</ID>
+                     <Name>普通会诊</Name>
+                     <Caption>普通会诊</Caption>
+                     <Width>272</Width>
+                     <Height>57.03125</Height>
+                     <GroupName>普通会诊</GroupName>
+                  </Element>
+               </XElements>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>会诊类别</Name>
+               <InnerValue>急会诊 普通会诊</InnerValue>
+               <BackgroundText>会诊类别</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>351</InnerID>
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>140</InnerID>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>142</InnerID>
+               <ID>label8</ID>
+               <Deleteable>false</Deleteable>
+               <Name>病情简要</Name>
+               <Width>200</Width>
+               <Height>57.03124</Height>
+               <Text>病情简要</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>143</InnerID>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>145</InnerID>
+               <ID>consultationResume</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>medicalInfo</DataSource>
+                  <BindingPath>consultationResume</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <InnerID>356</InnerID>
+                     <Text>患者因</Text>
+                  </Element>
+                  <Element xsi:type="XInputField">
+                     <InnerID>149</InnerID>
+                     <ID>Narrationname</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValueBinding>
+                        <DataSource>patientInfo</DataSource>
+                        <BindingPath>Narrationname</BindingPath>
+                     </ValueBinding>
+                     <ContentReadonly>False</ContentReadonly>
+                     <BorderElementColor />
+                     <Name>主诉</Name>
+                     <BackgroundText>主诉</BackgroundText>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <InnerID>357</InnerID>
+                     <Text>就诊，</Text>
+                  </Element>
+                  <Element xsi:type="XInputField">
+                     <InnerID>153</InnerID>
+                     <ID>Presentmedicalhistory </ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <ValueBinding>
+                        <DataSource>patientInfo</DataSource>
+                        <BindingPath>Presentmedicalhistory </BindingPath>
+                     </ValueBinding>
+                     <ContentReadonly>False</ContentReadonly>
+                     <BorderElementColor />
+                     <Name>现病史</Name>
+                     <BackgroundText>现病史</BackgroundText>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <InnerID>358</InnerID>
+                     <Text>，检查结果，目前考虑，请    科会诊协助诊治。</Text>
+                  </Element>
+               </XElements>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>会诊病情简要</Name>
+               <InnerValue>患者因就诊，，检查结果，目前考虑，请    科会诊协助诊治。</InnerValue>
+               <BackgroundText>会诊病情简要</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>178</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>180</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>352</InnerID>
+               <Text>                                                        </Text>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>238</InnerID>
+               <ID>label10</ID>
+               <Deleteable>false</Deleteable>
+               <Name>PhysicalExamination</Name>
+               <Width>150</Width>
+               <Height>57.03124</Height>
+               <Text>签名：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>239</InnerID>
+               <ID>signature</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <BindingPath>signature</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>医生签名</Name>
+               <BackgroundText>医生签名</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>240</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>242</InnerID>
+            </Element>
+            <Element xsi:type="HorizontalLine" StyleIndex="7">
+               <InnerID>244</InnerID>
+               <ID>hl1</ID>
+               <LineLengthInCM>16</LineLengthInCM>
+               <LineSize>3.125</LineSize>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>245</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>247</InnerID>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>249</InnerID>
+               <ID>label9</ID>
+               <Deleteable>false</Deleteable>
+               <Name>会诊时间</Name>
+               <Width>350</Width>
+               <Height>57.03124</Height>
+               <Text>会诊时间      </Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>250</InnerID>
+               <ID>consultationTime</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>medicalInfo</DataSource>
+                  <BindingPath>consultationTime</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XInputField">
+                     <InnerID>251</InnerID>
+                     <ID>datetime18</ID>
+                     <EnableValueValidate>true</EnableValueValidate>
+                     <BorderElementColor />
+                     <DisplayFormat>
+                        <Style>DateTime</Style>
+                        <Format>yyyy年MM月dd日 HH时mm分</Format>
+                     </DisplayFormat>
+                     <BackgroundText>yyyy年MM月dd日 HH时mm分</BackgroundText>
+                     <FieldSettings>
+                        <EditStyle>DateTimeWithoutSecond</EditStyle>
+                     </FieldSettings>
+                  </Element>
+               </XElements>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>会诊时间</Name>
+               <BackgroundText>会诊时间</BackgroundText>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>353</InnerID>
+               <Text> </Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>253</InnerID>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>255</InnerID>
+               <ID>label11</ID>
+               <Deleteable>false</Deleteable>
+               <Name>会诊记录</Name>
+               <Width>200</Width>
+               <Height>57.03124</Height>
+               <Text>会诊记录</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>256</InnerID>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>258</InnerID>
+               <ID>consultationRecord</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <DataSource>medicalInfo</DataSource>
+                  <BindingPath>consultationRecord</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <XElements>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <InnerID>359</InnerID>
+                     <Text>病史敬阅，</Text>
+                  </Element>
+                  <Element xsi:type="XParagraphFlag" StyleIndex="6">
+                     <InnerID>264</InnerID>
+                  </Element>
+                  <Element xsi:type="XString" StyleIndex="6">
+                     <InnerID>360</InnerID>
+                     <Text>    谢邀。</Text>
+                  </Element>
+               </XElements>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>会诊记录</Name>
+               <InnerValue>undefined</InnerValue>
+               <BackgroundText>会诊记录</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>272</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>274</InnerID>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>354</InnerID>
+               <Text>                                                        </Text>
+            </Element>
+            <Element xsi:type="XTextLabelElement">
+               <InnerID>332</InnerID>
+               <ID>label12</ID>
+               <Deleteable>false</Deleteable>
+               <Name>PhysicalExamination</Name>
+               <Width>150</Width>
+               <Height>57.03124</Height>
+               <Text>签名：</Text>
+            </Element>
+            <Element xsi:type="XInputField">
+               <InnerID>333</InnerID>
+               <ID>signature</ID>
+               <EnableValueValidate>true</EnableValueValidate>
+               <ValueBinding>
+                  <BindingPath>signature</BindingPath>
+               </ValueBinding>
+               <ContentReadonly>False</ContentReadonly>
+               <Deleteable>false</Deleteable>
+               <BorderElementColor />
+               <Name>医生签名</Name>
+               <BackgroundText>医生签名</BackgroundText>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>334</InnerID>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="6">
+               <InnerID>337</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+      <Element xsi:type="XTextFooter">
+         <InnerID>92</InnerID>
+         <ID>divXTextDocumentFooterElement</ID>
+         <AcceptTab>true</AcceptTab>
+         <XElements>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>361</InnerID>
+               <Text>第</Text>
+            </Element>
+            <Element xsi:type="XPageInfo">
+               <InnerID>107</InnerID>
+               <Width>69</Width>
+               <Height>66</Height>
+            </Element>
+            <Element xsi:type="XString" StyleIndex="6">
+               <InnerID>362</InnerID>
+               <Text>页 共1页</Text>
+            </Element>
+            <Element xsi:type="XParagraphFlag" StyleIndex="0">
+               <InnerID>113</InnerID>
+            </Element>
+         </XElements>
+      </Element>
+   </XElements>
+   <SerializeParameterValue>true</SerializeParameterValue>
+   <FileName>E:\下载\谷歌下载\consultation_record.xml</FileName>
+   <FileFormat>XML</FileFormat>
+   <ContentStyles>
+      <Default xsi:type="DocumentContentStyle">
+         <FontName>宋体</FontName>
+         <FontSize>12</FontSize>
+         <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+         <LineSpacing>4</LineSpacing>
+      </Default>
+      <Styles>
+         <Style Index="0">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+            <Align>Center</Align>
+         </Style>
+         <Style Index="1">
+            <FontName>楷体</FontName>
+            <FontSize>21.75</FontSize>
+            <Bold>true</Bold>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+         </Style>
+         <Style Index="2">
+            <FontName>宋体</FontName>
+            <FontSize>21.75</FontSize>
+            <Bold>true</Bold>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+         </Style>
+         <Style Index="3">
+            <FontName>宋体</FontName>
+            <FontSize>15</FontSize>
+            <Bold>true</Bold>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+         </Style>
+         <Style Index="4">
+            <BackgroundColor>#FFFFFF</BackgroundColor>
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+            <BorderStyle>Dash</BorderStyle>
+            <PaddingLeft>15</PaddingLeft>
+            <PaddingTop>10</PaddingTop>
+            <PaddingRight>12.5</PaddingRight>
+            <PaddingBottom>10</PaddingBottom>
+         </Style>
+         <Style Index="5">
+            <FontName>宋体</FontName>
+            <FontSize>10.5</FontSize>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+         </Style>
+         <Style Index="6">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+         </Style>
+         <Style Index="7">
+            <FontName>宋体</FontName>
+            <FontSize>12</FontSize>
+            <SpacingBeforeParagraph>9</SpacingBeforeParagraph>
+            <LineSpacing>4</LineSpacing>
+         </Style>
+      </Styles>
+   </ContentStyles>
+   <Info>
+      <LicenseText>都昌:都昌WEB旗舰版演示</LicenseText>
+      <CreationTime>2022-08-02T18:57:39.6158147+08:00</CreationTime>
+      <LastModifiedTime>2023-11-30T17:41:46.5182279+08:00</LastModifiedTime>
+      <LastPrintTime>1980-01-01T00:00:00</LastPrintTime>
+      <Operator>DCSoft.Writer Version:1.2020.6.15</Operator>
+      <NumOfPage>1</NumOfPage>
+   </Info>
+   <BodyText>初步诊断：诊断
+申请时间      yyyy年MM月dd日 HH时mm分
+会诊科室（） 
+会诊类别      □急会诊□普通会诊 
+病情简要
+患者因主诉就诊，现病史，检查结果，目前考虑，请    科会诊协助诊治。
+
+                                                        签名：医生签名
+
+
+
+会诊时间      yyyy年MM月dd日 HH时mm分 
+会诊记录
+病史敬阅，
+    谢邀。
+
+                                                        签名：医生签名
+</BodyText>
+   <LocalConfig />
+   <PageSettings>
+      <LeftMargin>78</LeftMargin>
+      <TopMargin>78</TopMargin>
+      <RightMargin>78</RightMargin>
+      <BottomMargin>78</BottomMargin>
+      <StrictUsePageSize>false</StrictUsePageSize>
+   </PageSettings>
+</XTextDocument>

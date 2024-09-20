@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.IMService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.Domain\YiJian.ECIS.IMService.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EntityFrameworkCore\Repositories\" />
+  </ItemGroup>
+
+</Project>

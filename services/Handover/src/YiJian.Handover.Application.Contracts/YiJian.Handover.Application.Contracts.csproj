@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Handover</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DocumentationFile>YiJian.Handover.Application.Contracts.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>YiJian.Handover.Application.Contracts.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.Authorization" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Handover.Domain.Shared\YiJian.Handover.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Handover\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="YiJian.Handover.Application.Contracts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Handover\NurseHandover\NursePatient\NursePatientsData.cs" />
+  </ItemGroup>
+
+</Project>

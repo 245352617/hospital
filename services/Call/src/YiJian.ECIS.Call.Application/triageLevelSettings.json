@@ -1,0 +1,32 @@
+﻿{
+  "TriageLevels": [
+    {
+      "Key": "TriageLevel_001",
+      "Display": "Ⅰ 级",
+      "Order": 0
+    },
+    {
+      "Key": "TriageLevel_002",
+      "Display": "Ⅱ 级",
+      "Order": 1
+    },
+    {
+      "Key": "TriageLevel_003",
+      "Display": "Ⅲ 级",
+      "Order": 2,
+      "IsSync": true // 是否同步
+    },
+    {
+      "Key": "TriageLevel_004",
+      "Display": "Ⅳa 级",
+      "Order": 3,
+      "IsSync": true // 是否同步
+    },
+    {
+      "Key": "TriageLevel_005",
+      "Display": "Ⅳb 级",
+      "Order": 4,
+      "IsSync": true // 是否同步
+    }
+  ]
+}

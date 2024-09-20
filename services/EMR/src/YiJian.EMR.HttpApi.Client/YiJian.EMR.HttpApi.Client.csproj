@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.EMR</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Http.Client" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.EMR.Application.Contracts\YiJian.EMR.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <PackageReference Update="Fody" Version="6.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>-->
+
+</Project>

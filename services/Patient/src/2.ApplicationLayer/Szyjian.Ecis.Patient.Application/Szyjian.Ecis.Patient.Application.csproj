@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <!--  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">-->
+  <!--    <DocumentationFile>Szyjian.Ecis.Patient.Application.xml</DocumentationFile>-->
+  <!--    <NoWarn>1701;1702;1591</NoWarn>-->
+  <!--  </PropertyGroup>-->
+
+  <!--  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">-->
+  <!--    <DocumentationFile>Szyjian.Ecis.Patient.Application.xml</DocumentationFile>-->
+  <!--    <NoWarn>1701;1702;1591</NoWarn>-->
+  <!--  </PropertyGroup>-->
+
+  <ItemGroup>
+    <Compile Remove="FakesAssemblies\**" />
+    <Compile Remove="Fakes\**" />
+    <EmbeddedResource Remove="FakesAssemblies\**" />
+    <EmbeddedResource Remove="Fakes\**" />
+    <None Remove="FakesAssemblies\**" />
+    <None Remove="Fakes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="triageDirections.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="triageDirections.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BeetleX.Http.Clients" Version="2.2.2.1802" />
+    <PackageReference Include="Chinese.IDCard" Version="1.0.0" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.1.2" />
+    <PackageReference Include="Google.Protobuf" Version="3.15.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.32.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.32.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Hangfire.Redis.StackExchange" Version="1.8.4" />
+    <PackageReference Include="Mapster" Version="7.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+    <PackageReference Include="Microsoft.QualityTools.Testing.Fakes" Version="16.7.4-beta.20330.2" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.0" />
+    <PackageReference Include="Szyjian.RabbitMq" Version="1.0.0" />
+    <PackageReference Include="Szyjian.Redis" Version="1.0.0" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.HangFire" Version="3.3.2" />
+    <PackageReference Include="Volo.Abp.AspNetCore.SignalR" Version="3.3.2" />
+    <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\3.DomainLayer\Szyjian.Ecis.Patient.Domain.Shared\Szyjian.Ecis.Patient.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\3.DomainLayer\Szyjian.Ecis.Patient.Domain\Szyjian.Ecis.Patient.Domain.csproj" />
+    <ProjectReference Include="..\Szyjian.Ecis.Patient.Application.Contracts\Szyjian.Ecis.Patient.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\..\..\..\..\shared\YiJian.ECIS.Protos\emr.proto" GrpcServices="Client">
+      <Link>Protos\emr.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\..\..\..\shared\YiJian.ECIS.Protos\healthReport.proto" GrpcServices="Client">
+      <Link>Protos\healthReport.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\..\..\..\shared\YiJian.ECIS.Protos\nursing.proto" GrpcServices="Client">
+      <Link>Protos\nursing.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\..\..\..\shared\YiJian.ECIS.Protos\recipe.proto" GrpcServices="Client">
+      <Link>Protos\recipe.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\..\..\..\shared\YiJian.ECIS.Protos\masterdata.proto" GrpcServices="Client">
+      <Link>Protos\masterdata.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Szyjian.Ecis.Patient.Application.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--<PropertyGroup>
+		<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>-->
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\Release\Szyjian.Ecis.Patient.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

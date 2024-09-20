@@ -1,0 +1,9 @@
+
+//急诊诊疗患者列表
+GET http://192.168.1.162/api/ecis/patientService/admissionRecord/admissionRecordPaged?PageIndex=1&PageSize=20
+###
+
+
+//通过表格名称，查询入科列表配置
+GET http://192.168.1.162/api/ecis/patientService/admissionListSetting/admissionListSetting?TableTypeCode=VisitArea
+###

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  aims.webapi.host:
+    image: registry.apps.dev.szyjian.com/aims-server
+    build:
+      context: .
+      dockerfile: AIMS.WebAPI/Dockerfile

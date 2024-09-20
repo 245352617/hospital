@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.MasterData</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <ProjectReference Include="..\YiJian.MasterData.EntityFrameworkCore.Tests\YiJian.MasterData.EntityFrameworkCore.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Fody" Version="6.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MasterData\Sequences\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="MasterData\Labs\Specimen\LabSpecimenManagerTests.cs" />
+    <Compile Remove="MasterData\Labs\Target\LabTargetManagerTests.cs" />
+    <Compile Remove="MasterData\Labs\Container\LabContainerManagerTests.cs" />
+    <Compile Remove="MasterData\Labs\Position\LabSpecimenPositionManagerTests.cs" />
+  </ItemGroup>
+
+</Project>

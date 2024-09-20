@@ -1,0 +1,15 @@
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+ENV TZ Asia/Shanghai
+# 这里必须用国内源，用官方源会出现字体错乱问题，具体原因问上帝
+RUN echo "deb http://mirrors.aliyun.com/debian stable main bullseye non-free" > /etc/apt/sources.list
+RUN echo "deb http://mirrors.aliyun.com/debian stable-proposed-updates main bullseye non-free" >> /etc/apt/sources.list
+RUN echo "deb http://mirrors.aliyun.com/debian stable-updates main bullseye non-free" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.aliyun.com/debian stable main bullseye non-free" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.aliyun.com/debian stable-proposed-updates main bullseye non-free" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.aliyun.com/debian stable-updates main bullseye non-free" >> /etc/apt/sources.list
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y libgdiplus libc6-dev && ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll && apt-get install --assume-yes apt-utils && apt-get install -y locales && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
+ENV LANG zh_CN.utf8 
+RUN apt-get install fontconfig curl -y
+COPY services/Report/host/YiJian.Health.Report.HttpApi.Host/Fonts/* /usr/share/fonts/
+RUN fc-cache -f -v

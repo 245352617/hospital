@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="OperApply\Dto\**" />
+    <EmbeddedResource Remove="OperApply\Dto\**" />
+    <None Remove="OperApply\Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DoctorsAdvices\Dto\DeleteDoctorsAdviceDto.cs" />
+  </ItemGroup>
+   
+  <ItemGroup>
+	<PackageReference Include="BeetleX.Http.Clients" Version="2.2.2.1803" />
+	<PackageReference Include="Chinese.IDCard" Version="1.0.0" />
+	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.Authorization" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Recipe.Domain.Shared\YiJian.Recipe.Domain.Shared.csproj" />
+    <ProjectReference Include="..\YiJian.Recipe.Domain\YiJian.Recipe.Domain.csproj" />
+  </ItemGroup>
+   
+  <ItemGroup>
+    <Folder Include="Cases\Dto\" />
+  </ItemGroup>
+ 
+</Project>

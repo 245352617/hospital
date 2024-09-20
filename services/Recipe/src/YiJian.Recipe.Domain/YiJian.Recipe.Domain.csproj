@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NovelCoronavirusRna\**" />
+    <EmbeddedResource Remove="NovelCoronavirusRna\**" />
+    <None Remove="NovelCoronavirusRna\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Ddd.Domain" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Recipe.Domain.Shared\YiJian.Recipe.Domain.Shared.csproj" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <Compile Remove="GroupConsultation\GroupConsultation.cs" />
+    <Compile Remove="GroupConsultation\GroupConsultationManager.cs" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <Folder Include="Emrs\Contracts\" />
+  </ItemGroup>
+
+</Project>

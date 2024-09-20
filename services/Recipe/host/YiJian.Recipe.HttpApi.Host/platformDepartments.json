@@ -1,0 +1,9 @@
+{
+  "PlatformDepartments": [
+    {
+      "Code": "Ecis",
+      "Name": "急诊科",
+      "IsSync": true
+    }
+  ]
+}

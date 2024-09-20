@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/17/2022 09:57:12" ReportInfo.Modified="10/21/2022 17:23:40" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary>
+    <TableDataSource Name="pacsesInsurance" ReferenceName="Data.pacsesInsurance" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="catalogCode" DataType="System.String"/>
+      <Column Name="catalogName" DataType="System.String"/>
+      <Column Name="firstCatalogCode" DataType="System.String"/>
+      <Column Name="firstCatalogName" DataType="System.String"/>
+      <Column Name="clinicalSymptom" DataType="System.String"/>
+      <Column Name="medicalHistory" DataType="System.String"/>
+      <Column Name="partCode" DataType="System.String"/>
+      <Column Name="partName" DataType="System.String"/>
+      <Column Name="catalogDisplayName" DataType="System.String"/>
+      <Column Name="reportTime" DataType="System.Object"/>
+      <Column Name="reportDoctorCode" DataType="System.String"/>
+      <Column Name="reportDoctorName" DataType="System.String"/>
+      <Column Name="hasReport" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isEmergency" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isBedSide" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="piid" DataType="System.String"/>
+      <Column Name="code" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="categoryCode" DataType="System.String"/>
+      <Column Name="categoryName" DataType="System.String"/>
+      <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="prescriptionNo" DataType="System.String"/>
+      <Column Name="recipeNo" DataType="System.String"/>
+      <Column Name="recipeGroupNo" DataType="System.Double"/>
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="applyTimeToString" DataType="System.String"/>
+      <Column Name="applyDoctorCode" DataType="System.String"/>
+      <Column Name="applyDoctorName" DataType="System.String"/>
+      <Column Name="applyDeptCode" DataType="System.String"/>
+      <Column Name="applyDeptName" DataType="System.String"/>
+      <Column Name="status" DataType="System.Double"/>
+      <Column Name="payTypeCode" DataType="System.String"/>
+      <Column Name="payType" DataType="System.Double"/>
+      <Column Name="unit" DataType="System.String"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="amount" DataType="System.Double"/>
+      <Column Name="insuranceCode" DataType="System.String"/>
+      <Column Name="insuranceType" DataType="System.Double"/>
+      <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="hisOrderNo" DataType="System.String"/>
+      <Column Name="diagnosis" DataType="System.String"/>
+      <Column Name="remarks" DataType="System.String"/>
+      <Column Name="prescribeTypeCode" DataType="System.String"/>
+      <Column Name="prescribeTypeName" DataType="System.String"/>
+      <Column Name="recieveQty" DataType="System.Double"/>
+      <Column Name="recieveUnit" DataType="System.String"/>
+      <Column Name="id" DataType="System.String"/>
+      <Column Name="accountFlag" DataType="System.Double"/>
+      <Column Name="accountFlagText" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+      <Column Name="lgjkzx_payurl" DataType="System.String"/>
+      <Column Name="lgzxyy_payurl" DataType="System.String"/>
+      <Column Name="stampBase" DataType="System.String"/>
+      <Column Name="medicalNo" DataType="System.String"/>
+      <Column Name="channelNumber" DataType="System.String"/>
+      <Column Name="channelNo" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="dataSource" ReferenceName="Data.dataSource" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="stampBase" DataType="System.Byte[]" Calculated="true" Expression="Convert.FromBase64String([pacsesInsurance.stampBase])"/>
+    </TableDataSource>
+    <TableDataSource Name="admissionRecords" ReferenceName="Data.admissionRecords" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="visNo" DataType="System.String"/>
+      <Column Name="aR_ID" DataType="System.Double"/>
+      <Column Name="pI_ID" DataType="System.String"/>
+      <Column Name="patientID" DataType="System.String"/>
+      <Column Name="contactsPerson" DataType="System.String"/>
+      <Column Name="contactsPhone" DataType="System.String"/>
+      <Column Name="narrationCode" DataType="System.String"/>
+      <Column Name="narrationName" DataType="System.String"/>
+      <Column Name="triageUserCode" DataType="System.String"/>
+      <Column Name="triageUserName" DataType="System.String"/>
+      <Column Name="visitNo" DataType="System.Double"/>
+      <Column Name="visitDate" DataType="System.String"/>
+      <Column Name="registerNo" DataType="System.String"/>
+      <Column Name="registerTime" DataType="System.Object"/>
+      <Column Name="registerDoctorCode" DataType="System.String"/>
+      <Column Name="registerDoctorName" DataType="System.String"/>
+      <Column Name="patientName" DataType="System.String"/>
+      <Column Name="age" DataType="System.String"/>
+      <Column Name="sex" DataType="System.String"/>
+      <Column Name="sexName" DataType="System.String"/>
+      <Column Name="homeAddress" DataType="System.String"/>
+      <Column Name="birthday" DataType="System.Object"/>
+      <Column Name="chargeType" DataType="System.String"/>
+      <Column Name="chargeTypeName" DataType="System.String"/>
+      <Column Name="greenRoadName" DataType="System.String"/>
+      <Column Name="areaCode" DataType="System.String"/>
+      <Column Name="areaName" DataType="System.String"/>
+      <Column Name="bed" DataType="System.String"/>
+      <Column Name="firstDoctorCode" DataType="System.String"/>
+      <Column Name="firstDoctorName" DataType="System.String"/>
+      <Column Name="dutyDoctorCode" DataType="System.String"/>
+      <Column Name="dutyDoctorName" DataType="System.String"/>
+      <Column Name="retentionTime" DataType="System.Object"/>
+      <Column Name="lockDate" DataType="System.Object"/>
+      <Column Name="nurseGrade" DataType="System.String"/>
+      <Column Name="dutyNurseCode" DataType="System.String"/>
+      <Column Name="dutyNurseName" DataType="System.String"/>
+      <Column Name="operatorCode" DataType="System.String"/>
+      <Column Name="operatorName" DataType="System.String"/>
+      <Column Name="visitStatus" DataType="System.Double"/>
+      <Column Name="isPlanBackRoom" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="emergencyLevel" DataType="System.Double"/>
+      <Column Name="inDeptTime" DataType="System.Object"/>
+      <Column Name="outDeptTime" DataType="System.String"/>
+      <Column Name="inDeptWay" DataType="System.String"/>
+      <Column Name="isAttention" DataType="System.String"/>
+      <Column Name="cardNo" DataType="System.String"/>
+      <Column Name="medicalCard" DataType="System.String"/>
+      <Column Name="idNo" DataType="System.String"/>
+      <Column Name="triageLevel" DataType="System.String"/>
+      <Column Name="triageLevelName" DataType="System.String"/>
+      <Column Name="triageTime" DataType="System.String"/>
+      <Column Name="isInHospital" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="triageDeptCode" DataType="System.String"/>
+      <Column Name="triageDeptName" DataType="System.String"/>
+      <Column Name="weight" DataType="System.String"/>
+      <Column Name="height" DataType="System.String"/>
+      <Column Name="pastMedicalHistory" DataType="System.String"/>
+      <Column Name="infectiousHistory" DataType="System.String"/>
+      <Column Name="presentMedicalHistory" DataType="System.String"/>
+      <Column Name="physicalExamination" DataType="System.String"/>
+      <Column Name="allergyHistory" DataType="System.String"/>
+      <Column Name="fluFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="fluTemp" DataType="System.String"/>
+      <Column Name="coughFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="chestFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="typeOfVisitCode" DataType="System.String"/>
+      <Column Name="typeOfVisitName" DataType="System.String"/>
+      <Column Name="triageErrorFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="patientWhereAbout" DataType="System.String"/>
+      <Column Name="triageDirectionCode" DataType="System.String"/>
+      <Column Name="triageDirectionName" DataType="System.String"/>
+      <Column Name="supplementaryNotes" DataType="System.String"/>
+      <Column Name="keyDiseasesCode" DataType="System.String"/>
+      <Column Name="deathTime" DataType="System.String"/>
+      <Column Name="outDeptReason" DataType="System.Double"/>
+      <Column Name="diagnoseCode" DataType="System.String"/>
+      <Column Name="diagnoseName" DataType="System.String"/>
+      <Column Name="sort" DataType="System.Double"/>
+      <Column Name="isTop" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="callStatus" DataType="System.Double"/>
+      <Column Name="identityCode" DataType="System.String"/>
+      <Column Name="identityName" DataType="System.String"/>
+      <Column Name="isHasTransfer" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="finishVisitTime" DataType="System.String"/>
+      <Column Name="current" DataType="System.String"/>
+      <Column Name="safetyNo" DataType="System.String" PropName="Column"/>
+    </TableDataSource>
+    <TableDataSource Name="otherInfo" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="item" DataType="System.Object"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+    <Total Name="NamePage1" Expression="[pacsesInsurance.name]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalAmount" Expression="[pacsesInsurance.amount]" Evaluator="Data1" PrintOn="GroupFooter1"/>
+    <Total Name="TotalAmountPage2" Expression="[pacsesInsurance.amount]" Evaluator="Data2" PrintOn="GroupFooter2"/>
+    <Total Name="TotalNamePage2" Expression="[pacsesInsurance.name]" Evaluator="Data2" PrintOn="GroupFooter2"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="148.1" PaperHeight="210.1" RawPaperSize="11" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" FirstPageSource="1" OtherPagesSource="1" LastPageSource="1" Guides="66.15" Watermark.Font="宋体, 60pt">
+    <GroupHeaderBand Name="GroupHeader1" Width="522.02" Height="141.75" Guides="9.45" Condition="[pacsesInsurance.prescriptionNo]">
+      <TextObject Name="Text3" Left="85.05" Top="103.95" Width="359.1" Height="18.9" Text="门诊大型设备检查治疗项目审核、报告单" Font="宋体, 14pt, style=Bold"/>
+      <BarcodeObject Name="Barcode2" Top="66.15" Width="116.8" Height="37.8" AutoSize="false" Text="[pacsesInsurance.channelNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <TextObject Name="Text4" Left="396.9" Top="66.15" Width="122.85" Height="18.9" Text="医科技号：[pacsesInsurance.prescriptionNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text2" Left="151.2" Top="66.15" Width="217.35" Height="18.9" Text="深圳市社保局医疗保险" WordWrap="false" Font="宋体, 14pt, style=Bold"/>
+      <BarcodeObject Name="Barcode1" Top="18.9" Width="116.8" Height="37.8" AutoSize="false" Text="[pacsesInsurance.medicalNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <BarcodeObject Name="Barcode3" Left="396.9" Top="18.9" Width="116.8" Height="47.25" AutoSize="false" Text="[pacsesInsurance.prescriptionNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <TextObject Name="Text1" Left="189" Top="28.35" Width="160.65" Height="18.9" Text="第一联(交医院)" WordWrap="false" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text5" Width="122.85" Height="18.9" Text="门诊号码：[admissionRecords.visitNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text318" Left="189" Width="126" Height="30.24" VisibleExpression="[admissionRecords.greenRoadName]==&quot;&quot;?false:true" Text="★ 绿色通道" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 14pt, style=Bold" TextFill.Color="Red"/>
+      <DataBand Name="Data1" Top="144.95" Width="522.02" Guides="9.45" DataSource="pacsesInsurance"/>
+      <GroupFooterBand Name="GroupFooter1" Top="148.15" Width="522.02" Height="519.75">
+        <TableObject Name="Table5" Top="321.3" Width="520.49" Height="198.45" Border.Lines="All">
+          <TableColumn Name="Column33" Width="46.87"/>
+          <TableColumn Name="Column34" Width="112.21"/>
+          <TableColumn Name="Column35" Width="46.06"/>
+          <TableColumn Name="Column36" Width="46.06"/>
+          <TableColumn Name="Column37" Width="46.06"/>
+          <TableColumn Name="Column38" Width="64.96"/>
+          <TableColumn Name="Column39" Width="64.96"/>
+          <TableColumn Name="Column40" Width="93.31"/>
+          <TableRow Name="Row13" Height="28.35">
+            <TableCell Name="Cell97" Border.Lines="All" Text="部位:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell98" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell99" Border.Lines="All" Text="[pacsesInsurance.partName]" VertAlign="Center" Font="宋体, 9pt" ColSpan="3"/>
+            <TableCell Name="Cell100" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell101" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell102" Border.Lines="All" Text="科主任意见:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell103" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell104" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row14" Height="85.05">
+            <TableCell Name="Cell105" Border.Lines="All" Text="大型设备检查结果报告:" Font="宋体, 9pt" ColSpan="8"/>
+            <TableCell Name="Cell106" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell107" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell108" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell109" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell110" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell111" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell112" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row15" Height="85.05">
+            <TableCell Name="Cell113" Border.Lines="All" Text="注：&#13;&#10;(1)此表仅门诊使用,由主诊专科医师提出申请,经科主任同意，然后报市 社会保险管理部门审核后方科进行检查治疗。&#13;&#10;(2)此单一式两联,分别交社保部门、医院各保存一份。&#13;&#10;(3)急诊抢救病人可先做检查,但须在5个工作日内补办审批手续,逾期失效。" VertAlign="Center" Font="宋体, 9pt" ColSpan="8"/>
+            <TableCell Name="Cell114" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell115" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell116" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell117" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell118" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell119" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell120" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+          </TableRow>
+        </TableObject>
+        <TableObject Name="Table6" Top="264.6" Width="520.49" Height="56.7" Border.Lines="All">
+          <TableColumn Name="Column41" Width="46.87"/>
+          <TableColumn Name="Column42" Width="112.21"/>
+          <TableColumn Name="Column43" Width="46.06"/>
+          <TableColumn Name="Column44" Width="46.06"/>
+          <TableColumn Name="Column45" Width="46.06"/>
+          <TableColumn Name="Column46" Width="64.96"/>
+          <TableColumn Name="Column47" Width="64.96"/>
+          <TableColumn Name="Column48" Width="93.31"/>
+          <TableRow Name="Row16" Height="56.7">
+            <TableCell Name="Cell121" Border.Lines="All" Text="检查治疗项目:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell122" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell123" Border.Lines="All" Text="[NamePage1]" Font="宋体, 9pt" ColSpan="6"/>
+            <TableCell Name="Cell124" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell125" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell126" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell127" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell128" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+        </TableObject>
+        <TableObject Name="Table1" Width="520.49" Height="264.6" Border.Lines="All">
+          <TableColumn Name="Column1" Width="46.87"/>
+          <TableColumn Name="Column2" Width="112.21"/>
+          <TableColumn Name="Column3" Width="46.06"/>
+          <TableColumn Name="Column4" Width="46.06"/>
+          <TableColumn Name="Column5" Width="46.06"/>
+          <TableColumn Name="Column6" Width="64.96"/>
+          <TableColumn Name="Column7" Width="64.96"/>
+          <TableColumn Name="Column8" Width="93.31"/>
+          <TableRow Name="Row5" Height="28.35">
+            <TableCell Name="Cell33" Border.Lines="All" Text="姓名:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2">
+              <TextObject Name="Text20" Left="47.25" Width="113.4" Height="28.35" Border.Lines="Left" Text="[admissionRecords.patientName]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+            </TableCell>
+            <TableCell Name="Cell34" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell35" Border.Lines="All" Text="性别：" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell36" Border.Lines="All" Text="[admissionRecords.sexName]" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell37" Border.Lines="All" Text="年龄：" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell38" Border.Lines="All" Text="[admissionRecords.age]" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell39" Border.Lines="All" Text="科别：[admissionRecords.triageDeptName]" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell40" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+          </TableRow>
+          <TableRow Name="Row10" Height="28.35">
+            <TableCell Name="Cell73" Border.Lines="All" Text="医院：" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell74" Border.Lines="All" Text="深圳市龙岗中心医院" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell75" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell76" Border.Lines="All" Text="收费:" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell77" Border.Lines="All" Text="[TotalAmount]" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell78" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell79" Border.Lines="All" Text="医疗证号：[admissionRecords.safetyNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell80" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row11" Height="28.35">
+            <TableCell Name="Cell81" Border.Lines="All" Text="诊断:" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell82" Border.Lines="All" Text="[admissionRecords.diagnoseName]" VertAlign="Center" Font="宋体, 9pt" ColSpan="7"/>
+            <TableCell Name="Cell83" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell84" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell85" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell86" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell87" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell88" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row12" Height="179.55">
+            <TableCell Name="Cell89" Border.Lines="All" Text="详述&#13;&#10;申请&#13;&#10;理由&#13;&#10;及做&#13;&#10;过何&#13;&#10;种辅&#13;&#10;助检&#13;&#10;查：" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell90" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt" ColSpan="6">
+              <TextObject Name="Text21" Width="378" Height="18.9" Text="主诉：[admissionRecords.narrationName]" VertAlign="Bottom" Font="宋体, 9pt"/>
+              <TextObject Name="Text22" Top="18.9" Width="378" Height="18.9" Text="现病史：[admissionRecords.presentMedicalHistory]" Font="宋体, 9pt"/>
+              <TextObject Name="Text23" Top="37.8" Width="378" Height="18.9" Text="既往史：[admissionRecords.pastMedicalHistory]" Font="宋体, 9pt"/>
+              <TextObject Name="Text24" Top="56.7" Width="378" Height="37.8" Text="体格检查：[admissionRecords.physicalExamination]" Font="宋体, 9pt"/>
+              <TextObject Name="Text25" Top="151.2" Width="94.5" Height="18.9" Text="专科医师签名：" VertAlign="Center" Font="宋体, 9pt"/>
+              <PictureObject Name="Picture2" Left="85.05" Top="141.75" Width="103.95" Height="28.35" DataColumn="dataSource.stampBase"/>
+              <TextObject Name="Text26" Left="245.7" Top="151.2" Width="75.6" Height="18.9" Text="[pacsesInsurance.applyTimeToString]" Format="Date" Format.Format="D" WordWrap="false" Font="宋体, 10pt"/>
+              <TextObject Name="Text28" Left="378" Top="113.4" Width="75.6" Height="18.9" Text="[pacsesInsurance.applyTimeToString]" Format="Date" Format.Format="D" WordWrap="false" Font="宋体, 10pt"/>
+            </TableCell>
+            <TableCell Name="Cell91" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell92" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell93" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell94" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell95" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell96" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt">
+              <TextObject Name="Text27" Left="18.9" Top="9.45" Width="75.6" Height="28.35" Text="审核意见&#13;&#10;（盖章）" VertAlign="Center" Font="宋体, 9pt"/>
+            </TableCell>
+          </TableRow>
+        </TableObject>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+  </ReportPage>
+  <ReportPage Name="Page2" PaperWidth="148.1" PaperHeight="210.1" RawPaperSize="11" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" FirstPageSource="1" OtherPagesSource="1" LastPageSource="1" Guides="66.15" Watermark.Font="宋体, 60pt">
+    <GroupHeaderBand Name="GroupHeader2" Width="522.02" Height="141.75" Guides="9.45" Condition="[pacsesInsurance.prescriptionNo]">
+      <TextObject Name="Text6" Left="85.05" Top="103.95" Width="359.1" Height="18.9" Text="门诊大型设备检查治疗项目审核、报告单" Font="宋体, 14pt, style=Bold"/>
+      <BarcodeObject Name="Barcode4" Top="66.15" Width="116.8" Height="37.8" AutoSize="false" Text="[pacsesInsurance.channelNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <TextObject Name="Text7" Left="396.9" Top="66.15" Width="122.85" Height="18.9" Text="医科技号：[pacsesInsurance.prescriptionNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text8" Left="151.2" Top="66.15" Width="217.35" Height="18.9" Text="深圳市社保局医疗保险" WordWrap="false" Font="宋体, 14pt, style=Bold"/>
+      <BarcodeObject Name="Barcode5" Top="18.9" Width="116.8" Height="37.8" AutoSize="false" Text="[pacsesInsurance.medicalNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <BarcodeObject Name="Barcode6" Left="396.9" Top="18.9" Width="116.8" Height="47.25" AutoSize="false" Text="[pacsesInsurance.prescriptionNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <TextObject Name="Text9" Left="189" Top="28.35" Width="160.65" Height="18.9" Text="第二联(交社保)" WordWrap="false" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text10" Width="122.85" Height="18.9" Text="门诊号码：[admissionRecords.visitNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text319" Left="189" Width="126" Height="30.24" VisibleExpression="[admissionRecords.greenRoadName]==&quot;&quot;?false:true" Text="★ 绿色通道" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 14pt, style=Bold" TextFill.Color="Red"/>
+      <DataBand Name="Data2" Top="144.95" Width="522.02" Guides="9.45" DataSource="pacsesInsurance"/>
+      <GroupFooterBand Name="GroupFooter2" Top="148.15" Width="522.02" Height="500.85">
+        <TableObject Name="Table2" Top="274.05" Width="520.49" Height="226.8" Border.Lines="All">
+          <TableColumn Name="Column9" Width="46.87"/>
+          <TableColumn Name="Column10" Width="112.21"/>
+          <TableColumn Name="Column11" Width="46.06"/>
+          <TableColumn Name="Column12" Width="46.06"/>
+          <TableColumn Name="Column13" Width="46.06"/>
+          <TableColumn Name="Column14" Width="64.96"/>
+          <TableColumn Name="Column15" Width="64.96"/>
+          <TableColumn Name="Column16" Width="93.31"/>
+          <TableRow Name="Row1" Height="28.35">
+            <TableCell Name="Cell1" Border.Lines="All" Text="部位:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell2" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell3" Border.Lines="All" Text="[pacsesInsurance.partName]" VertAlign="Center" Font="宋体, 9pt" ColSpan="3"/>
+            <TableCell Name="Cell4" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell5" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell6" Border.Lines="All" Text="科主任意见:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell7" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell8" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row2" Height="113.4">
+            <TableCell Name="Cell9" Border.Lines="All" Text="大型设备检查结果报告:" Font="宋体, 9pt" ColSpan="8"/>
+            <TableCell Name="Cell10" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell11" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell12" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell13" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell14" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell15" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell16" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row3" Height="85.05">
+            <TableCell Name="Cell17" Border.Lines="All" Text="注：&#13;&#10;(1)此表仅门诊使用,由主诊专科医师提出申请,经科主任同意，然后报市 社会保险管理部门审核后方科进行检查治疗。&#13;&#10;(2)此单一式两联,分别交社保部门、医院各保存一份。&#13;&#10;(3)急诊抢救病人可先做检查,但须在5个工作日内补办审批手续,逾期失效。" VertAlign="Center" Font="宋体, 9pt" ColSpan="8"/>
+            <TableCell Name="Cell18" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell19" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell20" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell21" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell22" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell23" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+            <TableCell Name="Cell24" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+          </TableRow>
+        </TableObject>
+        <TableObject Name="Table3" Top="217.35" Width="520.49" Height="56.7" Border.Lines="All">
+          <TableColumn Name="Column17" Width="46.87"/>
+          <TableColumn Name="Column18" Width="112.21"/>
+          <TableColumn Name="Column19" Width="46.06"/>
+          <TableColumn Name="Column20" Width="46.06"/>
+          <TableColumn Name="Column21" Width="46.06"/>
+          <TableColumn Name="Column22" Width="64.96"/>
+          <TableColumn Name="Column23" Width="64.96"/>
+          <TableColumn Name="Column24" Width="93.31"/>
+          <TableRow Name="Row4" Height="56.7">
+            <TableCell Name="Cell25" Border.Lines="All" Text="检查治疗项目:" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell26" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell27" Border.Lines="All" Text="[TotalNamePage2]" Font="宋体, 9pt" ColSpan="6"/>
+            <TableCell Name="Cell28" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell29" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell30" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell31" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell32" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+        </TableObject>
+        <TableObject Name="Table4" Width="520.49" Height="217.35" Border.Lines="All">
+          <TableColumn Name="Column25" Width="46.87"/>
+          <TableColumn Name="Column26" Width="112.21"/>
+          <TableColumn Name="Column27" Width="46.06"/>
+          <TableColumn Name="Column28" Width="46.06"/>
+          <TableColumn Name="Column29" Width="46.06"/>
+          <TableColumn Name="Column30" Width="64.96"/>
+          <TableColumn Name="Column31" Width="64.96"/>
+          <TableColumn Name="Column32" Width="93.31"/>
+          <TableRow Name="Row6" Height="28.35">
+            <TableCell Name="Cell41" Border.Lines="All" Text="姓名: " VertAlign="Center" Font="宋体, 9pt" ColSpan="2">
+              <TextObject Name="Text11" Left="47.25" Width="113.4" Height="28.35" Border.Lines="Left" Text="[admissionRecords.patientName]" VertAlign="Center" Font="宋体, 9pt"/>
+            </TableCell>
+            <TableCell Name="Cell42" Border.Lines="Right, Top, Bottom" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell43" Border.Lines="All" Text="性别：" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell44" Border.Lines="All" Text="[admissionRecords.sexName]" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell45" Border.Lines="All" Text="年龄：" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell46" Border.Lines="All" Text="[admissionRecords.age]" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell47" Border.Lines="All" Text="科别：[admissionRecords.triageDeptName]" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell48" Border.Lines="All" VertAlign="Center" Font="宋体, 8pt"/>
+          </TableRow>
+          <TableRow Name="Row7" Height="28.35">
+            <TableCell Name="Cell49" Border.Lines="All" Text="医院：" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell50" Border.Lines="All" Text="深圳市龙岗中心医院" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell51" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell52" Border.Lines="All" Text="收费:" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell53" Border.Lines="All" Text="[TotalAmountPage2]" VertAlign="Center" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell54" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell55" Border.Lines="All" Text="医疗证号：[admissionRecords.safetyNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt" ColSpan="2"/>
+            <TableCell Name="Cell56" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row8" Height="28.35">
+            <TableCell Name="Cell57" Border.Lines="All" Text="诊断:" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell58" Border.Lines="All" Text="[admissionRecords.diagnoseName]" VertAlign="Center" Font="宋体, 9pt" ColSpan="7"/>
+            <TableCell Name="Cell59" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell60" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell61" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell62" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell63" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell64" Border.Lines="All" VertAlign="Center" Font="宋体, 9pt"/>
+          </TableRow>
+          <TableRow Name="Row9" Height="132.3">
+            <TableCell Name="Cell65" Border.Lines="All" Text="详述&#13;&#10;申请&#13;&#10;理由&#13;&#10;及做&#13;&#10;过何&#13;&#10;种辅&#13;&#10;助检&#13;&#10;查：" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+            <TableCell Name="Cell66" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt" ColSpan="6">
+              <TextObject Name="Text12" Width="378" Height="18.9" Text="主诉：[admissionRecords.narrationName]" VertAlign="Bottom" Font="宋体, 9pt"/>
+              <TextObject Name="Text13" Top="18.9" Width="378" Height="18.9" Text="现病史：[admissionRecords.presentMedicalHistory]" Font="宋体, 9pt"/>
+              <TextObject Name="Text14" Top="37.8" Width="378" Height="18.9" Text="既往史：[admissionRecords.pastMedicalHistory]" Font="宋体, 9pt"/>
+              <TextObject Name="Text15" Top="56.7" Width="378" Height="37.8" Text="体格检查：[admissionRecords.physicalExamination]" Font="宋体, 9pt"/>
+              <TextObject Name="Text16" Top="113.4" Width="94.5" Height="18.9" Text="专科医师签名：" VertAlign="Center" Font="宋体, 9pt"/>
+              <PictureObject Name="Picture1" Left="85.05" Top="103.95" Width="103.95" Height="28.35" DataColumn="dataSource.stampBase"/>
+              <TextObject Name="Text17" Left="245.7" Top="113.4" Width="75.6" Height="18.9" Text="[pacsesInsurance.applyTimeToString]" Format="Date" Format.Format="D" WordWrap="false" Font="宋体, 10pt"/>
+              <TextObject Name="Text18" Left="378" Top="113.4" Width="75.6" Height="18.9" Text="[pacsesInsurance.applyTimeToString]" Format="Date" Format.Format="D" WordWrap="false" Font="宋体, 10pt"/>
+            </TableCell>
+            <TableCell Name="Cell67" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell68" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell69" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell70" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell71" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt"/>
+            <TableCell Name="Cell72" Border.Lines="All" VertAlign="Center" Font="宋体, 10pt">
+              <TextObject Name="Text19" Left="18.9" Top="9.45" Width="75.6" Height="28.35" Text="审核意见&#13;&#10;（盖章）" VertAlign="Center" Font="宋体, 9pt"/>
+            </TableCell>
+          </TableRow>
+        </TableObject>
+      </GroupFooterBand>
+    </GroupHeaderBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,3122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YiJian.Nursing.Application</name>
+    </assembly>
+    <members>
+        <member name="M:YiJian.External.Backgrounds.HisClientAppService.BuildHospitalService(System.String)">
+            <summary>
+            构建代理服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.External.SyncHisPatientInfoAppService.SyncPatientDiagnoseAsync">
+            <summary>
+            同步患者诊断信息
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:YiJian.Nursing.External.SyncHisPatientInfoAppService.SyncPatientBasicInfoAsync">
+            <summary>
+            同步患者入科时间信息
+            </summary>
+            <returns></returns> 
+        </member>
+        <member name="M:YiJian.Nursing.NursingApplicationAutoMapperProfile.IllnessObserveBiz">
+            <summary>
+            病情观察
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.NursingApplicationAutoMapperProfile.ExecutingBiz">
+            <summary>
+            医嘱执行
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.NursingApplicationAutoMapperProfile.NursingBiz">
+            <summary>
+            护理/导管
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.NursingConfigAppService">
+            <summary>
+            描述：
+            创建人： yangkai
+            创建时间：2022/10/10 18:23:10
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.NursingConfigAppService.GetNursingSettings">
+            <summary>
+            获取配置项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingConfigAppService.GetNursingSettingsFromConfiguration">
+            <summary>
+            从配置文件获取配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:YiJian.Nursing.NursingConfigAppService.regexDHHmmss">
+            <summary>
+            1.12:00:00
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.NursingConfigAppService.GetNursingSettingsFromGrpc">
+            <summary>
+            从配置中心获取配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.NursingCanulaAppService">
+            <summary>
+            护士导管护理API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.#ctor(YiJian.Nursing.INursingCanulaRepository,YiJian.Nursing.Settings.IParaModuleRepository,YiJian.Nursing.ICanulaPartRepository,YiJian.Nursing.ICanulaRepository,YiJian.Nursing.IParaItemRepository,YiJian.Nursing.ICanulaDynamicRepository,YiJian.Nursing.IDictRepository)">
+            <summary>
+            护士护理
+            </summary>
+            <param name="iNursingCanulaRepository"></param>
+            <param name="paraModuleRepository"></param>
+            <param name="canulaPartRepository"></param>
+            <param name="canulatRepository"></param>
+            <param name="paraItemRepository"></param>
+            <param name="canulaDynamicRepository"></param>
+            <param name="dictRepository"></param>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.SelectNursingCanulaListAsync(YiJian.Nursing.NursingCanulaInput)">
+            <summary>
+            根据条件查询插管列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.SelectCanulaListAsync(System.Guid,System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            查询管道列表
+            </summary>
+            <param name="canulaId">导管列表Id</param>
+            <param name="state"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.SelectNursingCanulaInfoAsync(System.Guid,System.Guid,System.String)">
+            <summary>
+            查询管道属性项
+            </summary>
+            <param name="id">主键</param>
+            <param name="pI_ID">患者id</param>
+            <param name="moduleCode">模块代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.CreateNursingCanulaInfoAsync(System.String,YiJian.ECIS.NursingCanulaDto)">
+            <summary>
+            新增或修改管道属性
+            </summary>
+            <param name="neworupdate">新增：new，修改：update</param>
+            <param name="nursingCanula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.UpdateNursingCanulaInfoAsync(YiJian.ECIS.NursingCanulaDto,System.Nullable{System.DateTime},YiJian.Nursing.TubeDrawStateEnum)">
+            <summary>
+            拔管/换管/取消拔管
+            </summary>
+            <param name="inDeptTime"></param>
+            <param name="nursingCanulaDto"></param>
+            <param name="state">0拔管，1换管，2取消拔管</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.DeleteNursingCanulaInfoAsync(System.Guid)">
+            <summary>
+            删除一条导管
+            </summary>
+            <param name="guid">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.DynamicItem">
+            <summary>
+            皮肤记录标题方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.Dynamic(YiJian.Nursing.CanulaDto)">
+            <summary>
+            导管记录列表方法
+            </summary>
+            <param name="canula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.SelectCanulaInfoAsync(System.Guid,System.DateTime,System.String)">
+            <summary>
+            查询管道观察项
+            </summary>
+            <param name="canulaId">导管列表ID</param>
+            <param name="nurseTime">观察时间</param>
+            <param name="itemId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.CreateCanulaInfoAsync(YiJian.Nursing.CanulaDto)">
+            <summary>
+            新增或修改管道观察
+            </summary>
+            <param name="canula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.DeleteCanulaInfoAsync(System.Guid)">
+            <summary>
+            删除一条导管记录
+            </summary>
+            <param name="id">Guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.CopyCanulaInfoAsync(System.Guid,System.Int32)">
+            <summary>
+            复制一条数据
+            </summary>
+            <param name="id"></param>
+            <param name="state">复制选中：1，复制上一条：2</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.NursingCanulaAppService.GetAllViewNursingCanulaListAsync(System.Guid,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            全景视图-导管列表
+            </summary>
+            <param name="PID"></param>
+            <param name="StartTime"></param>
+            <param name="EndTime"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.NursingEventAppService">
+            <summary>
+            护理记录 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.NursingEventAppService.CreateNursingEventInfoAsync(YiJian.Nursing.CreateUpdateNursingEventDto)">
+            <summary>
+            新增护理记录
+            </summary>
+            <param name="icuNursingEventDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.CanulaPartAppService">
+            <summary>
+            表:人体图-编号字典 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.CanulaPartAppService.#ctor(YiJian.Nursing.ICanulaPartRepository,YiJian.Nursing.Settings.IParaModuleRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="canulaPartRepository"></param>
+            <param name="paraModuleRepository"></param>
+        </member>
+        <member name="M:YiJian.Nursing.CanulaPartAppService.CreateCanulaPartInfoAsync(YiJian.Nursing.CanulaPartData)">
+            <summary>
+            新增或编辑部位
+            </summary>
+            <param name="canula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.CanulaPartAppService.CanulaPartListAsync(System.Int32,System.String)">
+            <summary>
+            获取人体图部位分布列表
+            </summary>
+            <param name="bodyType">导管：1，皮肤：2</param>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.CanulaPartAppService.DeleteNoticeInfoAsync(System.Guid)">
+            <summary>
+            删除一条人体图部位
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.DictAppService">
+            <summary>
+            表:导管字典-通用业务 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.#ctor(YiJian.Nursing.IDictRepository,YiJian.Nursing.DictManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dictRepository"></param>
+            <param name="dictManager"></param>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.CreateAsync(YiJian.Nursing.DictCreation)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.UpdateAsync(System.Guid,YiJian.Nursing.DictUpdate)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.SelectDictListAsync(System.String,System.String)">
+            <summary>
+            根据模块代码、参数代码查询参数字典列表
+            </summary>
+            <param name="moduleCode">模块代码</param>
+            <param name="paraCode">参数代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.GetListAsync(System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.DictAppService.GetPagedListAsync(YiJian.Nursing.GetDictPagedInput)">
+            <summary>
+            获取分页记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.ParaItemAppService">
+            <summary>
+            表:护理项目表 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.ParaItemAppService.#ctor(YiJian.Nursing.IParaItemRepository,YiJian.Nursing.IDictRepository,Volo.Abp.Guids.IGuidGenerator,YiJian.Nursing.Settings.IParaModuleRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="paraItemRepository"></param>
+            <param name="dictRepository"></param>
+            <param name="guidGenerator"></param>
+            <param name="paraModuleRepository"></param>
+        </member>
+        <member name="M:YiJian.Nursing.ParaItemAppService.SaveParaItemInfoAsync(YiJian.Nursing.ParaItemUpdate)">
+            <summary>
+            新增或修改系统项目
+            </summary> 
+            <param name="itemDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaItemAppService.GetParaItemListAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据条件获取参数项目列表
+            </summary>
+            <param name="moduleCode">模块代码</param>
+            <param name="moduleType">模块类型:(CANULA：导管，SKIN：皮肤，VS：观察项目，IO：出入量，EM：ECMO，BP：血液净化，PC：PICCO)</param>
+            <param name="query">项目名称</param>
+            <param name="deptCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaItemAppService.SaveParaItemListAsync(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量导入参数
+            </summary>
+            <param name="moduleCode">模块代码</param>
+            <param name="groupName">导管(管道属性、管道观察),皮肤(皮肤属性、皮肤观察)观察项和出入量传null</param>
+            <param name="paraCodes">选择的参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaItemAppService.DeleteParaItemInfoAsync(System.Guid)">
+            <summary>
+            删除一条参数(删除系统项目、观察项、出入量、导管、皮肤、ECMO血液净化、PICCO)
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.ParaModuleAppService">
+            <summary>
+            表:模块参数 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.ParaModuleAppService.#ctor(YiJian.Nursing.Settings.IParaModuleRepository,YiJian.Nursing.Settings.ParaModuleManager,YiJian.Nursing.IParaItemRepository,YiJian.Nursing.IDictRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="paraModuleRepository"></param>
+            <param name="paraModuleManager"></param>
+            <param name="paraItemRepository"></param>
+            <param name="dictRepository"></param>
+        </member>
+        <member name="M:YiJian.Nursing.ParaModuleAppService.SaveParaModuleInfoAsync(YiJian.Nursing.Settings.ParaModuleUpdate)">
+            <summary>
+            新增或修改模块参数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaModuleAppService.GetAsync(System.Guid)">
+            <summary>
+            获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaModuleAppService.DeleteParaModuleInfoAsync(System.String)">
+            <summary>
+            删除模块参数(仅用于删除科室项目模块)
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaModuleAppService.GetParaModuleListAsync(System.String,System.String,System.Int32)">
+            <summary>
+            根据条件查询模块参数
+            </summary>
+            <param name="moduleType">模块类型:(CANULA：导管，SKIN：皮肤，VS：观察项目，IO：出入量，EM：ECMO，BP：血液净化，PC：PICCO)</param>
+            <param name="query">名称</param>
+            <param name="isEnabled"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.ParaModuleAppService.SelectModuleListAsync(System.String,System.String)">
+            <summary>
+            查询批量导入参数
+            </summary>
+            <param name="moduleType">模块类型:(CANULA：导管，SKIN：皮肤，VS：观察项目，IO：出入量，EM：ECMO，BP：血液净化，PC：PICCO)</param>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.IllnessObserveAppService">
+            <summary>
+            病情观察API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.IllnessObserveAppService.SaveIllnessObserveAsync(YiJian.Nursing.IllnessObserveMainCreation,System.Threading.CancellationToken)">
+            <summary>
+            新增或修改
+            </summary>
+            <param name="dto"></param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="M:YiJian.Nursing.IllnessObserveAppService.DeleteIllnessObserveAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <exception cref="T:YiJian.ECIS.ShareModel.Exceptions.EcisBusinessException"></exception>
+        </member>
+        <member name="M:YiJian.Nursing.IllnessObserveAppService.GetIllnessObserveAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            根据id获取病情数据
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IllnessObserveAppService.GetIllnessObserveListAsync(YiJian.Nursing.GetIllnessObserveInput,System.Threading.CancellationToken)">
+            <summary>
+            列表
+            </summary>
+            <param name="input"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.IllnessObserveHeaderAppService">
+            <summary>
+            病情观察头部API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.IllnessObserveHeaderAppService.GetIllnessObserveHeaderAsync">
+            <summary>
+            列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IllnessObserveHeaderAppService.SavaIIllnessObserveHeaderAsync(YiJian.Nursing.IllnessObserveHeadercCreation)">
+            <summary>
+            新增
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService">
+            <summary>
+            护理服务：医嘱执行 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeRejectedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-驳回接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.OneKeyRecipeConfirmedListAsync(YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput)">
+            <summary>
+            医嘱-一键复核获取医嘱列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.OneKeyRecipeConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-一键复核接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-复核接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.DoRecipeConformAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput,System.Collections.Generic.List{YiJian.Nursing.Recipes.Entities.Recipe})">
+            <summary>
+            医嘱复核
+            </summary>
+            <param name="input"></param>
+            <param name="recipes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.GetAllFrequencies">
+            <summary>
+            获取全部药品频次信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeStopedConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-停复核接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.DoRecipeStopedConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput,System.Collections.Generic.List{YiJian.Nursing.Recipes.Entities.Recipe})">
+            <summary>
+            医嘱停复核
+            </summary>
+            <param name="input"></param>
+            <param name="recipes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.OneKeyRecipeExecCheckedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-一键核对，不核对需要皮试的项目，不管是否已经做过皮试。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeExecCheckedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-核对接口，会校验列表中是否需要皮试，以及皮试结果是否阳性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeExecRefusedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput)">
+            <summary>
+            医嘱执行-拒绝接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.DoRecipeExecRefuseAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput,System.DateTime,System.Collections.Generic.List{YiJian.Nursing.RecipeExecutes.Entities.RecipeExec},System.Collections.Generic.List{System.String})">
+            <summary>
+            拒绝核对和执行
+            </summary>
+            <param name="input"></param>
+            <param name="optime"></param>
+            <param name="recipeExecs"></param>
+            <param name="nos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeExecUndoRefusedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-取消执行（回退拒绝操作）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.OneKeyRecipeExecutedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-一键执行，不执行需要皮试的项目，不管是否已经做过皮试。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeExecutedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-执行接口，会校验列表中是否需要皮试，以及皮试结果是否阳性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.DoRecipeExecuteAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput,System.DateTime,System.Collections.Generic.List{YiJian.Nursing.RecipeExecutes.Entities.RecipeExec},System.Collections.Generic.List{System.String})">
+            <summary>
+            医嘱执行
+            </summary>
+            <param name="input"></param>
+            <param name="optime"></param>
+            <param name="recipeExecs"></param>
+            <param name="nos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.SkinTestCheckAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput,System.Collections.Generic.List{System.String})">
+            <summary>
+            皮试校验
+            </summary>
+            <param name="input"></param>
+            <param name="nos"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeExecCheckAndExecutedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-核对并执行接口，会校验列表中是否需要皮试，以及皮试结果是否阳性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.DoRecipeExecCheckAndExecuteAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput,System.DateTime,System.Collections.Generic.List{YiJian.Nursing.RecipeExecutes.Entities.RecipeExec},System.Collections.Generic.List{System.String})">
+            <summary>
+            核对并执行
+            </summary>
+            <param name="input"></param>
+            <param name="optime"></param>
+            <param name="recipeExecs"></param>
+            <param name="nos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeInfusionDispensedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液配药接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeInfusionStartedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液开始接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeInfusionSuspendedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecSuspendInput)">
+            <summary>
+            医嘱执行-输液暂停接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeInfusionContinuedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液继续接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeInfusionCompletedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液完成接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.QueryRecipeExecuteAsync(YiJian.Nursing.RecipeExecutes.RecipeListInput)">
+            <summary>
+            查询医嘱执行列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.OneKeyExecListAsync(YiJian.Nursing.RecipeExecutes.OneKeyExecInput)">
+            <summary>
+            一键核对和一键执行请求列表接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.GetDetailAsync(YiJian.Nursing.RecipeExecutes.RecipeDetailInpput)">
+            <summary>
+            根据医嘱号RecipeNo获取医嘱或医嘱执行详细信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.ExecListAsync(YiJian.Nursing.RecipeExecutes.RecipeExecListInput)">
+            <summary>
+            获取医嘱执行的历史记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.ExecuteListAsync(YiJian.Nursing.RecipeExecutes.RecipeExecListInput)">
+            <summary>
+            获取医嘱执行的详细列表记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.SkinTestResultAsync(YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput)">
+            <summary>
+            医嘱执行=皮试结果反馈
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.QueryRecipeExecRefundAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput)">
+            <summary>
+            退药退费-查询列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RecipeExecRefundCancelAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput)">
+            <summary>
+            退药退费-取消接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.SubscribeRefundApprovedAsync(YiJian.ECIS.ShareModel.Etos.NurseExecutes.HisApproveRefundEto)">
+            <summary>
+            接收his的审批结果消息接口（提交被通过、提交被驳回、取消被通过、取消被驳回）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.RefundApprovedAsync(YiJian.ECIS.ShareModel.Etos.NurseExecutes.HisApproveRefundEto)">
+            <summary>
+            来自his的退药退费请求响应处理
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.GetAllViewRecipeExecListAsync(System.Guid,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            全景视图-医嘱执行列表
+            </summary>
+            <param name="PID"></param>
+            <param name="StartTime"></param>
+            <param name="EndTime"></param>
+            <param name="pType"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteAppService.PushHisMedicineToxicAsync">
+            <summary>
+            长嘱拆分任务
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.Recipes.RecipeAppService">
+            <summary>
+            护理服务：对接医嘱服务API
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.SubscribeDoctorAdviceCreatedAsync(System.Collections.Generic.List{YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.SubmitDoctorsAdviceEto})">
+            <summary>
+            医嘱开立消息接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.DoctorAdviceCreatedAsync(System.Collections.Generic.List{YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.SubmitDoctorsAdviceEto})">
+            <summary>
+            医嘱开立消息接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.RecipeCreatedAsync(System.Collections.Generic.List{YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.SubmitDoctorsAdviceEto})">
+            <summary>
+            医嘱开立接口处理
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.GetFrequency(System.String)">
+            <summary>
+            根据药品频次码获取药品频次信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.SubscribeDoctorAdviceCanceledAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStatusEto)">
+            <summary>
+            医嘱作废消息接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.SubscribeHisStatusAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceHisEto)">
+            <summary>
+            医生工作站查询到的his医嘱状态同步到护士工作站
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.DoctorAdviceCanceledAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStatusEto)">
+            <summary>
+            医嘱作废消息接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.RecipeCanceledAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStatusEto)">
+            <summary>
+            医嘱作废接口处理
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.RecipeCancelResultAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStatusEto)">
+            <summary>
+            医嘱作废接口处理
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.SubscribeDoctorAdviceStopedAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStopEto)">
+            <summary>
+            医嘱停嘱消息接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.DoctorAdviceStopedAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStopEto)">
+            <summary>
+            医嘱停嘱消息接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.RecipeAppService.RecipeStopedAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStopEto)">
+            <summary>
+            医嘱停嘱接口处理
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeSplitBackgroundWorker">
+            <summary>
+            医嘱拆顿计划任务
+            暂时不用 使用通用的job服务，如果那边没问题就删掉这个
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeSplitBackgroundWorker.GetAllFrequencies">
+            <summary>
+            获取全部药品频次信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.GrpcServer.GrpcAppService.GetRecipeExecList(NursingService.GetRecipeExecListRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            医嘱执行
+            </summary>
+            <param name="request"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.GrpcServer.GrpcAppService.GetNursingCanulaList(NursingService.GetNursingCanulaRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            导管列表
+            </summary>
+            <param name="request"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MasterDataService.MasterdataReflection">
+            <summary>Holder for reflection information generated from masterdata.proto</summary>
+        </member>
+        <member name="P:MasterDataService.MasterdataReflection.Descriptor">
+            <summary>File descriptor for masterdata.proto</summary>
+        </member>
+        <member name="F:MasterDataService.LabCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsReponse.TargetsFieldNumber">
+            <summary>Field number for the "Targets" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.TargetCodeFieldNumber">
+            <summary>Field number for the "TargetCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.TargetNameFieldNumber">
+            <summary>Field number for the "TargetName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.ProjectCodeFieldNumber">
+            <summary>Field number for the "ProjectCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.SortFieldNumber">
+            <summary>Field number for the "Sort" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.PyCodeFieldNumber">
+            <summary>Field number for the "PyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.WbCodeFieldNumber">
+            <summary>Field number for the "WbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.TargetUnitFieldNumber">
+            <summary>Field number for the "TargetUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.QtyFieldNumber">
+            <summary>Field number for the "Qty" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.PriceFieldNumber">
+            <summary>Field number for the "Price" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.IsActiveFieldNumber">
+            <summary>Field number for the "IsActive" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.InsuranceTypeFieldNumber">
+            <summary>Field number for the "InsuranceType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.ProjectMergeFieldNumber">
+            <summary>Field number for the "ProjectMerge" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabTargetsModel.ProjectTypeFieldNumber">
+            <summary>Field number for the "ProjectType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsReponse.TargetsFieldNumber">
+            <summary>Field number for the "Targets" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.TargetCodeFieldNumber">
+            <summary>Field number for the "TargetCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.TargetNameFieldNumber">
+            <summary>Field number for the "TargetName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.ProjectCodeFieldNumber">
+            <summary>Field number for the "ProjectCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.TargetUnitFieldNumber">
+            <summary>Field number for the "TargetUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.QtyFieldNumber">
+            <summary>Field number for the "Qty" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.PriceFieldNumber">
+            <summary>Field number for the "Price" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.OtherPriceFieldNumber">
+            <summary>Field number for the "OtherPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.SpecificationFieldNumber">
+            <summary>Field number for the "Specification" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.SortFieldNumber">
+            <summary>Field number for the "Sort" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.PyCodeFieldNumber">
+            <summary>Field number for the "PyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.WbCodeFieldNumber">
+            <summary>Field number for the "WbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.InsuranceTypeFieldNumber">
+            <summary>Field number for the "InsuranceType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.SpecialFlagFieldNumber">
+            <summary>Field number for the "SpecialFlag" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.IsActiveFieldNumber">
+            <summary>Field number for the "IsActive" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.ProjectMergeFieldNumber">
+            <summary>Field number for the "ProjectMerge" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamTargetsModel.ProjectTypeFieldNumber">
+            <summary>Field number for the "ProjectType" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetListMedicinesRequest">
+             <summary>
+            根据药品编码集合
+             </summary>
+        </member>
+        <member name="F:MasterDataService.GetListMedicinesRequest.MedicineIdsFieldNumber">
+            <summary>Field number for the "medicineIds" field.</summary>
+        </member>
+        <member name="F:MasterDataService.MedicinesResponse.MedicinesFieldNumber">
+            <summary>Field number for the "medicines" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetMedicineByIdRquest">
+            <summary>
+            查询单个药品信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetMedicineByIdRquest.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetMedicineInvInfoRquest">
+            <summary>
+            查询单个药品信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetMedicineInvInfoRquest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetMedicineInvInfoRquest.SpecificationFieldNumber">
+            <summary>Field number for the "specification" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetMedicineInvInfoRquest.FactoryCodeFieldNumber">
+            <summary>Field number for the "factoryCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetMedicineInvInfoRquest.PharmacyCodeFieldNumber">
+            <summary>Field number for the "pharmacyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.MedicineResponse.MedicineFieldNumber">
+            <summary>Field number for the "medicine" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcMedicineModel">
+            <summary>
+            药品（字段说明参考 Medicine 类）
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ScientificNameFieldNumber">
+            <summary>Field number for the "scientificName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.AliasFieldNumber">
+            <summary>Field number for the "alias" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.AliasPyCodeFieldNumber">
+            <summary>Field number for the "aliasPyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.AliasWbCodeFieldNumber">
+            <summary>Field number for the "aliasWbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.CategoryCodeFieldNumber">
+            <summary>Field number for the "categoryCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.CategoryNameFieldNumber">
+            <summary>Field number for the "categoryName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.DefaultDosageFieldNumber">
+            <summary>Field number for the "defaultDosage" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.DosageQtyFieldNumber">
+            <summary>Field number for the "dosageQty" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.DosageUnitFieldNumber">
+            <summary>Field number for the "dosageUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.UnitFieldNumber">
+            <summary>Field number for the "unit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.PriceFieldNumber">
+            <summary>Field number for the "price" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.SmallPackUnitFieldNumber">
+            <summary>Field number for the "smallPackUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.SmallPackFactorFieldNumber">
+            <summary>Field number for the "smallPackFactor" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.SmallPackPriceFieldNumber">
+            <summary>Field number for the "smallPackPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.BigPackUnitFieldNumber">
+            <summary>Field number for the "bigPackUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.BigPackFactorFieldNumber">
+            <summary>Field number for the "bigPackFactor" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.BigPackPriceFieldNumber">
+            <summary>Field number for the "bigPackPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ChildrenPriceFieldNumber">
+            <summary>Field number for the "childrenPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FixPriceFieldNumber">
+            <summary>Field number for the "fixPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.RetPriceFieldNumber">
+            <summary>Field number for the "retPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.InsuranceTypeFieldNumber">
+            <summary>Field number for the "InsuranceType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.InsuranceCodeFieldNumber">
+            <summary>Field number for the "InsuranceCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.InsurancePayRateFieldNumber">
+            <summary>Field number for the "InsurancePayRate" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FactoryNameFieldNumber">
+            <summary>Field number for the "factoryName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FactoryCodeFieldNumber">
+            <summary>Field number for the "factoryCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.BatchNoFieldNumber">
+            <summary>Field number for the "batchNo" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ExpireDateFieldNumber">
+            <summary>Field number for the "expireDate" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.WeightFieldNumber">
+            <summary>Field number for the "weight" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.WeightUnitFieldNumber">
+            <summary>Field number for the "weightUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.VolumeFieldNumber">
+            <summary>Field number for the "volume" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.VolumeUnitFieldNumber">
+            <summary>Field number for the "volumeUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.RemarksFieldNumber">
+            <summary>Field number for the "remarks" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsSkinTestFieldNumber">
+            <summary>Field number for the "isSkinTest" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsCompoundFieldNumber">
+            <summary>Field number for the "isCompound" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsDrunkFieldNumber">
+            <summary>Field number for the "isDrunk" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ToxicLevelFieldNumber">
+            <summary>Field number for the "toxicLevel" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsHighRiskFieldNumber">
+            <summary>Field number for the "isHighRisk" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsRefrigeratedFieldNumber">
+            <summary>Field number for the "isRefrigerated" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsTumourFieldNumber">
+            <summary>Field number for the "isTumour" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.AntibioticLevelFieldNumber">
+            <summary>Field number for the "antibioticLevel" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsPreciousFieldNumber">
+            <summary>Field number for the "isPrecious" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsInsulinFieldNumber">
+            <summary>Field number for the "isInsulin" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsAnalepticFieldNumber">
+            <summary>Field number for the "isAnaleptic" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsAllergyTestFieldNumber">
+            <summary>Field number for the "isAllergyTest" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsLimitedFieldNumber">
+            <summary>Field number for the "isLimited" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.LimitedNoteFieldNumber">
+            <summary>Field number for the "limitedNote" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.SpecificationFieldNumber">
+            <summary>Field number for the "specification" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.DosageFormFieldNumber">
+            <summary>Field number for the "dosageForm" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ExecDeptCodeFieldNumber">
+            <summary>Field number for the "execDeptCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ExecDeptNameFieldNumber">
+            <summary>Field number for the "execDeptName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.UsageCodeFieldNumber">
+            <summary>Field number for the "usageCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.UsageNameFieldNumber">
+            <summary>Field number for the "usageName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FrequencyCodeFieldNumber">
+            <summary>Field number for the "frequencyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FrequencyNameFieldNumber">
+            <summary>Field number for the "frequencyName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsActiveFieldNumber">
+            <summary>Field number for the "isActive" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IsFirstAidFieldNumber">
+            <summary>Field number for the "isFirstAid" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.PharmacyCodeFieldNumber">
+            <summary>Field number for the "pharmacyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.PharmacyNameFieldNumber">
+            <summary>Field number for the "pharmacyName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.AntibioticPermissionFieldNumber">
+            <summary>Field number for the "antibioticPermission" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.PrescriptionPermissionFieldNumber">
+            <summary>Field number for the "prescriptionPermission" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.StockFieldNumber">
+            <summary>Field number for the "stock" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.BaseFlagFieldNumber">
+            <summary>Field number for the "baseFlag" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.UnpackFieldNumber">
+            <summary>Field number for the "unpack" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.MedicinePropertyFieldNumber">
+            <summary>Field number for the "medicineProperty" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ToxicPropertyFieldNumber">
+            <summary>Field number for the "toxicProperty" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ChargeCodeFieldNumber">
+            <summary>Field number for the "chargeCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.ChargeNameFieldNumber">
+            <summary>Field number for the "chargeName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FrequencyTimesFieldNumber">
+            <summary>Field number for the "frequencyTimes" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FrequencyUnitFieldNumber">
+            <summary>Field number for the "frequencyUnit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.FrequencyExecDayTimesFieldNumber">
+            <summary>Field number for the "frequencyExecDayTimes" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.MedicineIdFieldNumber">
+            <summary>Field number for the "medicineId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.DailyFrequencyFieldNumber">
+            <summary>Field number for the "dailyFrequency" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcMedicineModel.MedicalInsuranceCodeFieldNumber">
+            <summary>Field number for the "medicalInsuranceCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabProjectsResponse.LabProjectsFieldNumber">
+            <summary>Field number for the "labProjects" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetLabProjectByIdRequest">
+             <summary>
+            检验
+             </summary>
+        </member>
+        <member name="F:MasterDataService.GetLabProjectByIdRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetLabProjectByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.LabProjectResponse.LabProjectFieldNumber">
+            <summary>Field number for the "labProject" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcLabProjectModel">
+            <summary>
+            检验项目（字段说明参考 LabProject 类）
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ProjectCodeFieldNumber">
+            <summary>Field number for the "projectCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ProjectNameFieldNumber">
+            <summary>Field number for the "projectName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.CatalogCodeFieldNumber">
+            <summary>Field number for the "catalogCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.CatalogNameFieldNumber">
+            <summary>Field number for the "catalogName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.SpecimenCodeFieldNumber">
+            <summary>Field number for the "specimenCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.SpecimenNameFieldNumber">
+            <summary>Field number for the "specimenName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ExecDeptCodeFieldNumber">
+            <summary>Field number for the "execDeptCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ExecDeptNameFieldNumber">
+            <summary>Field number for the "execDeptName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.PositionCodeFieldNumber">
+            <summary>Field number for the "positionCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.PositionNameFieldNumber">
+            <summary>Field number for the "positionName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.SortFieldNumber">
+            <summary>Field number for the "sort" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.UnitFieldNumber">
+            <summary>Field number for the "unit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.PriceFieldNumber">
+            <summary>Field number for the "price" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.OtherPriceFieldNumber">
+            <summary>Field number for the "otherPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ContainerCodeFieldNumber">
+            <summary>Field number for the "containerCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ContainerNameFieldNumber">
+            <summary>Field number for the "containerName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.IsActiveFieldNumber">
+            <summary>Field number for the "isActive" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.PlatformTypeFieldNumber">
+            <summary>Field number for the "platformType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ChargeCodeFieldNumber">
+            <summary>Field number for the "chargeCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.ChargeNameFieldNumber">
+            <summary>Field number for the "chargeName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.AddCardFieldNumber">
+            <summary>Field number for the "addCard" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.GuideCodeFieldNumber">
+            <summary>Field number for the "guideCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabProjectModel.GuideNameFieldNumber">
+            <summary>Field number for the "guideName" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetAllExamProjectsRequest">
+             <summary>
+            检查
+             </summary>
+        </member>
+        <member name="F:MasterDataService.ExamProjectsResponse.ExamProjectsFieldNumber">
+            <summary>Field number for the "examProjects" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetExamProjectByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamProjectResponse.ExamProjectFieldNumber">
+            <summary>Field number for the "examProject" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcExamProjectModel">
+            <summary>
+            检查项目（字段说明参考 ExamProject 类）
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.ProjectCodeFieldNumber">
+            <summary>Field number for the "projectCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.ProjectNameFieldNumber">
+            <summary>Field number for the "projectName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.CatalogCodeFieldNumber">
+            <summary>Field number for the "catalogCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.CatalogNameFieldNumber">
+            <summary>Field number for the "catalogName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.SortFieldNumber">
+            <summary>Field number for the "sort" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PartCodeFieldNumber">
+            <summary>Field number for the "partCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PartNameFieldNumber">
+            <summary>Field number for the "partName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.UnitFieldNumber">
+            <summary>Field number for the "unit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PriceFieldNumber">
+            <summary>Field number for the "price" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.ExecDeptCodeFieldNumber">
+            <summary>Field number for the "execDeptCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.ExecDeptNameFieldNumber">
+            <summary>Field number for the "execDeptName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PositionCodeFieldNumber">
+            <summary>Field number for the "positionCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PositionNameFieldNumber">
+            <summary>Field number for the "positionName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.RoomCodeFieldNumber">
+            <summary>Field number for the "roomCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.RoomNameFieldNumber">
+            <summary>Field number for the "roomName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.IsActiveFieldNumber">
+            <summary>Field number for the "isActive" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.PlatformTypeFieldNumber">
+            <summary>Field number for the "platformType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.ChargeCodeFieldNumber">
+            <summary>Field number for the "chargeCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.ChargeNameFieldNumber">
+            <summary>Field number for the "chargeName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.FirstCatalogCodeFieldNumber">
+            <summary>Field number for the "firstCatalogCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.FirstCatalogNameFieldNumber">
+            <summary>Field number for the "firstCatalogName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.AddCardFieldNumber">
+            <summary>Field number for the "addCard" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.GuideCodeFieldNumber">
+            <summary>Field number for the "guideCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamProjectModel.GuideNameFieldNumber">
+            <summary>Field number for the "guideName" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetAllTreatProjectsRequest">
+             <summary>
+            诊疗
+             </summary>
+        </member>
+        <member name="F:MasterDataService.TreatProjectsResponse.TreatProjectsFieldNumber">
+            <summary>Field number for the "treatProjects" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetTreatProjectByIdRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetTreatProjectByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.TreatProjectResponse.TreatProjectFieldNumber">
+            <summary>Field number for the "treatProject" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetTreatByUsageCodeRequest.UsageCodeFieldNumber">
+            <summary>Field number for the "usageCode" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcTreatProjectModel">
+            <summary>
+            诊疗项目（字段说明参考 Treat 类）
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.TreatCodeFieldNumber">
+            <summary>Field number for the "treatCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.TreatNameFieldNumber">
+            <summary>Field number for the "treatName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.UnitFieldNumber">
+            <summary>Field number for the "unit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.PriceFieldNumber">
+            <summary>Field number for the "price" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.OtherPriceFieldNumber">
+            <summary>Field number for the "otherPrice" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.CategoryCodeFieldNumber">
+            <summary>Field number for the "categoryCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.CategoryNameFieldNumber">
+            <summary>Field number for the "categoryName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.SpecificationFieldNumber">
+            <summary>Field number for the "specification" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.FrequencyCodeFieldNumber">
+            <summary>Field number for the "frequencyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.ExecDeptCodeFieldNumber">
+            <summary>Field number for the "execDeptCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.ExecDeptNameFieldNumber">
+            <summary>Field number for the "execDeptName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.FeeTypeMainCodeFieldNumber">
+            <summary>Field number for the "feeTypeMainCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.FeeTypeSubCodeFieldNumber">
+            <summary>Field number for the "feeTypeSubCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.PlatformTypeFieldNumber">
+            <summary>Field number for the "platformType" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.ChargeCodeFieldNumber">
+            <summary>Field number for the "chargeCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.ChargeNameFieldNumber">
+            <summary>Field number for the "chargeName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.ProjectMergeFieldNumber">
+            <summary>Field number for the "projectMerge" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.DictionaryCodeFieldNumber">
+            <summary>Field number for the "DictionaryCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.DictionaryNameFieldNumber">
+            <summary>Field number for the "DictionaryName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcTreatProjectModel.AdditionalFieldNumber">
+            <summary>Field number for the "additional" field.</summary>
+        </member>
+        <member name="F:MasterDataService.FrequenciesResponse.FrequenciesFieldNumber">
+            <summary>Field number for the "frequencies" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetFrequencyByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.FrequencyResponse.FrequencyFieldNumber">
+            <summary>Field number for the "frequency" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcFrequencyModel">
+            <summary>
+            频次信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.FrequencyCodeFieldNumber">
+            <summary>Field number for the "frequencyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.FrequencyNameFieldNumber">
+            <summary>Field number for the "frequencyName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.FullNameFieldNumber">
+            <summary>Field number for the "fullName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.TimesFieldNumber">
+            <summary>Field number for the "times" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.UnitFieldNumber">
+            <summary>Field number for the "unit" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.ExecDayTimesFieldNumber">
+            <summary>Field number for the "execDayTimes" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.WeeksFieldNumber">
+            <summary>Field number for the "weeks" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.IsActiveFieldNumber">
+            <summary>Field number for the "isActive" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.DailyFrequencyFieldNumber">
+            <summary>Field number for the "dailyFrequency" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcFrequencyModel.FrequencyUnitFieldNumber">
+            <summary>Field number for the "frequencyUnit" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetMedicineUsageByCodeRequest">
+            <summary>
+            用法信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetMedicineUsageByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.MedicineUsageResponse.UsageFieldNumber">
+            <summary>Field number for the "usage" field.</summary>
+        </member>
+        <member name="F:MasterDataService.MedicineUsageModel.UsageCodeFieldNumber">
+            <summary>Field number for the "usageCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.MedicineUsageModel.UsageNameFieldNumber">
+            <summary>Field number for the "usageName" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetChargeInfoRequest">
+            <summary>
+            费别请求参数
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetChargeInfoRequest.CodesFieldNumber">
+            <summary>Field number for the "codes" field.</summary>
+        </member>
+        <member name="T:MasterDataService.ChargeInfoResponse">
+             <summary>
+            费别返回数据
+             </summary>
+        </member>
+        <member name="F:MasterDataService.ChargeInfoResponse.ChargeInfosFieldNumber">
+            <summary>Field number for the "chargeInfos" field.</summary>
+        </member>
+        <member name="T:MasterDataService.ChargeInfoModel">
+             <summary>
+            费别模型
+             </summary>
+        </member>
+        <member name="F:MasterDataService.ChargeInfoModel.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ChargeInfoModel.ChargeCodeFieldNumber">
+            <summary>Field number for the "chargeCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ChargeInfoModel.ChargeNameFieldNumber">
+            <summary>Field number for the "chargeName" field.</summary>
+        </member>
+        <member name="T:MasterDataService.AdviceExtendedAttributesRequest">
+             <summary>
+            医嘱的扩展属性
+             </summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesRequest.ItemTypeFieldNumber">
+            <summary>Field number for the "itemType" field.</summary>
+        </member>
+        <member name="T:MasterDataService.AdviceExtendedAttributesResponse">
+             <summary>
+            医嘱的扩展属性
+             </summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.ScientificNameFieldNumber">
+            <summary>Field number for the "scientificName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.AliasFieldNumber">
+            <summary>Field number for the "alias" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.AliasPyCodeFieldNumber">
+            <summary>Field number for the "aliasPyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AdviceExtendedAttributesResponse.AliasWbCodeFieldNumber">
+            <summary>Field number for the "aliasWbCode" field.</summary>
+        </member>
+        <member name="T:MasterDataService.SeparationRequest">
+             <summary>
+            分方请求参数
+             </summary>
+        </member>
+        <member name="F:MasterDataService.SeparationRequest.SeparationIdFieldNumber">
+            <summary>Field number for the "separationId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.AllSeparationResponse.SeparationsFieldNumber">
+            <summary>Field number for the "separations" field.</summary>
+        </member>
+        <member name="T:MasterDataService.SeparationResponse">
+             <summary>
+            分方配置的用药途径集合
+             </summary>
+        </member>
+        <member name="F:MasterDataService.SeparationResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationResponse.TitleFieldNumber">
+            <summary>Field number for the "title" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationResponse.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationResponse.PrintSettingIdFieldNumber">
+            <summary>Field number for the "printSettingId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationResponse.UsagesFieldNumber">
+            <summary>Field number for the "usages" field.</summary>
+        </member>
+        <member name="T:MasterDataService.UsagesModel">
+             <summary>
+            用药途径模型
+             </summary>
+        </member>
+        <member name="F:MasterDataService.UsagesModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.UsagesModel.UsageCodeFieldNumber">
+            <summary>Field number for the "usageCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.UsagesModel.UsageNameFieldNumber">
+            <summary>Field number for the "usageName" field.</summary>
+        </member>
+        <member name="T:MasterDataService.SeparationListResponse">
+             <summary>
+            途径分方和打印模板对应的参数
+             </summary>
+        </member>
+        <member name="F:MasterDataService.SeparationListResponse.SeparationFieldNumber">
+            <summary>Field number for the "Separation" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationListModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationListModel.TitleFieldNumber">
+            <summary>Field number for the "title" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationListModel.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationListModel.PrintSettingIdFieldNumber">
+            <summary>Field number for the "printSettingId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.SeparationListModel.UsageCodeFieldNumber">
+            <summary>Field number for the "usageCode" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetLabSpecimenByIdRequest">
+            <summary>
+            获取标本请求参数
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetLabSpecimenByIdRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetLabSpecimenByCodeRequest">
+            <summary>
+            获取标本请求参数
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetLabSpecimenByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="T:MasterDataService.LabSpecimenResponse">
+            <summary>
+            标本返回结果
+            </summary>
+        </member>
+        <member name="F:MasterDataService.LabSpecimenResponse.SpecimenFieldNumber">
+            <summary>Field number for the "specimen" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcLabSpecimenModel">
+            <summary>
+            标本信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenModel.SpecimenCodeFieldNumber">
+            <summary>Field number for the "specimenCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenModel.SpecimenNameFieldNumber">
+            <summary>Field number for the "specimenName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenModel.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenModel.IsActiveFieldNumber">
+            <summary>Field number for the "isActive" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetLabSpecimenPositionByCodeRequest">
+            <summary>
+            获取标本采集部位请求参数
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetLabSpecimenPositionByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="T:MasterDataService.LabSpecimenPositionResponse">
+            <summary>
+            标本采集部位返回结果
+            </summary>
+        </member>
+        <member name="F:MasterDataService.LabSpecimenPositionResponse.PositionFieldNumber">
+            <summary>Field number for the "position" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcLabSpecimenPositionModel">
+            <summary>
+            标本采集部位信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.SpecimenCodeFieldNumber">
+            <summary>Field number for the "specimenCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.SpecimenNameFieldNumber">
+            <summary>Field number for the "specimenName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.SpecimenPartCodeFieldNumber">
+            <summary>Field number for the "specimenPartCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.SpecimenPartNameFieldNumber">
+            <summary>Field number for the "specimenPartName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcLabSpecimenPositionModel.IsActiveFieldNumber">
+            <summary>Field number for the "isActive" field.</summary>
+        </member>
+        <member name="P:MasterDataService.GrpcLabSpecimenPositionModel.IsActive">
+            <summary>
+             string wbCode = 8;
+            </summary>
+        </member>
+        <member name="T:MasterDataService.GetExamPartByCodeRequest">
+            <summary>
+            获取检查部位
+            </summary>
+        </member>
+        <member name="F:MasterDataService.GetExamPartByCodeRequest.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ExamPartResponse.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamPartModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamPartModel.PartCodeFieldNumber">
+            <summary>Field number for the "partCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamPartModel.PartNameFieldNumber">
+            <summary>Field number for the "partName" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamPartModel.PyCodeFieldNumber">
+            <summary>Field number for the "pyCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GrpcExamPartModel.WbCodeFieldNumber">
+            <summary>Field number for the "wbCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeRequest.UsageCodeFieldNumber">
+            <summary>Field number for the "UsageCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeReponse.ModelFieldNumber">
+            <summary>Field number for the "Model" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeModel.SeparationIdFieldNumber">
+            <summary>Field number for the "SeparationId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeModel.PrintSettingIdFieldNumber">
+            <summary>Field number for the "PrintSettingId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeModel.TitleFieldNumber">
+            <summary>Field number for the "Title" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeModel.CodeFieldNumber">
+            <summary>Field number for the "Code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.GetSeparationsByCodeModel.UsageCodeFieldNumber">
+            <summary>Field number for the "usageCode" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetDepartmentsRequest">
+            <summary>
+            获取科室请求
+            </summary>
+        </member>
+        <member name="T:MasterDataService.DepartmentsResponse">
+            <summary>
+            科室信息列表
+            </summary>
+        </member>
+        <member name="F:MasterDataService.DepartmentsResponse.ItemsFieldNumber">
+            <summary>Field number for the "items" field.</summary>
+        </member>
+        <member name="T:MasterDataService.DepartmentModel">
+            <summary>
+            科室信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.DepartmentModel.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:MasterDataService.DepartmentModel.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.DepartmentModel.RegisterCodeFieldNumber">
+            <summary>Field number for the "registerCode" field.</summary>
+        </member>
+        <member name="F:MasterDataService.DepartmentModel.IsActivedFieldNumber">
+            <summary>Field number for the "isActived" field.</summary>
+        </member>
+        <member name="T:MasterDataService.GetConsultingRoomsRequest">
+            <summary>
+            获取诊室请求
+            </summary>
+        </member>
+        <member name="T:MasterDataService.ConsultingRoomsResponse">
+            <summary>
+            诊室列表
+            </summary>
+        </member>
+        <member name="F:MasterDataService.ConsultingRoomsResponse.ItemsFieldNumber">
+            <summary>Field number for the "items" field.</summary>
+        </member>
+        <member name="T:MasterDataService.ConsultingRoomModel">
+            <summary>
+            诊室信息
+            </summary>
+        </member>
+        <member name="F:MasterDataService.ConsultingRoomModel.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ConsultingRoomModel.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ConsultingRoomModel.CallScreenIpFieldNumber">
+            <summary>Field number for the "callScreenIp" field.</summary>
+        </member>
+        <member name="T:MasterDataService.MedicineIdsRequest">
+             <summary>
+            药品id集合
+             </summary>
+        </member>
+        <member name="F:MasterDataService.MedicineIdsRequest.MedicineIdsFieldNumber">
+            <summary>Field number for the "medicineIds" field.</summary>
+        </member>
+        <member name="T:MasterDataService.ToxicListResponse">
+             <summary>
+            药理列表
+             </summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListResponse.ToxicListFieldNumber">
+            <summary>Field number for the "ToxicList" field.</summary>
+        </member>
+        <member name="T:MasterDataService.ToxicListModel">
+             <summary>
+            药理模型
+             </summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.MedicineIdFieldNumber">
+            <summary>Field number for the "medicineId" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsSkinTestFieldNumber">
+            <summary>Field number for the "isSkinTest" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsCompoundFieldNumber">
+            <summary>Field number for the "isCompound" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsDrunkFieldNumber">
+            <summary>Field number for the "isDrunk" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.ToxicLevelFieldNumber">
+            <summary>Field number for the "toxicLevel" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsHighRiskFieldNumber">
+            <summary>Field number for the "isHighRisk" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsRefrigeratedFieldNumber">
+            <summary>Field number for the "isRefrigerated" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsTumourFieldNumber">
+            <summary>Field number for the "isTumour" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.AntibioticLevelFieldNumber">
+            <summary>Field number for the "antibioticLevel" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsPreciousFieldNumber">
+            <summary>Field number for the "isPrecious" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsInsulinFieldNumber">
+            <summary>Field number for the "isInsulin" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsAnalepticFieldNumber">
+            <summary>Field number for the "isAnaleptic" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsAllergyTestFieldNumber">
+            <summary>Field number for the "isAllergyTest" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.IsLimitedFieldNumber">
+            <summary>Field number for the "isLimited" field.</summary>
+        </member>
+        <member name="F:MasterDataService.ToxicListModel.LimitedNoteFieldNumber">
+            <summary>Field number for the "limitedNote" field.</summary>
+        </member>
+        <member name="P:MasterDataService.GrpcMasterData.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:MasterDataService.GrpcMasterData.GrpcMasterDataClient">
+            <summary>Client for GrpcMasterData</summary>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for GrpcMasterData</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for GrpcMasterData that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllMedicines(MasterDataService.GetAllMedicinesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询全部药品
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllMedicines(MasterDataService.GetAllMedicinesRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询全部药品
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllMedicinesAsync(MasterDataService.GetAllMedicinesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询全部药品
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllMedicinesAsync(MasterDataService.GetAllMedicinesRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询全部药品
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineListByCodes(MasterDataService.GetListMedicinesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询指定的药品集合
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineListByCodes(MasterDataService.GetListMedicinesRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询指定的药品集合
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineListByCodesAsync(MasterDataService.GetListMedicinesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询指定的药品集合
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineListByCodesAsync(MasterDataService.GetListMedicinesRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询指定的药品集合
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetToxicListByMedicineIds(MasterDataService.MedicineIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            跟进药品Id列表获取药理信息集合
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetToxicListByMedicineIds(MasterDataService.MedicineIdsRequest,Grpc.Core.CallOptions)">
+             <summary>
+            跟进药品Id列表获取药理信息集合
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetToxicListByMedicineIdsAsync(MasterDataService.MedicineIdsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            跟进药品Id列表获取药理信息集合
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetToxicListByMedicineIdsAsync(MasterDataService.MedicineIdsRequest,Grpc.Core.CallOptions)">
+             <summary>
+            跟进药品Id列表获取药理信息集合
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineById(MasterDataService.GetMedicineByIdRquest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个药品信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineById(MasterDataService.GetMedicineByIdRquest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个药品信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineByIdAsync(MasterDataService.GetMedicineByIdRquest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个药品信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineByIdAsync(MasterDataService.GetMedicineByIdRquest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个药品信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineInvInfo(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过单个药品库存信息
+            </summary>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineInvInfo(Grpc.Core.CallOptions)">
+            <summary>
+            通过单个药品库存信息
+            </summary>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllLabProjects(MasterDataService.GetAllLabProjectsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询全部检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllLabProjects(MasterDataService.GetAllLabProjectsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询全部检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllLabProjectsAsync(MasterDataService.GetAllLabProjectsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询全部检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllLabProjectsAsync(MasterDataService.GetAllLabProjectsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询全部检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectById(MasterDataService.GetLabProjectByIdRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过Id查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectById(MasterDataService.GetLabProjectByIdRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过Id查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectByIdAsync(MasterDataService.GetLabProjectByIdRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过Id查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectByIdAsync(MasterDataService.GetLabProjectByIdRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过Id查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectByCode(MasterDataService.GetLabProjectByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectByCode(MasterDataService.GetLabProjectByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectByCodeAsync(MasterDataService.GetLabProjectByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabProjectByCodeAsync(MasterDataService.GetLabProjectByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个检验项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllExamProjects(MasterDataService.GetAllExamProjectsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询所有检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllExamProjects(MasterDataService.GetAllExamProjectsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询所有检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllExamProjectsAsync(MasterDataService.GetAllExamProjectsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询所有检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllExamProjectsAsync(MasterDataService.GetAllExamProjectsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询所有检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamProjectByCode(MasterDataService.GetExamProjectByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamProjectByCode(MasterDataService.GetExamProjectByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamProjectByCodeAsync(MasterDataService.GetExamProjectByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamProjectByCodeAsync(MasterDataService.GetExamProjectByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个检查项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllTreatProjects(MasterDataService.GetAllTreatProjectsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询所有诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllTreatProjects(MasterDataService.GetAllTreatProjectsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询所有诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllTreatProjectsAsync(MasterDataService.GetAllTreatProjectsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询所有诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllTreatProjectsAsync(MasterDataService.GetAllTreatProjectsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询所有诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectById(MasterDataService.GetTreatProjectByIdRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过ID查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectById(MasterDataService.GetTreatProjectByIdRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过ID查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectByIdAsync(MasterDataService.GetTreatProjectByIdRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过ID查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectByIdAsync(MasterDataService.GetTreatProjectByIdRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过ID查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectByCode(MasterDataService.GetTreatProjectByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectByCode(MasterDataService.GetTreatProjectByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectByCodeAsync(MasterDataService.GetTreatProjectByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过编码查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatProjectByCodeAsync(MasterDataService.GetTreatProjectByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过编码查询单个诊疗项目
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllFrequencies(MasterDataService.GetAllFrequenciesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询全部频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllFrequencies(MasterDataService.GetAllFrequenciesRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询全部频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllFrequenciesAsync(MasterDataService.GetAllFrequenciesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询全部频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAllFrequenciesAsync(MasterDataService.GetAllFrequenciesRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询全部频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetFrequencyByCode(MasterDataService.GetFrequencyByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过频次编码查询频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetFrequencyByCode(MasterDataService.GetFrequencyByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过频次编码查询频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetFrequencyByCodeAsync(MasterDataService.GetFrequencyByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过频次编码查询频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetFrequencyByCodeAsync(MasterDataService.GetFrequencyByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            通过频次编码查询频次信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineUsageByCode(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            通过用法编码查询用法信息
+            </summary>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetMedicineUsageByCode(Grpc.Core.CallOptions)">
+            <summary>
+            通过用法编码查询用法信息
+            </summary>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetChargeInfos(MasterDataService.GetChargeInfoRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取费别的信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetChargeInfos(MasterDataService.GetChargeInfoRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取费别的信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetChargeInfosAsync(MasterDataService.GetChargeInfoRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取费别的信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetChargeInfosAsync(MasterDataService.GetChargeInfoRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取费别的信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenById(MasterDataService.GetLabSpecimenByIdRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenById(MasterDataService.GetLabSpecimenByIdRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenByIdAsync(MasterDataService.GetLabSpecimenByIdRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenByIdAsync(MasterDataService.GetLabSpecimenByIdRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenByCode(MasterDataService.GetLabSpecimenByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenByCode(MasterDataService.GetLabSpecimenByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenByCodeAsync(MasterDataService.GetLabSpecimenByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenByCodeAsync(MasterDataService.GetLabSpecimenByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取标本信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenPositionByCode(MasterDataService.GetLabSpecimenPositionByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取标本采集部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenPositionByCode(MasterDataService.GetLabSpecimenPositionByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取标本采集部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenPositionByCodeAsync(MasterDataService.GetLabSpecimenPositionByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取标本采集部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSpecimenPositionByCodeAsync(MasterDataService.GetLabSpecimenPositionByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取标本采集部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamPartByCode(MasterDataService.GetExamPartByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取检查部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamPartByCode(MasterDataService.GetExamPartByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取检查部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamPartByCodeAsync(MasterDataService.GetExamPartByCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            获取检查部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamPartByCodeAsync(MasterDataService.GetExamPartByCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            获取检查部位信息
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAdviceExtendedAttributes(MasterDataService.AdviceExtendedAttributesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            获取医嘱扩展属性【拼音，五笔，别名...属性】
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAdviceExtendedAttributes(MasterDataService.AdviceExtendedAttributesRequest,Grpc.Core.CallOptions)">
+             <summary>
+            获取医嘱扩展属性【拼音，五笔，别名...属性】
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAdviceExtendedAttributesAsync(MasterDataService.AdviceExtendedAttributesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            获取医嘱扩展属性【拼音，五笔，别名...属性】
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetAdviceExtendedAttributesAsync(MasterDataService.AdviceExtendedAttributesRequest,Grpc.Core.CallOptions)">
+             <summary>
+            获取医嘱扩展属性【拼音，五笔，别名...属性】
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSeparationsList(MasterDataService.GetAllSeparationRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            获取分方配置列表
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSeparationsList(MasterDataService.GetAllSeparationRequest,Grpc.Core.CallOptions)">
+             <summary>
+            获取分方配置列表
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSeparationsListAsync(MasterDataService.GetAllSeparationRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            获取分方配置列表
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetSeparationsListAsync(MasterDataService.GetAllSeparationRequest,Grpc.Core.CallOptions)">
+             <summary>
+            获取分方配置列表
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetDepartments(MasterDataService.GetDepartmentsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询科室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetDepartments(MasterDataService.GetDepartmentsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询科室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetDepartmentsAsync(MasterDataService.GetDepartmentsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询科室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetDepartmentsAsync(MasterDataService.GetDepartmentsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询科室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetConsultingRooms(MasterDataService.GetConsultingRoomsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询诊室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetConsultingRooms(MasterDataService.GetConsultingRoomsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询诊室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetConsultingRoomsAsync(MasterDataService.GetConsultingRoomsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询诊室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetConsultingRoomsAsync(MasterDataService.GetConsultingRoomsRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询诊室
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabTargetsByCode(MasterDataService.LabCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            跟进检查项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabTargetsByCode(MasterDataService.LabCodeRequest,Grpc.Core.CallOptions)">
+             <summary>
+            跟进检查项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabTargetsByCodeAsync(MasterDataService.LabCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            跟进检查项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetLabTargetsByCodeAsync(MasterDataService.LabCodeRequest,Grpc.Core.CallOptions)">
+             <summary>
+            跟进检查项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamTargetsByCode(MasterDataService.ExamCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            跟进检验项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamTargetsByCode(MasterDataService.ExamCodeRequest,Grpc.Core.CallOptions)">
+             <summary>
+            跟进检验项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamTargetsByCodeAsync(MasterDataService.ExamCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+             <summary>
+            跟进检验项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+             <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+             <param name="cancellationToken">An optional token for canceling the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetExamTargetsByCodeAsync(MasterDataService.ExamCodeRequest,Grpc.Core.CallOptions)">
+             <summary>
+            跟进检验项code获取所有子项的信息
+             </summary>
+             <param name="request">The request to send to the server.</param>
+             <param name="options">The options for the call.</param>
+             <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatByUsage(MasterDataService.GetTreatByUsageCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询处置
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatByUsage(MasterDataService.GetTreatByUsageCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询处置
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatByUsageAsync(MasterDataService.GetTreatByUsageCodeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            查询处置
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.GetTreatByUsageAsync(MasterDataService.GetTreatByUsageCodeRequest,Grpc.Core.CallOptions)">
+            <summary>
+            查询处置
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:MasterDataService.GrpcMasterData.GrpcMasterDataClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="T:NursingService.NursingReflection">
+            <summary>Holder for reflection information generated from nursing.proto</summary>
+        </member>
+        <member name="P:NursingService.NursingReflection.Descriptor">
+            <summary>File descriptor for nursing.proto</summary>
+        </member>
+        <member name="F:NursingService.GetRecipeExecListRequest.PIDFieldNumber">
+            <summary>Field number for the "PID" field.</summary>
+        </member>
+        <member name="F:NursingService.GetRecipeExecListRequest.StartTimeFieldNumber">
+            <summary>Field number for the "StartTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GetRecipeExecListRequest.EndTimeFieldNumber">
+            <summary>Field number for the "EndTime" field.</summary>
+        </member>
+        <member name="F:NursingService.RecipeExecListResponse.RecipeExecFieldNumber">
+            <summary>Field number for the "recipeExec" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.IfCalcInFieldNumber">
+            <summary>Field number for the "IfCalcIn" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.CheckNurseCodeFieldNumber">
+            <summary>Field number for the "CheckNurseCode" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.CheckNurseNameFieldNumber">
+            <summary>Field number for the "CheckNurseName" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.CheckStatusFieldNumber">
+            <summary>Field number for the "CheckStatus" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.CheckTimeFieldNumber">
+            <summary>Field number for the "CheckTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.ConversionTimeFieldNumber">
+            <summary>Field number for the "ConversionTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.DosageQtyFieldNumber">
+            <summary>Field number for the "DosageQty" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.DosageUnitFieldNumber">
+            <summary>Field number for the "DosageUnit" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.ExcuteNurseCodeFieldNumber">
+            <summary>Field number for the "ExcuteNurseCode" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.ExcuteNurseNameFieldNumber">
+            <summary>Field number for the "ExcuteNurseName" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.ExcuteNurseTimeFieldNumber">
+            <summary>Field number for the "ExcuteNurseTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.ExecuteTypeFieldNumber">
+            <summary>Field number for the "ExecuteType" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.FinishNurseFieldNumber">
+            <summary>Field number for the "FinishNurse" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.FinishNurseCodeFieldNumber">
+            <summary>Field number for the "FinishNurseCode" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.FinishTimeFieldNumber">
+            <summary>Field number for the "FinishTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.NurseTimeFieldNumber">
+            <summary>Field number for the "NurseTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.NursingStatusFieldNumber">
+            <summary>Field number for the "NursingStatus" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.PlanExcuteTimeFieldNumber">
+            <summary>Field number for the "PlanExcuteTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.SortNumFieldNumber">
+            <summary>Field number for the "SortNum" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.TotalDosageFieldNumber">
+            <summary>Field number for the "TotalDosage" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.UsageCodeFieldNumber">
+            <summary>Field number for the "UsageCode" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcRecipeExecModel.UsageNameFieldNumber">
+            <summary>Field number for the "UsageName" field.</summary>
+        </member>
+        <member name="F:NursingService.GetNursingCanulaRequest.PIDFieldNumber">
+            <summary>Field number for the "PID" field.</summary>
+        </member>
+        <member name="F:NursingService.GetNursingCanulaRequest.StartTimeFieldNumber">
+            <summary>Field number for the "StartTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GetNursingCanulaRequest.EndTimeFieldNumber">
+            <summary>Field number for the "EndTime" field.</summary>
+        </member>
+        <member name="F:NursingService.NursingCanulaListResponse.NursingCanulaFieldNumber">
+            <summary>Field number for the "nursingCanula" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.IdFieldNumber">
+            <summary>Field number for the "Id" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.StartTimeFieldNumber">
+            <summary>Field number for the "StartTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.StopTimeFieldNumber">
+            <summary>Field number for the "StopTime" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.ModuleCodeFieldNumber">
+            <summary>Field number for the "ModuleCode" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.ModuleNameFieldNumber">
+            <summary>Field number for the "ModuleName" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.CanulaNameFieldNumber">
+            <summary>Field number for the "CanulaName" field.</summary>
+        </member>
+        <member name="F:NursingService.GrpcNursingCanulaModel.CanulaPartFieldNumber">
+            <summary>Field number for the "CanulaPart" field.</summary>
+        </member>
+        <member name="P:NursingService.GrpcNursing.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:NursingService.GrpcNursing.GrpcNursingBase">
+            <summary>Base class for server-side implementations of GrpcNursing</summary>
+        </member>
+        <member name="M:NursingService.GrpcNursing.GrpcNursingBase.GetRecipeExecList(NursingService.GetRecipeExecListRequest,Grpc.Core.ServerCallContext)">
+            <summary>
+            查询全部医嘱执行
+            </summary>
+            <param name="request">The request received from the client.</param>
+            <param name="context">The context of the server-side call handler being invoked.</param>
+            <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:NursingService.GrpcNursing.GrpcNursingBase.GetNursingCanulaList(NursingService.GetNursingCanulaRequest,Grpc.Core.ServerCallContext)">
+             <summary>
+            查询患者导管列表
+             </summary>
+             <param name="request">The request received from the client.</param>
+             <param name="context">The context of the server-side call handler being invoked.</param>
+             <returns>The response to send back to the client (wrapped by a task).</returns>
+        </member>
+        <member name="M:NursingService.GrpcNursing.BindService(NursingService.GrpcNursing.GrpcNursingBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:NursingService.GrpcNursing.BindService(Grpc.Core.ServiceBinderBase,NursingService.GrpcNursing.GrpcNursingBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+    </members>
+</doc>

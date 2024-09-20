@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.Call</RootNamespace>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.ECIS.Call.Domain\YiJian.ECIS.Call.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

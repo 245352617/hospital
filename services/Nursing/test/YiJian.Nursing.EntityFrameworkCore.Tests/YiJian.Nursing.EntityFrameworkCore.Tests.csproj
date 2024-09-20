@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Nursing</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.0" />
+    <ProjectReference Include="..\..\src\YiJian.Nursing.EntityFrameworkCore\YiJian.Nursing.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\YiJian.Nursing.TestBase\YiJian.Nursing.TestBase.csproj" />
+	<PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="$(AbpVersion)" />
+  </ItemGroup>
+
+</Project>

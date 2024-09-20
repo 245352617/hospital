@@ -1,0 +1,191 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <Platforms>AnyCPU;x86</Platforms>
+    <UserSecretsId>0a532653-558b-4d93-84c4-a42baa9ad385</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SamJan.MicroService.PreHospital.TriageService.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DocumentationFile>SamJan.MicroService.PreHospital.TriageService.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Application\Dtos\Triage\Patient\MqDto\PekingUniversity\**" />
+    <Content Remove="Application\Dtos\Triage\Patient\MqDto\PekingUniversity\**" />
+    <EmbeddedResource Remove="Application\Dtos\Triage\Patient\MqDto\PekingUniversity\**" />
+    <None Remove="Application\Dtos\Triage\Patient\MqDto\PekingUniversity\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="build.ps1" />
+    <None Remove="build.sh" />
+    <None Update="DataSeedSqlFiles\Dict_JudgmentItem.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_JudgmentMaster.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_JudgmentType.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_LevelTriageRelationDirection.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_ReportSetting.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_ReportSettingQueryOption.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_ScoreDict.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_ScoreManage.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_TableSetting.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_TriageConfig.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_TriageConfigTypeDescription.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeedSqlFiles\Dict_VitalSignExpression.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Chinese.IDCard" Version="1.0.0" />
+    <PackageReference Include="EntityFrameworkCore.DataEncryption" Version="2.0.0" />
+    <PackageReference Include="FreeSql" Version="3.2.665" />
+    <PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.665" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="NLog.Targets.ElasticSearch" Version="7.6.0" />
+    <PackageReference Include="NPOI" Version="2.5.3" />
+    <PackageReference Include="SamJan.MicroService.PreHospital.Core" Version="1.7.7" />
+    <PackageReference Include="SkyAPM.Agent.AspNetCore" Version="2.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.2" />
+    <PackageReference Include="YJHealth.MedicalInsurance" Version="0.0.2" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.HangFire" Version="3.1.0" />
+    <PackageReference Include="Hangfire.Redis.StackExchange" Version="1.8.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Docker.Development.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="appsettings.Docker.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="NLog.Docker.config">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="NLog.Docker.Development.config">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="NLog.Development.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="publish\NLog.config" />
+    <_ContentIncludedByDefault Remove="publish\NLog.Production.config" />
+    <_ContentIncludedByDefault Remove="publish\NLog.Development.config" />
+    <_ContentIncludedByDefault Remove="publish\NLog.Docker.config" />
+    <_ContentIncludedByDefault Remove="publish\NLog.Docker.Development.config" />
+    <_ContentIncludedByDefault Remove="publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Production.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Docker.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Docker.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\SamJan.MicroService.PreHospital.TriageService.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\SamJan.MicroService.PreHospital.TriageService.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\skyapm.Docker.json" />
+    <_ContentIncludedByDefault Remove="publish\skyapm.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.insuplc.json" />
+    <_ContentIncludedByDefault Remove="publish\bdConfigs.json" />
+    <_ContentIncludedByDefault Remove="publish\mockQuestionnaire.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.LDC.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.PKU.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\NLog.config" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\NLog.Development.config" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\NLog.Docker.config" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\NLog.Docker.Development.config" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\NLog.Production.config" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\web.config" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Development.LDC.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Development.PKU.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Development.QXN.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Docker.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Docker.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.insuplc.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\appsettings.Production.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\bdConfigs.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\mockQuestionnaire.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\skyapm.Docker.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\skyapm.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\TriageService.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\TriageService\TriageService.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="build.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="build.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="install.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="uninstall.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataSeedSqlFiles" />
+  </ItemGroup>
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties appsettings_1development_1json__JsonSchema="c" />
+    </VisualStudio>
+  </ProjectExtensions>
+
+
+</Project>

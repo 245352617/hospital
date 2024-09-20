@@ -1,0 +1,60 @@
+{
+  // 队列配置
+  "QueueConfig": [
+    {
+      "QueueId": "19",
+      "QueueName": "急诊科",
+      "SnPrefix": "*"
+    },
+    {
+      "QueueId": "1901",
+      "QueueName": "急诊内科",
+      "SnPrefix": "A"
+    },
+    {
+      "QueueId": "1902",
+      "QueueName": "急诊外科",
+      "SnPrefix": "B"
+    },
+    {
+      "QueueId": "1903",
+      "QueueName": "急诊六诊室 ",
+      "SnPrefix": "C"
+    },
+    {
+      "QueueId": "1904",
+      "QueueName": "急诊五诊室",
+      "SnPrefix": "D"
+    },
+    {
+      "QueueId": "1905",
+      "QueueName": "急诊七诊室 ",
+      "SnPrefix": "E"
+    },
+    {
+      "QueueId": "1906",
+      "QueueName": "急诊口腔科",
+      "SnPrefix": "F"
+    },
+    {
+      "QueueId": "1907",
+      "QueueName": "急诊眼科",
+      "SnPrefix": "G"
+    },
+    {
+      "QueueId": "1908",
+      "QueueName": "急诊耳鼻喉",
+      "SnPrefix": "H"
+    },
+    {
+      "QueueId": "1909",
+      "QueueName": "急诊抢救室",
+      "SnPrefix": "J"
+    },
+    {
+      "QueueId": "1912",
+      "QueueName": "急诊观察区",
+      "SnPrefix": "*"
+    }
+  ]
+}

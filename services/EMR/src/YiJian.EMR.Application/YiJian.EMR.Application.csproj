@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.EMR</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\Debug\net6.0\YiJian.EMR.Application.xml</DocumentationFile>
+		<OutputPath>bin\Debug</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Minio" Version="4.0.5" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="6.2.1" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="6.2.1" />
+    <PackageReference Include="DotNetCore.CAP.SqlServer" Version="6.2.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.19.4" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.46.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.46.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="6.0.3" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="6.0.3" />
+		<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+    <ProjectReference Include="..\YiJian.EMR.Application.Contracts\YiJian.EMR.Application.Contracts.csproj" />
+    <ProjectReference Include="..\YiJian.EMR.Domain\YiJian.EMR.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Protobuf Include="..\..\..\..\shared\YiJian.ECIS.Protos\emr.proto" GrpcServices="Server">
+	    <Link>Protos\emr.proto</Link>
+	  </Protobuf>
+	</ItemGroup>
+
+</Project>

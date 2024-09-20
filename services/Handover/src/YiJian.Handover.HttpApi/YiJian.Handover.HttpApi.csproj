@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Handover</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Handover.Application.Contracts\YiJian.Handover.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

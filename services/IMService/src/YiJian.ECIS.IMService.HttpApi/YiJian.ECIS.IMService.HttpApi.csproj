@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.IMService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.Application.Contracts\YiJian.ECIS.IMService.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

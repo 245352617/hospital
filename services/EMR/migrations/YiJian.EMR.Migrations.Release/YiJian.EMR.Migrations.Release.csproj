@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.EMR.Migrations</RootNamespace>
+    <AssemblyName>YiJian.EMR.Migrations</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\host\YiJian.EMR.HttpApi.Host\YiJian.EMR.HttpApi.Host.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.EMR.EntityFrameworkCore\YiJian.EMR.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!--为避免对 Host 项目的引用导致循环引用，输出到 Host 项目下，使用 Host 的数据上下文。-->
+    <BaseOutputPath>..\..\host\YiJian.EMR.HttpApi.Host\bin\</BaseOutputPath>
+  </PropertyGroup>
+
+</Project>

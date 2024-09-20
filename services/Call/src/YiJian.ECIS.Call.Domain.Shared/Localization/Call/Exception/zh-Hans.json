@@ -1,0 +1,28 @@
+{
+  "culture": "zh-Hans",
+  "texts": {
+    "Call:deny_update": "不允许修改",
+    "Call:department-not-exists": "科室不存在",
+    "Call:consulting-room-not-exists": "诊室不存在",
+    "Call:consulting-room-regular-exists": "对应诊室固定规则已存在",
+    "Call:consulting-room-regular-not-exists": "诊室固定规则不存在",
+    "Call:doctor-regular-exists": "医生变动规则已存在",
+    "Call:doctor-regular-not-exists": "医生变动规则不存在",
+    "Call:hour-invalid": "小时（时间）不在0-23之间",
+    "Call:minute-invalid": "分钟（时间）不在0-59之间",
+    "Call:base-config-has-not-initial": "基础配置未初始化数据",
+    "Call:depart-sn-rule-exists": "当前科室已存在排队号规则",
+    "Call:sn-rule-not-exists": "排队号规则不存在",
+    "Call:department-has-not-sn-rule": "科室未设置排队号规则",
+    "Call:triage-has-not-consequence-and-register": "既无分诊信息亦无挂号信息，无法正常处理消息",
+    "Call:triage-info-has-not-dept": "分诊/信息中不包含科室代码",
+    "Call:call-info-not-exists": "叫号信息不存在",
+    "Call:has-not-waitting-patient": "暂无候诊中的患者",
+    "Call:consulting-room-has-not-waitting-patient": "当前诊室无叫号中的患者",
+    "Call:consulting-room-is-calling": "当前诊室存在叫号中的患者",
+    "Call:consulting-room-has-not-treating": "当前诊室不存在就诊中的患者",
+    "Call:patient-is-not-treating": "患者未接诊或已结束就诊",
+    "Call:patient-is-not-call-yet": "患者未叫号",
+    "Call:patient-is-treated-finish": "患者已结束就诊"
+  }
+}

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Handover</RootNamespace>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Validation" Version="6.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.14" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Handover\*.json" />
+    <Content Remove="Localization\Handover\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Handover\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.ShareModel\YiJian.ECIS.ShareModel.csproj" />
+  </ItemGroup>
+
+</Project>

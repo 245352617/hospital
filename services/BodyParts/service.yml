@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: icis-server
+  labels:
+    app: icis-server
+    provider: szyjian
+    group: com.szyjian
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: icis-server
+      provider: szyjian
+      group: com.szyjian
+  template:
+    metadata:
+      labels:
+        app: icis-server
+        provider: szyjian
+        group: com.szyjian
+    spec:
+      volumes:
+      - name: config
+        configMap:
+          name: icis.config
+      containers:
+      - name: icis-server
+        image: registry.apps.dev.szyjian.com/icis-server
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+        volumeMounts:
+        - name: config
+          mountPath: /app/appsettings.json
+          subPath: appsettings.json
+      imagePullSecrets:
+      - name: registry-auth-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: icis-server
+  labels:
+    app: icis-server
+spec:
+  selector:
+    app: icis-server
+    provider: szyjian
+    group: com.szyjian
+  #type: ClusterIP
+  type: NodePort
+  ports:
+  - name: http
+    nodePort: 30028
+    port: 80
+    targetPort: 80

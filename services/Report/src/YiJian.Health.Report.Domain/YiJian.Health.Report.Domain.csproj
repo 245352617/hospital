@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Health.Report</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Report\**" />
+    <EmbeddedResource Remove="Report\**" />
+    <None Remove="Report\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Chinese.IDCard" Version="1.0.0" />
+	<PackageReference Include="Volo.Abp.Ddd.Domain" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Health.Report.Domain.Shared\YiJian.Health.Report.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

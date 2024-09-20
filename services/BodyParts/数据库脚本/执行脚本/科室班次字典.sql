@@ -1,0 +1,3 @@
+INSERT INTO [dbo].[IcuDeptSchedule]([Id], [DeptCode], [ScheduleCode], [ScheduleName], [StartTime], [EndTime], [Period], [Days], [Hours]) VALUES ('52E50BFE-4BAD-4B85-89F3-2B7B2AE6576C', '171', 'A', 'A°à', '08:00', '15:59', '8,9,10,11,12,13,14,15', '1', '8');
+INSERT INTO [dbo].[IcuDeptSchedule]([Id], [DeptCode], [ScheduleCode], [ScheduleName], [StartTime], [EndTime], [Period], [Days], [Hours]) VALUES ('476D9C93-0ED5-42C0-A8F1-701EFAB499E0', '171', 'P', 'P°à', '16:00', '23:59', '16,17,18,19,20,21,22,23', '1', '8');
+INSERT INTO [dbo].[IcuDeptSchedule]([Id], [DeptCode], [ScheduleCode], [ScheduleName], [StartTime], [EndTime], [Period], [Days], [Hours]) VALUES ('D6F7E862-3ADD-4CC5-BF16-C57BA4BE54A4', '171', 'N', 'N°à', '00:00', '07:59', '0,1,2,3,4,5,6,7', '2', '8');

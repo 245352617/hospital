@@ -1,0 +1,1 @@
+abp new YiJian.ECIS.Recipe -t module -ts D:\Project\templates\services\module

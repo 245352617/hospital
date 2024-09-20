@@ -1,0 +1,105 @@
+﻿        #region constructor
+        /// <summary>
+        /// 交班日期构造器
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="handoverDate">交班日期</param>
+        /// <param name="handoverTime">交班时间</param>
+        /// <param name="handoverDoctorCode">交班医生编码</param>
+        /// <param name="handoverDoctorName">交班医生名称</param>
+        /// <param name="successionDoctorCode">接班医生编码</param>
+        /// <param name="successionDoctorName">接班医生名称</param>
+        /// <param name="shiftSettingId">班次id</param>
+        /// <param name="shiftSettingName">班次名称</param>
+        /// <param name="status">交班状态，0：未提交，1：提交交班</param>
+        /// <param name="nursePatients">交班患者</param>
+        public NurseHandover(Guid id,
+            [NotNull] string handoverDate,// 交班日期
+            DateTime handoverTime,        // 交班时间
+            [NotNull] string handoverDoctorCode,// 交班医生编码
+            [NotNull] string handoverDoctorName,// 交班医生名称
+            [NotNull] string successionDoctorCode,// 接班医生编码
+            [NotNull] string successionDoctorName,// 接班医生名称
+            [NotNull] Guid shiftSettingId,// 班次id
+            [NotNull] string shiftSettingName,// 班次名称
+            int status,                   // 交班状态，0：未提交，1：提交交班
+            ICollection<NursePatients> nursePatients// 交班患者
+            ) : base(id)
+        {           
+            //交班日期
+            HandoverDate = Check.NotNull(handoverDate, "交班日期"); 
+
+            Modify(handoverTime,// 交班时间
+                handoverDoctorCode,// 交班医生编码
+                handoverDoctorName,// 交班医生名称
+                successionDoctorCode,// 接班医生编码
+                successionDoctorName,// 接班医生名称
+                shiftSettingId, // 班次id
+                shiftSettingName,// 班次名称
+                status,         // 交班状态，0：未提交，1：提交交班
+                nursePatients   // 交班患者
+                );
+        }
+        #endregion
+
+        #region Modify
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="handoverTime">交班时间</param>
+        /// <param name="handoverDoctorCode">交班医生编码</param>
+        /// <param name="handoverDoctorName">交班医生名称</param>
+        /// <param name="successionDoctorCode">接班医生编码</param>
+        /// <param name="successionDoctorName">接班医生名称</param>
+        /// <param name="shiftSettingId">班次id</param>
+        /// <param name="shiftSettingName">班次名称</param>
+        /// <param name="status">交班状态，0：未提交，1：提交交班</param>
+        /// <param name="nursePatients">交班患者</param>
+        public void Modify(DateTime handoverTime,// 交班时间
+            [NotNull] string handoverDoctorCode,// 交班医生编码
+            [NotNull] string handoverDoctorName,// 交班医生名称
+            [NotNull] string successionDoctorCode,// 接班医生编码
+            [NotNull] string successionDoctorName,// 接班医生名称
+            [NotNull] Guid shiftSettingId,// 班次id
+            [NotNull] string shiftSettingName,// 班次名称
+            int status,                   // 交班状态，0：未提交，1：提交交班
+            ICollection<NursePatients> nursePatients// 交班患者
+            )
+        {   
+            
+            //交班时间
+            HandoverTime = handoverTime;
+            
+            //交班医生编码
+            HandoverDoctorCode = Check.NotNull(handoverDoctorCode, "交班医生编码");
+            
+            //交班医生名称
+            HandoverDoctorName = Check.NotNull(handoverDoctorName, "交班医生名称");
+            
+            //接班医生编码
+            SuccessionDoctorCode = Check.NotNull(successionDoctorCode, "接班医生编码");
+            
+            //接班医生名称
+            SuccessionDoctorName = Check.NotNull(successionDoctorName, "接班医生名称");
+            
+            //班次id
+            ShiftSettingId = Check.NotNull(shiftSettingId, "班次id");
+            
+            //班次名称
+            ShiftSettingName = Check.NotNull(shiftSettingName, "班次名称");
+            
+            //交班状态，0：未提交，1：提交交班
+            Status = status;
+            
+            //交班患者
+            NursePatients = nursePatients;
+            
+        }
+        #endregion
+
+        #region constructor
+        private NurseHandover()
+        {
+            // for EFCore
+        }
+        #endregion

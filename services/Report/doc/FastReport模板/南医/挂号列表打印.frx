@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/17/2022 10:43:43" ReportInfo.Modified="03/18/2022 15:22:17" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary/>
+  <ReportPage Name="Page1" PaperWidth="78" PaperHeight="103" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" Guides="0,217.35,113.4,160.65,85.05,151.2,75.6" Watermark.Font="宋体, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="257.04" Height="37.8" Guides="0,28.35">
+      <TextObject Name="Text1" Left="18.9" Top="9.45" Width="217.35" Height="28.35" Text="北京大学深圳医院挂号凭据" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="41" Width="257.04" Height="415.8" Guides="0,18.9,37.8,56.7,66.14999,85.05,103.95,113.4,132.3,151.2,170.1">
+      <TextObject Name="Text2" Left="18.9" Top="18.9" Width="113.4" Height="18.9" Text="患者ID：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text3" Left="132.3" Top="18.9" Width="103.95" Height="18.9" Text="区域： " VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text4" Left="18.9" Top="56.7" Width="113.4" Height="18.9" Text="姓  名：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text5" Left="132.3" Top="56.7" Width="47.25" Height="18.9" Text="级别：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text6" Left="18.9" Top="94.5" Width="113.4" Height="18.9" Text="性  别：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text7" Left="132.3" Top="94.5" Width="103.95" Height="18.9" Text="年龄： " VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text8" Left="179.55" Top="56.7" Width="56.7" Height="18.9" Text="I级：" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text9" Left="18.9" Top="122.85" Width="217.35" Border.Lines="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text10" Left="18.9" Top="132.3" Width="85.05" Height="18.9" Text="Temp：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text11" Left="103.95" Top="132.3" Width="66.15" Height="18.9" Text="P：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text12" Left="18.9" Top="160.65" Width="113.4" Height="18.9" Text="BP：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text13" Left="132.3" Top="160.65" Width="103.95" Height="18.9" Text="SPO2：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text15" Left="18.9" Top="189" Width="217.35" Border.Lines="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text16" Left="170.1" Top="132.3" Width="66.15" Height="18.9" Text="R：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text18" Left="18.9" Top="207.9" Width="217.35" Height="18.9" Text="分诊时间：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text19" Left="18.9" Top="236.25" Width="75.6" Height="18.9" Text="排 队 号：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text20" Left="18.9" Top="264.6" Width="75.6" Height="18.9" Text="科    室：" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text21" Left="94.5" Top="236.25" Width="141.75" Height="18.9" Text="002" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text22" Left="94.5" Top="264.6" Width="141.75" Height="18.9" Text="急诊抢救室" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="460" Width="257.04" Height="18.9"/>
+  </ReportPage>
+</Report>

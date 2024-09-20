@@ -1,0 +1,11 @@
+@echo off
+
+set remark=
+set /p remark=Please enter migrations file name:
+echo The code files you migrated: %remark%
+
+dotnet ef migrations add %remark%  --context MasterDataHttpApiHostMigrationsDbContext
+dotnet ef database update  --context MasterDataHttpApiHostMigrationsDbContext
+
+echo The migration completed
+echo .

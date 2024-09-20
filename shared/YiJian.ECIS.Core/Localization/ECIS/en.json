@@ -1,0 +1,41 @@
+{
+  "Report": {
+    "NursingSettings": {
+      "Default": "Default",
+      "List": "List",
+      "Detail": "Detail",
+      "Modify": "Modify",
+      "Delete": "Delete"
+    },
+    "NursingDocuments": {
+      "Default": "Default",
+      "List": "List",
+      "Detail": "Detail",
+      "Modify": "Modify",
+      "Delete": "Delete"
+    }
+  },
+  "EMR": {
+    "Catalogues": {
+      "Default": "Default",
+      "List": "List",
+      "Detail": "Detail",
+      "Modify": "Modify",
+      "Delete": "Delete"
+    },
+    "TemplateCatalogues": {
+      "Default": "Default",
+      "List": "List",
+      "Detail": "Detail",
+      "Modify": "Modify",
+      "Delete": "Delete"
+    },
+    "Writes": {
+      "Default": "Default",
+      "List": "List",
+      "Detail": "Detail",
+      "Modify": "Modify",
+      "Delete": "Delete"
+    }
+  }
+}

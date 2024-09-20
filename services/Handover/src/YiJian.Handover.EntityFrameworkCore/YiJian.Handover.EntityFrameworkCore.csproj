@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Handover</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Handover.Domain\YiJian.Handover.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EntityFrameworkCore\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="EntityFrameworkCore\Repositories\Nurse\NursePatient\NursePatientsRepository.cs" />
+  </ItemGroup>
+
+</Project>

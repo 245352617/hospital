@@ -1,0 +1,53 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace SamJan.MicroService.PreHospital.TriageService
+{
+    /// <summary>
+    /// 创建或更新判定依据主诉项目Dto
+    /// </summary>
+    public class CreateOrUpdateJudgmentItemDto
+    {
+        /// <summary>
+        /// 判定依据主诉分类Id
+        /// </summary>
+        public Guid JudgmentMasterId { get; set; }
+        
+        /// <summary>
+        /// 级别
+        /// </summary>
+        public int EmergencyLevel { get; set; }
+        
+        /// <summary>
+        /// 分诊级别Code
+        /// </summary>
+        [StringLength(50,ErrorMessage = "{0}的最大长度为{1}")]
+        public string TriageLevelCode { get; set; }
+
+        /// <summary>
+        /// 分诊级别名称
+        /// </summary>
+        [StringLength(50,ErrorMessage = "{0}的最大长度为{1}")]
+        public string TriageLevelName { get; set; }
+
+        /// <summary>
+        /// 分诊依据
+        /// </summary>
+        public string ItemName { get; set; }
+
+        /// <summary>
+        /// 是否属于绿色通道 0：不属于 1：属于
+        /// </summary>
+        public bool IsGreenRoad { get; set; }
+
+        /// <summary>
+        /// 是否启用：false：不启用；true：启用
+        /// </summary>
+        public bool IsEnabled { get; set; }
+        
+        /// <summary>
+        /// 序号
+        /// </summary>
+        public int Sort { get; set; }
+    }
+}

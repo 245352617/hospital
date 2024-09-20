@@ -1,0 +1,41 @@
+﻿namespace Szyjian.Ecis.Patient.Application.Contracts
+{
+    public class CallAgainDto
+    {
+        /// <summary>
+        /// 医生 ID
+        /// </summary>
+        public string DoctorId { get; set; }
+
+        /// <summary>
+        /// 医生名称
+        /// </summary>
+        public string DoctorName { get; set; }
+
+        /// <summary>
+        /// 诊室编码
+        /// </summary>
+        public string ConsultingRoomCode { get; set; }
+
+        /// <summary>
+        /// 诊室名称
+        /// </summary>
+        public string ConsultingRoomName { get; set; }
+
+        /// <summary>
+        /// Ip 诊室固定模式根据Ip 反查诊室编码
+        /// </summary>
+        public string IpAddr { get; set; }
+
+        /// <summary>
+        /// 就诊号
+        /// 挂号之后生成就诊号
+        /// </summary>
+        public string RegisterNo { get; set; }
+    }
+
+    public class RegisterNoDto
+    {
+        public string RegisterNo { get; set; }
+    }
+}

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS</RootNamespace>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="6.0.3" />
+    <PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.ECIS.Call.Domain.Shared\YiJian.ECIS.Call.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

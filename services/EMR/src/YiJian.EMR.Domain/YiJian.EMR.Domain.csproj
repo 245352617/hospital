@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.EMR</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.14" />
+	<PackageReference Include="Volo.Abp.Ddd.Domain" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.EMR.Domain.Shared\YiJian.EMR.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <PackageReference Update="Fody" Version="6.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>-->
+
+</Project>

@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="docs\**" />
+    <Content Remove="docs\**" />
+    <EmbeddedResource Remove="docs\**" />
+    <None Remove="docs\**" />
+    <Content Remove="DCLibCore\latest\DCSoft.Writer.ForASPNETCore.deps.json" />
+    <Content Remove="DCLibCore\bak\DCSoft.Writer.ForASPNETCore.deps.json" />
+    <None Update="DCLibCore\DCSoft.Writer.ForASPNETCore.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DCLibCore\DCSoft.Writer.ForASPNETCore.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Remove="DCLibCore\DCSoft.Writer.ForASPNETCore.deps.json" />
+    <None Include="DCLibCore\DCSoft.Writer.ForASPNETCore.deps.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\simhei.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\simkai.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+    
+  <ItemGroup>
+    <Folder Include="DCLibCore\" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="BeetleX.Http.Clients" Version="2.2.2.1803" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.17.1" /> 
+    <PackageReference Include="Hangfire.Core" Version="1.7.29" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.29" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.29" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.34" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.12" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <PackageReference Include="Minio" Version="4.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+ 
+    <PackageReference Include="DotNetCore.CAP" Version="6.2.1" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="6.2.1" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="6.2.1" />
+    <PackageReference Include="DotNetCore.CAP.SqlServer" Version="6.2.1" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Fonts\HOLOMDL2.TTF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\SIMSUN.TTC">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\simsun.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\5.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\consultation_record.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="publish\DCWriter\web.config" />
+    <_ContentIncludedByDefault Remove="publish\DCWriter\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\DCWriter\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\DCWriter\YiJian.EMR.DCWriter.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\DCWriter\YiJian.EMR.DCWriter.runtimeconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.ShareModel\YiJian.ECIS.ShareModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DCSoft.Writer.ForASPNETCore">
+      <HintPath>DCLibCore\DCSoft.Writer.ForASPNETCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+   
+</Project>

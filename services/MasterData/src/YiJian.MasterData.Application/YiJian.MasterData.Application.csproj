@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.MasterData</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>obj/Debug/net6.0/YiJian.MasterData.Application.xml</DocumentationFile>
+    <OutputPath>bin\Debug</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>obj/Release/net6.0/YiJian.MasterData.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="YiJian.MasterData.Application.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.9.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+    <PackageReference Include="ServiceStack.Redis" Version="6.2.0" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="6.0.3" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="6.0.3" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.29" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.HangFire" Version="6.0.3" /> 
+    <ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" /> 
+    <ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.DDP\YiJian.ECIS.DDP.csproj" />
+    <ProjectReference Include="..\YiJian.MasterData.Application.Contracts\YiJian.MasterData.Application.Contracts.csproj" />
+    <ProjectReference Include="..\YiJian.MasterData.Domain\YiJian.MasterData.Domain.csproj" /> 
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Protobuf Include="..\..\..\..\shared\YiJian.ECIS.Protos\masterdata.proto">
+      <Link>protos\masterdata.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+</Project>

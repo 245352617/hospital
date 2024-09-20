@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YiJian.Handover.Application</name>
+    </assembly>
+    <members>
+        <member name="T:YiJian.Handover.DoctorHandoverAppService">
+            <summary>
+            医生交接班API
+            </summary>
+        </member>
+        <member name="M:YiJian.Handover.DoctorHandoverAppService.#ctor(YiJian.Handover.IDoctorHandoverRepository,YiJian.Handover.DoctorHandoverManager,YiJian.Handover.IDoctorPatientsRepository,YiJian.Handover.IShiftHandoverSettingAppService,YiJian.Handover.IDoctorPatientStatisticRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="doctorHandoverRepository"></param>
+            <param name="doctorHandoverManager"></param>
+            <param name="doctorPatientsRepository"></param>
+            <param name="handoverSettingAppService"></param>
+            <param name="doctorPatientStatisticRepository"></param>
+        </member>
+        <member name="M:YiJian.Handover.DoctorHandoverAppService.CreateDoctorHandoverAsync(YiJian.Handover.DoctorHandoverCreation)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.DoctorHandoverAppService.UpdateDoctorHandoverAsync(YiJian.Handover.DoctorHandoverUpdate)">
+            <summary>
+            修改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.DoctorHandoverAppService.GetDoctorHandoverAsync(System.String,System.Guid,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="doctorCode">医生编码</param>
+            <param name="shiftId"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.DoctorHandoverAppService.GetHistoryListAsync(YiJian.Handover.GetDoctorHandoverInput)">
+            <summary>
+            分组查询历史数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.DoctorHandoverAppService.GetDetailsAsync(System.String,System.Guid)">
+            <summary>
+            历史数据详情
+            </summary>
+            <param name="date"></param>
+            <param name="shiftId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Handover.DoctorPatientsAppService">
+            <summary>
+            医生交班患者API
+            </summary>
+        </member>
+        <member name="M:YiJian.Handover.DoctorPatientsAppService.#ctor(YiJian.Handover.IDoctorPatientsRepository,YiJian.Handover.DoctorPatientsManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="doctorPatientsRepository"></param>
+            <param name="doctorPatientsManager"></param>
+        </member>
+        <member name="M:YiJian.Handover.DoctorPatientsAppService.SaveHandoverPatientAsync(YiJian.Handover.DoctorPatientsUpdate)">
+            <summary>
+            保存交班患者
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.DoctorPatientsAppService.GetHandoverPatientAsync(System.Guid)">
+            <summary>
+            获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.DoctorPatientsAppService.DeleteHandoverPatientAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Handover.NurseHandoverAppService">
+            <summary>
+            护士交班 API
+            </summary>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.#ctor(YiJian.Handover.INurseHandoverRepository,YiJian.Handover.NurseHandoverManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="nurseHandoverRepository"></param>
+            <param name="nurseHandoverManager"></param>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.SaveNurseHandoverAsync(YiJian.Handover.NurseHandoverCreation)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.GetNurseHandoverAsync(System.Guid,System.String,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="shiftId"></param>
+            <param name="handoverDate"></param>
+            <param name="creationCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.GetListAsync(YiJian.Handover.GetNurseHandoverPagedInput)">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.ImportUpDeviceAsync(YiJian.Handover.GetNurseHandoverInput)">
+            <summary>
+            导入上个班次
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.NurseHandoverAppService.GetDetailsAsync(System.String,System.Guid)">
+            <summary>
+            获取交班详情
+            </summary>
+            <param name="date"></param>
+            <param name="shiftId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Handover.ShiftHandoverSettingAppService">
+             <summary>
+            交接班设置API
+             </summary>
+        </member>
+        <member name="M:YiJian.Handover.ShiftHandoverSettingAppService.SaveShiftHandoverSettingAsync(YiJian.Handover.ShiftHandoverSettingCreationOrUpdate,System.Threading.CancellationToken)">
+            <summary>
+            新增或修改班次
+            </summary>
+            <param name="dto">dto.id传参表示修改，不传该参数表示新增</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.ShiftHandoverSettingAppService.GetShiftHandoverSettingDataAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            根据id获取班次信息
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:YiJian.ECIS.ShareModel.Exceptions.EcisBusinessException"></exception>
+        </member>
+        <member name="M:YiJian.Handover.ShiftHandoverSettingAppService.DeleteShiftHandoverSettingAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <exception cref="T:YiJian.ECIS.ShareModel.Exceptions.EcisBusinessException"></exception>
+        </member>
+        <member name="M:YiJian.Handover.ShiftHandoverSettingAppService.GetShiftHandoverSettingListAsync(YiJian.Handover.ShiftHandoverSettingInput,System.Threading.CancellationToken)">
+            <summary>
+            获取分页数据
+            </summary>
+            <param name="input"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Handover.TestAppService">
+            <summary>
+            测试服务
+            </summary>
+        </member>
+        <member name="M:YiJian.Handover.TestAppService.GetTestAsync">
+            <summary>
+            Test方法
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

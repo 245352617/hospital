@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Handover</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DocumentationFile>YiJian.Handover.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>YiJian.Handover.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Ddd.Domain" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Handover.Domain.Shared\YiJian.Handover.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Handover\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="YiJian.Handover.Domain.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Handover\NurseHandover\NursePatient\NursePatients.cs" />
+    <Compile Remove="Handover\NurseHandover\NursePatient\INursePatientsRepository.cs" />
+  </ItemGroup>
+
+</Project>

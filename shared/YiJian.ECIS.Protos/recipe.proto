@@ -1,0 +1,72 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "RecipeService";
+
+service GrpcRecipe {
+    // 查询全部医嘱执行
+    rpc GetOperApplyList (GetOperApplyRequest) returns (OperApplyResponse);
+    //获取打印的报表的数据结构内容
+    rpc GetReportCatalog (GetReportCatalogRequest) returns (GetReportCatalogResponse);
+    //获取检查条码打印列表
+    rpc GetPrintPathologyNoList (PacsItemNoRequest) returns (PacsItemNoResponse);
+}
+
+message GetOperApplyRequest {
+string PID=1;
+string StartTime=2;
+string EndTime=3;
+}
+
+message OperApplyResponse {
+    repeated GrpcOperApplyModel operApply = 1;
+}
+
+message GrpcOperApplyModel {
+    google.protobuf.Timestamp ApplyTime=1;
+    string OperationCode=2;
+    string OperationName=3;
+}
+
+
+message GetReportCatalogRequest{
+    string Piid  = 1;
+    int32 PlatformType = 2;
+}
+
+message GetReportCatalogResponse{ 
+    repeated ReportCatalogModel Model = 1;     
+}
+
+message ReportCatalogModel{
+    string UsageCode =2; 
+    int32 ToxicLevel=3;
+    string AddCard=4;
+    string ItemType=5;
+    string PrescriptionNo=6;
+    string RecipeNo=7;   
+    int32 IsPrint=8;
+    string TemplateId=9;
+    int32 CommitSerialNo=10;
+    bool IsCriticalPrescription=11;
+    string MyPrescriptionNo=12;
+    string PacsTemplateId=13;
+    int32 SourceType = 14;
+    int32 Additional = 15;
+}
+
+message PacsItemNoRequest{
+    string Piid  = 1;
+}
+
+message PacsItemNoResponse{
+    repeated PacsItemNoModel Model = 1;
+}
+
+message PacsItemNoModel{
+    int32 Id = 1;
+    string PacsName = 2;
+    string PathologyName = 3;
+    bool IsPrint = 4;
+}

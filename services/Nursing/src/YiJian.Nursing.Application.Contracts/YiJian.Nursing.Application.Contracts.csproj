@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DocumentationFile>obj/Debug/net6.0/YiJian.Nursing.Application.Contracts.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>obj/Release/net6.0/YiJian.Nursing.Application.Contracts.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Nursing\Duct\**" />
+    <EmbeddedResource Remove="Nursing\Duct\**" />
+    <None Remove="Nursing\Duct\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="DotNetCore.CAP" Version="6.2.1" />
+	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.Authorization" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Nursing.Domain.Shared\YiJian.Nursing.Domain.Shared.csproj" />
+    <ProjectReference Include="..\YiJian.Nursing.Domain\YiJian.Nursing.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

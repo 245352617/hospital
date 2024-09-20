@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: icis-server-test
+  labels:
+    app: icis-server-test
+    provider: szyjian
+    group: com.szyjian
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: icis-server-test
+      provider: szyjian
+      group: com.szyjian
+  template:
+    metadata:
+      labels:
+        app: icis-server-test
+        provider: szyjian
+        group: com.szyjian
+    spec:
+      volumes:
+      - name: config
+        configMap:
+          name: icis-test.config
+      containers:
+      - name: icis-server-test
+        image: registry.apps.dev.szyjian.com/icis-server:test
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+        volumeMounts:
+        - name: config
+          mountPath: /app/appsettings.json
+          subPath: appsettings.json
+      imagePullSecrets:
+      - name: registry-auth-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: icis-server-test
+  labels:
+    app: icis-server-test
+spec:
+  selector:
+    app: icis-server-test
+    provider: szyjian
+    group: com.szyjian
+  #type: ClusterIP
+  type: NodePort
+  ports:
+  - name: http
+    nodePort: 30058
+    port: 80
+    targetPort: 80

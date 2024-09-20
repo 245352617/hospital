@@ -1,0 +1,56 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "HealthReportService";
+
+service GrpcHealthReport {
+    // 查询全部生命体征
+    rpc GetVitalSignsList (GetVitalSignsListRequest) returns (VitalSignsListResponse);
+     // 查询全部出入量
+    //rpc GetInOutPutList (GetInOutPutListRequest) returns (InOutPutListResponse);
+
+}
+
+message GetVitalSignsListRequest {
+string PID=1;
+string StartTime=2;
+string EndTime=3;
+}
+
+message VitalSignsListResponse {
+    repeated GrpcVitalSignsModel vitalSigns = 1;
+}
+
+message GrpcVitalSignsModel {
+    string RecordTime=1;
+    string Temp = 2;
+    string Heart = 3;
+    string Breath = 4;
+    string BP = 5;
+    string BP2 = 6;
+    string SPO2 = 7;
+}
+
+
+
+//message GetInOutPutListRequest {
+//string PID=1;
+//string StartTime=2;
+//string EndTime=3;
+//}
+
+//message InOutPutListResponse {
+//    repeated GrpcInOutPutModel inOutPut = 1;
+//}
+
+//message GrpcInOutPutModel {
+    //string RecordTime=1;
+    //double InPut=2;
+    //double OutPut=3;
+   // double Balance=4;
+    //double UrineVol=5;
+   // double StoolVol=6;
+   // double InfusionVol=7;
+ //   double BloodVol=8;
+//}

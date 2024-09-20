@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian</RootNamespace> 
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Hospitals\readme.docx" />
+    <None Remove="Hospitals\readme.md" />
+  </ItemGroup>
+ 
+	<ItemGroup>
+		<PackageReference Include="BeetleX.Http.Clients" Version="2.2.2.1803" />
+		<PackageReference Include="BeetleX.Redis" Version="1.4.9.1803" />
+		<PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.9.0" />
+		<PackageReference Include="DotNetCore.CAP" Version="6.2.1" />
+		<PackageReference Include="Google.Protobuf" Version="3.19.4" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.46.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.46.1">
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="6.0.14" />
+		<PackageReference Include="Polly" Version="7.2.3" />
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="6.0.3" />
+		<PackageReference Include="Volo.Abp.BackgroundJobs.HangFire" Version="6.0.3" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="6.0.3" />
+		<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+		<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Authorization\YiJian.ECIS.Authorization.csproj" />
+		<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.DDP\YiJian.ECIS.DDP.csproj" />
+    <ProjectReference Include="..\YiJian.Recipe.Application.Contracts\YiJian.Recipe.Application.Contracts.csproj" />
+    <ProjectReference Include="..\YiJian.Recipe.Domain\YiJian.Recipe.Domain.csproj" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <Protobuf Include="..\..\..\..\shared\YiJian.ECIS.Protos\masterdata.proto" GrpcServices="Client">
+      <Link>Protos\masterdata.proto</Link>
+    </Protobuf>
+    <Protobuf Include="..\..\..\..\shared\YiJian.ECIS.Protos\recipe.proto" GrpcServices="Server">
+      <Link>Protos\recipe.proto</Link>
+    </Protobuf>
+  </ItemGroup> 
+
+  <ItemGroup>
+    <Compile Remove="NovelCoronavirusRna\NovelCoronavirusRnaAppService.cs" />
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,10 @@
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('5F6272F8-60DC-47EC-8C79-02D77AA842B2', '001', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('AF449BFC-96A0-4724-8CD3-18C036C7D270', '006', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('FBE527E0-B18B-4895-9C3D-2AB5064683FC', '005', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('8A28BACA-8A3C-4809-968A-2FA3EE83EF60', '009', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('FE7427A8-6F1C-4313-A428-3950A741E37C', '003', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('7A65152A-6890-4E0D-9092-7C07525A57E7', '004', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('0D896CAD-36B3-412D-9217-A4CD6193314D', '010', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('ECB47A7A-3E1A-4D59-81B0-B1648A39FEBD', '007', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('007F48A6-EF2B-428A-9859-C7311591F358', '002', '', '171', '1', 1);
+INSERT INTO [dbo].[IcuBed]([Id], [BedNum], [WardCode], [DeptCode], [RoomCode], [ValidState]) VALUES ('3CEE52CF-540C-4437-8BA3-F776AF582F73', '008', '', '171', '1', 1);

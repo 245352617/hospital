@@ -1,0 +1,820 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "MasterDataService";
+
+service GrpcMasterData {
+  // 查询全部药品
+  rpc GetAllMedicines (GetAllMedicinesRequest) returns (MedicinesResponse);
+  // 查询指定的药品集合
+  rpc GetMedicineListByCodes (GetListMedicinesRequest) returns (MedicinesResponse);
+  rpc GetMedicineListByMedicineCodes (GetListMedicinesByCodeRequest) returns (MedicinesResponse);
+  rpc GetMedicines(GetMedicinesRequest) returns (MedicinesResponse);
+  //跟进药品Id列表获取药理信息集合
+  rpc GetToxicListByMedicineIds(MedicineIdsRequest) returns (ToxicListResponse);
+  // 通过编码查询单个药品信息
+  rpc GetMedicineById (GetMedicineByIdRquest) returns (MedicineResponse);
+  // 通过单个药品库存信息
+  rpc GetMedicineInvInfo (GetMedicineInvInfoRquest) returns (MedicineResponse);
+  // 查询全部检验项目
+  rpc GetAllLabProjects (GetAllLabProjectsRequest) returns (LabProjectsResponse);
+  // 通过Id查询单个检验项目
+  rpc GetLabProjectById (GetLabProjectByIdRequest) returns (LabProjectResponse);
+  // 通过编码查询单个检验项目
+  rpc GetLabProjectByCode (GetLabProjectByCodeRequest) returns (LabProjectResponse);
+  // 查询所有检查项目
+  rpc GetAllExamProjects (GetAllExamProjectsRequest) returns (ExamProjectsResponse);
+  // 通过编码查询单个检查项目
+  rpc GetExamProjectByCode (GetExamProjectByCodeRequest) returns (ExamProjectResponse);
+  // 查询所有诊疗项目
+  rpc GetAllTreatProjects (GetAllTreatProjectsRequest) returns (TreatProjectsResponse);
+  // 通过ID查询单个诊疗项目
+  rpc GetTreatProjectById (GetTreatProjectByIdRequest) returns (TreatProjectResponse);
+  // 通过编码查询单个诊疗项目
+  rpc GetTreatProjectByCode (GetTreatProjectByCodeRequest) returns (TreatProjectResponse);
+  // 查询全部频次信息
+  rpc GetAllFrequencies (GetAllFrequenciesRequest) returns (FrequenciesResponse);
+  // 通过频次编码查询频次信息
+  rpc GetFrequencyByCode (GetFrequencyByCodeRequest) returns (FrequencyResponse);
+  // 通过用法编码查询用法信息
+  rpc GetMedicineUsageByCode (GetMedicineUsageByCodeRequest) returns (MedicineUsageResponse);
+  // 获取费别的信息
+  rpc GetChargeInfos(GetChargeInfoRequest) returns (ChargeInfoResponse);
+  // 获取标本信息
+  rpc GetSpecimenById(GetLabSpecimenByIdRequest) returns (LabSpecimenResponse);
+  // 获取标本信息
+  rpc GetSpecimenByCode(GetLabSpecimenByCodeRequest) returns (LabSpecimenResponse);
+  // 获取标本采集部位信息
+  rpc GetSpecimenPositionByCode(GetLabSpecimenPositionByCodeRequest) returns (LabSpecimenPositionResponse);
+  // 获取检查部位信息
+  rpc GetExamPartByCode(GetExamPartByCodeRequest) returns (ExamPartResponse);
+  //获取医嘱扩展属性【拼音，五笔，别名...属性】
+  rpc GetAdviceExtendedAttributes(AdviceExtendedAttributesRequest) returns (AdviceExtendedAttributesResponse);
+  rpc GetSeparationById(SeparationRequest) returns (SeparationResponse);
+  rpc GetSeparations(SeparationListRequest) returns (SeparationListResponse);
+  rpc GetSeparationsByCodes(GetSeparationsByCodeRequest) returns (GetSeparationsByCodeReponse);
+  //获取分方配置列表
+  rpc GetSeparationsList(GetAllSeparationRequest) returns (AllSeparationResponse);
+  // 查询科室
+  rpc GetDepartments(GetDepartmentsRequest) returns (DepartmentsResponse);
+  // 查询诊室
+  rpc GetConsultingRooms(GetConsultingRoomsRequest) returns (ConsultingRoomsResponse);
+  //跟进检查项code获取所有子项的信息
+  rpc GetLabTargetsByCode(LabCodeRequest) returns (LabTargetsReponse);
+  //跟进检验项code获取所有子项的信息
+  rpc GetExamTargetsByCode(ExamCodeRequest) returns (ExamTargetsReponse);
+  //根据codes查询检查信息
+  rpc GetExamsByCodes(ExamCodeRequest) returns(ExamProjectsResponse);
+  // 查询处置
+  rpc GetTreatByUsage(GetTreatByUsageCodeRequest) returns (GrpcTreatProjectModel);
+  //查询医嘱项目明细
+  rpc GetCombinationRecipeDetails(CombinationRequest) returns (CombinationResponse);
+  //根据诊疗的code获取诊疗信息
+  rpc GetTreatByCode(GetTreatByCodeRequest) returns (GetTreatByCodeResponse);
+  //查询字典多类型
+  rpc GetDictionariesMultiType(GetDictionariesMultiTypeRequest) returns (GetDictionariesMultiTypeResponse);
+  //获取急诊药信息集合
+  rpc GetHisMedicineSample(HisMedicineSampleRequest) returns (HisMedicineSampleResponse);
+  //获取字典
+  rpc GetDictionaries(GetDictionariesRequest) returns (GetDictionariesResponse);
+  //获取护士站医嘱类型
+  rpc GetNursingRecipeTypes(GetNursingRecipeTypesRequest) returns (NursingRecipeTypesResponse);
+  //获取检查附加项目
+  rpc GetExamAttachItems(ExamCodeRequest) returns (ExamAttachItemReponse);
+  //获取检验项目信息
+  rpc GetLabReportInfo(GetLabReportInfoCodes) returns (LabReportInfos);
+}
+
+message GetNursingRecipeTypesRequest{
+}
+
+message NursingRecipeTypesResponse{
+	repeated NursingRecipeTypeModel NursingRecipeTypes = 1;
+}
+
+message NursingRecipeTypeModel {
+	string TypeName = 1;
+	string UsageCode = 2;
+	string UsageName = 3;
+}
+
+message LabCodeRequest{
+  repeated string code = 1;
+}
+
+message GetLabReportInfoCodes{
+  repeated string code = 1;
+}
+
+message LabReportInfos{
+  repeated LabReportInfoModel labReportInfolist = 1;
+}
+
+message LabReportInfoModel{
+	string code = 1;
+	string remark =2;
+	string catelogName=3;
+	string execDeptName=4;
+}
+
+message ExamCodeRequest{
+  repeated string code = 1;
+}
+
+message ExamAttachItemReponse {
+  repeated ExamAttachItemModel examAttachItems = 1;
+}
+
+message ExamAttachItemModel {
+	string id = 1;
+	string projectCode = 2;
+	string medicineCode = 3;
+	double qty = 4;
+	string type =5;
+}
+
+message LabTargetsReponse{
+  repeated LabTargetsModel  Targets = 1;
+}
+
+message LabTargetsModel{
+  int32 Id = 1;
+  string TargetCode = 2;
+  string TargetName = 3;
+  string ProjectCode = 4;
+  int32 Sort = 5;
+  string PyCode = 6;
+  string WbCode = 7;
+  string TargetUnit = 8;
+  double Qty = 9;
+  double Price = 10;
+  bool IsActive = 11;
+  int32 InsuranceType = 12;
+  string ProjectMerge = 13;
+  string ProjectType = 14;
+
+
+}
+
+message ExamTargetsReponse{
+  repeated ExamTargetsModel Targets = 1;
+}
+
+message ExamTargetsModel{
+  int32 Id = 1;
+  string TargetCode = 2;
+  string TargetName = 3;
+  string ProjectCode = 4;
+  string TargetUnit = 5;
+  double Qty = 6;
+  double Price = 7;
+  double OtherPrice = 8;
+  string Specification = 9;
+  int32 Sort = 10;
+  string PyCode = 11;
+  string WbCode = 12;
+  int32 InsuranceType = 13;
+  string SpecialFlag = 14;
+  bool IsActive = 15;
+  string ProjectMerge = 16;
+  string ProjectType = 17;
+}
+
+
+message GetAllMedicinesRequest {}
+
+//根据药品编码集合
+message GetListMedicinesRequest{
+  repeated int32 medicineIds = 1;
+}
+
+message GetListMedicinesByCodeRequest{
+  repeated string MedicineCode = 1;
+}
+
+//根据药品编码MedicineCode,药品产商FactoryCode，药品规格Specification获取药品信息
+message GetMedicinesRequest{
+   int32 MedicineCode = 1;
+   int32 FactoryCode = 2;
+   string Specification = 3;
+}
+
+message GetDictionariesMultiTypeRequest{
+ string groupCode=1;
+ string code=2;
+}
+
+message GetDictionariesMultiTypeResponse{
+  string groupCode=1;
+  string GroupName=2;
+  string code=3;
+  string name=4;
+  string value=5;
+}
+
+message MedicinesResponse {
+  repeated GrpcMedicineModel medicines = 1;
+}
+// 查询单个药品信息
+message GetMedicineByIdRquest {
+  int32 Id = 1;
+}
+// 查询单个药品信息
+message GetMedicineInvInfoRquest {
+  string code = 1;
+  string specification = 2;
+  string factoryCode = 3;
+  string pharmacyCode = 4;
+}
+message MedicineResponse{
+  GrpcMedicineModel medicine = 1;
+}
+
+// 药品（字段说明参考 Medicine 类）
+message GrpcMedicineModel{
+  string code = 1;
+  string name = 2;
+  string pyCode = 3;
+  string wbCode = 4;
+  string scientificName = 5;
+  string alias = 6;
+  string aliasPyCode = 7;
+  string aliasWbCode = 8;
+  string categoryCode = 9;
+  string categoryName = 10;
+  double defaultDosage = 11;
+  double dosageQty = 12;
+  string dosageUnit = 13;
+  string unit = 14;
+  double price = 15;
+  string smallPackUnit = 16;
+  int32 smallPackFactor = 17;
+  double smallPackPrice = 18;
+  string bigPackUnit = 19;
+  int32 bigPackFactor = 20;
+  double bigPackPrice = 21;
+  double childrenPrice = 22;
+  double fixPrice = 23;
+  double retPrice = 24;
+  string InsuranceType = 25;
+  int32 InsuranceCode = 26;
+  int32 InsurancePayRate = 27;
+  string factoryName = 28;
+  string factoryCode = 29;
+  string batchNo = 30;
+  google.protobuf.Timestamp expireDate = 31;
+  double weight = 32;
+  string weightUnit = 33;
+  double volume = 34;
+  string volumeUnit = 35;
+  string remarks = 36;
+  bool isSkinTest = 37;
+  bool isCompound = 38;
+  bool isDrunk = 39;
+  int32 toxicLevel = 40;
+  bool isHighRisk = 41;
+  bool isRefrigerated = 42;
+  bool isTumour = 43;
+  bool antibioticLevel = 44;
+  bool isPrecious = 45;
+  bool isInsulin = 46;
+  bool isAnaleptic = 47;
+  bool isAllergyTest = 48;
+  bool isLimited = 49;
+  string limitedNote = 50;
+  string specification = 51;
+  string dosageForm = 52;
+  string execDeptCode = 53;
+  string execDeptName = 54;
+  string usageCode = 55;
+  string usageName = 56;
+  string frequencyCode = 57;
+  string frequencyName = 58;
+  bool isActive = 59;
+  bool isFirstAid = 60;
+  string pharmacyCode = 61;
+  string pharmacyName = 62;
+  int32 antibioticPermission = 63;
+  int32 prescriptionPermission = 64;
+  int32 stock = 65;
+  string baseFlag = 66;
+  int32 unpack = 68;
+  int32 id = 69;
+  string medicineProperty = 70;
+  string toxicProperty = 71;
+  string chargeCode = 72;
+  string chargeName = 73;
+  int32 frequencyTimes = 74;
+  string frequencyUnit = 75;
+  string frequencyExecDayTimes = 76;
+  int32 medicineId = 77;
+  string dailyFrequency = 78;
+  string medicalInsuranceCode = 79;
+  double qty = 80;
+  string yBInneCode = 81;
+  string meducalInsuranceName = 82;
+}
+
+message GetAllLabProjectsRequest{}
+message LabProjectsResponse{
+  repeated GrpcLabProjectModel labProjects = 1;
+}
+//检验
+message GetLabProjectByIdRequest{
+  int32 id = 1;
+}
+message GetLabProjectByCodeRequest{
+  string code = 1;
+}
+message LabProjectResponse{
+  GrpcLabProjectModel labProject = 1;
+}
+
+// 检验项目（字段说明参考 LabProject 类）
+message GrpcLabProjectModel{
+  int32 id = 1;
+  string projectCode = 2;
+  string projectName = 3;
+  string catalogCode = 4;
+  string catalogName = 5;
+  string specimenCode = 6;
+  string specimenName = 7;
+  string execDeptCode = 8;
+  string execDeptName = 9;
+  string positionCode = 10;
+  string positionName = 11;
+  string sort = 12;
+  string pyCode = 13;
+  string wbCode = 14;
+  string unit = 15;
+  double price = 16;
+  double otherPrice = 17;
+  string containerCode = 18;
+  string containerName = 19;
+  bool isActive = 20;
+  int32 platformType = 21;
+  string chargeCode = 22;
+  string chargeName = 23;
+  string addCard=24;
+  string guideCode=25;
+  string guideName=26;
+  int32 depExecutionType=27;
+  string depExecutionRules=28;
+  string prescribeCode=29;
+  string treatCode=30;
+}
+
+//检查
+message GetAllExamProjectsRequest{}
+message ExamProjectsResponse{
+  repeated GrpcExamProjectModel examProjects = 1;
+}
+message GetExamProjectByCodeRequest{
+  string code = 1;
+}
+message ExamProjectResponse{
+  GrpcExamProjectModel examProject = 1;
+}
+
+// 检查项目（字段说明参考 ExamProject 类）
+message GrpcExamProjectModel{
+  int32 id = 1;
+  string projectCode = 2;
+  string projectName = 3;
+  string catalogCode = 4;
+  string catalogName = 5;
+  string sort = 6;
+  string pyCode = 7;
+  string wbCode = 8;
+  string partCode = 9;
+  string partName = 10;
+  string unit = 11;
+  double price = 12;
+  string execDeptCode = 13;
+  string execDeptName = 14;
+  string positionCode = 15;
+  string positionName = 16;
+  string roomCode = 17;
+  string roomName = 18;
+  bool isActive = 19;
+  int32 platformType = 20;
+  string chargeCode = 21;
+  string chargeName = 22;
+  string firstCatalogCode=23;
+  string firstCatalogName=24;
+  string addCard=25;
+  string guideCode=26;
+  string guideName=27;
+  int32 depExecutionType=28;
+  string depExecutionRules=29;
+  string reservationPlace=30;
+  string reservationTime=31;
+  string templateId=32;
+  string prescribeCode=33;
+  string treatCode=34;
+}
+
+//诊疗
+message GetAllTreatProjectsRequest{}
+message TreatProjectsResponse{
+  repeated GrpcTreatProjectModel treatProjects = 1;
+}
+message GetTreatProjectByIdRequest{
+  int32 id = 1;
+}
+message GetTreatProjectByCodeRequest{
+  string code = 1;
+}
+message TreatProjectResponse{
+  GrpcTreatProjectModel treatProject = 1;
+}
+message GetTreatByUsageCodeRequest{
+  string  usageCode = 1;
+}
+// 诊疗项目（字段说明参考 Treat 类）
+message GrpcTreatProjectModel{
+  int32 id = 1;
+  string treatCode = 2;
+  string treatName = 3;
+  string pyCode = 5;
+  string wbCode = 6;
+  string unit = 7;
+  double price = 8;
+  double otherPrice = 9;
+  string categoryCode = 10;
+  string categoryName = 11;
+  string specification = 12;
+  string frequencyCode = 13;
+  string execDeptCode = 14;
+  string execDeptName = 15;
+  string feeTypeMainCode = 16;
+  string feeTypeSubCode = 17;
+  int32 platformType = 18;
+  string chargeCode = 19;
+  string chargeName = 20;
+  string projectMerge = 21;
+  string DictionaryCode = 22;
+  string DictionaryName = 23;
+  bool additional = 24;
+  int32 depExecutionType=25;
+  string depExecutionRules=26;
+  string meducalInsuranceCode = 27;
+  string yBInneCode = 28;
+}
+
+message GetAllFrequenciesRequest{
+}
+message FrequenciesResponse{
+  repeated GrpcFrequencyModel frequencies = 1;
+}
+
+message GetFrequencyByCodeRequest{
+  string code = 1;
+}
+message FrequencyResponse{
+  GrpcFrequencyModel frequency = 1;
+}
+
+// 频次信息
+message GrpcFrequencyModel{
+  string frequencyCode = 1;
+  string frequencyName = 2;
+  string fullName = 3;
+  int32 times = 4;
+  string unit = 5;
+  string execDayTimes = 6;
+  string weeks = 7;
+  bool isActive = 8;
+  string dailyFrequency = 9;
+  string frequencyUnit = 10;
+}
+
+// 用法信息
+message GetMedicineUsageByCodeRequest {
+  string code = 1;
+}
+message MedicineUsageResponse {
+  MedicineUsageModel usage = 1;
+}
+message MedicineUsageModel {
+  string usageCode = 1;
+  string usageName = 2;
+}
+
+// 费别请求参数
+message GetChargeInfoRequest{
+  repeated string codes = 1;
+}
+
+//费别返回数据
+message ChargeInfoResponse{
+  repeated ChargeInfoModel chargeInfos = 1;
+}
+
+//费别模型
+message ChargeInfoModel{
+  string code = 1;
+  string chargeCode = 2;
+  string chargeName = 3;
+}
+
+//医嘱的扩展属性
+message AdviceExtendedAttributesRequest{
+  string code = 1;
+  int32 itemType = 2;
+}
+
+//医嘱的扩展属性
+message AdviceExtendedAttributesResponse {
+  string code = 1;
+  string name = 2;
+  string pyCode = 3;
+  string wbCode = 4;
+  string scientificName = 5;
+  string alias = 6;
+  string aliasPyCode = 7;
+  string aliasWbCode = 8;
+}
+
+//分方请求参数
+message SeparationRequest{
+  string separationId = 1;
+}
+
+message GetAllSeparationRequest{}
+
+message AllSeparationResponse {
+	repeated SeparationResponse separations = 1;
+}
+
+//分方配置的用药途径集合
+message SeparationResponse
+{
+  string id = 1;
+  string title = 2;
+  int32 code = 3;
+  string printSettingId = 4;
+  repeated UsagesModel usages = 5;
+}
+
+//用药途径模型
+message UsagesModel
+{
+  string id = 1;
+  string usageCode = 2;
+  string usageName = 3;
+}
+
+message SeparationListRequest{
+
+}
+
+//途径分方和打印模板对应的参数
+message SeparationListResponse {
+  repeated SeparationListModel Separation = 1;
+}
+
+message SeparationListModel {
+  string id = 1;
+  string title = 2;
+  int32 code = 3;
+  string printSettingId = 4;
+  string usageCode = 5;
+
+}
+
+// 获取标本请求参数
+message GetLabSpecimenByIdRequest{
+  int32 id = 1;
+}
+
+// 获取标本请求参数
+message GetLabSpecimenByCodeRequest{
+  string code = 1;
+}
+
+// 标本返回结果
+message LabSpecimenResponse{
+  GrpcLabSpecimenModel specimen = 1;
+}
+// 标本信息
+message GrpcLabSpecimenModel{
+  int32 id = 1;
+  string specimenCode = 2;
+  string specimenName = 3;
+  string pyCode = 5;
+  string wbCode = 6;
+  bool isActive = 7;
+}
+
+// 获取标本采集部位请求参数
+message GetLabSpecimenPositionByCodeRequest{
+  string code = 1;
+}
+// 标本采集部位返回结果
+message LabSpecimenPositionResponse{
+  GrpcLabSpecimenPositionModel position = 1;
+}
+// 标本采集部位信息
+message GrpcLabSpecimenPositionModel{
+  int32 id = 1;
+  string specimenCode = 2;
+  string specimenName = 3;
+  string specimenPartCode = 4;
+  string specimenPartName = 5;
+  string pyCode = 7;
+  //  string wbCode = 8;
+  bool isActive = 9;
+}
+
+// 获取检查部位
+message GetExamPartByCodeRequest{
+  string code = 1;
+}
+message ExamPartResponse{
+  GrpcExamPartModel data = 1;
+}
+message GrpcExamPartModel{
+  int32 id = 1;
+  string partCode = 2;
+  string partName = 3;
+  string pyCode = 5;
+  string wbCode = 6;
+}
+
+message GetSeparationsByCodeRequest{
+  repeated string UsageCode = 1;
+}
+
+message GetSeparationsByCodeReponse{
+  repeated GetSeparationsByCodeModel Model = 1;
+
+}
+
+message GetSeparationsByCodeModel{
+  string SeparationId = 1;
+  string PrintSettingId = 2;
+  string Title = 3;
+  int32 Code = 4;
+  string usageCode=5;
+
+}
+
+// 获取科室请求
+message GetDepartmentsRequest {
+
+}
+// 科室信息列表
+message DepartmentsResponse {
+  repeated DepartmentModel items = 1;
+}
+// 科室信息
+message DepartmentModel {
+  string name = 1;
+  string code = 2;
+  string registerCode = 3;
+  bool isActived = 4;
+}
+
+// 获取诊室请求
+message GetConsultingRoomsRequest {}
+// 诊室列表
+message ConsultingRoomsResponse {
+  repeated ConsultingRoomModel items = 1;
+}
+// 诊室信息
+message ConsultingRoomModel {
+  string name = 1;
+  string code = 2;
+  string Ip = 3;
+  string callScreenIp = 4;
+}
+
+//药品id集合
+message MedicineIdsRequest{
+	repeated string medicineIds = 1;
+}
+
+//药理列表
+message ToxicListResponse{
+	repeated ToxicListModel ToxicList = 1; 
+}
+
+//药理模型
+message ToxicListModel{
+	int32  medicineId = 1;
+	google.protobuf.BoolValue isSkinTest = 2;
+	google.protobuf.BoolValue isCompound = 3;
+	google.protobuf.BoolValue isDrunk = 4;
+	google.protobuf.Int32Value toxicLevel = 5;
+	google.protobuf.BoolValue isHighRisk = 6;
+	google.protobuf.BoolValue isRefrigerated = 7;
+	google.protobuf.BoolValue isTumour = 8;
+	google.protobuf.Int32Value antibioticLevel= 9;
+	google.protobuf.BoolValue isPrecious = 10;
+	google.protobuf.BoolValue isInsulin = 11;
+	google.protobuf.BoolValue isAnaleptic =12;
+	google.protobuf.BoolValue isAllergyTest = 13;
+	google.protobuf.BoolValue isLimited = 14;
+	string limitedNote = 15;
+	string code = 16;
+}
+
+//组合请求模型查询医嘱项目信息
+message CombinationRequest{
+	repeated LabProjectInfo LabInfo = 1;
+	repeated string ExamProjectCode = 2;
+	repeated string TreatCode = 3;
+	repeated GetMedicineInvInfoRquest MedicineInfo = 4;
+}
+
+//检验查询信息
+message LabProjectInfo {
+	string CatalogCode = 1;
+	string ProjectCode = 2;
+}
+
+//组合请求返回医嘱项目信息
+message CombinationResponse {
+	repeated CombinationRecipe Details = 1;
+}
+
+//医嘱项目明细信息
+message CombinationRecipe {
+	string Code = 1;
+	string Category = 2;
+	bool IsActive = 3;
+	string MedicineCode =4;
+	string FactoryCode = 5;
+	string PharmacyCode = 6;
+	string Specification = 7;
+}
+
+//诊疗code
+message GetTreatByCodeRequest{
+	string code = 1;
+}
+
+//根据诊疗的code获取诊疗信息
+message GetTreatByCodeResponse{
+	int32 id = 1;
+	string code = 2;
+	string name = 3;
+	string pyCode = 4;
+	string wbCode= 5;
+	double price = 6;
+	double retPrice = 7;
+	double otherPrice = 8;
+	bool additional = 9;
+	string categoryCode = 10;
+	string categoryName = 11;
+	string specification = 12;
+	string unit = 13;
+	string frequencyCode = 14;
+	string feeTypeMainCode = 15;
+	string feeTypeSubCode = 16;
+	int32 platformType = 17;
+	string projectMerge = 18;
+	string projectType = 19;
+	string projectTypeName = 20;
+	string dictionaryCode = 21;
+    string dictionaryName = 22;
+	string meducalInsuranceCode = 23;
+	string yBInneCode = 24;
+}
+
+message HisMedicineSampleRequest{
+   double EmergencySign = 1;
+}
+
+message HisMedicineSampleResponse{ 
+	repeated HisMedicineSampleModel HisMedicine = 1;
+	
+}
+
+message HisMedicineSampleModel{
+	string InvId = 1;
+	double EmergencySign = 2;
+	string MedicineCode = 3;
+	string MedicineName = 4; 
+	string PharmacyCode = 5;
+	string PharmacyName = 6;  
+	int32 IsFirstAid= 7;
+}
+
+//字典类型
+message GetDictionariesRequest{
+ string DictionariesTypeCode=1;
+ string DictionariesCode=2;
+}
+
+//字典信息
+message GetDictionariesResponse{
+  string DictionariesTypeCode=1;
+  string DictionariesTypeName=2;
+  string DictionariesCode=3;
+  string DictionariesName=4;
+}
+

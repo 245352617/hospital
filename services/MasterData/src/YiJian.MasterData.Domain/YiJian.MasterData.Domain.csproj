@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DocumentationFile>obj/Debug/net6.0/YiJian.MasterData.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>obj/Release/net6.0/YiJian.MasterData.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Ddd.Domain" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="6.0.3" />
+	<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+    <ProjectReference Include="..\YiJian.MasterData.Domain.Shared\YiJian.MasterData.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <None Update="YiJian.MasterData.Domain.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <PackageReference Update="Fody" Version="6.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="MasterData\Exams\Project\ExamProjectAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Exams\Project\ExamProjectManager.cs" />
+    <Compile Remove="MasterData\Exams\Catalog\ExamCatalogManager.cs" />
+    <Compile Remove="MasterData\Exams\Catalog\ExamCatalogAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Exams\Target\ExamTargetManager.cs" />
+    <Compile Remove="MasterData\Labs\Project\LabProjectAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Labs\Target\LabTargetManager.cs" />
+    <Compile Remove="MasterData\Labs\Target\LabTargetAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Labs\Project\LabProjectManager.cs" />
+    <Compile Remove="MasterData\Labs\Specimen\LabSpecimenAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Labs\Catalog\LabCatalogManager.cs" />
+    <Compile Remove="MasterData\Labs\Container\LabContainerAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Labs\Position\LabSpecimenPositionManager.cs" />
+    <Compile Remove="MasterData\Labs\Position\LabSpecimenPositionAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Labs\Catalog\LabCatalogAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Exams\Target\ExamTargetAlreadyExistsException.cs" />
+    <Compile Remove="MasterData\Labs\Container\LabContainerManager.cs" />
+    <Compile Remove="MasterData\Labs\Specimen\LabSpecimenManager.cs" />
+    <Compile Remove="MasterData\Medicines\Usage\MedicineUsageManager.cs" />
+  </ItemGroup>
+
+</Project>

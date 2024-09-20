@@ -1,0 +1,56 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS restore
+WORKDIR /source
+COPY shared/YiJian.ECIS.Authorization/YiJian.ECIS.Authorization.csproj shared/YiJian.ECIS.Authorization/
+COPY shared/YiJian.ECIS.Core/YiJian.ECIS.Core.csproj shared/YiJian.ECIS.Core/
+COPY shared/YiJian.ECIS.ShareModel/YiJian.ECIS.ShareModel.csproj shared/YiJian.ECIS.ShareModel/
+COPY shared/YiJian.ECIS.DDP/YiJian.ECIS.DDP.csproj shared/YiJian.ECIS.DDP/
+COPY services/Report/src/YiJian.Health.Report.EntityFrameworkCore/YiJian.Health.Report.EntityFrameworkCore.csproj services/Report/src/YiJian.Health.Report.EntityFrameworkCore/
+COPY services/Report/src/YiJian.Health.Report.Domain.Shared/YiJian.Health.Report.Domain.Shared.csproj services/Report/src/YiJian.Health.Report.Domain.Shared/
+COPY services/Report/src/YiJian.Health.Report.Domain/YiJian.Health.Report.Domain.csproj services/Report/src/YiJian.Health.Report.Domain/
+COPY services/Report/src/YiJian.Health.Report.Application/YiJian.Health.Report.Application.csproj services/Report/src/YiJian.Health.Report.Application/
+COPY services/Report/src/YiJian.Health.Report.Application.Contracts/YiJian.Health.Report.Application.Contracts.csproj services/Report/src/YiJian.Health.Report.Application.Contracts/
+COPY services/Report/src/YiJian.Health.Report.HttpApi/YiJian.Health.Report.HttpApi.csproj services/Report/src/YiJian.Health.Report.HttpApi/
+COPY services/Report/host/YiJian.Health.Report.HttpApi.Host/YiJian.Health.Report.HttpApi.Host.csproj services/Report/host/YiJian.Health.Report.HttpApi.Host/
+
+RUN dotnet restore "services/Report/host/YiJian.Health.Report.HttpApi.Host/YiJian.Health.Report.HttpApi.Host.csproj"
+# # 复制 FastReport 逆向版本（去除水印、打印5页限制）
+# COPY services/Report/dll/FastReport.dll ~/.nuget/packages/fastreport.core/2022.2.2-demo/lib/netstandard2.0/
+# COPY services/Report/dll/FastReport.dll ~/.nuget/packages/fastreport.core/2022.2.2-demo/lib/netstandard2.1/
+
+FROM restore AS build
+WORKDIR /source
+COPY shared/. shared/
+COPY services/Report/. services/Report/
+RUN dotnet publish -c Release -o /app services/Report/host/YiJian.Health.Report.HttpApi.Host/YiJian.Health.Report.HttpApi.Host.csproj
+# 复制 FastReport 逆向版本（去除水印、打印5页限制）
+COPY services/Report/dll/FastReport.dll /app/FastReport.dll
+
+
+# FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# ENV TZ Asia/Shanghai
+# # 这里必须用国内源，用官方源会出现字体错乱问题，具体原因问上帝
+# RUN echo "deb http://mirrors.aliyun.com/debian stable main bullseye non-free" > /etc/apt/sources.list
+# RUN echo "deb http://mirrors.aliyun.com/debian stable-proposed-updates main bullseye non-free" >> /etc/apt/sources.list
+# RUN echo "deb http://mirrors.aliyun.com/debian stable-updates main bullseye non-free" >> /etc/apt/sources.list
+# RUN echo "deb-src http://mirrors.aliyun.com/debian stable main bullseye non-free" >> /etc/apt/sources.list
+# RUN echo "deb-src http://mirrors.aliyun.com/debian stable-proposed-updates main bullseye non-free" >> /etc/apt/sources.list
+# RUN echo "deb-src http://mirrors.aliyun.com/debian stable-updates main bullseye non-free" >> /etc/apt/sources.list
+# ARG DEBIAN_FRONTEND=noninteractive
+# RUN apt-get update && apt-get install -y libgdiplus libc6-dev && ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll && apt-get install --assume-yes apt-utils && apt-get install -y locales && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8 \
+#     && apt-get install -y curl
+# ENV LANG zh_CN.utf8 
+# RUN apt-get install fontconfig -y
+# COPY services/Report/host/YiJian.Health.Report.HttpApi.Host/Fonts/* /usr/share/fonts/\
+
+# FROM base AS production
+FROM registry.szyjian.com/ecis2.0/report-base:dev AS production
+WORKDIR /app
+COPY --from=build /app .
+HEALTHCHECK --interval=5s --timeout=3s \
+    CMD curl -sS -f -X 'POST' 'http://localhost/health' || exit 1
+
+EXPOSE 80
+EXPOSE 443
+
+ENV TZ Asia/Shanghai
+ENTRYPOINT ["dotnet", "YiJian.Health.Report.HttpApi.Host.dll"]

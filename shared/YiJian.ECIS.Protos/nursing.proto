@@ -1,0 +1,71 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "NursingService";
+
+service GrpcNursing {
+    // 查询全部医嘱执行
+    rpc GetRecipeExecList (GetRecipeExecListRequest) returns (RecipeExecListResponse);
+    //查询患者导管列表
+    rpc GetNursingCanulaList (GetNursingCanulaRequest) returns (NursingCanulaListResponse);
+
+}
+
+message GetRecipeExecListRequest {
+string PID=1;
+string StartTime=2;
+string EndTime=3;
+}
+
+message RecipeExecListResponse {
+    repeated GrpcRecipeExecModel recipeExec = 1;
+}
+
+message GrpcRecipeExecModel {
+    string Id = 1;
+    int32 IfCalcIn=2;
+    string CheckNurseCode=3;
+    string CheckNurseName=4;
+    string CheckStatus=5;
+    google.protobuf.Timestamp CheckTime=6;
+    string ConversionTime=7;
+    string DosageQty=8;
+    string DosageUnit=9;
+    string ExcuteNurseCode=10;
+    string ExcuteNurseName=11;
+    google.protobuf.Timestamp ExcuteNurseTime=12;
+    string ExecuteType=13;
+    string FinishNurse=14;
+    string FinishNurseCode=15;
+    google.protobuf.Timestamp FinishTime=16;
+    google.protobuf.Timestamp NurseTime=17;
+    string NursingStatus=18;
+    google.protobuf.Timestamp PlanExcuteTime=19;
+    int32 SortNum=20;
+    string TotalDosage=21;
+    string UsageCode=22;
+    string UsageName=23;
+}
+
+
+
+message GetNursingCanulaRequest {
+string PID=1;
+string StartTime=2;
+string EndTime=3;
+}
+
+message NursingCanulaListResponse {
+    repeated GrpcNursingCanulaModel nursingCanula = 1;
+}
+
+message GrpcNursingCanulaModel {
+    string Id = 1;
+    google.protobuf.Timestamp StartTime=2;
+    google.protobuf.Timestamp StopTime=3;
+    int64 ModuleCode=4;
+    string ModuleName=5;
+    string CanulaName=6;
+    string CanulaPart=7;
+}

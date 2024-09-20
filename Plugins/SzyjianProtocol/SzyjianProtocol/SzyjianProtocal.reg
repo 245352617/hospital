@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\szyjian]
+@="URL:Open with Szyjian Protocol"
+"URL Protocol"=""
+[HKEY_CLASSES_ROOT\szyjian\shell]
+[HKEY_CLASSES_ROOT\szyjian\shell\open]
+[HKEY_CLASSES_ROOT\szyjian\shell\open\command]
+@="\"C:\\Program Files\\Szyjian\\SzyjianProtocol.exe\" \"%1\""

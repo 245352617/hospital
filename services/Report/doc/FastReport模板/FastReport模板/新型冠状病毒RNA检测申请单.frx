@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/17/2022 11:46:15" ReportInfo.Modified="10/19/2022 11:22:10" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary>
+    <TableDataSource Name="dataSource" ReferenceName="Data.dataSource" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="stampBase" DataType="System.Byte[]" Calculated="true" Expression="Convert.FromBase64String([lisesNovelCoronavirus.lises.stampBase])"/>
+    </TableDataSource>
+    <TableDataSource Name="lises" ReferenceName="Data.lises" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="lgjkzx_payurl" DataType="System.String"/>
+      <Column Name="lgzxyy_payurl" DataType="System.String"/>
+      <Column Name="stampBase" DataType="System.String"/>
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="catalogCode" DataType="System.String"/>
+      <Column Name="catalogName" DataType="System.String"/>
+      <Column Name="clinicalSymptom" DataType="System.String"/>
+      <Column Name="specimenCode" DataType="System.String"/>
+      <Column Name="specimenName" DataType="System.String"/>
+      <Column Name="specimenPartCode" DataType="System.String"/>
+      <Column Name="specimenPartName" DataType="System.String"/>
+      <Column Name="containerCode" DataType="System.String"/>
+      <Column Name="containerName" DataType="System.String"/>
+      <Column Name="containerColor" DataType="System.String"/>
+      <Column Name="specimenDescription" DataType="System.String"/>
+      <Column Name="specimenCollectDatetime" DataType="System.Object"/>
+      <Column Name="specimenReceivedDatetime" DataType="System.Object"/>
+      <Column Name="reportTime" DataType="System.Object"/>
+      <Column Name="reportDoctorCode" DataType="System.String"/>
+      <Column Name="reportDoctorName" DataType="System.String"/>
+      <Column Name="hasReportName" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isEmergency" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isBedSide" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="execDeptCode" DataType="System.String"/>
+      <Column Name="execDeptName" DataType="System.String"/>
+      <Column Name="piid" DataType="System.String"/>
+      <Column Name="code" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="categoryCode" DataType="System.String"/>
+      <Column Name="categoryName" DataType="System.String"/>
+      <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="prescriptionNo" DataType="System.String"/>
+      <Column Name="recipeNo" DataType="System.String"/>
+      <Column Name="recipeGroupNo" DataType="System.Double"/>
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="resultTime" DataType="System.String"/>
+      <Column Name="applyDoctorCode" DataType="System.String"/>
+      <Column Name="applyDoctorName" DataType="System.String"/>
+      <Column Name="applyDeptCode" DataType="System.String"/>
+      <Column Name="applyDeptName" DataType="System.String"/>
+      <Column Name="status" DataType="System.Double"/>
+      <Column Name="payTypeCode" DataType="System.String"/>
+      <Column Name="payType" DataType="System.Double"/>
+      <Column Name="unit" DataType="System.String"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="amount" DataType="System.Double"/>
+      <Column Name="insuranceCode" DataType="System.String"/>
+      <Column Name="insuranceType" DataType="System.Double"/>
+      <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="hisOrderNo" DataType="System.String"/>
+      <Column Name="diagnosis" DataType="System.String"/>
+      <Column Name="remarks" DataType="System.String"/>
+      <Column Name="prescribeTypeCode" DataType="System.String"/>
+      <Column Name="prescribeTypeName" DataType="System.String"/>
+      <Column Name="recieveQty" DataType="System.Double"/>
+      <Column Name="recieveUnit" DataType="System.String"/>
+      <Column Name="id" DataType="System.String"/>
+      <Column Name="accountFlag" DataType="System.Double"/>
+      <Column Name="accountFlagText" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+      <Column Name="medicalNo" DataType="System.String"/>
+      <Column Name="channelNo" DataType="System.String"/>
+      <Column Name="guideName" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="admissionRecords" ReferenceName="Data.admissionRecords" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="visNo" DataType="System.String"/>
+      <Column Name="aR_ID" DataType="System.Double"/>
+      <Column Name="pI_ID" DataType="System.String"/>
+      <Column Name="patientID" DataType="System.String"/>
+      <Column Name="contactsPerson" DataType="System.String"/>
+      <Column Name="contactsPhone" DataType="System.String"/>
+      <Column Name="narrationCode" DataType="System.String"/>
+      <Column Name="narrationName" DataType="System.String"/>
+      <Column Name="triageUserCode" DataType="System.String"/>
+      <Column Name="triageUserName" DataType="System.String"/>
+      <Column Name="visitNo" DataType="System.Double"/>
+      <Column Name="visitDate" DataType="System.String"/>
+      <Column Name="registerNo" DataType="System.String"/>
+      <Column Name="registerTime" DataType="System.Object"/>
+      <Column Name="registerDoctorCode" DataType="System.String"/>
+      <Column Name="registerDoctorName" DataType="System.String"/>
+      <Column Name="patientName" DataType="System.String"/>
+      <Column Name="age" DataType="System.String"/>
+      <Column Name="sex" DataType="System.String"/>
+      <Column Name="sexName" DataType="System.String"/>
+      <Column Name="homeAddress" DataType="System.String"/>
+      <Column Name="birthday" DataType="System.Object"/>
+      <Column Name="chargeType" DataType="System.String"/>
+      <Column Name="chargeTypeName" DataType="System.String"/>
+      <Column Name="greenRoadName" DataType="System.String"/>
+      <Column Name="areaCode" DataType="System.String"/>
+      <Column Name="areaName" DataType="System.String"/>
+      <Column Name="bed" DataType="System.String"/>
+      <Column Name="firstDoctorCode" DataType="System.String"/>
+      <Column Name="firstDoctorName" DataType="System.String"/>
+      <Column Name="dutyDoctorCode" DataType="System.String"/>
+      <Column Name="dutyDoctorName" DataType="System.String"/>
+      <Column Name="retentionTime" DataType="System.Object"/>
+      <Column Name="lockDate" DataType="System.Object"/>
+      <Column Name="nurseGrade" DataType="System.String"/>
+      <Column Name="dutyNurseCode" DataType="System.String"/>
+      <Column Name="dutyNurseName" DataType="System.String"/>
+      <Column Name="operatorCode" DataType="System.String"/>
+      <Column Name="operatorName" DataType="System.String"/>
+      <Column Name="visitStatus" DataType="System.Double"/>
+      <Column Name="isPlanBackRoom" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="emergencyLevel" DataType="System.Double"/>
+      <Column Name="inDeptTime" DataType="System.Object"/>
+      <Column Name="outDeptTime" DataType="System.String"/>
+      <Column Name="inDeptWay" DataType="System.String"/>
+      <Column Name="isAttention" DataType="System.String"/>
+      <Column Name="cardNo" DataType="System.String"/>
+      <Column Name="medicalCard" DataType="System.String"/>
+      <Column Name="idNo" DataType="System.String"/>
+      <Column Name="triageLevel" DataType="System.String"/>
+      <Column Name="triageLevelName" DataType="System.String"/>
+      <Column Name="triageTime" DataType="System.String"/>
+      <Column Name="isInHospital" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="triageDeptCode" DataType="System.String"/>
+      <Column Name="triageDeptName" DataType="System.String"/>
+      <Column Name="weight" DataType="System.String"/>
+      <Column Name="height" DataType="System.String"/>
+      <Column Name="pastMedicalHistory" DataType="System.String"/>
+      <Column Name="infectiousHistory" DataType="System.String"/>
+      <Column Name="allergyHistory" DataType="System.String"/>
+      <Column Name="fluFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="fluTemp" DataType="System.String"/>
+      <Column Name="coughFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="chestFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="typeOfVisitCode" DataType="System.String"/>
+      <Column Name="typeOfVisitName" DataType="System.String"/>
+      <Column Name="triageErrorFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="patientWhereAbout" DataType="System.String"/>
+      <Column Name="triageDirectionCode" DataType="System.String"/>
+      <Column Name="triageDirectionName" DataType="System.String"/>
+      <Column Name="supplementaryNotes" DataType="System.String"/>
+      <Column Name="keyDiseasesCode" DataType="System.String"/>
+      <Column Name="deathTime" DataType="System.String"/>
+      <Column Name="outDeptReason" DataType="System.Double"/>
+      <Column Name="diagnoseCode" DataType="System.String"/>
+      <Column Name="diagnoseName" DataType="System.String"/>
+      <Column Name="sort" DataType="System.Double"/>
+      <Column Name="isTop" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="callStatus" DataType="System.Double"/>
+      <Column Name="identityCode" DataType="System.String"/>
+      <Column Name="identityName" DataType="System.String"/>
+      <Column Name="isHasTransfer" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="finishVisitTime" DataType="System.String"/>
+      <Column Name="current" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+      <Column Name="safetyNo" DataType="System.String" PropName="Column"/>
+    </TableDataSource>
+    <TableDataSource Name="otherInfo" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="item" DataType="System.Object"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+    <TableDataSource Name="lisesNovelCoronavirus" ReferenceName="Data.lisesNovelCoronavirus" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="consultationOpinions" DataType="System.Int32"/>
+      <Column Name="doctorsAdviceId" DataType="System.String"/>
+      <Column Name="epidemicHistory" DataType="System.Int32"/>
+      <Column Name="isFever" DataType="System.Boolean"/>
+      <Column Name="isLymphopenia" DataType="System.Boolean"/>
+      <Column Name="isPneumonia" DataType="System.Boolean"/>
+      <Column Name="lisesName" DataType="System.String"/>
+      <Column Name="patientIdentity" DataType="System.String"/>
+      <Column Name="patientSource" DataType="System.String"/>
+      <Column Name="placeToShenzhen" DataType="System.Int32"/>
+      <Column Name="specimenType" DataType="System.Int32"/>
+    </TableDataSource>
+    <Relation Name="lisRelation" ReferenceName="Data.lisRelation" ParentDataSource="lises" ChildDataSource="lisesNovelCoronavirus" ParentColumns="id" ChildColumns="doctorsAdviceId" Enabled="true"/>
+  </Dictionary>
+  <ReportPage Name="NovelCoronavirus" PaperWidth="148" PaperHeight="210" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" FirstPageSource="15" OtherPagesSource="15" LastPageSource="15" Guides="170.1,396.9,37.8,124.76,141.75,368.55,0,75.6,189,340.2,415.8,519.75,264.6,245.7,179.55,94.5,56.7,500.85,302.4,390.05,406.35,494,292.95,387.45,491.4" Watermark.Font="宋体, 60pt">
+    <PageHeaderBand Name="PageHeader2" Width="521.64" Height="223.02" Border.Lines="Bottom" Guides="37.8,56.7,18.9,66.15,9.45,132.3,151.2,103.95,122.85,75.6,94.5,160.65,179.55,189,207.9">
+      <ShapeObject Name="Shape6" Left="349.65" Top="198.45" Width="18.9" Height="18.9" Shape="Ellipse"/>
+      <ShapeObject Name="Shape5" Left="215.46" Top="198.45" Width="18.9" Height="18.9" Shape="Ellipse"/>
+      <ShapeObject Name="Shape4" Left="111.51" Top="198.45" Width="18.9" Height="18.9" Shape="Ellipse"/>
+      <ShapeObject Name="Shape2" Left="368.55" Top="141.75" Width="18.9" Height="18.9" Shape="Ellipse"/>
+      <CheckBoxObject Name="CheckBox26" Left="368.55" Top="141.75" Width="15.12" Height="15.12" VisibleExpression="[lisesNovelCoronavirus.specimenType]==1" Checked="false" Expression="IIf([lisesNovelCoronavirus.specimenType]==1,true,false)"/>
+      <ShapeObject Name="Shape3" Left="434.7" Top="141.75" Width="18.9" Height="18.9" Shape="Ellipse"/>
+      <ShapeObject Name="Shape1" Left="311.85" Top="141.75" Width="18.9" Height="18.9" Shape="Ellipse"/>
+      <LineObject Name="Line1" Top="75.6" Width="519.75" Border.Width="2"/>
+      <TextObject Name="Text67" Top="85.05" Width="47.25" Height="18.9" Text="姓名:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text4" Left="37.8" Top="85.05" Width="132.3" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.patientName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text68" Left="170.1" Top="85.05" Width="37.8" Height="18.9" Text="性别：" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text69" Left="207.9" Top="85.05" Width="37.8" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.sexName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text70" Left="245.7" Top="85.05" Width="37.8" Height="18.9" Text="年龄:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text71" Left="283.5" Top="85.05" Width="75.6" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.age]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text72" Left="368.55" Top="85.05" Width="47.25" Height="18.9" Text="籍贯:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text10" Left="415.8" Top="85.05" Width="103.95" Height="18.9" Border.Lines="Bottom" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text73" Top="113.4" Width="75.6" Height="18.9" Text="送检单位:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text12" Left="75.6" Top="113.4" Width="151.2" Height="18.9" Border.Lines="Bottom" Text="深圳市龙岗中心医院" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text74" Left="226.8" Top="113.4" Width="37.8" Height="18.9" Text="科别:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text14" Left="264.6" Top="113.4" Width="103.95" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.triageDeptName]" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text75" Left="368.55" Top="113.4" Width="66.15" Height="18.9" Text="医疗证号:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text16" Left="434.7" Top="113.4" Width="85.05" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.safetyNo]" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <TextObject Name="Text76" Top="141.75" Width="141.75" Height="18.9" Text="门诊号或住院号码:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text77" Left="132.3" Top="141.75" Width="94.5" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.visitNo]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text78" Left="236.25" Top="141.75" Width="66.15" Height="18.9" Text="标本类型:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text79" Left="330.75" Top="141.75" Width="37.8" Height="18.9" Text="血液" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text80" Left="387.45" Top="141.75" Width="47.25" Height="18.9" Text="咽拭子" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text81" Left="453.6" Top="141.75" Width="18.9" Height="18.9" Text="痰" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text84" Top="47.25" Width="519.75" Height="28.35" Text="新型冠状病毒RNA检测申请单" HorzAlign="Center" Font="宋体, 16pt"/>
+      <TextObject Name="Text85" Left="18.9" Top="18.9" Width="463.05" Height="18.9" Text="深圳市龙岗区" HorzAlign="Center" WordWrap="false" Font="宋体, 14pt"/>
+      <BarcodeObject Name="Barcode7" Width="122.85" Height="37.8" AutoSize="false" Text="[lisesNovelCoronavirus.lises.medicalNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <BarcodeObject Name="Barcode2" Left="396.9" Width="122.85" Height="37.8" AutoSize="false" Text="[lisesNovelCoronavirus.lises.channelNo]" ShowText="false" AllowExpressions="true" Barcode="Code128" Barcode.AutoEncode="true"/>
+      <TextObject Name="Text82" Top="170.1" Width="75.6" Height="18.9" Text="临床诊断:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text83" Left="66.15" Top="170.1" Width="264.6" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.diagnoseName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text29" Left="330.75" Top="170.1" Width="66.15" Height="18.9" Text="电话号码:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text30" Left="396.9" Top="170.1" Width="122.85" Height="18.9" Border.Lines="Bottom" Text="[admissionRecords.contactsPhone]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text31" Top="198.45" Width="124.76" Height="18.9" Text="专家会诊意见:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text32" Left="132.3" Top="198.45" Width="75.6" Height="18.9" Text="疑似患者" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text33" Left="236.25" Top="198.45" Width="94.5" Height="18.9" Text="医学观察对象" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text34" Left="368.55" Top="198.45" Width="94.5" Height="18.9" Text="复工复产复学" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox23" Left="113.4" Top="198.45" Width="15.12" Height="15.12" Checked="false" Expression="IIf([lisesNovelCoronavirus.consultationOpinions]==0,true,false)"/>
+      <CheckBoxObject Name="CheckBox24" Left="217.35" Top="198.45" Width="15.12" Height="15.12" Checked="false" Expression="[lisesNovelCoronavirus.consultationOpinions]==1?true:false"/>
+      <CheckBoxObject Name="CheckBox25" Left="349.65" Top="198.45" Width="15.12" Height="15.12" Checked="false" Expression="[lisesNovelCoronavirus.consultationOpinions]==2?true:false"/>
+      <CheckBoxObject Name="CheckBox22" Left="434.7" Top="141.75" Width="15.12" Height="15.12" VisibleExpression="[lisesNovelCoronavirus.specimenType]==2" Checked="false" Expression="IIf([lisesNovelCoronavirus.specimenType]==2,true,false)"/>
+      <CheckBoxObject Name="CheckBox20" Left="311.85" Top="141.75" Width="15.12" Height="15.12" VisibleExpression="[lisesNovelCoronavirus.specimenType]==0" Checked="false" Expression="IIf([lisesNovelCoronavirus.specimenType]==0,true,false)"/>
+      <TextObject Name="Text313" Left="1.91" Top="37.8" Width="122.85" Height="18.9" Text="病历号：[lisesNovelCoronavirus.lises.medicalNo]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text318" Left="393.75" Top="45.36" Width="126" Height="30.24" VisibleExpression="[admissionRecords.greenRoadName]==&quot;&quot;?false:true" Text="★ 绿色通道" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="宋体, 14pt, style=Bold" TextFill.Color="Red"/>
+    </PageHeaderBand>
+    <DataBand Name="Data2" Top="226.22" Width="521.64" Height="372.33" Guides="9.449997,28.34999,37.8,56.7" DataSource="lisesNovelCoronavirus" KeepTogether="true">
+      <TextObject Name="Text89" Left="3.78" Top="230.58" Width="175.77" Height="18.9" Text="3、是否有肺炎影像学特征" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text90" Left="202.23" Top="230.58" Width="18.9" Height="18.9" Text="无" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text91" Left="258.93" Top="230.58" Width="18.9" Height="18.9" Text="有" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox8" Left="240.03" Top="230.58" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.isPneumonia]"/>
+      <TextObject Name="Text92" Left="3.78" Top="258.93" Width="166.32" Height="18.9" Text="4、淋巴细胞是否降低 " VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox9" Left="154.98" Top="258.93" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.isLymphopenia]==false"/>
+      <TextObject Name="Text93" Left="183.33" Top="258.93" Width="18.9" Height="18.9" Text="无" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text94" Left="240.03" Top="258.93" Width="18.9" Height="18.9" Text="有" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox10" Left="221.13" Top="258.93" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.isLymphopenia]"/>
+      <TextObject Name="Text95" Left="3.78" Top="287.28" Width="90.72" Height="18.9" Text="5、人员来源" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text96" Left="98.28" Top="287.28" Width="160.65" Height="18.9" Border.Lines="Bottom" Text="[lisesNovelCoronavirus.patientSource]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text97" Left="3.78" Top="315.63" Width="90.72" Height="18.9" Text="6、人员身份" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text98" Left="98.28" Top="315.63" Width="160.65" Height="18.9" Border.Lines="Bottom" Text="[lisesNovelCoronavirus.patientIdentity]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text35" Left="3.78" Top="3.78" Width="94.5" Height="18.9" Text="检验项目:" VertAlign="Bottom" Font="宋体, 12pt"/>
+      <TextObject Name="Text36" Left="22.68" Top="22.68" Width="383.67" Height="34.02" Text="[lisesNovelCoronavirus.lisesName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text37" Left="3.78" Top="60.48" Width="151.2" Height="18.9" Text="1、是否有流行病学史：&#13;" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox1" Left="22.68" Top="79.38" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="IIf([lisesNovelCoronavirus.epidemicHistory]==0,true,false)"/>
+      <TextObject Name="Text38" Left="41.58" Top="79.38" Width="18.9" Height="18.9" Text="无" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox2" Left="22.68" Top="107.73" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="IIf([lisesNovelCoronavirus.epidemicHistory]==1,true,false)"/>
+      <TextObject Name="Text39" Left="41.58" Top="98.28" Width="481.95" Height="37.8" Text="发病前14天内有武汉地区或其他有本地病例持续传播地区的旅行史或居住史&#13;" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox3" Left="22.68" Top="145.53" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.epidemicHistory]==2?true:false"/>
+      <TextObject Name="Text40" Left="41.58" Top="136.08" Width="481.95" Height="37.8" Text="发病前14天内曾接触过来自武汉市或其他有本地病例持续传播地区的发热或有呼吸道症状的患者" VertAlign="Bottom" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox4" Left="22.68" Top="173.88" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.epidemicHistory]==3?true:false"/>
+      <TextObject Name="Text41" Left="41.58" Top="173.88" Width="481.95" Height="18.9" Text="有聚集性发病或与新型冠状病毒感染者有流行病学关联" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text86" Left="3.78" Top="202.23" Width="120.98" Height="18.9" Text="2、是否有发热" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox5" Left="117.18" Top="202.23" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="![lisesNovelCoronavirus.isFever]"/>
+      <TextObject Name="Text87" Left="136.08" Top="202.23" Width="18.9" Height="18.9" Text="无" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text88" Left="192.78" Top="202.23" Width="18.9" Height="18.9" Text="有" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox6" Left="173.88" Top="202.23" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.isFever]"/>
+      <TextObject Name="Text99" Left="3.78" Top="343.98" Width="90.72" Height="18.9" Text="7、来深地点" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox11" Left="98.28" Top="343.98" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.placeToShenzhen]==0?true:false"/>
+      <TextObject Name="Text100" Left="117.18" Top="343.98" Width="34.02" Height="18.9" Text="其他" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text101" Left="173.88" Top="343.98" Width="66.15" Height="18.9" Text="湖北来深" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox12" Left="154.98" Top="343.98" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.placeToShenzhen]==1?true:false"/>
+      <TextObject Name="Text102" Left="268.38" Top="343.98" Width="147.42" Height="18.9" Text="14天内境外入境人员" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox13" Left="249.48" Top="343.98" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.placeToShenzhen]==2?true:false"/>
+      <BarcodeObject Name="Barcode8" Left="406.35" Top="9.45" Width="87.65" Height="77.3" AutoSize="false" Text="[lisesNovelCoronavirus.lises.lgzxyy_payurl]" ShowText="false" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text107" Left="396.9" Width="132.3" Height="18.9" Text="支持自费和医保支付" Font="宋体, 9pt"/>
+      <TextObject Name="Text108" Left="396.9" Top="75.6" Width="132.3" Height="18.9" Text="龙岗中心医院扫码付" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <BarcodeObject Name="Barcode9" Left="406.35" Top="255.15" Width="87.65" Height="77.3" AutoSize="false" Text="[lisesNovelCoronavirus.lises.lgjkzx_payurl]" ShowText="false" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text109" Left="406.35" Top="245.7" Width="94.5" Height="18.9" Text="自费和医保支付" Font="宋体, 9pt"/>
+      <TextObject Name="Text110" Left="406.35" Top="321.3" Width="103.95" Height="18.9" Text=" 龙岗健康在线" VertAlign="Bottom" Font="宋体, 9pt"/>
+      <CheckBoxObject Name="CheckBox27" Left="183.33" Top="232.47" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[lisesNovelCoronavirus.isPneumonia]==false"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter2" Top="601.75" Width="521.64" Height="151.2" Guides="0,18.89999,28.35001,47.25,96.20001,94.5,113.4,75.60001,122.85,151.2,170.1">
+      <TextObject Name="Text59" Top="9.45" Width="75.6" Height="18.9" Text="送检医生" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text60" Left="217.35" Top="9.45" Width="66.15" Height="18.9" Text="送检日期:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text61" Left="292.95" Top="9.45" Width="189" Height="18.9" Border.Lines="Bottom" Text="[lisesNovelCoronavirus.applyTime]" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text62" Top="37.8" Width="66.15" Height="18.9" Text="接收单位:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text63" Left="66.15" Top="37.8" Width="151.2" Height="18.9" Border.Lines="Bottom" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text64" Left="217.35" Top="37.8" Width="75.6" Height="18.9" Text="接收人:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text65" Left="283.5" Top="37.8" Width="198.45" Height="18.9" Border.Lines="Bottom" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text66" Top="66.15" Width="66.15" Height="18.9" Text="温馨提示:" VertAlign="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <LineObject Name="Line3" Width="519.75" Border.Width="2"/>
+      <TextObject Name="Text314" Left="30.26" Top="85.05" Width="470.59" Height="66.15" Text="[lisesNovelCoronavirus.lises.guideName]" Font="宋体, 9pt"/>
+      <PictureObject Name="Picture1" Left="66.15" Width="103.95" Height="28.35" DataColumn="dataSource.stampBase"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

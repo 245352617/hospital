@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/07/2022 16:26:30" ReportInfo.Modified="05/16/2022 15:03:58" ReportInfo.CreatorVersion="1.0.0.0">
+  <Dictionary>    
+          <TableDataSource Name="medicines" ReferenceName="Data.medicines"  DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+            <Column Name="index" DataType="System.Int32"/>
+            
+              <Column Name="medicineProperty" DataType="System.String"/>
+              <Column Name="toxicProperty" DataType="System.String"/>
+              <Column Name="isNonPreferredDrugs" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="usageCode" DataType="System.String"/>
+              <Column Name="usageName" DataType="System.String"/>
+              <Column Name="speed" DataType="System.String"/>
+              <Column Name="longDays" DataType="System.Double"/>
+              <Column Name="actualDays" DataType="System.Double"/>
+              <Column Name="dosageQty" DataType="System.Double"/>
+              <Column Name="qtyPerTimes" DataType="System.Double"/>
+              <Column Name="dosageUnit" DataType="System.String"/>
+              <Column Name="frequencyCode" DataType="System.String"/>
+              <Column Name="frequencyName" DataType="System.String"/>
+              <Column Name="frequencyTimes" DataType="System.Double"/>
+              <Column Name="frequencyUnit" DataType="System.String"/>
+              <Column Name="frequencyExecDayTimes" DataType="System.String"/>
+              <Column Name="pharmacyCode" DataType="System.String"/>
+              <Column Name="pharmacyName" DataType="System.String"/>
+              <Column Name="factoryName" DataType="System.String"/>
+              <Column Name="factoryCode" DataType="System.String"/>
+              <Column Name="batchNo" DataType="System.Object"/>
+              <Column Name="isSkinTest" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="skinTestResult" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="materialPrice" DataType="System.Double"/>
+              <Column Name="isAdaptationDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="isFirstAid" DataType="System.Object" BindableControl="CheckBox"/>
+              <Column Name="antibioticPermission" DataType="System.Double"/>
+              <Column Name="prescriptionPermission" DataType="System.Double"/>
+              <Column Name="specification" DataType="System.String"/>
+              <Column Name="piid" DataType="System.String"/>
+              <Column Name="code" DataType="System.String"/>
+              <Column Name="name" DataType="System.String"/>
+              <Column Name="categoryCode" DataType="System.String"/>
+              <Column Name="categoryName" DataType="System.String"/>
+              <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="prescriptionNo" DataType="System.String"/>
+              <Column Name="recipeNo" DataType="System.String"/>
+              <Column Name="recipeGroupNo" DataType="System.Double"/>
+              <Column Name="applyTime" DataType="System.String"/>
+              <Column Name="applyDoctorCode" DataType="System.String"/>
+              <Column Name="applyDoctorName" DataType="System.String"/>
+              <Column Name="applyDeptCode" DataType="System.String"/>
+              <Column Name="applyDeptName" DataType="System.String"/>
+              <Column Name="status" DataType="System.Double"/>
+              <Column Name="payTypeCode" DataType="System.String"/>
+              <Column Name="payType" DataType="System.Double"/>
+              <Column Name="unit" DataType="System.String"/>
+              <Column Name="price" DataType="System.Double"/>
+              <Column Name="amount" DataType="System.Double"/>
+              <Column Name="insuranceCode" DataType="System.String"/>
+              <Column Name="insuranceType" DataType="System.Double"/>
+              <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="hisOrderNo" DataType="System.String"/>
+              <Column Name="diagnosis" DataType="System.String"/>
+              <Column Name="remarks" DataType="System.String"/>
+              <Column Name="prescribeTypeCode" DataType="System.String"/>
+              <Column Name="prescribeTypeName" DataType="System.String"/>
+              <Column Name="recieveQty" DataType="System.Double"/>
+              <Column Name="recieveUnit" DataType="System.String"/>
+              <Column Name="id" DataType="System.String"/>
+              <Column Name="skinTestSignChoseResult" DataType="System.Object"/>
+              <Column Name="skinTestSignChoseResultText" DataType="System.String"/>
+              <Column Name="limitType" DataType="System.Double"/>
+              <Column Name="restrictedDrugs" DataType="System.Object"/>
+              <Column Name="restrictedDrugsText" DataType="System.String"/>
+        
+          </TableDataSource>
+          <TableDataSource Name="lises" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="System.Object">
+              <Column Name="catalogCode" DataType="System.String"/>
+              <Column Name="catalogName" DataType="System.String"/>
+              <Column Name="clinicalSymptom" DataType="System.String"/>
+              <Column Name="specimenCode" DataType="System.String"/>
+              <Column Name="specimenName" DataType="System.String"/>
+              <Column Name="specimenPartCode" DataType="System.String"/>
+              <Column Name="specimenPartName" DataType="System.String"/>
+              <Column Name="containerCode" DataType="System.String"/>
+              <Column Name="containerName" DataType="System.String"/>
+              <Column Name="containerColor" DataType="System.String"/>
+              <Column Name="specimenDescription" DataType="System.String"/>
+              <Column Name="specimenCollectDatetime" DataType="System.Object"/>
+              <Column Name="specimenReceivedDatetime" DataType="System.Object"/>
+              <Column Name="reportTime" DataType="System.Object"/>
+              <Column Name="reportDoctorCode" DataType="System.String"/>
+              <Column Name="reportDoctorName" DataType="System.String"/>
+              <Column Name="hasReportName" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="isEmergency" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="isBedSide" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="execDeptCode" DataType="System.String"/>
+              <Column Name="execDeptName" DataType="System.String"/>
+              <Column Name="piid" DataType="System.String"/>
+              <Column Name="code" DataType="System.String"/>
+              <Column Name="name" DataType="System.String"/>
+              <Column Name="categoryCode" DataType="System.String"/>
+              <Column Name="categoryName" DataType="System.String"/>
+              <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="prescriptionNo" DataType="System.String"/>
+              <Column Name="recipeNo" DataType="System.String"/>
+              <Column Name="recipeGroupNo" DataType="System.Double"/>
+              <Column Name="applyTime" DataType="System.String"/>
+              <Column Name="applyDoctorCode" DataType="System.String"/>
+              <Column Name="applyDoctorName" DataType="System.String"/>
+              <Column Name="applyDeptCode" DataType="System.String"/>
+              <Column Name="applyDeptName" DataType="System.String"/>
+              <Column Name="status" DataType="System.Double"/>
+              <Column Name="payTypeCode" DataType="System.String"/>
+              <Column Name="payType" DataType="System.Double"/>
+              <Column Name="unit" DataType="System.String"/>
+              <Column Name="price" DataType="System.Double"/>
+              <Column Name="amount" DataType="System.Double"/>
+              <Column Name="insuranceCode" DataType="System.String"/>
+              <Column Name="insuranceType" DataType="System.Double"/>
+              <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="hisOrderNo" DataType="System.String"/>
+              <Column Name="diagnosis" DataType="System.String"/>
+              <Column Name="remarks" DataType="System.String"/>
+              <Column Name="prescribeTypeCode" DataType="System.String"/>
+              <Column Name="prescribeTypeName" DataType="System.String"/>
+              <Column Name="recieveQty" DataType="System.Double"/>
+              <Column Name="recieveUnit" DataType="System.String"/>
+              <Column Name="id" DataType="System.String"/>
+              <Column Name="accountFlag" DataType="System.Double"/>
+              <Column Name="accountFlagText" DataType="System.String"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </TableDataSource>
+          <TableDataSource Name="pacses" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="System.Object">
+              <Column Name="catalogCode" DataType="System.String"/>
+              <Column Name="catalogName" DataType="System.String"/>
+              <Column Name="clinicalSymptom" DataType="System.String"/>
+              <Column Name="medicalHistory" DataType="System.String"/>
+              <Column Name="partCode" DataType="System.String"/>
+              <Column Name="partName" DataType="System.String"/>
+              <Column Name="catalogDisplayName" DataType="System.String"/>
+              <Column Name="reportTime" DataType="System.Object"/>
+              <Column Name="reportDoctorCode" DataType="System.String"/>
+              <Column Name="reportDoctorName" DataType="System.String"/>
+              <Column Name="hasReport" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="isEmergency" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="isBedSide" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="piid" DataType="System.String"/>
+              <Column Name="code" DataType="System.String"/>
+              <Column Name="name" DataType="System.String"/>
+              <Column Name="categoryCode" DataType="System.String"/>
+              <Column Name="categoryName" DataType="System.String"/>
+              <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="prescriptionNo" DataType="System.String"/>
+              <Column Name="recipeNo" DataType="System.String"/>
+              <Column Name="recipeGroupNo" DataType="System.Double"/>
+              <Column Name="applyTime" DataType="System.String"/>
+              <Column Name="applyDoctorCode" DataType="System.String"/>
+              <Column Name="applyDoctorName" DataType="System.String"/>
+              <Column Name="applyDeptCode" DataType="System.String"/>
+              <Column Name="applyDeptName" DataType="System.String"/>
+              <Column Name="status" DataType="System.Double"/>
+              <Column Name="payTypeCode" DataType="System.String"/>
+              <Column Name="payType" DataType="System.Double"/>
+              <Column Name="unit" DataType="System.String"/>
+              <Column Name="price" DataType="System.Double"/>
+              <Column Name="amount" DataType="System.Double"/>
+              <Column Name="insuranceCode" DataType="System.String"/>
+              <Column Name="insuranceType" DataType="System.Double"/>
+              <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="hisOrderNo" DataType="System.String"/>
+              <Column Name="diagnosis" DataType="System.String"/>
+              <Column Name="remarks" DataType="System.String"/>
+              <Column Name="prescribeTypeCode" DataType="System.String"/>
+              <Column Name="prescribeTypeName" DataType="System.String"/>
+              <Column Name="recieveQty" DataType="System.Double"/>
+              <Column Name="recieveUnit" DataType="System.String"/>
+              <Column Name="id" DataType="System.String"/>
+              <Column Name="accountFlag" DataType="System.Double"/>
+              <Column Name="accountFlagText" DataType="System.String"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </TableDataSource>
+          <TableDataSource Name="treats" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="System.Object">
+              <Column Name="otherPrice" DataType="System.Double"/>
+              <Column Name="frequencyCode" DataType="System.String"/>
+              <Column Name="frequencyName" DataType="System.String"/>
+              <Column Name="feeTypeMainCode" DataType="System.String"/>
+              <Column Name="feeTypeSubCode" DataType="System.String"/>
+              <Column Name="specification" DataType="System.String"/>
+              <Column Name="piid" DataType="System.String"/>
+              <Column Name="code" DataType="System.String"/>
+              <Column Name="name" DataType="System.String"/>
+              <Column Name="categoryCode" DataType="System.String"/>
+              <Column Name="categoryName" DataType="System.String"/>
+              <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="prescriptionNo" DataType="System.String"/>
+              <Column Name="recipeNo" DataType="System.String"/>
+              <Column Name="recipeGroupNo" DataType="System.Double"/>
+              <Column Name="applyTime" DataType="System.String"/>
+              <Column Name="applyDoctorCode" DataType="System.String"/>
+              <Column Name="applyDoctorName" DataType="System.String"/>
+              <Column Name="applyDeptCode" DataType="System.String"/>
+              <Column Name="applyDeptName" DataType="System.String"/>
+              <Column Name="status" DataType="System.Double"/>
+              <Column Name="payTypeCode" DataType="System.String"/>
+              <Column Name="payType" DataType="System.Double"/>
+              <Column Name="unit" DataType="System.String"/>
+              <Column Name="price" DataType="System.Double"/>
+              <Column Name="amount" DataType="System.Double"/>
+              <Column Name="insuranceCode" DataType="System.String"/>
+              <Column Name="insuranceType" DataType="System.Double"/>
+              <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="hisOrderNo" DataType="System.String"/>
+              <Column Name="diagnosis" DataType="System.String"/>
+              <Column Name="remarks" DataType="System.String"/>
+              <Column Name="prescribeTypeCode" DataType="System.String"/>
+              <Column Name="prescribeTypeName" DataType="System.String"/>
+              <Column Name="recieveQty" DataType="System.Double"/>
+              <Column Name="recieveUnit" DataType="System.String"/>
+              <Column Name="id" DataType="System.String"/>
+              <Column Name="accountFlag" DataType="System.Double"/>
+              <Column Name="accountFlagText" DataType="System.String"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </TableDataSource>
+          <TableDataSource Name="admissionRecords"  ReferenceName="Data.admissionRecords" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+              <Column Name="aR_ID" DataType="System.Double"/>
+              <Column Name="pI_ID" DataType="System.String"/>
+              <Column Name="patientID" DataType="System.String"/>
+              <Column Name="contactsPerson" DataType="System.String"/>
+              <Column Name="contactsPhone" DataType="System.String"/>
+              <Column Name="narrationCode" DataType="System.String"/>
+              <Column Name="narrationName" DataType="System.String"/>
+              <Column Name="triageUserCode" DataType="System.String"/>
+              <Column Name="triageUserName" DataType="System.String"/>
+              <Column Name="visitNo" DataType="System.Double"/>
+              <Column Name="visitDate" DataType="System.String"/>
+              <Column Name="registerNo" DataType="System.String"/>
+              <Column Name="registerTime" DataType="System.Object"/>
+              <Column Name="registerDoctorCode" DataType="System.String"/>
+              <Column Name="registerDoctorName" DataType="System.String"/>
+              <Column Name="patientName" DataType="System.String"/>
+              <Column Name="age" DataType="System.String"/>
+              <Column Name="sex" DataType="System.String"/>
+              <Column Name="homeAddress" DataType="System.String"/>
+              <Column Name="birthday" DataType="System.Object"/>
+              <Column Name="chargeType" DataType="System.String"/>
+              <Column Name="greenRoad" DataType="System.String"/>
+              <Column Name="areaCode" DataType="System.String"/>
+              <Column Name="areaName" DataType="System.String"/>
+              <Column Name="bed" DataType="System.String"/>
+              <Column Name="firstDoctorCode" DataType="System.String"/>
+              <Column Name="firstDoctorName" DataType="System.String"/>
+              <Column Name="dutyDoctorCode" DataType="System.String"/>
+              <Column Name="dutyDoctorName" DataType="System.String"/>
+              <Column Name="retentionTime" DataType="System.Object"/>
+              <Column Name="lockDate" DataType="System.Object"/>
+              <Column Name="nurseGrade" DataType="System.String"/>
+              <Column Name="dutyNurseCode" DataType="System.String"/>
+              <Column Name="dutyNurseName" DataType="System.String"/>
+              <Column Name="operatorCode" DataType="System.String"/>
+              <Column Name="operatorName" DataType="System.String"/>
+              <Column Name="visitStatus" DataType="System.Double"/>
+              <Column Name="isPlanBackRoom" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="emergencyLevel" DataType="System.Double"/>
+              <Column Name="inDeptTime" DataType="System.Object"/>
+              <Column Name="outDeptTime" DataType="System.String"/>
+              <Column Name="inDeptWay" DataType="System.String"/>
+              <Column Name="isAttention" DataType="System.String"/>
+              <Column Name="cardNo" DataType="System.String"/>
+              <Column Name="medicalCard" DataType="System.String"/>
+              <Column Name="idNo" DataType="System.String"/>
+              <Column Name="triageLevel" DataType="System.String"/>
+              <Column Name="triageLevelName" DataType="System.String"/>
+              <Column Name="triageTime" DataType="System.String"/>
+              <Column Name="isInHospital" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="triageDeptCode" DataType="System.String"/>
+              <Column Name="triageDeptName" DataType="System.String"/>
+              <Column Name="weight" DataType="System.String"/>
+              <Column Name="height" DataType="System.String"/>
+              <Column Name="pastMedicalHistory" DataType="System.String"/>
+              <Column Name="infectiousHistory" DataType="System.String"/>
+              <Column Name="allergyHistory" DataType="System.String"/>
+              <Column Name="fluFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="fluTemp" DataType="System.String"/>
+              <Column Name="coughFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="chestFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="typeOfVisitCode" DataType="System.String"/>
+              <Column Name="typeOfVisitName" DataType="System.String"/>
+              <Column Name="triageErrorFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="patientWhereAbout" DataType="System.String"/>
+              <Column Name="triageDirectionCode" DataType="System.String"/>
+              <Column Name="triageDirectionName" DataType="System.String"/>
+              <Column Name="supplementaryNotes" DataType="System.String"/>
+              <Column Name="keyDiseasesCode" DataType="System.String"/>
+              <Column Name="deathTime" DataType="System.String"/>
+              <Column Name="outDeptReason" DataType="System.Double"/>
+              <Column Name="diagnoseCode" DataType="System.String"/>
+              <Column Name="diagnoseName" DataType="System.String"/>
+              <Column Name="sort" DataType="System.Double"/>
+              <Column Name="isTop" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="callStatus" DataType="System.Double"/>
+              <Column Name="identityCode" DataType="System.String"/>
+              <Column Name="identityName" DataType="System.String"/>
+              <Column Name="isHasTransfer" DataType="System.Boolean" BindableControl="CheckBox"/>
+              <Column Name="finishVisitTime" DataType="System.String"/>
+              <Column Name="current" DataType="System.String"/>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </TableDataSource>
+          <TableDataSource Name="otherInfo" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="System.Object"/>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="148" PaperHeight="210" Guides="245.7,245.7,245.7,236.25,236.25" Watermark.Font="宋体, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="483.84" Height="236.25">
+      <BarcodeObject Name="Barcode1" Top="7.56" Width="85.05" Height="85.05" AutoSize="false" Text="https://weixin.szlgzxyy.com/mps/scan/pay/3/6314073/123456?hospital_id=2&amp;idcard=362227198502110930&amp;MZHM=1&amp;billNo=CF25939370" ShowText="false" HideIfNoData="false" AllowExpressions="true" HorzAlign="Center" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text1" Left="103.95" Top="47.25" Width="283.5" Height="28.35" Text="深圳市龙岗中心医院" HorzAlign="Center" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text2" Left="198.45" Top="75.6" Width="75.6" Height="18.9" Text="处方笺" HorzAlign="Center" Font="宋体, 14pt, style=Bold"/>
+      <TextObject Name="Text3" Top="207.9" Width="37.8" Height="28.35" Text="Rp" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text4" Width="94.5" Height="9.45" Text="支付自费和医保支付" HorzAlign="Center" Font="宋体, 7pt"/>
+      <TextObject Name="Text5" Top="94.5" Width="94.5" Height="9.45" Text="龙岗中心医院扫码支付" HorzAlign="Center" Font="宋体, 7pt"/>
+      <BarcodeObject Name="Barcode2" Left="94.5" Width="103.95" Height="22.68" AutoSize="false" Text="1234567890123" ShowText="false" Barcode="Codabar"/>
+      <TextObject Name="Text6" Left="94.5" Top="26.46" Width="330.75" Height="18.9" Text="病历号：[admissionRecords.patientID]" Font="宋体, 9pt"/>
+      <TextObject Name="Text7" Left="434.7" Width="45.36" Height="18.9" Border.Lines="All" Text="急诊" Padding="2, 3, 2, 0" HorzAlign="Center" VertAlign="Center" Font="宋体, 10pt, style=Bold"/>
+      <TextObject Name="Text8" Left="292.95" Top="85.05" Width="189" Height="18.9" Text="日期：[admissionRecords.current]" HorzAlign="Right" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text9" Left="321.3" Top="113.4" Width="207.9" Height="18.9" Text="处方编号：[medicines.prescriptionNo]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text10" Top="113.4" Width="179.55" Height="18.9" Text="性质：[admissionRecords.chargeType]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text11" Left="179.55" Top="113.4" Width="94.5" Height="18.9" Text="医疗证号：--" VertAlign="Center" Font="宋体, 9pt"/>
+      <LineObject Name="Line1" Top="132.3" Width="481.95" Border.Width="1.5"/>
+      <TextObject Name="Text12" Top="134.19" Width="132.3" Height="18.9" Text="姓名：[admissionRecords.patientName]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text13" Left="141.75" Top="134.19" Width="122.85" Height="18.9" Text="性别：[admissionRecords.sex]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text14" Left="274.05" Top="132.3" Width="113.4" Height="18.9" Text="年龄：[admissionRecords.age]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text15" Top="151.2" Width="132.3" Height="18.9" Text="门诊号：[admissionRecords.visitNo]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text16" Left="141.75" Top="151.2" Width="122.85" Height="18.9" Text="科别：[admissionRecords.triageDeptName]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text17" Left="274.05" Top="151.2" Width="245.7" Height="18.9" Text="药房：[medicines.pharmacyName]" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text18" Top="170.1" Width="481.95" Height="18.9" Text="临床诊断：[admissionRecords.diagnoseName]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text19" Top="189" Width="151.2" Height="18.9" Text="费别：普通门诊(硬编码)" VertAlign="Center" Font="宋体, 9pt, style=Bold"/>
+      <TextObject Name="Text20" Left="141.75" Top="189" Width="264.6" Height="18.9" Text="电话/住址：[admissionRecords.contactsPhone]/[admissionRecords.homeAddress]" VertAlign="Center" Font="宋体, 9pt"/>
+      <LineObject Name="Line2" Top="207.9" Width="481.95" Border.Width="1.5"/>
+    </PageHeaderBand>
+    <DataBand Name="DataRp" Top="238.92" Width="483.84" Height="66.15" DataSource="medicines" KeepDetail="true">
+      <TableObject Name="Table3" Top="3.78" Width="481.95" Height="37.8">
+        <TableColumn Name="Column8" Width="59.85"/>
+        <TableColumn Name="Column9" Width="182.7"/>
+        <TableColumn Name="Column10" Width="239.4"/>
+        <TableRow Name="Row5">
+          <TableCell Name="Cell18" Text="[Row#] [medicines.name]([medicines.restrictedDrugsText])" Font="宋体, 9pt" ColSpan="2"/>
+          <TableCell Name="Cell19" Font="宋体, 9pt"/>
+          <TableCell Name="Cell20" Text="[medicines.specification]  [medicines.dosageQty]" Font="宋体, 9pt"/>
+        </TableRow>
+        <TableRow Name="Row6">
+          <TableCell Name="Cell23" Font="宋体, 9pt"/>
+          <TableCell Name="Cell24" Text="用法：[medicines.dosageQty] [medicines.frequencyName] [medicines.usageName]" Font="宋体, 9pt" ColSpan="2"/>
+          <TableCell Name="Cell25" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="307.73" Width="483.84" Height="141.75">
+      <BarcodeObject Name="Barcode3" Left="9.45" Top="9.45" Width="113.4" Height="28.35" AutoSize="false" Text="1234567890123" ShowText="false" Barcode="Codabar"/>
+      <ShapeObject Name="Shape1" Top="41.58" Width="132.3" Height="34.02"/>
+      <BarcodeObject Name="Barcode4" Left="387.45" Top="18.9" Width="94.5" Height="94.5" AutoSize="false" Text="https://lgjkzx.lggov.cn/mps-area-version/scan/pay/3/6314073/123456?hospital_id=2&amp;idcard=362227198502110930&amp;MZHM=1" ShowText="false" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text21" Left="387.45" Top="9.45" Width="94.5" Height="18.9" Text="自费和医保支付" HorzAlign="Center" VertAlign="Center" Font="宋体, 7pt"/>
+      <TextObject Name="Text22" Left="396.9" Top="113.4" Width="85.05" Height="9.45" Text="龙岗健康在线" HorzAlign="Center" VertAlign="Center" Font="宋体, 7pt"/>
+      <TextObject Name="Text23" Left="9.45" Top="41.58" Width="122.85" Height="18.9" Text="药费：￥0.00 元" VertAlign="Center" Font="宋体, 7pt"/>
+      <TextObject Name="Text24" Left="18.9" Top="58.59" Width="94.5" Height="18.9" Text="处方当日有效" HorzAlign="Center" VertAlign="Center" Font="宋体, 7pt"/>
+      <TextObject Name="Text25" Top="75.6" Width="368.55" Height="56.7" Text="温馨提示：1、本处方当天有效； 2、取药时请仔细核对清单，点齐药品；&#13;&#10;3、依《药疗机构药事管理规定》第二十八条：为保证患者用药安全，药品一经发出，不得退换。" VertAlign="Center" Font="宋体, 8pt"/>
+      <TextObject Name="Text26" Left="141.75" Top="18.9" Width="94.5" Height="18.9" Text="医生" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text27" Left="141.75" Top="37.8" Width="37.8" Height="37.8" Text="调配药师" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text28" Left="255.15" Top="9.45" Width="37.8" Height="37.8" Text="审核药师" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text29" Left="255.15" Top="37.8" Width="37.8" Height="37.8" Text="核发药师" VertAlign="Center" Font="宋体, 9pt"/>
+      <LineObject Name="Line3" Left="170.1" Top="37.8" Width="75.6" Border.Width="1.5"/>
+      <LineObject Name="Line4" Left="170.1" Top="66.15" Width="75.6"/>
+      <LineObject Name="Line5" Left="283.5" Top="37.8" Width="85.05" Border.Width="1.5"/>
+      <LineObject Name="Line6" Left="283.5" Top="66.15" Width="85.05"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

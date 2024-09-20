@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/20/2022 09:18:31" ReportInfo.Modified="05/24/2022 10:12:43" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary/>
+  <ReportPage Name="Page1" PaperWidth="148.1" PaperHeight="210.1" RawPaperSize="11" Guides="141.75" Watermark.Font="宋体, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="484.22" Height="154.98">
+      <TextObject Name="Text2" Left="170.1" Top="47.25" Width="85.05" Height="22.68" GroupIndex="3" Text="处方笺" HorzAlign="Center" Font="宋体, 16pt, style=Bold"/>
+      <TextObject Name="Text1" Left="113.4" Top="18.9" Width="236.25" Height="28.35" GroupIndex="3" Text="深圳市龙岗中心医院" HorzAlign="Center" Font="宋体, 18pt, style=Bold"/>
+      <ShapeObject Name="Shape2" Left="378" Width="83.16" Height="30.24" Shape="RoundRectangle"/>
+      <TextObject Name="Text25" Left="378" Top="3.78" Width="85.05" Height="28.35" Text="普通" HorzAlign="Center" VertAlign="Center" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text3" Left="9.45" Top="85.05" Width="66.15" Height="18.9" Text="性质：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text4" Left="330.75" Top="85.05" Width="103.95" Height="18.9" Text="处方编号：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text6" Left="170.1" Top="85.05" Width="103.95" Height="18.9" Text="医疗证号：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <LineObject Name="Line1" Left="-1.89" Top="103.95" Width="485.73"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="158.18" Width="484.22" Height="529.2">
+      <ShapeObject Name="Shape1" Left="9.45" Top="453.6" Width="160.65" Height="66.15" GroupIndex="2"/>
+      <TextObject Name="Text5" Left="18.9" Top="9.45" Width="359.1" Text="性质：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text7" Left="9.45" Top="47.25" Width="66.15" Height="18.9" Text="姓名：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text8" Left="170.1" Top="47.25" Width="66.15" Height="18.9" Text="性别：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text9" Left="330.75" Top="47.25" Width="66.15" Height="18.9" Text="年龄：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text10" Left="9.45" Top="75.6" Width="85.05" Height="18.9" Text="门诊号：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text11" Left="170.1" Top="75.6" Width="66.15" Height="18.9" Text="科别：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text12" Left="9.45" Top="103.95" Width="103.95" Height="18.9" Text="临床诊断：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text13" Left="9.45" Top="132.3" Width="66.15" Height="18.9" Text="费别：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <TextObject Name="Text14" Left="170.1" Top="132.3" Width="113.4" Height="18.9" Text="电话/住址：" Padding="0, 0, 0, 0" Font="宋体, 14pt"/>
+      <LineObject Name="Line2" Left="9.45" Top="160.65" Width="466.83"/>
+      <TextObject Name="Text15" Left="9.45" Top="160.65" Width="28.35" Height="28.35" GroupIndex="1" Text="R" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text16" Left="22.68" Top="168.21" Width="26.46" Height="28.35" GroupIndex="1" Text="P" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text18" Left="132.3" Top="463.05" Width="37.8" Height="18.9" GroupIndex="2" Text="元" HorzAlign="Center" Font="宋体, 14pt"/>
+      <TextObject Name="Text19" Left="9.45" Top="491.4" Width="160.65" Height="18.9" GroupIndex="2" Text="处方当日有效" HorzAlign="Center" Font="宋体, 14pt"/>
+      <TextObject Name="Text17" Left="9.45" Top="463.05" Width="94.5" Height="18.9" GroupIndex="2" Text="药费：￥" HorzAlign="Center" Font="宋体, 14pt"/>
+      <TextObject Name="Text20" Left="179.55" Top="444.15" Width="56.7" Height="18.9" GroupIndex="2" Text="医生" Font="宋体, 14pt"/>
+      <TextObject Name="Text21" Left="283.5" Top="425.25" Width="56.7" Height="37.8" GroupIndex="2" Text="审核&#13;&#10;药师" Font="宋体, 14pt"/>
+      <TextObject Name="Text22" Left="179.55" Top="481.95" Width="56.7" Height="37.8" GroupIndex="2" Text="调配&#13;&#10;药师" Font="宋体, 14pt"/>
+      <TextObject Name="Text23" Left="283.5" Top="481.95" Width="56.7" Height="37.8" GroupIndex="2" Text="核发&#13;&#10;药师" Font="宋体, 14pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="690.58" Width="484.22" Height="85.05">
+      <TextObject Name="Text24" Left="9.45" Top="9.45" Width="463.05" Height="56.7" Text="温馨提示：1、本处方当天有效；2、取药时请仔细核对清单，点齐药品；3、依《医疗机构药事管理规定》第二十八条：为保证患者用药安全，药品一经发出，不得退换。" Font="宋体, 10pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

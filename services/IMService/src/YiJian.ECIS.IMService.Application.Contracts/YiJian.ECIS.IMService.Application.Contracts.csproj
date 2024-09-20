@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.IMService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.Authorization" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.Domain.Shared\YiJian.ECIS.IMService.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IMService\" />
+  </ItemGroup>
+
+</Project>

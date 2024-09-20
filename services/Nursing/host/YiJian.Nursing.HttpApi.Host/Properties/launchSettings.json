@@ -1,0 +1,31 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "https://localhost:44334",
+      "sslPort": 44334
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }      
+    },
+    "ECIS.Nursing.Service": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNEtCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        "SKYWALKING__SERVICENAME": "ECIS-Nursing-Prd"
+
+      },
+      "applicationUrl": "https://localhost:44334",
+      "launchUrl": "https://localhost:44334/swagger"
+    }
+  }
+}

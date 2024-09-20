@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>YiJian.Nursing.Migrations</AssemblyName>
+        <RootNamespace>YiJian.Nursing.Migrations</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\host\YiJian.Nursing.HttpApi.Host\YiJian.Nursing.HttpApi.Host.csproj" />
+        <ProjectReference Include="..\..\src\YiJian.Nursing.EntityFrameworkCore\YiJian.Nursing.EntityFrameworkCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Migrations" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <!--为避免对 Host 项目的引用导致循环引用，输出到 Host 项目下，使用 Host 的数据上下文。-->
+        <BaseOutputPath>..\..\host\YiJian.Nursing.HttpApi.Host\bin\</BaseOutputPath>
+    </PropertyGroup>
+
+</Project>

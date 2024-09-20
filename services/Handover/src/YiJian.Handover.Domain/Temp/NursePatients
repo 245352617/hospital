@@ -1,0 +1,225 @@
+﻿        #region constructor
+        /// <summary>
+        /// 护士交班id构造器
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nurseHandoverId">护士交班id</param>
+        /// <param name="pIID">tiage分诊患者id</param>
+        /// <param name="patientId">患者id</param>
+        /// <param name="visitNo">就诊号</param>
+        /// <param name="patientName">患者姓名</param>
+        /// <param name="sex">性别</param>
+        /// <param name="age">年龄</param>
+        /// <param name="triageLevelName">分诊级别</param>
+        /// <param name="inDeptTime">入科时间</param>
+        /// <param name="diagnoseName">诊断</param>
+        /// <param name="bed">床号</param>
+        /// <param name="isNoThree">是否三无</param>
+        /// <param name="criticallyIll">是否病危</param>
+        /// <param name="content">交班内容</param>
+        /// <param name="test">检验</param>
+        /// <param name="inspect">检查</param>
+        /// <param name="emr">电子病历</param>
+        /// <param name="inOutVolume">出入量</param>
+        /// <param name="vitalSigns">生命体征</param>
+        /// <param name="medicine">药物</param>
+        /// <param name="latestStatus">最新现状</param>
+        /// <param name="background">背景</param>
+        /// <param name="assessment">评估</param>
+        /// <param name="proposal">建议</param>
+        /// <param name="devices">设备</param>
+        public NursePatients(Guid id,
+            Guid nurseHandoverId,         // 护士交班id
+            Guid pIID,                    // tiage分诊患者id
+            string patientId,             // 患者id
+            int? visitNo,                 // 就诊号
+            string patientName,           // 患者姓名
+            string sex,                   // 性别
+            string age,                   // 年龄
+            string triageLevelName,       // 分诊级别
+            DateTime inDeptTime,          // 入科时间
+            string diagnoseName,          // 诊断
+            string bed,                   // 床号
+            bool isNoThree,               // 是否三无
+            bool criticallyIll,           // 是否病危
+            string content,               // 交班内容
+            string test,                  // 检验
+            string inspect,               // 检查
+            string emr,                   // 电子病历
+            string inOutVolume,           // 出入量
+            string vitalSigns,            // 生命体征
+            string medicine,              // 药物
+            string latestStatus,          // 最新现状
+            string background,            // 背景
+            string assessment,            // 评估
+            string proposal,              // 建议
+            string devices                // 设备
+            ) : base(id)
+        {           
+            //护士交班id
+            NurseHandoverId = nurseHandoverId; 
+
+            Modify(pIID,   // tiage分诊患者id
+                patientId,      // 患者id
+                visitNo,        // 就诊号
+                patientName,    // 患者姓名
+                sex,            // 性别
+                age,            // 年龄
+                triageLevelName,// 分诊级别
+                inDeptTime,     // 入科时间
+                diagnoseName,   // 诊断
+                bed,            // 床号
+                isNoThree,      // 是否三无
+                criticallyIll,  // 是否病危
+                content,        // 交班内容
+                test,           // 检验
+                inspect,        // 检查
+                emr,            // 电子病历
+                inOutVolume,    // 出入量
+                vitalSigns,     // 生命体征
+                medicine,       // 药物
+                latestStatus,   // 最新现状
+                background,     // 背景
+                assessment,     // 评估
+                proposal,       // 建议
+                devices         // 设备
+                );
+        }
+        #endregion
+
+        #region Modify
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="pIID">tiage分诊患者id</param>
+        /// <param name="patientId">患者id</param>
+        /// <param name="visitNo">就诊号</param>
+        /// <param name="patientName">患者姓名</param>
+        /// <param name="sex">性别</param>
+        /// <param name="age">年龄</param>
+        /// <param name="triageLevelName">分诊级别</param>
+        /// <param name="inDeptTime">入科时间</param>
+        /// <param name="diagnoseName">诊断</param>
+        /// <param name="bed">床号</param>
+        /// <param name="isNoThree">是否三无</param>
+        /// <param name="criticallyIll">是否病危</param>
+        /// <param name="content">交班内容</param>
+        /// <param name="test">检验</param>
+        /// <param name="inspect">检查</param>
+        /// <param name="emr">电子病历</param>
+        /// <param name="inOutVolume">出入量</param>
+        /// <param name="vitalSigns">生命体征</param>
+        /// <param name="medicine">药物</param>
+        /// <param name="latestStatus">最新现状</param>
+        /// <param name="background">背景</param>
+        /// <param name="assessment">评估</param>
+        /// <param name="proposal">建议</param>
+        /// <param name="devices">设备</param>
+        public void Modify(Guid pIID,        // tiage分诊患者id
+            string patientId,             // 患者id
+            int? visitNo,                 // 就诊号
+            string patientName,           // 患者姓名
+            string sex,                   // 性别
+            string age,                   // 年龄
+            string triageLevelName,       // 分诊级别
+            DateTime inDeptTime,          // 入科时间
+            string diagnoseName,          // 诊断
+            string bed,                   // 床号
+            bool isNoThree,               // 是否三无
+            bool criticallyIll,           // 是否病危
+            string content,               // 交班内容
+            string test,                  // 检验
+            string inspect,               // 检查
+            string emr,                   // 电子病历
+            string inOutVolume,           // 出入量
+            string vitalSigns,            // 生命体征
+            string medicine,              // 药物
+            string latestStatus,          // 最新现状
+            string background,            // 背景
+            string assessment,            // 评估
+            string proposal,              // 建议
+            string devices                // 设备
+            )
+        {   
+            
+            //tiage分诊患者id
+            PIID = pIID;
+            
+            //患者id
+            PatientId = patientId;
+            
+            //就诊号
+            VisitNo = visitNo;
+            
+            //患者姓名
+            PatientName = patientName;
+            
+            //性别
+            Sex = sex;
+            
+            //年龄
+            Age = age;
+            
+            //分诊级别
+            TriageLevelName = triageLevelName;
+            
+            //入科时间
+            InDeptTime = inDeptTime;
+            
+            //诊断
+            DiagnoseName = diagnoseName;
+            
+            //床号
+            Bed = bed;
+            
+            //是否三无
+            IsNoThree = isNoThree;
+            
+            //是否病危
+            CriticallyIll = criticallyIll;
+            
+            //交班内容
+            Content = content;
+            
+            //检验
+            Test = test;
+            
+            //检查
+            Inspect = inspect;
+            
+            //电子病历
+            Emr = emr;
+            
+            //出入量
+            InOutVolume = inOutVolume;
+            
+            //生命体征
+            VitalSigns = vitalSigns;
+            
+            //药物
+            Medicine = medicine;
+            
+            //最新现状
+            LatestStatus = latestStatus;
+            
+            //背景
+            Background = background;
+            
+            //评估
+            Assessment = assessment;
+            
+            //建议
+            Proposal = proposal;
+            
+            //设备
+            Devices = devices;
+            
+        }
+        #endregion
+
+        #region constructor
+        private NursePatients()
+        {
+            // for EFCore
+        }
+        #endregion

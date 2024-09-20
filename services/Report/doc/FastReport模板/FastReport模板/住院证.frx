@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/26/2022 11:57:15" ReportInfo.Modified="09/26/2022 18:20:34" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary>
+    <TableDataSource Name="admissionRecords" ReferenceName="Data.admissionRecords" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="visNo" DataType="System.String"/>
+      <Column Name="aR_ID" DataType="System.Double"/>
+      <Column Name="pI_ID" DataType="System.String"/>
+      <Column Name="patientID" DataType="System.String"/>
+      <Column Name="contactsPerson" DataType="System.String"/>
+      <Column Name="contactsPhone" DataType="System.String"/>
+      <Column Name="narrationCode" DataType="System.String"/>
+      <Column Name="narrationName" DataType="System.String"/>
+      <Column Name="triageUserCode" DataType="System.String"/>
+      <Column Name="triageUserName" DataType="System.String"/>
+      <Column Name="visitNo" DataType="System.Double"/>
+      <Column Name="visitDate" DataType="System.String"/>
+      <Column Name="registerNo" DataType="System.String"/>
+      <Column Name="registerTime" DataType="System.Object"/>
+      <Column Name="registerDoctorCode" DataType="System.String"/>
+      <Column Name="registerDoctorName" DataType="System.String"/>
+      <Column Name="patientName" DataType="System.String"/>
+      <Column Name="age" DataType="System.String"/>
+      <Column Name="sex" DataType="System.String"/>
+      <Column Name="sexName" DataType="System.String"/>
+      <Column Name="homeAddress" DataType="System.String"/>
+      <Column Name="birthday" DataType="System.Object"/>
+      <Column Name="chargeType" DataType="System.String"/>
+      <Column Name="greenRoad" DataType="System.String"/>
+      <Column Name="areaCode" DataType="System.String"/>
+      <Column Name="areaName" DataType="System.String"/>
+      <Column Name="bed" DataType="System.String"/>
+      <Column Name="firstDoctorCode" DataType="System.String"/>
+      <Column Name="firstDoctorName" DataType="System.String"/>
+      <Column Name="dutyDoctorCode" DataType="System.String"/>
+      <Column Name="dutyDoctorName" DataType="System.String"/>
+      <Column Name="retentionTime" DataType="System.Object"/>
+      <Column Name="lockDate" DataType="System.Object"/>
+      <Column Name="nurseGrade" DataType="System.String"/>
+      <Column Name="dutyNurseCode" DataType="System.String"/>
+      <Column Name="dutyNurseName" DataType="System.String"/>
+      <Column Name="operatorCode" DataType="System.String"/>
+      <Column Name="operatorName" DataType="System.String"/>
+      <Column Name="visitStatus" DataType="System.Double"/>
+      <Column Name="isPlanBackRoom" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="emergencyLevel" DataType="System.Double"/>
+      <Column Name="inDeptTime" DataType="System.Object"/>
+      <Column Name="outDeptTime" DataType="System.String"/>
+      <Column Name="inDeptWay" DataType="System.String"/>
+      <Column Name="isAttention" DataType="System.String"/>
+      <Column Name="cardNo" DataType="System.String"/>
+      <Column Name="medicalCard" DataType="System.String"/>
+      <Column Name="idNo" DataType="System.String"/>
+      <Column Name="triageLevel" DataType="System.String"/>
+      <Column Name="triageLevelName" DataType="System.String"/>
+      <Column Name="triageTime" DataType="System.String"/>
+      <Column Name="isInHospital" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="triageDeptCode" DataType="System.String"/>
+      <Column Name="triageDeptName" DataType="System.String"/>
+      <Column Name="weight" DataType="System.String"/>
+      <Column Name="height" DataType="System.String"/>
+      <Column Name="pastMedicalHistory" DataType="System.String"/>
+      <Column Name="infectiousHistory" DataType="System.String"/>
+      <Column Name="allergyHistory" DataType="System.String"/>
+      <Column Name="fluFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="fluTemp" DataType="System.String"/>
+      <Column Name="coughFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="chestFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="typeOfVisitCode" DataType="System.String"/>
+      <Column Name="typeOfVisitName" DataType="System.String"/>
+      <Column Name="triageErrorFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="patientWhereAbout" DataType="System.String"/>
+      <Column Name="triageDirectionCode" DataType="System.String"/>
+      <Column Name="triageDirectionName" DataType="System.String"/>
+      <Column Name="supplementaryNotes" DataType="System.String"/>
+      <Column Name="keyDiseasesCode" DataType="System.String"/>
+      <Column Name="deathTime" DataType="System.String"/>
+      <Column Name="outDeptReason" DataType="System.Double"/>
+      <Column Name="diagnoseCode" DataType="System.String"/>
+      <Column Name="diagnoseName" DataType="System.String"/>
+      <Column Name="sort" DataType="System.Double"/>
+      <Column Name="isTop" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="callStatus" DataType="System.Double"/>
+      <Column Name="identityCode" DataType="System.String"/>
+      <Column Name="identityName" DataType="System.String"/>
+      <Column Name="isHasTransfer" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="finishVisitTime" DataType="System.String"/>
+      <Column Name="current" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+      <Column Name="AgencyPeopleName" DataType="System.String"/>
+      <Column Name="AgencyPeopleCard" DataType="System.String"/>
+      <Column Name="AgencyPeopleMobile" DataType="System.String"/>
+      <Column Name="AgencyPeopleSex" DataType="System.String"/>
+      <Column Name="AgencyPeopleAge" DataType="System.String"/>
+      <Column Name="safetyNo" DataType="System.String" PropName="Column"/>
+    </TableDataSource>
+    <TableDataSource Name="hospitalApplyRecord" ReferenceName="Data.hospitalApplyRecord" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="patientID" DataType="System.String"/>
+      <Column Name="visitNo" DataType="System.String"/>
+      <Column Name="inpatientNum" DataType="System.String"/>
+      <Column Name="native" DataType="System.String"/>
+      <Column Name="occupation" DataType="System.String"/>
+      <Column Name="company" DataType="System.String"/>
+      <Column Name="contacts" DataType="System.String"/>
+      <Column Name="contactsPhone" DataType="System.Double"/>
+      <Column Name="contactsAddress" DataType="System.String"/>
+      <Column Name="applyTime" DataType="System.Object"/>
+      <Column Name="inpatientTime" DataType="System.Object"/>
+      <Column Name="marriageType" DataType="System.String"/>
+      <Column Name="bedNo" DataType="System.String"/>
+      <Column Name="advance" DataType="System.String"/>
+      <Column Name="payWay" DataType="System.String"/>
+      <Column Name="deptCode" DataType="System.String"/>
+      <Column Name="deptName" DataType="System.String"/>
+      <Column Name="inHospitalEntrust" DataType="System.String"/>
+      <Column Name="nurseEntrust" DataType="System.String"/>
+      <Column Name="dateOfAdmission" DataType="System.Object"/>
+      <Column Name="inpatientDepartmentCode" DataType="System.String"/>
+      <Column Name="inpatientDepartmentName" DataType="System.String"/>
+      <Column Name="admissionCode" DataType="System.String"/>
+      <Column Name="admissionName" DataType="System.String"/>
+      <Column Name="admissionModeCode" DataType="System.String"/>
+      <Column Name="admissionModeName" DataType="System.String"/>
+      <Column Name="tenDaysAdmission" DataType="System.String"/>
+      <Column Name="tenDaysAdmissionStr" DataType="System.String"/>
+      <Column Name="admissionTypeCode" DataType="System.String"/>
+      <Column Name="admissionTypeName" DataType="System.String"/>
+      <Column Name="wardCode" DataType="System.String"/>
+      <Column Name="tenDaysAdmissionStr" DataType="System.String"/>
+      <Column Name="wardName" DataType="System.String"/>
+      <Column Name="stampBase" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="dataSource" ReferenceName="Data.dataSource" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="stampBase" DataType="System.Byte[]" Calculated="true" Expression="Convert.FromBase64String([hospitalApplyRecord.stampBase])"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="148.1" PaperHeight="210.1" RawPaperSize="11" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" FirstPageSource="1" OtherPagesSource="1" LastPageSource="1" Watermark.Font="宋体, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="522.02" Height="28.35">
+      <TextObject Name="Text1" Left="179.55" Width="151.2" Height="28.35" Text="住 院 证" HorzAlign="Center" Font="宋体, 20pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="31.55" Width="522.02" Height="699.3">
+      <TextObject Name="Text2" Width="160.65" Height="18.9" Text="ID号:[hospitalApplyRecord.patientID]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text3" Left="349.65" Width="170.1" Height="18.9" Text="医保号:[admissionRecords.safetyNo]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text4" Top="18.9" Width="160.65" Height="18.9" Text="门急诊号：[admissionRecords.visitNo]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text5" Left="170.1" Top="18.9" Width="75.6" Height="18.9" Text="出生年月:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text6" Left="349.65" Top="18.9" Width="170.1" Height="18.9" Text="住院号:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text7" Top="37.8" Width="160.65" Height="18.9" Text="姓名:[admissionRecords.patientName]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text8" Left="170.1" Top="37.8" Width="85.05" Height="18.9" Text="性别:[admissionRecords.sexName]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text9" Left="255.15" Top="37.8" Width="94.5" Height="18.9" Text="年龄:[admissionRecords.age]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text10" Left="349.65" Top="37.8" Width="170.1" Height="18.9" Text="婚否:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text11" Top="56.7" Width="340.2" Height="18.9" Text="单位或住址:[hospitalApplyRecord.contactsAddress]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text12" Left="349.65" Top="56.7" Width="170.1" Height="18.9" Text="电话:[admissionRecords.contactsPhone]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text13" Top="75.6" Width="170.1" Height="18.9" Text="联系人:[hospitalApplyRecord.contacts]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text14" Left="349.65" Top="75.6" Width="170.1" Height="18.9" Text="联系电话:[hospitalApplyRecord.contactsPhone]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text15" Top="103.95" Width="519.75" Height="18.9" Text="初诊诊断（门诊·急诊）:[admissionRecords.diagnoseName]" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text16" Top="122.85" Width="103.95" Height="18.9" Text="入院情况:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text17" Left="122.85" Top="122.85" Width="28.35" Height="18.9" Text="危" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox1" Left="103.95" Top="122.85" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[hospitalApplyRecord.admissionCode]==&quot;3&quot;?true:false"/>
+      <TextObject Name="Text18" Left="170.1" Top="122.85" Width="28.35" Height="18.9" Text="急" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox2" Left="151.2" Top="122.85" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[hospitalApplyRecord.admissionCode]==&quot;2&quot;?true:false"/>
+      <TextObject Name="Text19" Left="217.35" Top="122.85" Width="37.8" Height="18.9" Text="一般" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox3" Left="198.45" Top="122.85" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[hospitalApplyRecord.admissionCode]==&quot;1&quot;?true:false"/>
+      <TextObject Name="Text20" Left="264.6" Top="122.85" Width="103.95" Height="18.9" Text="收住科室:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text21" Left="340.2" Top="122.85" Width="179.55" Height="18.9" Border.Lines="Bottom" Text="[hospitalApplyRecord.inpatientDepartmentName]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text22" Left="264.6" Top="151.2" Width="103.95" Height="18.9" Text="预收治科室:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text23" Left="349.65" Top="151.2" Width="170.1" Height="18.9" Border.Lines="Bottom" Text="[hospitalApplyRecord.wardName]" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text24" Left="37.8" Top="179.55" Width="85.05" Height="18.9" Text="病区收治:" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox4" Left="113.4" Top="179.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[hospitalApplyRecord.admissionTypeCode]==&quot;1&quot;?true:false"/>
+      <TextObject Name="Text25" Left="132.3" Top="179.55" Width="66.15" Height="18.9" Text="专科收治" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox5" Left="207.9" Top="179.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[hospitalApplyRecord.admissionTypeCode]==&quot;2&quot;?true:false"/>
+      <TextObject Name="Text26" Left="226.8" Top="179.55" Width="122.85" Height="18.9" Text="仅限专科所在大楼" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox6" Left="359.1" Top="179.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false" Expression="[hospitalApplyRecord.admissionTypeCode]==&quot;3&quot;?true:false"/>
+      <TextObject Name="Text27" Left="378" Top="179.55" Width="94.5" Height="18.9" Text="无收治限制" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text28" Top="207.9" Width="103.95" Height="18.9" Text="费用来源:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <CheckBoxObject Name="CheckBox7" Left="28.35" Top="226.8" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text29" Left="47.25" Top="226.8" Width="113.4" Height="18.9" Text="1.社保:(1)险种" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox8" Left="160.65" Top="226.8" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text30" Left="179.55" Top="226.8" Width="66.15" Height="18.9" Text="深圳医保" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox9" Left="245.7" Top="226.8" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text31" Left="264.6" Top="226.8" Width="132.3" Height="18.9" Text="广东省内异地医保" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox10" Left="396.9" Top="226.8" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text32" Left="415.8" Top="226.8" Width="103.95" Height="18.9" Text="跨省异地医保" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox11" Top="255.15" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text33" Left="18.9" Top="255.15" Width="75.6" Height="18.9" Text="跨省新农合" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox12" Left="94.5" Top="255.15" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text34" Left="113.4" Top="255.15" Width="66.15" Height="18.9" Text="工伤保险" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox13" Left="179.55" Top="255.15" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text35" Left="198.45" Top="255.15" Width="75.6" Height="18.9" Text="生育保险" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text36" Left="274.05" Top="255.15" Width="103.95" Height="18.9" Text="(2)是否带卡:" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox14" Left="378" Top="255.15" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text37" Left="396.9" Top="255.15" Width="47.25" Height="18.9" Text="已带" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox15" Left="434.7" Top="255.15" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text38" Left="453.6" Top="255.15" Width="37.8" Height="18.9" Text="未带" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text39" Top="283.5" Width="330.75" Height="18.9" Border.Lines="Bottom" Text="必须入院3天内提供社保卡，逾期按自费处理:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <CheckBoxObject Name="CheckBox16" Left="28.35" Top="311.85" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text40" Left="47.25" Top="311.85" Width="94.5" Height="18.9" Text="2.商业保险" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox17" Left="141.75" Top="311.85" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text41" Left="160.65" Top="311.85" Width="85.05" Height="18.9" Text="3.自费医疗" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox18" Left="255.15" Top="311.85" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text42" Left="274.05" Top="311.85" Width="94.5" Height="18.9" Text="4.其他" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text43" Top="340.2" Width="217.35" Height="18.9" Text="社保患者（或代理人）确认签名:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text44" Left="217.35" Top="340.2" Width="113.4" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text45" Left="330.75" Top="340.2" Width="94.5" Height="18.9" Text="并按手印" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text46" Left="396.9" Top="340.2" Width="113.4" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text47" Top="368.55" Width="151.2" Height="18.9" Text="代理人与患者关系:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text48" Left="132.3" Top="368.55" Width="189" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text49" Top="396.9" Width="94.5" Height="18.9" Text="医师签名:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text50" Left="75.6" Top="396.9" Width="151.2" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text51" Left="226.8" Top="396.9" Width="66.15" Height="18.9" Text="时   间:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text52" Left="292.95" Top="396.9" Width="179.55" Height="18.9" Border.Lines="Bottom" Text="[hospitalApplyRecord.applyTime]" Format="Custom" Format.Format="yyyy-MM-dd HH:mm:ss" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text53" Top="425.25" Width="94.5" Height="18.9" Text="建议押金:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text54" Left="75.6" Top="425.25" Width="151.2" Height="18.9" Border.Lines="Bottom" Text="[hospitalApplyRecord.advance]" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text55" Left="226.8" Top="425.25" Width="75.6" Height="18.9" Text="实收押金" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text56" Left="292.95" Top="425.25" Width="179.55" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text57" Top="453.6" Width="103.95" Height="18.9" Text="缴款人签名:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text58" Left="85.05" Top="453.6" Width="122.85" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text59" Left="207.9" Top="453.6" Width="103.95" Height="18.9" Text="与患者关系:" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox19" Left="292.95" Top="453.6" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text60" Left="311.85" Top="453.6" Width="56.7" Height="18.9" Text="1.配偶" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox20" Left="368.55" Top="453.6" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text61" Left="387.45" Top="453.6" Width="56.7" Height="18.9" Text="2.父母" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox21" Left="444.15" Top="453.6" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text62" Left="463.05" Top="453.6" Width="56.7" Height="18.9" Text="3.子女" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox22" Top="472.5" Width="15.12" Height="15.12" Checked="false"/>
+      <TextObject Name="Text63" Left="18.9" Top="472.5" Width="56.7" Height="18.9" Text="4.同事" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox23" Left="75.6" Top="472.5" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text64" Left="94.5" Top="472.5" Width="56.7" Height="18.9" Text="5.朋友" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox24" Left="151.2" Top="472.5" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text65" Left="170.1" Top="472.5" Width="56.7" Height="18.9" Text="6.亲戚" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox25" Left="236.25" Top="472.5" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text66" Left="255.15" Top="472.5" Width="94.5" Height="18.9" Text="7.其他监护人" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox26" Left="359.1" Top="472.5" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text67" Left="378" Top="472.5" Width="56.7" Height="18.9" Text="8.其他" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text68" Top="500.85" Width="236.25" Height="18.9" Text="收费员确认并书面告知参保人:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text69" Top="519.75" Width="264.6" Height="18.9" Text="一丶社保患者的社保险种并告知患者，" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text70" Left="264.6" Top="519.75" Width="236.25" Height="18.9" Text="社保系统提示参保人险种为:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text71" Top="538.65" Width="85.05" Height="18.9" Text="1.深圳医保:" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox27" Left="85.05" Top="538.65" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text72" Left="103.95" Top="538.65" Width="94.5" Height="18.9" Text="一档；二档（" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text73" Left="217.35" Top="538.65" Width="47.25" Height="18.9" Text="成人" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox28" Left="198.45" Top="538.65" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <CheckBoxObject Name="CheckBox29" Left="264.6" Top="538.65" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text74" Left="283.5" Top="538.65" Width="47.25" Height="18.9" Text="少儿）" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox30" Left="330.75" Top="538.65" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text75" Left="349.65" Top="538.65" Width="47.25" Height="18.9" Text="三档；" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox31" Left="396.9" Top="538.65" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text76" Left="415.8" Top="538.65" Width="75.6" Height="18.9" Text="工伤保险" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox32" Top="557.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text77" Left="18.9" Top="557.55" Width="66.15" Height="18.9" Text="生育保险" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text78" Left="85.05" Top="557.55" Width="37.8" Height="18.9" Text="职工" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox33" Left="122.85" Top="557.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text79" Left="141.75" Top="557.55" Width="66.15" Height="18.9" Text="个人缴费" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox34" Left="207.9" Top="557.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text80" Left="226.8" Top="557.55" Width="18.9" Height="18.9" Text="；" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox35" Left="255.15" Top="557.55" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text81" Left="274.05" Top="557.55" Width="113.4" Height="18.9" Text="4.市属统筹医保；" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox36" Top="576.45" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text82" Left="18.9" Top="576.45" Width="198.45" Height="18.9" Text="5.广东省内异地医保，参保地" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text83" Left="226.8" Top="576.45" Width="113.4" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox37" Top="595.35" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text84" Left="18.9" Top="595.35" Width="170.1" Height="18.9" Text="6.跨省异地医保，参保地" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text85" Left="198.45" Top="595.35" Width="141.75" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox38" Top="614.25" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text86" Left="18.9" Top="614.25" Width="207.9" Height="18.9" Text="7.跨省异地新农合，参保地" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text87" Left="207.9" Top="614.25" Width="132.3" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text88" Top="633.15" Width="207.9" Height="18.9" Text="二丶自费患者提供身份证情况:" WordWrap="false" Font="宋体, 11pt, style=Bold"/>
+      <CheckBoxObject Name="CheckBox39" Left="207.9" Top="633.15" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text89" Left="226.8" Top="633.15" Width="47.25" Height="18.9" Text="提供；" WordWrap="false" Font="宋体, 11pt"/>
+      <CheckBoxObject Name="CheckBox40" Left="207.9" Top="652.05" Width="15.12" Height="15.12" Border.Lines="All" Checked="false"/>
+      <TextObject Name="Text90" Left="226.8" Top="652.05" Width="217.35" Height="18.9" Text="未提供（患者/代理人签字确认）" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text92" Left="434.7" Top="652.05" Width="85.05" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text93" Top="680.4" Width="113.4" Height="18.9" Text="收费员签名:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text94" Left="85.05" Top="680.4" Width="122.85" Height="18.9" Border.Lines="Bottom" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text95" Left="217.35" Top="680.4" Width="56.7" Height="18.9" Text="时间:" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text96" Left="302.4" Top="680.4" Width="28.35" Height="18.9" Text="年" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text97" Left="359.1" Top="680.4" Width="28.35" Height="18.9" Text="月" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text98" Left="406.35" Top="680.4" Width="28.35" Height="18.9" Text="日" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text99" Left="463.05" Top="680.4" Width="28.35" Height="18.9" Text="分" WordWrap="false" Font="宋体, 11pt"/>
+      <TextObject Name="Text100" Left="245.7" Top="18.9" Width="103.95" Height="18.9" Text="[admissionRecords.birthday]" Format="Custom" Format.Format="yyyy-MM-dd" WordWrap="false" Font="宋体, 11pt"/>
+      <PictureObject Name="Picture1" Left="85.05" Top="387.45" Width="113.4" Height="28.35" DataColumn="dataSource.stampBase"/>
+    </DataBand>
+  </ReportPage>
+</Report>

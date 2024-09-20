@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.IMService</RootNamespace>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\Debug\net6.0\YiJian.ECIS.IMService.Application.xml</DocumentationFile>
+		<OutputPath>bin\Debug</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="IMService\**" />
+	  <EmbeddedResource Remove="IMService\**" />
+	  <None Remove="IMService\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="6.0.3" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.Application.Contracts\YiJian.ECIS.IMService.Application.Contracts.csproj" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.Domain\YiJian.ECIS.IMService.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

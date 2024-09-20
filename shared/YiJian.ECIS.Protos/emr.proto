@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "EMRService";
+
+service GrpcEMR {
+    // 查询患者病历
+    rpc GetPatientEmrList (GetPatientEmrListRequest) returns (PatientEmrListResponse);
+}
+
+message GetPatientEmrListRequest {
+string PID=1;
+string StartTime=2;
+string EndTime=3;
+
+}
+
+
+message PatientEmrListResponse {   
+    repeated GrpcPatientEmrModel patientEmr = 1;
+}
+
+message GrpcPatientEmrModel {
+google.protobuf.Timestamp CreationTime=1;
+    int64 Classify=2;
+    string EmrTitle=3;
+}

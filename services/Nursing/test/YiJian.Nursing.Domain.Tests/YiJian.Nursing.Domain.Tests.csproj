@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Nursing</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <ProjectReference Include="..\YiJian.Nursing.EntityFrameworkCore.Tests\YiJian.Nursing.EntityFrameworkCore.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

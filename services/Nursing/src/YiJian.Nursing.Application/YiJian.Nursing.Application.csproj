@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!--<Import Project="..\..\common.props" />-->
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>YiJian</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>obj/Debug/net6.0/YiJian.Nursing.Application.xml</DocumentationFile>
+		<OutputPath>bin\Debug</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<DocumentationFile>obj/Release/net6.0/YiJian.Nursing.Application.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.9.0" />
+		<PackageReference Include="DotNetCore.CAP" Version="6.2.1" />
+		<PackageReference Include="Google.Protobuf" Version="3.19.4" />
+		<PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="2.46.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.46.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="6.0.3" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="6.0.3" />
+		<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.DDP\YiJian.ECIS.DDP.csproj" />
+		<ProjectReference Include="..\YiJian.Nursing.Application.Contracts\YiJian.Nursing.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+		<ProjectReference Include="..\YiJian.Nursing.Domain\YiJian.Nursing.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\..\..\..\shared\YiJian.ECIS.Protos\masterdata.proto" GrpcServices="Client">
+			<Link>Protos\masterdata.proto</Link>
+		</Protobuf>
+		<Protobuf Include="..\..\..\..\shared\YiJian.ECIS.Protos\nursing.proto" GrpcServices="Server">
+			<Link>Protos\nursing.proto</Link>
+		</Protobuf>
+	</ItemGroup>
+
+</Project>

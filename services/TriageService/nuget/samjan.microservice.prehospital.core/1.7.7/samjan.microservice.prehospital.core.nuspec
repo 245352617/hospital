@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SamJan.MicroService.PreHospital.Core</id>
+    <version>1.7.7</version>
+    <authors>SamJan.MicroService.PreHospital.Core</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="CHSPinYinConv" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Consul" version="1.6.1.1" exclude="Build,Analyzers" />
+        <dependency id="Dapper" version="2.0.123" exclude="Build,Analyzers" />
+        <dependency id="DotNetCore.CAP" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="DotNetCore.CAP.Dashboard" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="DotNetCore.CAP.InMemoryStorage" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="DotNetCore.CAP.RabbitMQ" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="DotNetCore.CAP.SqlServer" version="3.1.2" exclude="Build,Analyzers" />
+        <dependency id="EntityFrameworkCore.DataEncryption" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="InfluxDB.LineProtocol" version="1.1.1" exclude="Build,Analyzers" />
+        <dependency id="Mapster" version="7.0.1" exclude="Build,Analyzers" />
+        <dependency id="MathNet.Numerics" version="4.15.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="3.1.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.OpenIdConnect" version="3.1.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" version="3.1.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="3.1.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Abstractions" version="3.1.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Http.Polly" version="5.0.1" exclude="Build,Analyzers" />
+        <dependency id="Minio.AspNetCore" version="3.1.10" exclude="Build,Analyzers" />
+        <dependency id="NLog.Extensions.Logging" version="1.7.0" exclude="Build,Analyzers" />
+        <dependency id="NLog.Web.AspNetCore" version="4.9.3" exclude="Build,Analyzers" />
+        <dependency id="Nlog.RabbitMQ.Target" version="2.7.7" exclude="Build,Analyzers" />
+        <dependency id="Portable.BouncyCastle" version="1.9.0" exclude="Build,Analyzers" />
+        <dependency id="SkyAPM.Agent.AspNetCore" version="1.1.0" exclude="Build,Analyzers" />
+        <dependency id="StackExchange.Redis" version="2.2.4" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.8.1" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.AspNetCore.Mvc" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.AuditLogging.Domain" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.AuditLogging.Domain.Shared" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.AuditLogging.EntityFrameworkCore" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.Auditing" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.Autofac" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.Ddd.Application" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.Ddd.Application.Contracts" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.Ddd.Domain" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.EntityFrameworkCore" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.EntityFrameworkCore.SqlServer" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.EventBus" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.EventBus.RabbitMQ" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Volo.Abp.Swashbuckle" version="3.3.2" exclude="Build,Analyzers" />
+        <dependency id="Winton.Extensions.Configuration.Consul" version="3.1.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

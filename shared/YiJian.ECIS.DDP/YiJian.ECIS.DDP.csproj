@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="BeetleX.Http.Clients" Version="2.2.2.1803" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="6.0.3" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="6.0.3" />
+    <PackageReference Include="WebApiClientCore" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+    <ProjectReference Include="..\YiJian.ECIS.ShareModel\YiJian.ECIS.ShareModel.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Recipe</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\YiJian.Recipe.Application\YiJian.Recipe.Application.csproj" />
+    <ProjectReference Include="..\YiJian.Recipe.Domain.Tests\YiJian.Recipe.Domain.Tests.csproj" /> 
+  </ItemGroup>
+ 
+</Project>

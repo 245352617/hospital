@@ -1,0 +1,28 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS restore
+WORKDIR /source
+COPY shared/YiJian.ECIS.Core/YiJian.ECIS.Core.csproj shared/YiJian.ECIS.Core/
+COPY services/EMR/host/YiJian.EMR.DCWriter/YiJian.EMR.DCWriter.csproj services/EMR/host/YiJian.EMR.DCWriter/
+RUN dotnet restore "services/EMR/host/YiJian.EMR.DCWriter/YiJian.EMR.DCWriter.csproj"
+
+FROM restore AS build
+WORKDIR /source
+COPY shared/. shared/
+COPY services/EMR/. services/EMR/
+RUN dotnet publish -c Release -o /app services/EMR/host/YiJian.EMR.DCWriter/YiJian.EMR.DCWriter.csproj
+
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+ENV TZ Asia/Shanghai
+# RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free" > /etc/apt/sources.list
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y libgdiplus libc6-dev && ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll && apt-get install --assume-yes apt-utils && apt-get install -y locales && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8 && apt-get install fontconfig -y
+ENV LANG zh_CN.utf8 
+
+FROM base AS production
+WORKDIR /app
+COPY services/EMR/host/YiJian.EMR.DCWriter/Fonts/* /usr/share/fonts/
+COPY --from=build /app .
+
+EXPOSE 80 
+
+ENTRYPOINT ["dotnet", "YiJian.EMR.DCWriter.dll"]

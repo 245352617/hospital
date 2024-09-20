@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/19/2022 09:51:03" ReportInfo.Modified="08/17/2022 16:01:42" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary>
+    <TableDataSource Name="medicines" ReferenceName="Data.medicines" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="medicineProperty" DataType="System.String"/>
+      <Column Name="toxicProperty" DataType="System.String"/>
+      <Column Name="isNonPreferredDrugs" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="usageCode" DataType="System.String"/>
+      <Column Name="usageName" DataType="System.String"/>
+      <Column Name="speed" DataType="System.String"/>
+      <Column Name="longDays" DataType="System.Double"/>
+      <Column Name="actualDays" DataType="System.Double"/>
+      <Column Name="dosageQty" DataType="System.Double"/>
+      <Column Name="qtyPerTimes" DataType="System.Double"/>
+      <Column Name="dosageUnit" DataType="System.String"/>
+      <Column Name="frequencyCode" DataType="System.String"/>
+      <Column Name="frequencyName" DataType="System.String"/>
+      <Column Name="frequencyTimes" DataType="System.Double"/>
+      <Column Name="frequencyUnit" DataType="System.String"/>
+      <Column Name="frequencyExecDayTimes" DataType="System.String"/>
+      <Column Name="pharmacyCode" DataType="System.String"/>
+      <Column Name="pharmacyName" DataType="System.String"/>
+      <Column Name="factoryName" DataType="System.String"/>
+      <Column Name="factoryCode" DataType="System.String"/>
+      <Column Name="batchNo" DataType="System.Object"/>
+      <Column Name="isSkinTest" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="skinTestResult" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="materialPrice" DataType="System.Double"/>
+      <Column Name="isAdaptationDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isFirstAid" DataType="System.Object" BindableControl="CheckBox"/>
+      <Column Name="antibioticPermission" DataType="System.Double"/>
+      <Column Name="prescriptionPermission" DataType="System.Double"/>
+      <Column Name="specification" DataType="System.String"/>
+      <Column Name="piid" DataType="System.String"/>
+      <Column Name="code" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="categoryCode" DataType="System.String"/>
+      <Column Name="categoryName" DataType="System.String"/>
+      <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="prescriptionNo" DataType="System.String"/>
+      <Column Name="recipeNo" DataType="System.String"/>
+      <Column Name="recipeGroupNo" DataType="System.Double"/>
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="applyTimeToString" DataType="System.String"/>
+      <Column Name="applyDoctorCode" DataType="System.String"/>
+      <Column Name="applyDoctorName" DataType="System.String"/>
+      <Column Name="applyDeptCode" DataType="System.String"/>
+      <Column Name="applyDeptName" DataType="System.String"/>
+      <Column Name="status" DataType="System.Double"/>
+      <Column Name="payTypeCode" DataType="System.String"/>
+      <Column Name="payType" DataType="System.Double"/>
+      <Column Name="unit" DataType="System.String"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="amount" DataType="System.Double"/>
+      <Column Name="insuranceCode" DataType="System.String"/>
+      <Column Name="insuranceType" DataType="System.Double"/>
+      <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="hisOrderNo" DataType="System.String"/>
+      <Column Name="diagnosis" DataType="System.String"/>
+      <Column Name="remarks" DataType="System.String"/>
+      <Column Name="prescribeTypeCode" DataType="System.String"/>
+      <Column Name="prescribeTypeName" DataType="System.String"/>
+      <Column Name="recieveQty" DataType="System.Double"/>
+      <Column Name="recieveUnit" DataType="System.String"/>
+      <Column Name="id" DataType="System.String"/>
+      <Column Name="skinTestSignChoseResult" DataType="System.Object"/>
+      <Column Name="skinTestSignChoseResultText" DataType="System.String"/>
+      <Column Name="limitType" DataType="System.Double"/>
+      <Column Name="restrictedDrugs" DataType="System.Object"/>
+      <Column Name="restrictedDrugsText" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="lises" ReferenceName="Data.lises" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="catalogCode" DataType="System.String"/>
+      <Column Name="catalogName" DataType="System.String"/>
+      <Column Name="clinicalSymptom" DataType="System.String"/>
+      <Column Name="specimenCode" DataType="System.String"/>
+      <Column Name="specimenName" DataType="System.String"/>
+      <Column Name="specimenPartCode" DataType="System.String"/>
+      <Column Name="specimenPartName" DataType="System.String"/>
+      <Column Name="containerCode" DataType="System.String"/>
+      <Column Name="containerName" DataType="System.String"/>
+      <Column Name="containerColor" DataType="System.String"/>
+      <Column Name="specimenDescription" DataType="System.String"/>
+      <Column Name="specimenCollectDatetime" DataType="System.Object"/>
+      <Column Name="specimenReceivedDatetime" DataType="System.Object"/>
+      <Column Name="reportTime" DataType="System.Object"/>
+      <Column Name="reportDoctorCode" DataType="System.String"/>
+      <Column Name="reportDoctorName" DataType="System.String"/>
+      <Column Name="hasReportName" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isEmergency" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isBedSide" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="execDeptCode" DataType="System.String"/>
+      <Column Name="execDeptName" DataType="System.String"/>
+      <Column Name="piid" DataType="System.String"/>
+      <Column Name="code" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="categoryCode" DataType="System.String"/>
+      <Column Name="categoryName" DataType="System.String"/>
+      <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="prescriptionNo" DataType="System.String"/>
+      <Column Name="recipeNo" DataType="System.String"/>
+      <Column Name="recipeGroupNo" DataType="System.Double"/>
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="applyTimeToString" DataType="System.String"/>
+      <Column Name="applyDoctorCode" DataType="System.String"/>
+      <Column Name="applyDoctorName" DataType="System.String"/>
+      <Column Name="applyDeptCode" DataType="System.String"/>
+      <Column Name="applyDeptName" DataType="System.String"/>
+      <Column Name="status" DataType="System.Double"/>
+      <Column Name="payTypeCode" DataType="System.String"/>
+      <Column Name="payType" DataType="System.Double"/>
+      <Column Name="unit" DataType="System.String"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="amount" DataType="System.Double"/>
+      <Column Name="insuranceCode" DataType="System.String"/>
+      <Column Name="insuranceType" DataType="System.Double"/>
+      <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="hisOrderNo" DataType="System.String"/>
+      <Column Name="diagnosis" DataType="System.String"/>
+      <Column Name="remarks" DataType="System.String"/>
+      <Column Name="prescribeTypeCode" DataType="System.String"/>
+      <Column Name="prescribeTypeName" DataType="System.String"/>
+      <Column Name="recieveQty" DataType="System.Double"/>
+      <Column Name="recieveUnit" DataType="System.String"/>
+      <Column Name="id" DataType="System.String"/>
+      <Column Name="accountFlag" DataType="System.Double"/>
+      <Column Name="accountFlagText" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+    <TableDataSource Name="pacses" ReferenceName="Data.pacses" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="catalogCode" DataType="System.String"/>
+      <Column Name="catalogName" DataType="System.String"/>
+      <Column Name="clinicalSymptom" DataType="System.String"/>
+      <Column Name="medicalHistory" DataType="System.String"/>
+      <Column Name="partCode" DataType="System.String"/>
+      <Column Name="partName" DataType="System.String"/>
+      <Column Name="catalogDisplayName" DataType="System.String"/>
+      <Column Name="reportTime" DataType="System.Object"/>
+      <Column Name="reportDoctorCode" DataType="System.String"/>
+      <Column Name="reportDoctorName" DataType="System.String"/>
+      <Column Name="hasReport" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isEmergency" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="isBedSide" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="piid" DataType="System.String"/>
+      <Column Name="code" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="categoryCode" DataType="System.String"/>
+      <Column Name="categoryName" DataType="System.String"/>
+      <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="prescriptionNo" DataType="System.String"/>
+      <Column Name="recipeNo" DataType="System.String"/>
+      <Column Name="recipeGroupNo" DataType="System.Double"/>
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="applyTimeToString" DataType="System.String"/>
+      <Column Name="applyDoctorCode" DataType="System.String"/>
+      <Column Name="applyDoctorName" DataType="System.String"/>
+      <Column Name="applyDeptCode" DataType="System.String"/>
+      <Column Name="applyDeptName" DataType="System.String"/>
+      <Column Name="status" DataType="System.Double"/>
+      <Column Name="payTypeCode" DataType="System.String"/>
+      <Column Name="payType" DataType="System.Double"/>
+      <Column Name="unit" DataType="System.String"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="amount" DataType="System.Double"/>
+      <Column Name="insuranceCode" DataType="System.String"/>
+      <Column Name="insuranceType" DataType="System.Double"/>
+      <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="hisOrderNo" DataType="System.String"/>
+      <Column Name="diagnosis" DataType="System.String"/>
+      <Column Name="remarks" DataType="System.String"/>
+      <Column Name="prescribeTypeCode" DataType="System.String"/>
+      <Column Name="prescribeTypeName" DataType="System.String"/>
+      <Column Name="recieveQty" DataType="System.Double"/>
+      <Column Name="recieveUnit" DataType="System.String"/>
+      <Column Name="id" DataType="System.String"/>
+      <Column Name="accountFlag" DataType="System.Double"/>
+      <Column Name="accountFlagText" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+    <TableDataSource Name="treats" ReferenceName="Data.treats" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="otherPrice" DataType="System.Double"/>
+      <Column Name="frequencyCode" DataType="System.String"/>
+      <Column Name="frequencyName" DataType="System.String"/>
+      <Column Name="feeTypeMainCode" DataType="System.String"/>
+      <Column Name="feeTypeSubCode" DataType="System.String"/>
+      <Column Name="specification" DataType="System.String"/>
+      <Column Name="piid" DataType="System.String"/>
+      <Column Name="code" DataType="System.String"/>
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="categoryCode" DataType="System.String"/>
+      <Column Name="categoryName" DataType="System.String"/>
+      <Column Name="isBackTracking" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="prescriptionNo" DataType="System.String"/>
+      <Column Name="recipeNo" DataType="System.String"/>
+      <Column Name="recipeGroupNo" DataType="System.Double"/>
+      <Column Name="applyTime" DataType="System.String"/>
+      <Column Name="applyTimeToString" DataType="System.String"/>
+      <Column Name="applyDoctorCode" DataType="System.String"/>
+      <Column Name="applyDoctorName" DataType="System.String"/>
+      <Column Name="applyDeptCode" DataType="System.String"/>
+      <Column Name="applyDeptName" DataType="System.String"/>
+      <Column Name="status" DataType="System.Double"/>
+      <Column Name="payTypeCode" DataType="System.String"/>
+      <Column Name="payType" DataType="System.Double"/>
+      <Column Name="unit" DataType="System.String"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="amount" DataType="System.Double"/>
+      <Column Name="insuranceCode" DataType="System.String"/>
+      <Column Name="insuranceType" DataType="System.Double"/>
+      <Column Name="isChronicDisease" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="hisOrderNo" DataType="System.String"/>
+      <Column Name="diagnosis" DataType="System.String"/>
+      <Column Name="remarks" DataType="System.String"/>
+      <Column Name="prescribeTypeCode" DataType="System.String"/>
+      <Column Name="prescribeTypeName" DataType="System.String"/>
+      <Column Name="recieveQty" DataType="System.Double"/>
+      <Column Name="recieveUnit" DataType="System.String"/>
+      <Column Name="id" DataType="System.String"/>
+      <Column Name="accountFlag" DataType="System.Double"/>
+      <Column Name="accountFlagText" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+    <TableDataSource Name="admissionRecords" ReferenceName="Data.admissionRecords" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="visNo" DataType="System.String"/>
+      <Column Name="aR_ID" DataType="System.Double"/>
+      <Column Name="pI_ID" DataType="System.String"/>
+      <Column Name="patientID" DataType="System.String"/>
+      <Column Name="contactsPerson" DataType="System.String"/>
+      <Column Name="contactsPhone" DataType="System.String"/>
+      <Column Name="narrationCode" DataType="System.String"/>
+      <Column Name="narrationName" DataType="System.String"/>
+      <Column Name="triageUserCode" DataType="System.String"/>
+      <Column Name="triageUserName" DataType="System.String"/>
+      <Column Name="visitNo" DataType="System.Double"/>
+      <Column Name="visitDate" DataType="System.String"/>
+      <Column Name="registerNo" DataType="System.String"/>
+      <Column Name="registerTime" DataType="System.Object"/>
+      <Column Name="registerDoctorCode" DataType="System.String"/>
+      <Column Name="registerDoctorName" DataType="System.String"/>
+      <Column Name="patientName" DataType="System.String"/>
+      <Column Name="age" DataType="System.String"/>
+      <Column Name="sex" DataType="System.String"/>
+      <Column Name="sexName" DataType="System.String"/>
+      <Column Name="homeAddress" DataType="System.String"/>
+      <Column Name="birthday" DataType="System.Object"/>
+      <Column Name="chargeType" DataType="System.String"/>
+      <Column Name="chargeTypeName" DataType="System.String"/>
+      <Column Name="greenRoadName" DataType="System.String"/>
+      <Column Name="areaCode" DataType="System.String"/>
+      <Column Name="areaName" DataType="System.String"/>
+      <Column Name="bed" DataType="System.String"/>
+      <Column Name="firstDoctorCode" DataType="System.String"/>
+      <Column Name="firstDoctorName" DataType="System.String"/>
+      <Column Name="dutyDoctorCode" DataType="System.String"/>
+      <Column Name="dutyDoctorName" DataType="System.String"/>
+      <Column Name="retentionTime" DataType="System.Object"/>
+      <Column Name="lockDate" DataType="System.Object"/>
+      <Column Name="nurseGrade" DataType="System.String"/>
+      <Column Name="dutyNurseCode" DataType="System.String"/>
+      <Column Name="dutyNurseName" DataType="System.String"/>
+      <Column Name="operatorCode" DataType="System.String"/>
+      <Column Name="operatorName" DataType="System.String"/>
+      <Column Name="visitStatus" DataType="System.Double"/>
+      <Column Name="isPlanBackRoom" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="emergencyLevel" DataType="System.Double"/>
+      <Column Name="inDeptTime" DataType="System.Object"/>
+      <Column Name="outDeptTime" DataType="System.String"/>
+      <Column Name="inDeptWay" DataType="System.String"/>
+      <Column Name="isAttention" DataType="System.String"/>
+      <Column Name="cardNo" DataType="System.String"/>
+      <Column Name="medicalCard" DataType="System.String"/>
+      <Column Name="idNo" DataType="System.String"/>
+      <Column Name="triageLevel" DataType="System.String"/>
+      <Column Name="triageLevelName" DataType="System.String"/>
+      <Column Name="triageTime" DataType="System.String"/>
+      <Column Name="isInHospital" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="triageDeptCode" DataType="System.String"/>
+      <Column Name="triageDeptName" DataType="System.String"/>
+      <Column Name="weight" DataType="System.String"/>
+      <Column Name="height" DataType="System.String"/>
+      <Column Name="pastMedicalHistory" DataType="System.String"/>
+      <Column Name="infectiousHistory" DataType="System.String"/>
+      <Column Name="allergyHistory" DataType="System.String"/>
+      <Column Name="fluFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="fluTemp" DataType="System.String"/>
+      <Column Name="coughFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="chestFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="typeOfVisitCode" DataType="System.String"/>
+      <Column Name="typeOfVisitName" DataType="System.String"/>
+      <Column Name="triageErrorFlag" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="patientWhereAbout" DataType="System.String"/>
+      <Column Name="triageDirectionCode" DataType="System.String"/>
+      <Column Name="triageDirectionName" DataType="System.String"/>
+      <Column Name="supplementaryNotes" DataType="System.String"/>
+      <Column Name="keyDiseasesCode" DataType="System.String"/>
+      <Column Name="deathTime" DataType="System.String"/>
+      <Column Name="outDeptReason" DataType="System.Double"/>
+      <Column Name="diagnoseCode" DataType="System.String"/>
+      <Column Name="diagnoseName" DataType="System.String"/>
+      <Column Name="sort" DataType="System.Double"/>
+      <Column Name="isTop" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="callStatus" DataType="System.Double"/>
+      <Column Name="identityCode" DataType="System.String"/>
+      <Column Name="identityName" DataType="System.String"/>
+      <Column Name="isHasTransfer" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="finishVisitTime" DataType="System.String"/>
+      <Column Name="current" DataType="System.String"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+    <TableDataSource Name="otherInfo" DataType="FastReport.JsonBase" Enabled="true">
+      <Column Name="index" DataType="System.Int32"/>
+      <Column Name="item" DataType="System.Object"/>
+      <Column Name="array" DataType="FastReport.JsonBase"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="148.1" PaperHeight="210.1" RawPaperSize="11" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" FirstPageSource="1" OtherPagesSource="1" LastPageSource="1" Watermark.Font="宋体, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="522.02" Height="132.3">
+      <TextObject Name="Text1" Left="141.75" Width="189" Height="28.35" Text="深圳市龙岗中心医院" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 14pt, style=Bold"/>
+      <TextObject Name="Text2" Left="141.75" Top="28.35" Width="189" Height="28.35" Text="病理检验申请单" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 14pt, style=Bold"/>
+      <TextObject Name="Text3" Top="-18.9" Width="141.75" Height="37.8" Text="缴费后请把标本及申请单交&#13;&#10;到门诊二楼体液室收标本处" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <BarcodeObject Name="Barcode1" Left="9.45" Top="18.9" Width="108.35" Height="47.25" AutoSize="false" ShowText="false" Barcode="2/5 Interleaved"/>
+      <BarcodeObject Name="Barcode2" Left="359.1" Top="9.45" Width="117.8" Height="47.25" AutoSize="false" ShowText="false" Barcode="2/5 Interleaved"/>
+      <TextObject Name="Text4" Top="75.6" Width="85.05" Height="18.9" Text="标本离体时间：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text5" Top="94.5" Width="85.05" Height="18.9" Text="标本固定时间：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text6" Left="359.1" Top="66.15" Width="132.3" Height="18.9" Text="费别: [admissionRecords.chargeTypeName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt, style=Bold"/>
+      <TextObject Name="Text7" Left="359.1" Top="94.5" Width="94.5" Height="18.9" Text="病理检验号:" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+      <TextObject Name="Text8" Top="113.4" Width="141.75" Height="18.9" Text="送检单位:本院" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+      <TextObject Name="Text9" Left="359.1" Top="113.4" Width="94.5" Height="18.9" Text="原病理检验号:" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="135.5" Width="522.02" Height="557.97" Guides="37.8">
+      <TableObject Name="Table1" Left="-9.45" Width="531.48" Height="557.97" Border.Lines="All">
+        <TableColumn Name="Column1" Width="101.56"/>
+        <TableColumn Name="Column2" Width="82.66"/>
+        <TableColumn Name="Column3" Width="186.61"/>
+        <TableColumn Name="Column4" Width="160.65"/>
+        <TableRow Name="Row1" Height="20.28">
+          <TableCell Name="Cell1" Border.Lines="All" Text="姓名：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold" ColSpan="3">
+            <TextObject Name="Text10" Left="37.8" Width="94.5" Height="18.9" Text="[admissionRecords.patientName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt"/>
+            <TextObject Name="Text11" Left="132.3" Width="66.15" Height="18.9" Text="性别：[admissionRecords.sexName]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text12" Left="198.45" Width="66.15" Height="18.9" Text="年龄：[admissionRecords.age]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text13" Left="264.6" Width="56.7" Height="18.9" Text="籍贯：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text14" Left="321.3" Width="47.25" Height="18.9" Text="婚否：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell2" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt"/>
+          <TableCell Name="Cell3" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt"/>
+          <TableCell Name="Cell4" Border.Lines="All" Text="申请日期：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row2" Height="20.28">
+          <TableCell Name="Cell6" Border.Lines="All" Font="宋体, 9pt" ColSpan="3">
+            <TextObject Name="Text16" Left="113.4" Width="66.15" Height="18.9" Text="职业：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text17" Left="179.55" Width="122.85" Height="18.9" Text="科别：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text18" Left="302.4" Width="66.15" Height="18.9" Text="床号：[admissionRecords.bed]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text15" Width="113.4" Height="18.9" Text="门诊号码:[admissionRecords.visNo]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell7" Border.Lines="All" Font="宋体, 9pt"/>
+          <TableCell Name="Cell8" Border.Lines="All" Font="宋体, 9pt"/>
+          <TableCell Name="Cell9" Border.Lines="All" Text="收到日期     年  月  日" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="20.28">
+          <TableCell Name="Cell11" Border.Lines="All" Font="宋体, 8pt, style=Bold" ColSpan="4">
+            <TextObject Name="Text19" Width="255.15" Height="18.9" Text="家庭住址：[admissionRecords.homeAddress]" VertAlign="Bottom" WordWrap="false" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text20" Left="255.15" Width="103.95" Height="18.9" Text="邮编：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text21" Left="359.1" Width="170.1" Height="18.9" Text="电话：[admissionRecords.contactsPhone]" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell12" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell13" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell14" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row4" Height="95.88">
+          <TableCell Name="Cell16" Border.Lines="All" Font="宋体, 8pt, style=Bold" ColSpan="4">
+            <TextObject Name="Text22" Width="160.65" Height="18.9" Text="病史摘要及临床检查所见：" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text23" Left="28.35" Top="18.9" Width="500.85" Height="18.9" Text="主诉：[admissionRecords.narrationName]" VertAlign="Bottom" Font="宋体, 8pt"/>
+            <TextObject Name="Text24" Left="28.35" Top="37.8" Width="500.85" Height="18.9" Text="现病史：" VertAlign="Bottom" Font="宋体, 8pt"/>
+            <TextObject Name="Text25" Left="28.35" Top="56.7" Width="500.85" Height="18.9" Text="既往史：[admissionRecords.pastMedicalHistory]" VertAlign="Bottom" Font="宋体, 8pt"/>
+            <TextObject Name="Text26" Left="28.35" Top="75.6" Width="500.85" Height="18.9" Text="LMP:" VertAlign="Bottom" Font="宋体, 8pt"/>
+          </TableCell>
+          <TableCell Name="Cell17" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell18" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell19" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="152.58">
+          <TableCell Name="Cell21" Border.Lines="All" Font="宋体, 8pt, style=Bold" ColSpan="2">
+            <TextObject Name="Text27" Width="179.55" Height="18.9" Text="若系肿瘤，请填写下列各项：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text28" Left="9.45" Top="18.9" Width="75.6" Height="18.9" Text="部    位：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text29" Left="9.45" Top="37.8" Width="75.6" Height="18.9" Text="发现日期：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text30" Left="9.45" Top="56.7" Width="75.6" Height="18.9" Text="大小形状：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text31" Left="9.45" Top="75.6" Width="75.6" Height="18.9" Text="生长速度：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text32" Left="9.45" Top="94.5" Width="75.6" Height="18.9" Text="活 动 度：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text33" Left="9.45" Top="113.4" Width="75.6" Height="18.9" Text="硬    度：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text34" Left="9.45" Top="132.3" Width="75.6" Height="18.9" Text="有无转移：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell22" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell23" Border.Lines="All" Font="宋体, 8pt, style=Bold" ColSpan="2">
+            <TextObject Name="Text35" Width="226.8" Height="18.9" Text="若系妇科标本，请填写下列各项：" VertAlign="Bottom" Font="宋体, 7pt, style=Bold"/>
+            <TextObject Name="Text36" Top="18.9" Width="122.85" Height="18.9" Text="月经周期及持续时间：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text37" Top="37.8" Width="179.55" Height="18.9" Text="上次月经日期" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text38" Left="179.55" Top="37.8" Width="75.6" Height="18.9" Text="经量" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text39" Left="255.15" Top="37.8" Width="75.6" Height="18.9" Text="持续时间：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text40" Top="56.7" Width="179.55" Height="18.9" Text="末次月经日期" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text41" Left="179.55" Top="56.7" Width="75.6" Height="18.9" Text="经量" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text42" Left="255.15" Top="56.7" Width="75.6" Height="18.9" Text="持续时间：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text43" Top="75.6" Width="330.75" Height="18.9" Text="刮宫日期：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text44" Top="94.5" Width="330.75" Height="18.9" Text="激素治疗日期及剂量：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell24" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="86.43">
+          <TableCell Name="Cell26" Border.Lines="All" Font="宋体, 8pt, style=Bold" ColSpan="4">
+            <TextObject Name="Text45" Width="151.2" Height="18.9" Text="手术范围及手术所见：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text46" Left="9.45" Top="56.7" Width="132.3" Height="18.9" Text="特殊生物感染 请√：" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text47" Left="141.75" Top="56.7" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text48" Left="160.65" Top="56.7" Width="28.35" Height="18.9" Text="HIV" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text49" Left="198.45" Top="56.7" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text50" Left="217.35" Top="56.7" Width="30.24" Height="18.9" Text="梅毒" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text51" Left="264.6" Top="56.7" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text52" Left="283.5" Top="56.7" Width="52.92" Height="18.9" Text="结核杆菌" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text53" Left="340.2" Top="56.7" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text54" Left="359.1" Top="56.7" Width="52.92" Height="18.9" Text="肝炎病毒" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text55" Left="415.8" Top="28.35" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text56" Left="434.7" Top="28.35" Width="18.9" Height="18.9" Text="甲" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text57" Left="415.8" Top="47.25" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text58" Left="434.7" Top="47.25" Width="18.9" Height="18.9" Text="乙" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text59" Left="415.8" Top="66.15" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text60" Left="434.7" Top="66.15" Width="18.9" Height="18.9" Text="丙" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+            <TextObject Name="Text61" Left="472.5" Top="56.7" Width="15.12" Height="15.12" Border.Lines="All" VertAlign="Bottom" Font="宋体, 9pt, style=Bold"/>
+            <TextObject Name="Text62" Left="491.4" Top="37.8" Width="37.8" Height="47.25" Text="新型冠状病毒" VertAlign="Bottom" Font="宋体, 8pt, style=Bold"/>
+          </TableCell>
+          <TableCell Name="Cell27" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell28" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell29" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row7" Height="20.28">
+          <TableCell Name="Cell31" Border.Lines="All" Text="   临床诊断：[admissionRecords.diagnoseName]" Font="宋体, 8pt, style=Bold" ColSpan="4"/>
+          <TableCell Name="Cell32" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell33" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell34" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="20.28">
+          <TableCell Name="Cell36" Border.Lines="All" Text="送检标本" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell37" Border.Lines="All" Text="采取部位" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell38" Border.Lines="All" Text="送检标本名称" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell39" Border.Lines="All" Text="有特殊临床情况请注明" HorzAlign="Center" VertAlign="Center" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row9" Height="20.28">
+          <TableCell Name="Cell41" Border.Lines="All" Text="1" HorzAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell42" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell43" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell44" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row10" Height="20.28">
+          <TableCell Name="Cell46" Border.Lines="All" Text="2" HorzAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell47" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell48" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell49" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row11" Height="20.28">
+          <TableCell Name="Cell61" Border.Lines="All" Text="3" HorzAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell62" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell63" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell64" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row12" Height="20.28">
+          <TableCell Name="Cell67" Border.Lines="All" Text="4" HorzAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell68" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell69" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell70" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row13" Height="20.28">
+          <TableCell Name="Cell85" Border.Lines="All" Text="5" HorzAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell86" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell87" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell88" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+        <TableRow Name="Row14" Height="20.28">
+          <TableCell Name="Cell92" Border.Lines="All" Text="备注" HorzAlign="Center" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell93" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell94" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+          <TableCell Name="Cell95" Border.Lines="All" Font="宋体, 8pt, style=Bold"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="696.67" Width="522.02" Height="56.7">
+      <TextObject Name="Text64" Top="28.35" Width="519.75" Height="18.9" Text="注：请临床各科室在申请单填写患者是否感染新型冠状病毒！谢谢！" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text63" Left="292.95" Width="217.35" Height="18.9" Text="送检医师： " VertAlign="Bottom" Font="宋体, 8pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

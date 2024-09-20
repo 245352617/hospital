@@ -1,0 +1,34 @@
+{
+  "TriageDirections": [
+    {
+      "Code": "TriageDirection_001",
+      "Name": "死亡",
+      "ToAreaCode": "RescueArea"
+    },
+    {
+      "Code": "TriageDirection_002",
+      "Name": "留观区",
+      "ToAreaCode": "ObservationArea"
+    },
+    {
+      "Code": "TriageDirection_003",
+      "Name": "抢救区",
+      "ToAreaCode": "RescueArea"
+    },
+    {
+      "Code": "TriageDirection_004",
+      "Name": "专科",
+      "ToAreaCode": "OutpatientArea"
+    },
+    {
+      "Code": "TriageDirection_005",
+      "Name": "特护病房",
+      "ToAreaCode": "OutpatientArea"
+    },
+    {
+      "Code": "TriageDirection_006",
+      "Name": "急诊",
+      "ToAreaCode": "OutpatientArea"
+    }
+  ]
+}

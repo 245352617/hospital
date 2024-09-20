@@ -1,0 +1,3695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YiJian.Nursing.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="P:YiJian.External.Backgrounds.Dto.RemoteServices.Patient">
+            <summary>
+            患者服务BaseAddress
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.VisitStatus">
+            <summary>
+            就诊状态 
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.VisitDate">
+            <summary>
+            就诊时间
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.InDeptTime">
+            <summary>
+            入科时间
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.FirstDoctorCode">
+            <summary>
+            首诊医生编码
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.FirstDoctorName">
+            <summary>
+            首诊医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.DutyDoctorCode">
+            <summary>
+            责任医生编码
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.DutyDoctorName">
+            <summary>
+            责任医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="T:YiJian.External.Backgrounds.Dto.XmlUtil">
+            <summary>
+            Xml序列化与反序列化
+            </summary>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.Dto.XmlUtil.Deserialize(System.Type,System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type">类型</param>
+            <param name="xml">XML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.Dto.XmlUtil.Deserialize(System.Type,System.IO.Stream)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type"></param>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.Dto.XmlUtil.Serializer(System.Type,System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="type">类型</param>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.Dto.XmlUtil.ReplaceLowOrderASCIICharacters(System.String)">
+            <summary>
+            过滤低位非打印字符
+            </summary>
+            <param name="tmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.IHisClientAppService.UpdateAdmissionRecordByViewAsync(System.Collections.Generic.List{YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto})">
+            <summary>
+            更新入科记录
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.External.Backgrounds.IHisClientProxyService">
+            <summary>
+            代理接口
+            </summary>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.IHisClientProxyService.SyncUpdateAdmissionRecordByViewAsync(System.Collections.Generic.List{YiJian.External.Backgrounds.Dto.UpdateAdmissionRecordByViewDto})">
+            <summary>
+            更新入科记录
+            </summary>
+            <param name="list">更新入科记录</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:YiJian.External.Backgrounds.IHisClientProxyService.GetVisitAdmissionRecordAsync">
+            <summary>
+            获取在就诊的患者
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.External.Backgrounds.IHisClientProxyService.HandleDiagnoseAsync(System.Collections.Generic.List{YiJian.External.Backgrounds.Dto.GetDiagnoseRecordBySocketDto})">
+            <summary>
+            删除新增患者诊断 GetVisitAdmissionRecordDto patItem,
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.External.Backgrounds.ISyncHisPatientInfoAppService.SyncPatientDiagnoseAsync">
+            <summary>
+            同步患者诊断信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.External.Backgrounds.ISyncHisPatientInfoAppService.SyncPatientBasicInfoAsync">
+            <summary>
+            同步患者入科时间信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.CanulaDto">
+            <summary>
+            导管护理记录
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.Id">
+            <summary>
+            导管护理记录Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.CanulaId">
+            <summary>
+            导管记录Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.NurseTime">
+            <summary>
+            护理时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.NurseTime2">
+            <summary>
+            护理时间(去除秒)
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.NurseId">
+            <summary>
+            护士Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.NurseName">
+            <summary>
+            护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.CanulaWay">
+            <summary>
+            置入方式
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.CanulaLength">
+            <summary>
+            置管长度
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaDto.CanulaItemDto">
+            <summary>
+            动态列表
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.INursingCanulaAppService.GetAllViewNursingCanulaListAsync(System.Guid,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            全景视图-导管列表
+            </summary>
+            <param name="PID"></param>
+            <param name="StartTime"></param>
+            <param name="EndTime"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.PI_ID">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.UseFlag">
+            <summary>
+            使用标志：（Y在用，N已拔管）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.State">
+            <summary>
+            状态：（0插管时间，1拔管时间）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.InDeptTime">
+            <summary>
+            入科时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.VisitStatus">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.NursingCanulaInput.OutDeptTime">
+            <summary>
+            出科时间
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.CreateUpdateNursingEventDto">
+            <summary>
+            表:护理记录表
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.Inhosnum">
+            <summary>
+            入科流水号
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.Context">
+            <summary>
+            内容
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.NurseCode">
+            <summary>
+            护士工号
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.NurseName">
+            <summary>
+            护士名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.RecordTime">
+            <summary>
+            记录时间
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.RecordTime2">
+            <summary>
+            记录时间(去除秒)
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.AuditNurseCode">
+            <summary>
+            审核人
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.AuditNurseName">
+            <summary>
+            审核人名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.AuditTime">
+            <summary>
+            审核时间
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.CreateUpdateNursingEventDto.AuditState">
+            <summary>
+            审核状态（0-未审核，1，已审核，2-取消审核）
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.CanulaPartData">
+            <summary>
+            表:人体图-编号字典 读取输出
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaPartData.DeptCode">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaPartData.ModuleCode">
+            <summary>
+            模块代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaPartData.PartName">
+            <summary>
+            部位名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaPartData.PartNumber">
+            <summary>
+            部位编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaPartData.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.CanulaPartData.IsEnable">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.GetCanulaPartPagedInput">
+            <summary>
+            表:人体图-编号字典 分页排序输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetCanulaPartPagedInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetCanulaPartPagedInput.Sorting">
+            <summary>
+            排序字段.
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.ICanulaPartAppService">
+            <summary>
+            表:人体图-编号字典 API Interface
+            </summary>   
+        </member>
+        <member name="T:YiJian.Nursing.DictCreation">
+            <summary>
+            表:导管字典-通用业务 新增输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.ParaCode">
+            <summary>
+            参数代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.ParaName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.DictCode">
+            <summary>
+            字典代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.DictValue">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.DictDesc">
+            <summary>
+            字典值说明
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.ParentId">
+            <summary>
+            上级代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.DictStandard">
+            <summary>
+            字典标准（国标、自定义）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.HisCode">
+            <summary>
+            HIS对照代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.HisName">
+            <summary>
+            HIS对照
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.DeptCode">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.ModuleCode">
+            <summary>
+            模块代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictCreation.ValidState">
+            <summary>
+            有效状态（1-有效，0-无效）
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.DictData">
+            <summary>
+            表:导管字典-通用业务 读取输出
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.ParaCode">
+            <summary>
+            参数代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.ParaName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.DictCode">
+            <summary>
+            字典代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.DictValue">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.DictDesc">
+            <summary>
+            字典值说明
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.ParentId">
+            <summary>
+            上级代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.DictStandard">
+            <summary>
+            字典标准（国标、自定义）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.HisCode">
+            <summary>
+            HIS对照代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.HisName">
+            <summary>
+            HIS对照
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.DeptCode">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.ModuleCode">
+            <summary>
+            模块代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictData.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.DictUpdate">
+            <summary>
+            表:导管字典-通用业务 修改输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.ParaCode">
+            <summary>
+            参数代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.ParaName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.DictCode">
+            <summary>
+            字典代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.DictValue">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.DictDesc">
+            <summary>
+            字典值说明
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.ParentId">
+            <summary>
+            上级代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.DictStandard">
+            <summary>
+            字典标准（国标、自定义）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.HisCode">
+            <summary>
+            HIS对照代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.HisName">
+            <summary>
+            HIS对照
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.DeptCode">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.ModuleCode">
+            <summary>
+            模块代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.IsDefault">
+            <summary>
+            是否默认
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.DictUpdate.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.GetDictPagedInput">
+            <summary>
+            表:导管字典-通用业务 分页排序输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetDictPagedInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetDictPagedInput.Sorting">
+            <summary>
+            排序字段.
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.IDictAppService">
+            <summary>
+            表:导管字典-通用业务 API Interface
+            </summary>   
+        </member>
+        <member name="M:YiJian.Nursing.IDictAppService.CreateAsync(YiJian.Nursing.DictCreation)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IDictAppService.UpdateAsync(System.Guid,YiJian.Nursing.DictUpdate)">
+            <summary>
+            修改
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IDictAppService.DeleteAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IDictAppService.GetListAsync(System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IDictAppService.GetPagedListAsync(YiJian.Nursing.GetDictPagedInput)">
+            <summary>
+            获取分页记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.GetParaItemPagedInput">
+            <summary>
+            表:护理项目表 分页排序输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetParaItemPagedInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetParaItemPagedInput.Sorting">
+            <summary>
+            排序字段.
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.IParaItemAppService">
+            <summary>
+            表:护理项目表 API Interface
+            </summary>   
+        </member>
+        <member name="M:YiJian.Nursing.IParaItemAppService.DeleteParaItemInfoAsync(System.Guid)">
+            <summary>
+            删除
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.Nursing.ParaItemData">
+            <summary>
+            表:护理项目表 读取输出
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DeptCode">
+            <summary>
+            科室编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ModuleCode">
+            <summary>
+            参数所属模块
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ParaCode">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ParaName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ScoreCode">
+            <summary>
+            评分代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.GroupName">
+            <summary>
+            导管分类
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.UnitName">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ValueType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.Style">
+            <summary>
+            文本类型
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DecimalDigits">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.HighValue">
+            <summary>
+            高值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.LowValue">
+            <summary>
+            低值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.Threshold">
+            <summary>
+            是否预警
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DataSource">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DictFlag">
+            <summary>
+            导管项目是否静态显示
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.GuidFlag">
+            <summary>
+            是否评分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.GuidId">
+            <summary>
+            评分指引编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.StatisticalType">
+            <summary>
+            特护单统计参数分类
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DrawChartFlag">
+            <summary>
+            绘制趋势图形
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ColorParaCode">
+            <summary>
+            关联颜色
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ColorParaName">
+            <summary>
+            关联颜色名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.PropertyParaCode">
+            <summary>
+            关联性状
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.PropertyParaName">
+            <summary>
+            关联性状名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DeviceParaCode">
+            <summary>
+            设备参数代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.DeviceParaType">
+            <summary>
+            设备参数类型（1-测量值，2-设定值）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.HealthSign">
+            <summary>
+            是否生命体征项目
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.KBCode">
+            <summary>
+            知识库代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.NuringViewCode">
+            <summary>
+            护理概览参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.AbnormalSign">
+            <summary>
+            是否异常体征参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.IsUsage">
+            <summary>
+            是否用药所属项目
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.AddSource">
+            <summary>
+            添加来源
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemData.ParaItemType">
+            <summary>
+            项目参数类型，用于区分监护仪或者呼吸机等
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.ParaItemUpdate">
+            <summary>
+            表:护理项目表 修改输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DeptCode">
+            <summary>
+            科室编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ModuleCode">
+            <summary>
+            参数所属模块
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ParaCode">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ParaName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ScoreCode">
+            <summary>
+            评分代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.GroupName">
+            <summary>
+            导管分类
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.UnitName">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ValueType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.Style">
+            <summary>
+            文本类型
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DecimalDigits">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.HighValue">
+            <summary>
+            高值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.LowValue">
+            <summary>
+            低值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.Threshold">
+            <summary>
+            是否预警
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.Sort">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DataSource">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DictFlag">
+            <summary>
+            导管项目是否静态显示
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.GuidFlag">
+            <summary>
+            是否评分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.GuidId">
+            <summary>
+            评分指引编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.StatisticalType">
+            <summary>
+            特护单统计参数分类
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DrawChartFlag">
+            <summary>
+            绘制趋势图形
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ColorParaCode">
+            <summary>
+            关联颜色
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ColorParaName">
+            <summary>
+            关联颜色名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.PropertyParaCode">
+            <summary>
+            关联性状
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.PropertyParaName">
+            <summary>
+            关联性状名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DeviceParaCode">
+            <summary>
+            设备参数代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.DeviceParaType">
+            <summary>
+            设备参数类型（1-测量值，2-设定值）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.HealthSign">
+            <summary>
+            是否生命体征项目
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.KBCode">
+            <summary>
+            知识库代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.NuringViewCode">
+            <summary>
+            护理概览参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.AbnormalSign">
+            <summary>
+            是否异常体征参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.IsUsage">
+            <summary>
+            是否用药所属项目
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.AddSource">
+            <summary>
+            添加来源
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.ParaItemType">
+            <summary>
+            项目参数类型，用于区分监护仪或者呼吸机等
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemUpdate.CreateUpdateDictDtos">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.Settings.GetParaModulePagedInput">
+            <summary>
+            表:模块参数 分页排序输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.GetParaModulePagedInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.GetParaModulePagedInput.Sorting">
+            <summary>
+            排序字段.
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.Settings.IParaModuleAppService">
+            <summary>
+            表:模块参数 API Interface
+            </summary>   
+        </member>
+        <member name="T:YiJian.Nursing.Settings.ParaModuleData">
+            <summary>
+            表:模块参数 读取输出
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.ModuleCode">
+            <summary>
+            模块代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.DisplayName">
+            <summary>
+            模块显示名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.DeptCode">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.ModuleType">
+            <summary>
+            模块类型：（CANULA：导管，SKIN：皮肤，VS：观察项目，IO：出入量，EM：ECMO，BP：血液净化，PC：PICCO）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.IsBloodFlow">
+            <summary>
+            是否血流内导管
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.Py">
+            <summary>
+            模块拼音
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleData.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.Settings.ParaModuleUpdate">
+            <summary>
+            表:模块参数 修改输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.DisplayName">
+            <summary>
+            模块显示名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.DeptCode">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.ModuleType">
+            <summary>
+            模块类型：（CANULA：导管，SKIN：皮肤，VS：观察项目，IO：出入量，EM：ECMO，BP：血液净化，PC：PICCO）
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.IsBloodFlow">
+            <summary>
+            是否血流内导管
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.Py">
+            <summary>
+            模块拼音
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.Settings.ParaModuleUpdate.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.ModuleListDto">
+            <summary>
+            系统模块参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ModuleListDto.ParaCode">
+            <summary>
+            模块代码
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.ModuleListDto.ParaName">
+            <summary>
+            模块名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemListDto.ParaCode">
+            <summary>
+            项目代码
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemListDto.ParaName">
+            <summary>
+            项目名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.ParaItemListDto.UnitName">
+            <summary>
+            单位名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.Nursing.GetIllnessObserveInput.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetIllnessObserveInput.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.GetIllnessObserveInput.PI_ID">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.IIllnessObserveAppService.SaveIllnessObserveAsync(YiJian.Nursing.IllnessObserveMainCreation,System.Threading.CancellationToken)">
+            <summary>
+            新增
+            </summary>
+            <param name="dto"></param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="M:YiJian.Nursing.IIllnessObserveAppService.DeleteIllnessObserveAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <exception cref="T:YiJian.ECIS.ShareModel.Exceptions.EcisBusinessException"></exception>
+        </member>
+        <member name="M:YiJian.Nursing.IIllnessObserveAppService.GetIllnessObserveAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            根据id获取病情数据
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IIllnessObserveAppService.GetIllnessObserveListAsync(YiJian.Nursing.GetIllnessObserveInput,System.Threading.CancellationToken)">
+            <summary>
+            列表
+            </summary>
+            <param name="input"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveData.HeaderList">
+            <summary>
+            头部
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveData.LeftColumnList">
+            <summary>
+            左侧列
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.IIllnessObserveHeaderAppService.GetIllnessObserveHeaderAsync">
+            <summary>
+            列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.IIllnessObserveHeaderAppService.SavaIIllnessObserveHeaderAsync(YiJian.Nursing.IllnessObserveHeadercCreation)">
+            <summary>
+            新增
+            </summary>
+            <param name="dto"></param>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.ItemCode">
+            <summary>
+            项目编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.ItemName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.MaxEarlyWarning">
+            <summary>
+            最大值预警
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.MinEarlyWarning">
+            <summary>
+            最小值预警
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.ParentCode">
+            <summary>
+            父级编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeadercCreation.Grade">
+            <summary>
+            等级，1:一级，2：二级
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.ItemCode">
+            <summary>
+            项目编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.ItemName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.MaxEarlyWarning">
+            <summary>
+            最大值预警
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.MinEarlyWarning">
+            <summary>
+            最小值预警
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveHeaderData.ParentCode">
+            <summary>
+            父级编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParentIllnessObserveHeaderData.ItemCode">
+            <summary>
+            项目编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParentIllnessObserveHeaderData.ItemName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParentIllnessObserveHeaderData.Unit">
+            <summary>
+            单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.ParentIllnessObserveHeaderData.ChildList">
+            <summary>
+            下级
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputCreation.BloodTransfusion">
+            <summary>
+            输血
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputCreation.Diet">
+            <summary>
+            饮食
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputCreation.Water">
+            <summary>
+            水
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputCreation.NasalFeeding">
+            <summary>
+            鼻饲
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputData.TotalInput">
+            <summary>
+            入量合计
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputData.BloodTransfusion">
+            <summary>
+            输血
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputData.Diet">
+            <summary>
+            饮食
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputData.Water">
+            <summary>
+            水
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveInputData.NasalFeeding">
+            <summary>
+            鼻饲
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.Id">
+            <summary>
+            主键id，新增不传，修改传参
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.PI_ID">
+            <summary>
+            traige患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.PatientId">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.ObserveTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.Temperature">
+            <summary>
+            体温
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.HeartRate">
+            <summary>
+            心率
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.Breathing">
+            <summary>
+            呼吸
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.Sbp">
+            <summary>
+            血压BP收缩压
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.Sdp">
+            <summary>
+            血压BP舒张压
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.SpO2">
+            <summary>
+            血氧饱和度
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.ConsciousnessCode">
+            <summary>
+            意识编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.ConsciousnessName">
+            <summary>
+            意识名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.BloodSugar">
+            <summary>
+            血糖
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.LeftPupilType">
+            <summary>
+            左瞳类型，0：灵敏，1：迟钝，2：无反应
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.LeftPupilSize">
+            <summary>
+            左瞳大小
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.RightPupilType">
+            <summary>
+            右瞳类型，0：灵敏，1：迟钝，2：无反应
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.RightPupilSize">
+            <summary>
+            右瞳大小
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.IllnessObserveInput">
+            <summary>
+            病情观察入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.IllnessObserveOutput">
+            <summary>
+            病情观察出量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainCreation.IllnessObserveOther">
+            <summary>
+            病情观察其他
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.Id">
+            <summary>
+            主键id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.PI_ID">
+            <summary>
+            traige患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.PatientId">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.ObserveTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.Temperature">
+            <summary>
+            体温
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.HeartRate">
+            <summary>
+            心率
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.Breathing">
+            <summary>
+            呼吸
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.Sbp">
+            <summary>
+            血压BP收缩压
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.Sdp">
+            <summary>
+            血压BP舒张压
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.SpO2">
+            <summary>
+            血氧饱和度
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.ConsciousnessCode">
+            <summary>
+            意识编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.ConsciousnessName">
+            <summary>
+            意识名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.BloodSugar">
+            <summary>
+            血糖
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.LeftPupilType">
+            <summary>
+            左瞳类型，0：灵敏，1：迟钝，2：无反应
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.LeftPupilSize">
+            <summary>
+            左瞳大小
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.RightPupilType">
+            <summary>
+            右瞳类型，0：灵敏，1：迟钝，2：无反应
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.RightPupilSize">
+            <summary>
+            右瞳大小
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.IllnessObserveInput">
+            <summary>
+            病情观察入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.IllnessObserveOutput">
+            <summary>
+            病情观察出量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveMainData.IllnessObserveOther">
+            <summary>
+            病情观察其他
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherCreation.G">
+            <summary>
+            GCS分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherCreation.C">
+            <summary>
+            GCS分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherCreation.S">
+            <summary>
+            GCS分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherCreation.ElectricCardioversion">
+            <summary>
+            电复律
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherCreation.TurnOver">
+            <summary>
+            翻身
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherData.G">
+            <summary>
+            GCS分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherData.C">
+            <summary>
+            GCS分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherData.S">
+            <summary>
+            GCS分
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherData.ElectricCardioversion">
+            <summary>
+            电复律
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOtherData.TurnOver">
+            <summary>
+            翻身
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputCreation.UrineVolume">
+            <summary>
+            尿量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputCreation.Shit">
+            <summary>
+            大便
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputCreation.Vomit">
+            <summary>
+            呕吐
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputCreation.Sweat">
+            <summary>
+            汗液
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputCreation.SputumSuction">
+            <summary>
+            吸痰
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputCreation.VenousInflow">
+            <summary>
+            静脉入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.TotalOutput">
+            <summary>
+            出量合计
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.UrineVolume">
+            <summary>
+            尿量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.Shit">
+            <summary>
+            大便
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.Vomit">
+            <summary>
+            呕吐
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.Sweat">
+            <summary>
+            汗液
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.SputumSuction">
+            <summary>
+            吸痰
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.IllnessObserveOutputData.VenousInflow">
+            <summary>
+            静脉入量
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto">
+            <summary>
+            一键核对一键执行列表信息
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.PlatformType">
+            <summary>
+            业务类型 0=急诊,1=院前急救
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.RecipeStatus">
+            <summary>
+            医嘱状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.RecipeExecuteStatus">
+            <summary>
+            医嘱执行状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.Status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.StatusText">
+            <summary>
+            状态√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.CategoryCode">
+            <summary>
+             医嘱项目分类编码 (药物，检查，检验，治疗，护理，膳食，麻醉，手术，会诊，耗材，其他，嘱托)
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.CategoryName">
+            <summary>
+            医嘱项目分类 (药物，检查，检验，治疗，护理，膳食，麻醉，手术，会诊，耗材，其他，嘱托)√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.PrescribeTypeCode">
+            <summary>
+            医嘱类型编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.PrescribeTypeName">
+            <summary>
+            医嘱类型： 临嘱、长嘱 (临/长)√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.ApplyTime">
+            <summary>
+            开立时间(开嘱时间)√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.Code">
+            <summary>
+            医嘱编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.Name">
+            <summary>
+            医嘱名称√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.Specification">
+            <summary>
+            包装规格（规格）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.UsageCode">
+            <summary>
+            用法 如：点滴（途径）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.UsageName">
+            <summary>
+            用法 如：点滴（途径）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.FrequencyCode">
+            <summary>
+            频次码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.FrequencyName">
+            <summary>
+            频次√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.FrequencyTimes">
+            <summary>
+            在一个周期内执行的次数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.FrequencyUnit">
+            <summary>
+            周期单位，比如1D表示每天，1W表示每周，2D隔天执行，1H每小时或者每半小时
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.ApplyDeptCode">
+            <summary>
+            开嘱科室编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.ApplyDeptName">
+            <summary>
+            开嘱科室
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.ApplyDoctorCode">
+            <summary>
+            开嘱医生编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.ApplyDoctorName">
+            <summary>
+            开嘱医生√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.StopTime">
+            <summary>
+            停嘱时间√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.DosageQty">
+            <summary>
+            每次剂量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.QtyPerTimes">
+            <summary>
+            每次用量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.DosageUnit">
+            <summary>
+            剂量单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.ExecId">
+            <summary>
+            医嘱执行编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.PIID">
+            <summary>
+            病人标识√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.IsBackTracking">
+            <summary>
+            是否补录
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.PrescriptionNo">
+            <summary>
+            处方号
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.HisOrderNo">
+            <summary>
+            HIS医嘱号
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.Remarks">
+            <summary>
+            医嘱说明
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInfoDto.IsInfusion">
+            <summary>
+            是否输液
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.OneKeyExecInput">
+            <summary>
+            一键核对和一键执行的列表获取请求参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前急救
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInput.PIID">
+            <summary>
+            患者唯一Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInput.Page">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInput.Status">
+            <summary>
+            医嘱执行状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyExecInput.SearchTimes">
+            <summary>
+            时间检索（24h、48h、72h）是用：计划执行时间[0=全部, 1=24小时内, 2=48小时内, 3=72小时内]
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput">
+            <summary>
+            一键复核的列表获取请求参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前急救
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput.PIID">
+            <summary>
+            患者唯一Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput.Page">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput.SearchTimes">
+            <summary>
+            时间检索（24h、48h、72h）是用：开嘱时间[0=全部, 1=24小时内, 2=48小时内, 3=72小时内]，默认空，暂时未校验这个参数。
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.OneKeySkinTestExecInfoDto">
+            <summary>
+            需要皮试的医嘱名
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeySkinTestExecInfoDto.RecipeNo">
+            <summary>
+            医嘱号
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.OneKeySkinTestExecInfoDto.RecipeName">
+            <summary>
+            医嘱名
+            </summary> 
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeDetailInpput">
+            <summary>
+            根据医嘱号RecipeNo获取医嘱或医嘱执行详细信息
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeDetailInpput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeDetailInpput.PIID">
+            <summary>
+            患者编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeDetailInpput.RecipeNo">
+            <summary>
+            医嘱号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.UsageCode">
+            <summary>
+            用法编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.UsageName">
+            <summary>
+            用法名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.ConversionTime">
+            <summary>
+            拆分时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.NurseTime">
+            <summary>
+            护理时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.PlanExcuteTime">
+            <summary>
+            计划执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.TotalDosage">
+            <summary>
+            总剂量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.DosageQty">
+            <summary>
+            每次剂量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.DosageUnit">
+            <summary>
+            每次剂量单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.IfCalcIn">
+            <summary>
+            是否计算进入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.SortNum">
+            <summary>
+            排序编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.NursingStatus">
+            <summary>
+            医嘱执行状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.NursingStatusText">
+            <summary>
+            医嘱执行状态文本
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.CheckNurseCode">
+            <summary>
+            核对护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.CheckNurseName">
+            <summary>
+            核对护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.CheckTime">
+            <summary>
+            核对时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.CheckStatus">
+            <summary>
+            核对结果
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.ExecuteType">
+            <summary>
+            执行方式PC/PDA
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.ExcuteNurseCode">
+            <summary>
+            执行护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.ExcuteNurseName">
+            <summary>
+            执行护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.ExcuteNurseTime">
+            <summary>
+            护士执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.FinishTime">
+            <summary>
+            执行完成时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.FinishNurseCode">
+            <summary>
+            完成护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecDto.FinishNurse">
+            <summary>
+            完成护士名称
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecListInput">
+            <summary>
+            医嘱执行历史记录请求参数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecListInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecListInput.PIID">
+            <summary>
+            患者编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecListInput.RecipeNo">
+            <summary>
+            医嘱号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecListInput.PlanDate">
+            <summary>
+            历史执行记录的计划日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecListInput.Page">
+            <summary>
+            分页信息，前端下来分页(产品需求)
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput">
+            <summary>
+            取消退药退费
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.PIID">
+            <summary>
+            病人标识
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.RecipeNo">
+            <summary>
+            医嘱号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.ExecIds">
+            <summary>
+            医嘱执行编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.ExcuteType">
+            <summary>
+            操作方式PC/PDA
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.NurseCode">
+            <summary>
+            核对/执行护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.NurseName">
+            <summary>
+            核对/执行护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput.Optime">
+            <summary>
+            核对/执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.ExecId">
+            <summary>
+            关联医嘱执行表编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.PIID">
+            <summary>
+            病人标识
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.RefundType">
+            <summary>
+            退药还是退费，0：退药，1：退费
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.IsWithDrawn">
+            <summary>
+            是否退药退费
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.NursingRefundStatus">
+            <summary>
+            退药退费状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.NursingRefundStatusText">
+            <summary>
+            退药退费状态文本
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.RequestTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.Code">
+            <summary>
+            医嘱编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.Name">
+            <summary>
+            医嘱名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.Specification">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.RefundQty">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.Price">
+            <summary>
+            单价
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.PlanExecuteTime">
+            <summary>
+            计划执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.NurseCode">
+            <summary>
+            申请护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.NurseName">
+            <summary>
+            申请护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.Reason">
+            <summary>
+            原因
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.ConfirmedTime">
+            <summary>
+            审批时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.ConfirmmerCode">
+            <summary>
+            审批人编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundDto.ConfirmmerName">
+            <summary>
+            审批人名称
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput">
+            <summary>
+            退药退费-查询列表
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前急救
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput.PIID">
+            <summary>
+            患者唯一Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput.Page">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput.RefundType">
+            <summary>
+            退药还是退费，0：退药，1：退费
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput">
+            <summary>
+            医嘱执行更新Dto，拒绝核对、拒绝执行
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput.ReasonCode">
+            <summary>
+            拒绝原因编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput.Reason">
+            <summary>
+            拒绝原因
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput.IsWithdrawal">
+            <summary>
+            是否退药
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput.WithdrawalQty">
+            <summary>
+            退药数量
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput">
+            <summary>
+            医嘱执行更新Dto，
+            医嘱执行-核对，一键核对
+            医嘱执行-拒绝
+            医嘱执行-取消执行
+            医嘱执行-执行，一键执行
+            医嘱执行-核对并执行，一键核对并执行
+            医嘱执行-输液-配药
+            医嘱执行-输液-开始
+            医嘱执行-输液-暂停
+            医嘱执行-输液-继续
+            医嘱执行-输液-完成
+            列表
+            详情
+            退费退药
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.PIID">
+            <summary>
+            病人标识
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.ExecIds">
+            <summary>
+            医嘱执行编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.ExcuteType">
+            <summary>
+            操作方式PC/PDA
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.NurseCode">
+            <summary>
+            核对/执行护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.NurseName">
+            <summary>
+            核对/执行护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput.Optime">
+            <summary>
+            核对/执行时间
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecSuspendInput">
+            <summary>
+            医嘱执行更新Dto，暂停输液
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecSuspendInput.Reasons">
+            <summary>
+            暂停原因
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeExecuteDetailDto">
+            <summary>
+            医嘱执行内容详情
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDetailDto.RecipeInfos">
+            <summary>
+            医嘱信息集合(因为有开出一组记录的信息，所以会出现多个记录的问题)
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDetailDto.RecipeExecInfos">
+            <summary>
+            当天的执行集合
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.RecipeName">
+            <summary>
+            医嘱名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.UsageCode">
+            <summary>
+            用法编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.UsageName">
+            <summary>
+            用法名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.ConversionTime">
+            <summary>
+            拆分时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.NurseTime">
+            <summary>
+            护理时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.TotalDosage">
+            <summary>
+            总剂量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.DosageQty">
+            <summary>
+            每次剂量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.DosageUnit">
+            <summary>
+            每次剂量单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.IfCalcIn">
+            <summary>
+            是否计算进入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.SortNum">
+            <summary>
+            排序编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.NursingStatus">
+            <summary>
+            医嘱执行状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.NursingStatusText">
+            <summary>
+            医嘱执行状态文本
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.CheckNurseCode">
+            <summary>
+            核对护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.CheckNurseName">
+            <summary>
+            核对护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.CheckTime">
+            <summary>
+            核对时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.CheckStatus">
+            <summary>
+            核对结果
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.ExecuteType">
+            <summary>
+            执行方式PC/PDA
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.ExcuteNurseCode">
+            <summary>
+            执行护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.ExcuteNurseName">
+            <summary>
+            执行护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.ExcuteNurseTime">
+            <summary>
+            护士执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.FinishTime">
+            <summary>
+            执行完成时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.FinishNurseCode">
+            <summary>
+            完成护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteDto.FinishNurse">
+            <summary>
+            完成护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteGroupDtoBase.RecipeNo">
+            <summary>
+            医嘱号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteGroupDtoBase.PlanExcuteTime">
+            <summary>
+            计划执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteGroupDtoBase.RecipeGroupNo">
+            <summary>
+            医嘱子号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeExecuteGroupDtoBase.GroupFlag">
+            <summary>
+            医嘱号分组标记：0=无分组，1=开始，2=包含，3=结束
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeExecuteGroupDtoBase.SetGroupFlag``1(System.Collections.Generic.List{``0})">
+            <summary>
+            设置医嘱号分组标记
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeGroupDtoBase.RecipeNo">
+            <summary>
+            医嘱号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeGroupDtoBase.RecipeGroupNo">
+            <summary>
+            医嘱子号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeGroupDtoBase.GroupFlag">
+            <summary>
+            医嘱号分组标记：0=无分组，1=开始，2=包含，3=结束
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.RecipeGroupDtoBase.SetGroupFlag``1(System.Collections.Generic.List{``0})">
+            <summary>
+            设置医嘱号分组标记
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeInfoDto">
+            <summary>
+            医嘱执行列表
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PlatformType">
+            <summary>
+            业务类型 0=急诊,1=院前急救
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.RecipeStatus">
+            <summary>
+            医嘱状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.RecipeExecuteStatus">
+            <summary>
+            医嘱执行状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StatusText">
+            <summary>
+            状态√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.CategoryCode">
+            <summary>
+             医嘱项目分类编码 (药物，检查，检验，治疗，护理，膳食，麻醉，手术，会诊，耗材，其他，嘱托)
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.CategoryName">
+            <summary>
+            医嘱项目分类 (药物，检查，检验，治疗，护理，膳食，麻醉，手术，会诊，耗材，其他，嘱托)√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ItemType">
+            <summary>
+            医嘱类型，0=药品，1=检查，2=检验，3=诊疗
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ItemTypeText">
+            <summary>
+            医嘱类型，药品，检查，检验，诊疗
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PrescribeTypeCode">
+            <summary>
+            医嘱类型编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PrescribeTypeName">
+            <summary>
+            医嘱类型： 临嘱、长嘱 (临/长)√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ApplyTime">
+            <summary>
+            开立时间(开嘱时间)√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Code">
+            <summary>
+            医嘱编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Name">
+            <summary>
+            医嘱名称√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Specification">
+            <summary>
+            包装规格（规格）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.DosageQty">
+            <summary>
+            每次剂量(剂量）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.QtyPerTimes">
+            <summary>
+            每次用量（用量）
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.DosageUnit">
+            <summary>
+            每次剂量单位（单位）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.UsageCode">
+            <summary>
+            用法 如：点滴（途径）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.UsageName">
+            <summary>
+            用法 如：点滴（途径）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.FrequencyCode">
+            <summary>
+            频次码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.FrequencyName">
+            <summary>
+            频次√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.FrequencyTimes">
+            <summary>
+            在一个周期内执行的次数
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.FrequencyUnit">
+            <summary>
+            周期单位，比如1D表示每天，1W表示每周，2D隔天执行，1H每小时或者每半小时
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.FrequencyExecDayTimes">
+            <summary>
+            一天内的执行时间，格式如："00:01,00:30","21:00:00.000","14:00,02:00","周日：08：00","周一：08：00；周四：08：00；"。
+            日时间点只有一个的时候，格式为：HH:mm:ss.fff。
+            日时间点多个的时候，格式为：HH:mm，以逗号（,）分割。
+            周时间点一个到多个的时候，格式为：周[一 | 二 | 三 | 四 | 五 | 六 | 日 | 天]:HH:mm，以分号（;）分割。 
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.LongDays">
+            <summary>
+            开药天数（天数）√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SkinTestResultText">
+            <summary>
+            皮试结果
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Report">
+            <summary>
+            报告 √
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Price">
+            <summary>
+            单价(金额) √
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PayType">
+            <summary>
+            付费类型  0=自费 1=医保 2=其它
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PayTypeText">
+            <summary>
+            付费类型
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Amount">
+            <summary>
+            总费用
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Speed">
+            <summary>
+            滴速
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ActualDays">
+            <summary>
+            实际天数
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.RecieveQty">
+            <summary>
+            领量
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.RecieveUnit">
+            <summary>
+            领量单位
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsOutDrug">
+            <summary>
+            是否自备药：0-非自备药1-自备药
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PharmacyCode">
+            <summary>
+            药房编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PharmacyName">
+            <summary>
+            药房
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ExecDeptCode">
+            <summary>
+            执行科室编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ExecDeptName">
+            <summary>
+            执行科室
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ApplyDeptCode">
+            <summary>
+            开嘱科室编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ApplyDeptName">
+            <summary>
+            开嘱科室
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.TraineeCode">
+            <summary>
+            管培生编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.TraineeName">
+            <summary>
+            管培生
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ApplyDoctorCode">
+            <summary>
+            开嘱医生编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ApplyDoctorName">
+            <summary>
+            开嘱医生√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PlanExcuteTime">
+            <summary>
+            计划执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ExcuteNurseTime">
+            <summary>
+            护士执行时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ExcuteNurseCode">
+            <summary>
+            执行护士编码√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ExcuteNurseName">
+            <summary>
+            执行护士名称√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.CheckNurseTime">
+            <summary>
+            护士核对时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.CheckNurseCode">
+            <summary>
+            核对护士编码√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.CheckNurseName">
+            <summary>
+            核对护士名称√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ConfirmDateTime">
+            <summary>
+            复核时间√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ConfirmNurseCode">
+            <summary>
+            复核护士编码√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ConfirmNurseName">
+            <summary>
+            复核护士名称√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StopTime">
+            <summary>
+            停嘱时间√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StopDoctorCode">
+            <summary>
+            停嘱医生编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StopDoctorName">
+            <summary>
+             停嘱人√
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StopedConfirmDateTime">
+            <summary>
+            停复核时间√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StopedConfirmNurseCode">
+            <summary>
+            停复核护士编码√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StopedConfirmNurseName">
+            <summary>
+            停复核护士名称√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ExecId">
+            <summary>
+            医嘱执行编号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PIID">
+            <summary>
+            病人标识√
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsBackTracking">
+            <summary>
+            是否补录
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PrescriptionNo">
+            <summary>
+            处方号
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.InsuranceType">
+            <summary>
+            医保目录：0=自费 1=甲类 2=乙类 3=其它
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.InsuranceText">
+            <summary>
+            医保目录：0=自费 1=甲类 2=乙类 3=其它
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsChronicDisease">
+            <summary>
+            慢性病标识
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.MedicineProperty">
+            <summary>
+            药物属性：西药、中药、西药制剂、中药制剂
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ToxicProperty">
+            <summary>
+            药理等级：毒、麻、精一、精二
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ToxicPropertyText">
+            <summary>
+            药理等级
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.HisOrderNo">
+            <summary>
+            HIS医嘱号
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.Remarks">
+            <summary>
+            医嘱说明
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsAmendedMark">
+            <summary>
+            是否抢救后补：0-非抢救后补1-抢救后补
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsSkinTest">
+            <summary>
+            是否皮试 0 不需要皮试 1 需要皮试 √
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SkinTestSignChoseResult">
+            <summary>
+            皮试选择结果
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SkinTestResult">
+            <summary>
+            皮试结果 0-阴性 1-阳性
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsAdaptationDisease">
+            <summary>
+            是否医保适应症
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.IsInfusion">
+            <summary>
+            是否输液
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.MaterialPrice">
+            <summary>
+            耗材金额
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ChargeCode">
+            <summary>
+            收费类型编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.ChargeName">
+            <summary>
+            收费类型名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PartCode">
+            <summary>
+            检查部位编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.PartName">
+            <summary>
+            检查部位名称
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SpecimenCode">
+            <summary>
+            标本编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SpecimenName">
+            <summary>
+            标本名称
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SpecimenPartCode">
+            <summary>
+            标本采集部位编码
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.SpecimenPartName">
+            <summary>
+            标本采集部位
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.AdditionalItemsId">
+            <summary>
+            处置关联处方医嘱ID
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeInfoDto.AdditionalItemsType">
+            <summary>
+            附加类型 0=否 1=用法附加处置 2=皮试附加处置
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeListInput">
+            <summary>
+            查询医嘱执行的传输模型，用于展示层到服务层的查询传递
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前急救
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.PIID">
+            <summary>
+            患者唯一Id
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.Page">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.Status">
+            <summary>
+            医嘱执行状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.SearchTimes">
+            <summary>
+            时间检索（24h、48h、72h）是用：计划执行时间[0=全部, 1=24小时内, 2=48小时内, 3=72小时内]
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.CategoryCode">
+            <summary>
+            医嘱项目分类Code，对应的Name (药物，检查，检验，治疗，护理，膳食，麻醉，手术，会诊，耗材，其他，嘱托)
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.ItemType">
+            <summary>
+            医嘱类型，-1=全部，0=药品，1=检查，2=检验，3=诊疗
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.PrescribeType">
+            <summary>
+            医嘱类型：（临嘱、长嘱、出院带药 ）
+            </summary> 
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeListInput.RecipeName">
+            <summary>
+            医嘱名称
+            </summary> 
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput">
+            <summary>
+            医嘱皮试Dto
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.PIID">
+            <summary>
+            病人标识
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.RecipeNo">
+            <summary>
+            医嘱号
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.SkinTestResult">
+            <summary>
+            皮试结果:false=阴性 ture=阳性
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.NurseCode">
+            <summary>
+            护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.NurseName">
+            <summary>
+            护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput.Optime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.RecipeStatusInput">
+            <summary>
+            医嘱更新Dto，
+            医嘱-驳回
+            医嘱-确认（复核）
+            医嘱-停复核
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.PlatformType">
+            <summary>
+            系统标识: 0=急诊，1=院前
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.PIID">
+            <summary>
+            病人标识
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.Ids">
+            <summary>
+            医嘱ID集合
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.NurseCode">
+            <summary>
+            护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.NurseName">
+            <summary>
+            护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.Optime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Nursing.RecipeExecutes.RecipeStatusInput.IsInfusionCenter">
+            <summary>
+            是否输液中心, 1:是输液中心
+            </summary>
+        </member>
+        <member name="T:YiJian.Nursing.RecipeExecutes.GroupFlagConst">
+            <summary>
+            医嘱号分组标记：0=无分组，1=开始分组，2=分组包含，3=分组结束
+            </summary>
+        </member>
+        <member name="F:YiJian.Nursing.RecipeExecutes.GroupFlagConst.NonGroup">
+            <summary>
+            0=无分组
+            </summary>
+        </member>
+        <member name="F:YiJian.Nursing.RecipeExecutes.GroupFlagConst.GroupStart">
+            <summary>
+            1=开始分组
+            </summary>
+        </member>
+        <member name="F:YiJian.Nursing.RecipeExecutes.GroupFlagConst.GroupArea">
+            <summary>
+            2=分组包含
+            </summary>
+        </member>
+        <member name="F:YiJian.Nursing.RecipeExecutes.GroupFlagConst.GroupEnd">
+            <summary>
+            3=分组结束
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeRejectedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-驳回接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.OneKeyRecipeConfirmedListAsync(YiJian.Nursing.RecipeExecutes.OneKeyRecipeInput)">
+            <summary>
+            医嘱-一键复核获取医嘱列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.OneKeyRecipeConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-一键复核接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-复核接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeStopedConfirmedAsync(YiJian.Nursing.RecipeExecutes.RecipeStatusInput)">
+            <summary>
+            医嘱-停复核接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.OneKeyRecipeExecCheckedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-一键核对，不核对需要皮试的项目，不管是否已经做过皮试。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeExecCheckedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-核对接口，会校验列表中是否需要皮试，以及皮试结果是否阳性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeExecRefusedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefuseInput)">
+            <summary>
+            医嘱执行-拒绝接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeExecUndoRefusedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-取消执行接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.OneKeyRecipeExecutedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-一键执行，不核对需要皮试的项目，不管是否已经做过皮试。
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeExecutedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-执行接口，会校验列表中是否需要皮试，以及皮试结果是否阳性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeExecCheckAndExecutedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-核对并执行接口，会校验列表中是否需要皮试，以及皮试结果是否阳性
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeInfusionDispensedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液配药接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeInfusionStartedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液开始接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeInfusionSuspendedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecSuspendInput)">
+            <summary>
+            医嘱执行-输液暂停接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeInfusionContinuedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液继续接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeInfusionCompletedAsync(YiJian.Nursing.RecipeExecutes.RecipeExecStatusInput)">
+            <summary>
+            医嘱执行-输液完成接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.QueryRecipeExecuteAsync(YiJian.Nursing.RecipeExecutes.RecipeListInput)">
+            <summary>
+            医嘱执行=查询医嘱执行列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.OneKeyExecListAsync(YiJian.Nursing.RecipeExecutes.OneKeyExecInput)">
+            <summary>
+            医嘱执行=一键核对和一键执行请求列表接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.GetDetailAsync(YiJian.Nursing.RecipeExecutes.RecipeDetailInpput)">
+            <summary>
+            医嘱执行=根据医嘱号RecipeNo获取医嘱或医嘱执行详细信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.ExecListAsync(YiJian.Nursing.RecipeExecutes.RecipeExecListInput)">
+            <summary>
+            医嘱执行=获取医嘱历史执行记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.ExecuteListAsync(YiJian.Nursing.RecipeExecutes.RecipeExecListInput)">
+            <summary>
+            医嘱执行=获取医嘱执行的详细列表记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.SkinTestResultAsync(YiJian.Nursing.RecipeExecutes.RecipeSkinTestInput)">
+            <summary>
+            医嘱执行=皮试结果反馈
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.QueryRecipeExecRefundAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefundListInput)">
+            <summary>
+            退药退费-查询列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.RecipeExecRefundCancelAsync(YiJian.Nursing.RecipeExecutes.RecipeExecRefundCancelInput)">
+            <summary>
+            退药退费-取消接口
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.RecipeExecutes.IRecipeExecuteAppService.GetAllViewRecipeExecListAsync(System.Guid,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            全景视图-医嘱执行列表
+            </summary>
+            <param name="PID"></param>
+            <param name="StartTime"></param>
+            <param name="EndTime"></param>
+            <param name="pType"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.IRecipeAppService.DoctorAdviceCreatedAsync(System.Collections.Generic.List{YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.SubmitDoctorsAdviceEto})">
+            <summary>
+            医嘱-开立
+            </summary>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.IRecipeAppService.DoctorAdviceCanceledAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStatusEto)">
+            <summary>
+            医嘱-作废
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Nursing.Recipes.IRecipeAppService.DoctorAdviceStopedAsync(YiJian.ECIS.ShareModel.Etos.DoctorsAdvices.DoctorsAdviceStopEto)">
+            <summary>
+            医嘱-停嘱
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YiJian.ECIS.CanulaListDto">
+            <summary>
+            返回导管护理列
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaListDto.CanulaItemDto">
+            <summary>
+            动态列表
+            </summary>
+        </member>
+        <member name="T:YiJian.ECIS.CanulaItemDtos">
+            <summary>
+            导管返回参数
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDtos.ParaCode">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDtos.ParaName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDtos.ParaValue">
+            <summary>
+            项目值
+            </summary>
+        </member>
+        <member name="T:YiJian.ECIS.NursingCanulaDto">
+            <summary>
+            表:导管护理信息
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.Id">
+            <summary>
+            导管记录Id
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.PI_ID">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.InHosNum">
+            <summary>
+            住院流水号
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.Days">
+            <summary>
+            插管天数
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.ModuleCode">
+            <summary>
+            导管分类
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.ModuleName">
+            <summary>
+            导管分类名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.DisplayName">
+            <summary>
+            模块显示名称
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaName">
+            <summary>
+            管道名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaPart">
+            <summary>
+            插管部位
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.StartTime">
+            <summary>
+            插管时间
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaNumber">
+            <summary>
+            插管次数
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaPosition">
+            <summary>
+            插管地点
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaWay">
+            <summary>
+            置入方式
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaLength">
+            <summary>
+            置管长度
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.DoctorId">
+            <summary>
+            置管人代码
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.DoctorName">
+            <summary>
+            置管人名称
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.NurseId">
+            <summary>
+            护士Id
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.NurseName">
+            <summary>
+            护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.NurseTime">
+            <summary>
+            护理时间
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.DrawReason">
+            <summary>
+            拔管原因
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.StopTime">
+            <summary>
+            拔管时间
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.UseFlag">
+            <summary>
+            使用标志：（Y在用，N已拔管）
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.PartNumber">
+            <summary>
+            人体图部位编号
+            </summary>
+            <example></example>
+        </member>
+        <member name="P:YiJian.ECIS.NursingCanulaDto.CanulaItemDto">
+            <summary>
+            动态列表
+            </summary>
+        </member>
+        <member name="T:YiJian.ECIS.CanulaItemDto">
+            <summary>
+            导管/皮肤返回参数
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.Id">
+            <summary>
+            动态参数Id
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.ParaCode">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.ParaName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.DictFlag">
+            <summary>
+            项目是否静态显示
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.GroupName">
+            <summary>
+            导管分类：管道属性、管道观察/皮肤分类：皮肤属性、皮肤观察
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.Style">
+            <summary>
+            文本类型(文本框、时间框、单选框、复选框)
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.DataSource">
+            <summary>
+            文本框默认值
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.CanulaItemDto.Dicts">
+            <summary>
+            下拉框字典值
+            </summary>
+        </member>
+        <member name="T:YiJian.ECIS.Dicts">
+            <summary>
+            下拉框字典值
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.Dicts.DictId">
+            <summary>
+            参数代码
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.Dicts.DictName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.Dicts.DictCode">
+            <summary>
+            字典代码
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.Dicts.DictValue">
+            <summary>
+            字典值
+            </summary>
+        </member>
+        <member name="P:YiJian.ECIS.Dicts.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+    </members>
+</doc>

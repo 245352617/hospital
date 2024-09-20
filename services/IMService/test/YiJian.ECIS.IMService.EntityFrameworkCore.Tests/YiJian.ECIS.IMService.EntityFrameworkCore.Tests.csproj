@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.IMService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.0" />
+    <ProjectReference Include="..\..\src\YiJian.ECIS.IMService.EntityFrameworkCore\YiJian.ECIS.IMService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.TestBase\YiJian.ECIS.IMService.TestBase.csproj" />
+	<PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="4.4.3" />
+  </ItemGroup>
+
+</Project>

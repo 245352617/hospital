@@ -1,0 +1,32 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS restore
+WORKDIR /source
+RUN dotnet nuget add source "https://nuget.cdn.azure.cn/v3/index.json"
+COPY services/Patient/src/1.PresentationLayer/Szyjian.Ecis.Patient.Api.Host/Szyjian.Ecis.Patient.Api.Host.csproj services/Patient/src/1.PresentationLayer/Szyjian.Ecis.Patient.Api.Host/
+COPY services/Patient/src/2.ApplicationLayer/Szyjian.Ecis.Patient.Application/Szyjian.Ecis.Patient.Application.csproj services/Patient/src/2.ApplicationLayer/Szyjian.Ecis.Patient.Application/
+COPY services/Patient/src/3.DomainLayer/Szyjian.Ecis.Patient.Domain/Szyjian.Ecis.Patient.Domain.csproj services/Patient/src/3.DomainLayer/Szyjian.Ecis.Patient.Domain/
+COPY services/Patient/src/3.DomainLayer/Szyjian.Ecis.Patient.Domain.Shared/Szyjian.Ecis.Patient.Domain.Shared.csproj services/Patient/src/3.DomainLayer/Szyjian.Ecis.Patient.Domain.Shared/
+COPY services/Patient/src/2.ApplicationLayer/Szyjian.Ecis.Patient.Application.Contracts/Szyjian.Ecis.Patient.Application.Contracts.csproj services/Patient/src/2.ApplicationLayer/Szyjian.Ecis.Patient.Application.Contracts/
+COPY services/Patient/nuget/. /root/.nuget/packages/
+RUN dotnet restore "services/Patient/src/1.PresentationLayer/Szyjian.Ecis.Patient.Api.Host/Szyjian.Ecis.Patient.Api.Host.csproj"
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 as base
+RUN apt-get update && apt-get install -y libgdiplus libc6-dev && ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll && apt-get install --assume-yes apt-utils && apt-get install -y locales && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
+ENV LANG zh_CN.utf8 
+RUN apt-get install fontconfig -y && apt-get install -y curl
+
+FROM restore AS build
+WORKDIR /source
+COPY shared/. shared/
+COPY services/Patient/. services/Patient/
+RUN dotnet publish --no-restore -c Release -o /app services/Patient/src/1.PresentationLayer/Szyjian.Ecis.Patient.Api.Host/Szyjian.Ecis.Patient.Api.Host.csproj
+
+FROM base AS production
+WORKDIR /app
+COPY ./Fonts/* /usr/share/fonts/
+COPY --from=build /app .
+EXPOSE 80
+EXPOSE 443
+ENV TZ Asia/Shanghai
+HEALTHCHECK --interval=5s --timeout=3s \
+    CMD curl -sS -f http://localhost/api/patientService/healthCheck || exit 1
+ENTRYPOINT [ "dotnet", "Szyjian.Ecis.Patient.Api.Host.dll" ]

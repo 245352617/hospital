@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.EMR</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="6.0.3" />
+	<PackageReference Include="Volo.Abp.Authorization" Version="6.0.3" />
+	<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.ShareModel\YiJian.ECIS.ShareModel.csproj" />
+    <ProjectReference Include="..\YiJian.EMR.Domain.Shared\YiJian.EMR.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <PackageReference Update="Fody" Version="6.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>-->
+
+</Project>

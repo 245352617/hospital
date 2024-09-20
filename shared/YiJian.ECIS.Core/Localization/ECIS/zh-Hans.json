@@ -1,0 +1,41 @@
+{
+  "Report": {
+    "NursingSettings": {
+      "Default": "默认",
+      "List": "列表",
+      "Detail": "详情",
+      "Modify": "修改",
+      "Delete": "删除"
+    },
+    "NursingDocuments": {
+      "Default": "默认",
+      "List": "列表",
+      "Detail": "详情",
+      "Modify": "修改",
+      "Delete": "删除"
+    }
+  },
+  "EMR": {
+    "Catalogues": {
+      "Default": "默认",
+      "List": "列表",
+      "Detail": "详情",
+      "Modify": "修改",
+      "Delete": "删除"
+    },
+    "TemplateCatalogues": {
+      "Default": "默认",
+      "List": "列表",
+      "Detail": "详情",
+      "Modify": "修改",
+      "Delete": "删除"
+    },
+    "Writes": {
+      "Default": "默认",
+      "List": "列表",
+      "Detail": "详情",
+      "Modify": "修改",
+      "Delete": "删除"
+    }
+  }
+}

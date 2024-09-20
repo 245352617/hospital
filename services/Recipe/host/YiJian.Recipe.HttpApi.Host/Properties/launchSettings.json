@@ -1,0 +1,47 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "https://localhost:44375",
+      "sslPort": 44375
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Recipe": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:44375/",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore",
+        "SKYWALKING_SERVICENAME": "ECIS-Recipe-Prd"
+        //        "apollo__AppId": "ecis",
+        //        "apollo__Cluster": "Default",
+        //        "apollo__Secret": "df9464ff7b0c4680af9ca33ce950b4e9",
+        //        "apollo__MetaServer": "http://10.104.194.231:8080/",
+        //        "apollo__Namespaces__0": "rabbitmq",
+        //        "apollo__Env": "Dev",
+        //        "apollo__Meta__DEV": "http://10.104.194.231:8080/"
+      },
+      "launchUrl": "https://localhost:44375/swagger"
+    },
+    "北大医院": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:44375/",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "pku",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "SkyAPM.Agent.AspNetCore"
+      },
+      "launchUrl": "https://localhost:44375/swagger"
+    }
+  }
+}

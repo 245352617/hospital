@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.Call</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.14" />
+    <ProjectReference Include="..\..\src\YiJian.ECIS.Call.EntityFrameworkCore\YiJian.ECIS.Call.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\YiJian.ECIS.Call.TestBase\YiJian.ECIS.Call.TestBase.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="6.0.3" />
+  </ItemGroup>
+
+</Project>

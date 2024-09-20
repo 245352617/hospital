@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>790d61bc-d8a0-4dbd-be70-317aa633723b</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="csv\drug_views.csv" />
+    <None Remove="Dockerfile" /> 
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="csv\drug_views.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content> 
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" /> 
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.310801">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="JsonDatas\drug_stock.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="JsonDatas\lis_report.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="JsonDatas\lis_report_detail.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="JsonDatas\medical_info.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="JsonDatas\pacs.report_detail.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="JsonDatas\pacs_report.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JsonDatas\data\" />
+    <Folder Include="Migrations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20221123092719_add_RegisterPatient.cs" />
+    <Compile Remove="Migrations\20221123092719_add_RegisterPatient.Designer.cs" />
+    <Compile Remove="Migrations\20221123095037_add_RegisterPatient.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\HisApiMockService.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\HisApiMockService.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\JsonDatas\drug_stock.json" />
+    <_ContentIncludedByDefault Remove="publish\JsonDatas\lis_report.json" />
+    <_ContentIncludedByDefault Remove="publish\JsonDatas\lis_report_detail.json" />
+    <_ContentIncludedByDefault Remove="publish\JsonDatas\medical_info.json" />
+    <_ContentIncludedByDefault Remove="publish\JsonDatas\pacs.report_detail.json" />
+    <_ContentIncludedByDefault Remove="publish\JsonDatas\pacs_report.json" />
+  </ItemGroup>
+</Project>

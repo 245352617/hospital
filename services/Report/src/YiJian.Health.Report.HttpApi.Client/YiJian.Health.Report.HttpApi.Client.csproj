@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.Health.Report</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="libs\**" />
+    <EmbeddedResource Remove="libs\**" />
+    <None Remove="libs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Volo.Abp.Http.Client" Version="6.0.3" />
+    <ProjectReference Include="..\YiJian.Health.Report.Application.Contracts\YiJian.Health.Report.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

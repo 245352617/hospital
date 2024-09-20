@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.EMR</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>YiJian.EMR-c2d31439-b723-48e2-b061-5ebd7aeb6010</UserSecretsId>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile> 
+	  <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="IGeekFan.AspNetCore.Knife4jUI" Version="0.0.11" />
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+	  <PackageReference Include="Minio" Version="4.0.5" />
+	  <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+	  <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+	  <PackageReference Include="IdentityModel" Version="5.1.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="6.0.14" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14" />
+	  <PackageReference Include="Volo.Abp.Autofac" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.Swashbuckle" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="6.0.3" />
+
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+    
+  </ItemGroup> 
+   
+  <ItemGroup>    
+	<ProjectReference Include="..\..\..\..\shared\YiJian.ECIS.Core\YiJian.ECIS.Core.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.EMR.HttpApi\YiJian.EMR.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.EMR.Application\YiJian.EMR.Application.csproj" />
+    <ProjectReference Include="..\..\src\YiJian.EMR.EntityFrameworkCore\YiJian.EMR.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\DCWriterController.cs~RF1883a18.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="consulconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OpenIE": {
+      "commandName": "Project",
+      "commandLineArgs": "szyjian://ie&aHR0cDovLzE3Mi4xNi4xNzUuMjI1OjgwODAvQkJNU1dlYi93ZWxjb21lMS5kbz9kZXBhcnROYW1lMT3mgKXor4rnp5EmZGVwYXJ0Q29kZTE9MTkwMiZkZXBhcnROYW1lMj0mZGVwYXJ0Q29kZTI9JmVtcGxveWVlTm89YWRtaW4mZW1wbG95ZWVOYW1lPeeuoeeQhuWRmCZwYXRpZW50SUQ9NjUyMDAwMjAwNTImZGVwYXJ0VHlwZT1PJmRvY3RvclR5cGU9RDImdGltZT0mYmVkTm89JmRpYWdub3Npcz1COTkueDAxJTJDUjUwLjgwMHgwMDImb3BlcmF0aW9uPSZUb2tlbj0="
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--<Import Project="..\..\common.props" />-->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>YiJian.ECIS.IMService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\YiJian.ECIS.IMService.Application\YiJian.ECIS.IMService.Application.csproj" />
+    <ProjectReference Include="..\YiJian.ECIS.IMService.Domain.Tests\YiJian.ECIS.IMService.Domain.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

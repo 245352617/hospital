@@ -1,0 +1,28 @@
+{
+  "culture": "en",
+  "texts": {
+    "Call:deny_update": "Deny to Update",
+    "Call:department-not-exists": "department does not exists",
+    "Call:consulting-room-not-exists": "consulting room does not exists",
+    "Call:consulting-room-regular-exists": "consulting room regular already exists",
+    "Call:consulting-room-regular-not-exists": "consulting room regular does not exists",
+    "Call:doctor-regular-exists": "doctor regular already exists",
+    "Call:doctor-regular-not-exists": "doctor regular does not exists",
+    "Call:hour-invalid": "hour value must set between 0 and 23",
+    "Call:minute-invalid": "minute value mest set between 0 and 59",
+    "Call:base-config-has-not-initial": "base config has not initial data",
+    "Call:depart-sn-rule-exists": "department serial number rule already exists",
+    "Call:sn-rule-not-exists": "serial number rule does not exists",
+    "Call:department-has-not-sn-rule": "department has not serial number rule",
+    "Call:triage-has-not-consequence-and-register": "cannot treat this payload because triage has not consequence and register infomation",
+    "Call:triage-info-has-not-dept": "triage infomation has not department code",
+    "Call:call-info-not-exists": "call info is not existed",
+    "Call:has-not-waitting-patient": "there is not waitting patient",
+    "Call:consulting-room-has-not-waitting-patient": "there is not waitting patient in this consulting room",
+    "Call:consulting-room-is-calling": "there is a calling patient in this consulting room",
+    "Call:consulting-room-has-not-treating": "there is not patient that is treating in this consulting room",
+    "Call:patient-is-not-treating": "the patient is not treating now, maybe he/she is waitting or treated",
+    "Call:patient-is-not-call-yet": "the patient has not being called yet",
+    "Call:patient-is-treated-finish": "the patient is finished treating"
+  }
+}

@@ -1,0 +1,1937 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YiJian.Handover.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.HandoverDoctorCode">
+            <summary>
+            交班医生编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.HandoverDoctorName">
+            <summary>
+            交班医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.OtherMatters">
+            <summary>
+            其他事项
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.Status">
+            <summary>
+            交班状态，0：未提交，1：已提交
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.PatientStatistics">
+            <summary>
+            统计
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverCreation.DoctorPatients">
+            <summary>
+            交班患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.HandoverDoctorCode">
+            <summary>
+            交班医生编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.HandoverDoctorName">
+            <summary>
+            交班医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.OtherMatters">
+            <summary>
+            其他事项
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.Status">
+            <summary>
+            交班状态，0：未提交，1：已提交
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.PatientStatistics">
+            <summary>
+            统计
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverData.DoctorPatients">
+            <summary>
+            交班患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverDetailsData.HandoverTime">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverDetailsData.HandoverDoctorName">
+            <summary>
+            交班医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverDetailsData.OtherMatters">
+            <summary>
+            其他事项
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.HandoverDoctorName">
+            <summary>
+            交班医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.Total">
+            <summary>
+            接诊总人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ClassI">
+            <summary>
+            I级  (病危人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ClassII">
+            <summary>
+            II级  (病重人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ClassIII">
+            <summary>
+            III级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ClassIV">
+            <summary>
+            IV级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.PreOperation">
+            <summary>
+            预术人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.ExistingDisease">
+            <summary>
+            现有病人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.OutDept">
+            <summary>
+            出科人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.Rescue">
+            <summary>
+            抢救人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.Visit">
+            <summary>
+            出诊人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.Death">
+            <summary>
+            死亡人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.CPR">
+            <summary>
+            心肺复苏人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverStatisticDataList.Admission">
+            <summary>
+            收住院人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.HandoverDoctorCode">
+            <summary>
+            交班医生编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.HandoverDoctorName">
+            <summary>
+            交班医生名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.OtherMatters">
+            <summary>
+            其他事项
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.Status">
+            <summary>
+            交班状态，0：未提交，1：已提交
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.PatientStatistics">
+            <summary>
+            统计
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorHandoverUpdate.DoctorPatients">
+            <summary>
+            交班患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.Total">
+            <summary>
+            接诊总人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.ClassI">
+            <summary>
+            I级  (病危人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.ClassII">
+            <summary>
+            II级  (病重人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.ClassIII">
+            <summary>
+            III级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.ClassIV">
+            <summary>
+            IV级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.PreOperation">
+            <summary>
+            预术人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.ExistingDisease">
+            <summary>
+            现有病人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.OutDept">
+            <summary>
+            出科人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.Rescue">
+            <summary>
+            抢救人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.Visit">
+            <summary>
+            出诊人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.Death">
+            <summary>
+            死亡人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.CPR">
+            <summary>
+            心肺复苏人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticCreation.Admission">
+            <summary>
+            收住院人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.DoctorHandoverId">
+            <summary>
+            医生交班id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.Total">
+            <summary>
+            接诊总人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.ClassI">
+            <summary>
+            I级  (病危人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.ClassII">
+            <summary>
+            II级  (病重人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.ClassIII">
+            <summary>
+            III级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.ClassIV">
+            <summary>
+            IV级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.PreOperation">
+            <summary>
+            预术人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.ExistingDisease">
+            <summary>
+            现有病人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.OutDept">
+            <summary>
+            出科人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.Rescue">
+            <summary>
+            抢救人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.Visit">
+            <summary>
+            出诊人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.Death">
+            <summary>
+            死亡人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.CPR">
+            <summary>
+            心肺复苏人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticData.Admission">
+            <summary>
+            收住院人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.Total">
+            <summary>
+            接诊总人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.ClassI">
+            <summary>
+            I级  (病危人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.ClassII">
+            <summary>
+            II级  (病重人数)
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.ClassIII">
+            <summary>
+            III级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.ClassIV">
+            <summary>
+            IV级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.PreOperation">
+            <summary>
+            预术人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.ExistingDisease">
+            <summary>
+            现有病人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.OutDept">
+            <summary>
+            出科人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.Rescue">
+            <summary>
+            抢救人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.Visit">
+            <summary>
+            出诊人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.Death">
+            <summary>
+            死亡人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.CPR">
+            <summary>
+            心肺复苏人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientStatisticUpdate.Admission">
+            <summary>
+            收住院人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.PI_ID">
+            <summary>
+            triage分诊患者id
+            </summary> 
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.PatientId">
+             <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.TriageLevelName">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsCreation.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.DoctorHandoverId">
+            <summary>
+            医生交班id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.PatientId">
+            <summary>
+            tiage分诊患者id </summary> <summary> 患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.TriageLevelName">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsData.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.DoctorHandoverId">
+            <summary>
+            医生交班id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.PI_ID">
+            <summary>
+            triage分诊患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.PatientId">
+            <summary>
+             患者id
+             </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.SexName">
+            <summary>
+            性别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.TriageLevelName">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.DoctorPatientsUpdate.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetDoctorPatientsInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="M:YiJian.Handover.IDoctorPatientsAppService.SaveHandoverPatientAsync(YiJian.Handover.DoctorPatientsUpdate)">
+            <summary>
+            保存交班患者
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YiJian.Handover.GetDoctorHandoverInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.PatientId">
+            <summary> 患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.HandoverHistoryPatientsDataList.HandoverDoctorName">
+            <summary>
+            交班医生名称
+            </summary>
+        </member>
+        <member name="T:YiJian.Handover.GetNurseHandoverInput">
+            <summary>
+            护士交班
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetNurseHandoverInput.ShiftId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetNurseHandoverInput.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetNurseHandoverInput.CreationCode">
+            <summary>
+            创建人编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetNurseHandoverInput.PI_ID">
+            <summary>
+            患者分诊id
+            </summary>
+        </member>
+        <member name="T:YiJian.Handover.GetNurseHandoverPagedInput">
+            <summary>
+            护士交班 分页排序输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetNurseHandoverPagedInput.Filter">
+            <summary>
+            过滤条件.
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.GetNurseHandoverPagedInput.Sorting">
+            <summary>
+            排序字段.
+            </summary>
+        </member>
+        <member name="T:YiJian.Handover.INurseHandoverAppService">
+            <summary>
+            护士交班 API Interface
+            </summary>   
+        </member>
+        <member name="T:YiJian.Handover.NurseHandoverCreation">
+            <summary>
+            护士交班 新增输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.PI_ID">
+            <summary>
+            triage分诊患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.PatientId">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Sex">
+            <summary>
+            性别编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.SexName">
+            <summary>
+            性别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.TriageLevel">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.TriageLevelName">
+            <summary>
+            分诊级别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.AreaCode">
+            <summary>
+            区域编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.AreaName">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.InDeptTime">
+            <summary>
+            入科时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.IsNoThree">
+            <summary>
+            是否三无
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.CriticallyIll">
+            <summary>
+            是否病危
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.LatestStatus">
+            <summary>
+            最新现状
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Background">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Assessment">
+            <summary>
+            评估
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Proposal">
+            <summary>
+            建议
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Devices">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.HandoverNurseCode">
+            <summary>
+            交班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.HandoverNurseName">
+            <summary>
+            交班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.SuccessionNurseCode">
+            <summary>
+            接班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.SuccessionNurseName">
+            <summary>
+            接班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.Status">
+            <summary>
+            交班状态，0：未提交，1：提交交班
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.CreationCode">
+            <summary>
+            创建人编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.CreationName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.TotalPatient">
+            <summary>
+            查询的全部患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverCreation.DutyNurseName">
+            <summary>
+            责任护士
+            </summary>
+        </member>
+        <member name="T:YiJian.Handover.NurseHandoverData">
+            <summary>
+            护士交班 读取输出
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.PI_ID">
+            <summary>
+            triage分诊患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.PatientId">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Sex">
+            <summary>
+            性别编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.SexName">
+            <summary>
+            性别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.TriageLevel">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.TriageLevelName">
+            <summary>
+            分诊级别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.AreaCode">
+            <summary>
+            区域编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.AreaName">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.InDeptTime">
+            <summary>
+            入科时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.IsNoThree">
+            <summary>
+            是否三无
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.CriticallyIll">
+            <summary>
+            是否病危
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.LatestStatus">
+            <summary>
+            最新现状
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Background">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Assessment">
+            <summary>
+            评估
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Proposal">
+            <summary>
+            建议
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Devices">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.HandoverNurseCode">
+            <summary>
+            交班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.HandoverNurseName">
+            <summary>
+            交班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.SuccessionNurseCode">
+            <summary>
+            接班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.SuccessionNurseName">
+            <summary>
+            接班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.Status">
+            <summary>
+            交班状态，0：未提交，1：提交交班
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.CreationCode">
+            <summary>
+            创建人编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.CreationName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.TotalPatient">
+            <summary>
+            查询的全部患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverData.DutyNurseName">
+            <summary>
+            责任护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.HandoverNurseName">
+            <summary>
+            交班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.SuccessionNurseName">
+            <summary>
+            接班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.RescueTotal">
+            <summary>
+            抢救总人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.RescueI">
+            <summary>
+            抢救一级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.RescueII">
+            <summary>
+            抢救二级级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.RescueIII">
+            <summary>
+            抢救三级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.RescueIV">
+            <summary>
+            抢救四级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ObservationTotal">
+            <summary>
+            留观总人数
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ObservationI">
+            <summary>
+            留观一级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ObservationII">
+            <summary>
+            留观二级级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ObservationIII">
+            <summary>
+            留观三级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverDataList.ObservationIV">
+            <summary>
+            留观四级
+            </summary>
+        </member>
+        <member name="T:YiJian.Handover.NurseHandoverUpdate">
+            <summary>
+            护士交班 修改输入
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.PI_ID">
+            <summary>
+            triage分诊患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.PatientId">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Sex">
+            <summary>
+            性别编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.SexName">
+            <summary>
+            性别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.TriageLevel">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.TriageLevelName">
+            <summary>
+            分诊级别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.AreaCode">
+            <summary>
+            区域编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.AreaName">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.InDeptTime">
+            <summary>
+            入科时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.IsNoThree">
+            <summary>
+            是否三无
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.CriticallyIll">
+            <summary>
+            是否病危
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.LatestStatus">
+            <summary>
+            最新现状
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Background">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Assessment">
+            <summary>
+            评估
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Proposal">
+            <summary>
+            建议
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Devices">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.HandoverNurseCode">
+            <summary>
+            交班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.HandoverNurseName">
+            <summary>
+            交班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.SuccessionNurseCode">
+            <summary>
+            接班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.SuccessionNurseName">
+            <summary>
+            接班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.HandoverDate">
+            <summary>
+            交班日期
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.ShiftSettingId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.ShiftSettingName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.Status">
+            <summary>
+            交班状态，0：未提交，1：提交交班
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.CreationCode">
+            <summary>
+            创建人编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.CreationName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.TotalPatient">
+            <summary>
+            查询的全部患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NurseHandoverUpdate.DutyNurseName">
+            <summary>
+            责任护士
+            </summary>
+        </member>
+        <member name="T:YiJian.Handover.NursePatientsData">
+            <summary>
+            交班患者 读取输出
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.NurseHandoverId">
+            <summary>
+            护士交班id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.PI_ID">
+            <summary>
+            triage分诊患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.PatientId">
+            <summary>
+            患者id
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.VisitNo">
+            <summary>
+            就诊号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.PatientName">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.TriageLevel">
+            <summary>
+            分诊级别
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.TriageLevelName">
+            <summary>
+            分诊级别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.AreaCode">
+            <summary>
+            区域编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.AreaName">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.InDeptTime">
+            <summary>
+            入科时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.DiagnoseName">
+            <summary>
+            诊断
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Bed">
+            <summary>
+            床号
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.IsNoThree">
+            <summary>
+            是否三无
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.CriticallyIll">
+            <summary>
+            是否病危
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Content">
+            <summary>
+            交班内容
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Test">
+            <summary>
+            检验
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Inspect">
+            <summary>
+            检查
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Emr">
+            <summary>
+            电子病历
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.InOutVolume">
+            <summary>
+            出入量
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.VitalSigns">
+            <summary>
+            生命体征
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Medicine">
+            <summary>
+            药物
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.LatestStatus">
+            <summary>
+            最新现状
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Background">
+            <summary>
+            背景
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Assessment">
+            <summary>
+            评估
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Proposal">
+            <summary>
+            建议
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.Devices">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.HandoverTime">
+            <summary>
+            交班时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.HandoverNurseCode">
+            <summary>
+            交班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.HandoverNurseName">
+            <summary>
+            交班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.SuccessionNurseCode">
+            <summary>
+            接班护士编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.SuccessionNurseName">
+            <summary>
+            接班护士名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.NursePatientsData.DutyNurseName">
+            <summary>
+            责任护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.TotalPatient">
+            <summary>
+            全部患者
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.Already">
+            <summary>
+            已交班
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.Not">
+            <summary>
+            未交班
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.I">
+            <summary>
+            一级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.II">
+            <summary>
+            二级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.III">
+            <summary>
+            三级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.IV">
+            <summary>
+            四级
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.StatisticsData.NursePatients">
+            <summary>
+            患者
+            </summary>
+        </member>
+        <member name="M:YiJian.Handover.IShiftHandoverSettingAppService.SaveShiftHandoverSettingAsync(YiJian.Handover.ShiftHandoverSettingCreationOrUpdate,System.Threading.CancellationToken)">
+            <summary>
+            新增或修改班次
+            </summary>
+            <param name="dto">dto.id传参表示修改，不传该参数表示新增</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.IShiftHandoverSettingAppService.GetShiftHandoverSettingDataAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            根据id获取班次信息
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:YiJian.ECIS.ShareModel.Exceptions.EcisBusinessException"></exception>
+        </member>
+        <member name="M:YiJian.Handover.IShiftHandoverSettingAppService.GetShiftHandoverSettingListAsync(YiJian.Handover.ShiftHandoverSettingInput,System.Threading.CancellationToken)">
+            <summary>
+            获取分页数据
+            </summary>
+            <param name="input"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YiJian.Handover.IShiftHandoverSettingAppService.DeleteShiftHandoverSettingAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <param name="cancellationToken"></param>
+            <exception cref="T:YiJian.ECIS.ShareModel.Exceptions.EcisBusinessException"></exception>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.Id">
+            <summary>
+            主键id,有修改，无则新增
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.CategoryCode">
+            <summary>
+            类别编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.CategoryName">
+            <summary>
+            类别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.ShiftName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.MatchingColor">
+            <summary>
+            匹配颜色
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingCreationOrUpdate.Type">
+            <summary>
+            类型，医生1，护士0
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.Id">
+            <summary>
+            主键id,有修改，无则新增
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.CategoryCode">
+            <summary>
+            类别编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.CategoryName">
+            <summary>
+            类别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.ShiftName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.MatchingColor">
+            <summary>
+            匹配颜色
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingData.Type">
+            <summary>
+            类型，医生1，护士0
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.Id">
+            <summary>
+            主键id,有修改，无则新增
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.CategoryCode">
+            <summary>
+            类别编码
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.CategoryName">
+            <summary>
+            类别名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.ShiftName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.MatchingColor">
+            <summary>
+            匹配颜色
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.Type">
+            <summary>
+            类型，医生1，护士0
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.LastModificationTime">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.CreationName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingDataList.ModificationName">
+            <summary>
+            修改人名称
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingInput.Type">
+            <summary>
+            类型，1：医生，0：护士
+            </summary>
+        </member>
+        <member name="P:YiJian.Handover.ShiftHandoverSettingInput.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+    </members>
+</doc>

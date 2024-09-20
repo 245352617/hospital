@@ -1,0 +1,37 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim AS restore
+WORKDIR /source
+COPY shared/YiJian.ECIS.Authorization/YiJian.ECIS.Authorization.csproj shared/YiJian.ECIS.Authorization/
+COPY shared/YiJian.ECIS.Core/YiJian.ECIS.Core.csproj shared/YiJian.ECIS.Core/
+COPY shared/YiJian.ECIS.ShareModel/YiJian.ECIS.ShareModel.csproj shared/YiJian.ECIS.ShareModel/
+COPY shared/YiJian.ECIS.DDP/YiJian.ECIS.DDP.csproj shared/YiJian.ECIS.DDP/
+COPY services/MasterData/src/YiJian.MasterData.EntityFrameworkCore/YiJian.MasterData.EntityFrameworkCore.csproj services/MasterData/src/YiJian.MasterData.EntityFrameworkCore/
+COPY services/MasterData/src/YiJian.MasterData.Domain/YiJian.MasterData.Domain.csproj services/MasterData/src/YiJian.MasterData.Domain/
+COPY services/MasterData/src/YiJian.MasterData.Domain.Shared/YiJian.MasterData.Domain.Shared.csproj services/MasterData/src/YiJian.MasterData.Domain.Shared/
+COPY services/MasterData/src/YiJian.MasterData.Application.Contracts/YiJian.MasterData.Application.Contracts.csproj services/MasterData/src/YiJian.MasterData.Application.Contracts/
+COPY services/MasterData/src/YiJian.MasterData.Application/YiJian.MasterData.Application.csproj services/MasterData/src/YiJian.MasterData.Application/
+COPY services/MasterData/src/YiJian.MasterData.HttpApi/YiJian.MasterData.HttpApi.csproj services/MasterData/src/YiJian.MasterData.HttpApi/
+COPY services/MasterData/host/YiJian.MasterData.HttpApi.Host/YiJian.MasterData.HttpApi.Host.csproj services/MasterData/host/YiJian.MasterData.HttpApi.Host/
+RUN dotnet restore "services/MasterData/host/YiJian.MasterData.HttpApi.Host/YiJian.MasterData.HttpApi.Host.csproj"
+
+FROM restore AS build
+WORKDIR /source
+COPY shared/. shared/
+COPY services/MasterData/. services/MasterData/
+RUN dotnet publish --no-restore -c Release -o /app services/MasterData/host/YiJian.MasterData.HttpApi.Host/YiJian.MasterData.HttpApi.Host.csproj
+
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+RUN apt-get update && apt-get install -y curl
+# 修改配置以用于支持低版本 SQL Server（https://stackoverflow.com/questions/61518238/azure-linux-web-app-change-openssl-default-security-level/61523341#61523341）
+RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
+
+FROM base AS production
+WORKDIR /app
+COPY --from=build /app .
+HEALTHCHECK --interval=5s --timeout=3s \
+    CMD curl -sS -f -X 'POST' 'http://localhost/health' || exit 1
+EXPOSE 80
+EXPOSE 443
+EXPOSE 666
+ENV TZ Asia/Shanghai
+ENTRYPOINT [ "dotnet", "YiJian.MasterData.HttpApi.Host.dll" ]

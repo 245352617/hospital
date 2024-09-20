@@ -1,0 +1,9 @@
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('37A123AF-930A-7B67-0B4E-39F92AFACFC4', '1FD7C86D-D1A2-4D61-89F3-4859CE4E6203', '减压', '压疮风险评估', '0003', NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('038F6A31-6714-EBAA-3E6A-39F92AFAF8E4', '1FD7C86D-D1A2-4D61-89F3-4859CE4E6203', '皮肤护理', '压疮风险评估', '0003', NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('D1C3ED5C-6271-E7E6-B0ED-39F92AFB40FA', '1FD7C86D-D1A2-4D61-89F3-4859CE4E6203', '营养支持', '压疮风险评估', '0003', NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('71236360-1A96-690A-6E53-39F92AFB641D', '1FD7C86D-D1A2-4D61-89F3-4859CE4E6203', '健康教育', '压疮风险评估', '0003', NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('BC2AEEF3-04F4-763D-B6D1-39F92B009C3E', '2CAC5843-C273-4A8C-BACD-9475A383FF39', '常规性护理措施', '跌倒/坠床评估', NULL, NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('9C95C38B-7EC9-353E-719B-39F92B00D1B7', '2CAC5843-C273-4A8C-BACD-9475A383FF39', '选择针对性预防措施', '跌倒/坠床评估', NULL, NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('01114D49-B7CC-F201-D073-39F92B02F1D8', '23C742FE-D511-485F-882C-F4FFF6982FE8', '基础预防', 'DVT评分', '0009', NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('73DBF893-3519-56C7-D095-39F92B030BCD', '23C742FE-D511-485F-882C-F4FFF6982FE8', '物理预防', 'DVT评分', '0009', NULL);
+INSERT INTO [dbo].[IcuScoreMeasure]([Id], [Pid], [Name], [PName], [Code], [DataValue]) VALUES ('32A06D4F-F3FA-A1FE-9C0B-39F92B032431', '23C742FE-D511-485F-882C-F4FFF6982FE8', '药物预防', 'DVT评分', '0009', NULL);

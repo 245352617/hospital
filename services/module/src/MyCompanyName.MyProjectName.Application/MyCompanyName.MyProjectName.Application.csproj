@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<RootNamespace>MyCompanyName</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\Debug\net5.0\MyCompanyName.MyProjectName.Application.xml</DocumentationFile>
+		<OutputPath>bin\Debug\net5.0\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Volo.Abp.AutoMapper" Version="$(AbpVersion)" />
+		<PackageReference Include="Volo.Abp.Ddd.Application" Version="$(AbpVersion)" />
+		<ProjectReference Include="..\MyCompanyName.MyProjectName.Application.Contracts\MyCompanyName.MyProjectName.Application.Contracts.csproj" />
+		<ProjectReference Include="..\MyCompanyName.MyProjectName.Domain\MyCompanyName.MyProjectName.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="MyProjectName\" />
+	</ItemGroup>
+
+</Project>

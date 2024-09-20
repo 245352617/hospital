@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/17/2022 10:43:43" ReportInfo.Modified="03/24/2022 11:09:19" ReportInfo.CreatorVersion="2022.1.13.0">
+  <Dictionary>
+    <TableDataSource Name="RegisterPatientInfo" ReferenceName="Data.RegisterPatientInfo" DataType="System.Int32" Enabled="true" TableName="RegisterPatientInfo">
+      <Column Name="TriagePatientInfoId" DataType="System.Int64"/>
+      <Column Name="TaskInfoId" DataType="System.Int64"/>
+      <Column Name="TaskInfoNum" DataType="System.Int64"/>
+      <Column Name="RegisterNo" DataType="System.Int64"/>
+      <Column Name="RegisterTime" DataType="System.Int64"/>
+      <Column Name="CallingSn" DataType="System.Int64"/>
+      <Column Name="LogTime" DataType="System.Int64"/>
+      <Column Name="CarNum" DataType="System.Int64"/>
+      <Column Name="VisitNo" DataType="System.Int64"/>
+      <Column Name="VisitStatus" DataType="System.Int64"/>
+      <Column Name="VisitStatusName" DataType="System.Int64"/>
+      <Column Name="PatientId" DataType="System.Int64"/>
+      <Column Name="PatientName" DataType="System.Int64"/>
+      <Column Name="Sex" DataType="System.Int64"/>
+      <Column Name="SexName" DataType="System.Int64"/>
+      <Column Name="Birthday" DataType="System.Int64"/>
+      <Column Name="Address" DataType="System.Int64"/>
+      <Column Name="ContactsPerson" DataType="System.Int64"/>
+      <Column Name="ContactsPhone" DataType="System.Int64"/>
+      <Column Name="ToHospitalWay" DataType="System.Int64"/>
+      <Column Name="ToHospitalWayName" DataType="System.Int64"/>
+      <Column Name="Identity" DataType="System.Int64"/>
+      <Column Name="IdentityName" DataType="System.Int64"/>
+      <Column Name="ChargeType" DataType="System.Int64"/>
+      <Column Name="ChargeTypeName" DataType="System.Int64"/>
+      <Column Name="IdentityNo" DataType="System.Int64"/>
+      <Column Name="Nation" DataType="System.Int64"/>
+      <Column Name="NationName" DataType="System.Int64"/>
+      <Column Name="Country" DataType="System.Int64"/>
+      <Column Name="OnsetTime" DataType="System.Int64"/>
+      <Column Name="GreenRoad" DataType="System.Int64"/>
+      <Column Name="GreenRoadName" DataType="System.Int64"/>
+      <Column Name="CardNo" DataType="System.Int64"/>
+      <Column Name="RFID" DataType="System.Int64"/>
+      <Column Name="MedicalNo" DataType="System.Int64"/>
+      <Column Name="Age" DataType="System.Int64"/>
+      <Column Name="Weight" DataType="System.Int64"/>
+      <Column Name="Py" DataType="System.Int64"/>
+      <Column Name="DiseaseCode" DataType="System.Int64"/>
+      <Column Name="DiseaseName" DataType="System.Int64"/>
+      <Column Name="TriageStatus" DataType="System.Int64"/>
+      <Column Name="StartTriageTime" DataType="System.Int64"/>
+      <Column Name="TriageTime" DataType="System.Int64"/>
+      <Column Name="GroupInjuryName" DataType="System.Int64"/>
+      <Column Name="IsNoThree" DataType="System.Int64"/>
+      <Column Name="TypeOfVisitCode" DataType="System.Int64"/>
+      <Column Name="TypeOfVisitName" DataType="System.Int64"/>
+      <Column Name="Narration" DataType="System.Int64"/>
+      <Column Name="NarrationName" DataType="System.Int64"/>
+      <Column Name="NarrationComments" DataType="System.Int64"/>
+      <Column Name="AllNarration" DataType="System.Int64"/>
+      <Column Name="Consciousness" DataType="System.Int64"/>
+      <Column Name="ConsciousnessName" DataType="System.Int64"/>
+      <Column Name="TriageUserCode" DataType="System.Int64"/>
+      <Column Name="TriageUserName" DataType="System.Int64"/>
+      <Column Name="CreationTime" DataType="System.Int64"/>
+      <Column Name="IsBasicInfoReadOnly" DataType="System.Int64"/>
+      <Column Name="IsCovidExamFromOuterSystem" DataType="System.Int64"/>
+      <Column Name="TriageDeptCode" DataType="System.Int64"/>
+      <Column Name="TriageDeptName" DataType="System.Int64"/>
+      <Column Name="TriageTargetCode" DataType="System.Int64"/>
+      <Column Name="TriageTargetName" DataType="System.Int64"/>
+      <Column Name="ActTriageLevel" DataType="System.Int64"/>
+      <Column Name="ActTriageLevelName" DataType="System.Int64"/>
+      <Column Name="TriageTimeConsuming" DataType="System.Int64"/>
+      <Column Name="TriageNurse" DataType="System.Int64"/>
+      <Column Name="TriageNurseName" DataType="System.Int64"/>
+      <Column Name="WaitingDuration" DataType="System.Int64"/>
+      <Column Name="Sbp" DataType="System.Int64"/>
+      <Column Name="Sdp" DataType="System.Int64"/>
+      <Column Name="SpO2" DataType="System.Int64"/>
+      <Column Name="BreathRate" DataType="System.Int64"/>
+      <Column Name="Temp" DataType="System.Int64"/>
+      <Column Name="HeartRate" DataType="System.Int64"/>
+      <Column Name="BP" DataType="System.Int64"/>
+      <Column Name="HasFinishedCovid19Exam" DataType="System.Int64"/>
+      <Column Name="WaittingForNumber" DataType="System.Int64"/>
+      <Column Name="RegisterInfo" DataType="System.Int64"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="78" PaperHeight="103" LeftMargin="5" TopMargin="5" RightMargin="5" BottomMargin="5" FirstPageSource="15" OtherPagesSource="15" LastPageSource="15" Guides="18.9,236.25,132.3,170.1,103.95,94.5,66.15,217.35" Watermark.Font="宋体, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="257.04" Height="37.8" Guides="9.45,37.8">
+      <TextObject Name="Text1" Left="18.9" Top="9.45" Width="217.35" Height="28.35" Text="北京大学深圳医院挂号凭据" HorzAlign="Center" VertAlign="Center" Font="宋体, 12pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="41" Width="257.04" Height="264.6" CanGrow="true" CanBreak="true" Guides="0,18.9,28.35,56.7,47.25,75.6,85.05,103.95,113.4,132.3,141.75,151.2,170.1,207.9,226.8,236.25,255.15,179.55,198.45" DataSource="RegisterPatientInfo" KeepTogether="true">
+      <TextObject Name="Text2" Left="18.9" Width="113.4" Height="18.9" Text="患者ID：[RegisterPatientInfo.PatientId]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text3" Left="132.3" Width="103.95" Height="18.9" Text="区域：[RegisterPatientInfo.TriageTargetName]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text4" Left="18.9" Top="28.35" Width="113.4" Height="28.35" Text="姓名：[RegisterPatientInfo.PatientName]" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text5" Left="132.3" Top="28.35" Width="37.8" Height="18.9" Text="级别：" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text6" Left="18.9" Top="56.7" Width="113.4" Height="18.9" Text="性别：[RegisterPatientInfo.SexName]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text7" Left="132.3" Top="56.7" Width="103.95" Height="18.9" Text="年龄：[RegisterPatientInfo.Age]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text8" Left="170.1" Top="28.35" Width="66.15" Height="18.9" Text="[RegisterPatientInfo.ActTriageLevelName]" VertAlign="Center" WordWrap="false" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text9" Left="18.9" Top="85.05" Width="217.35" Border.Lines="Bottom" WordWrap="false" Font="宋体, 8pt"/>
+      <TextObject Name="Text10" Left="18.9" Top="85.05" Width="85.05" Height="18.9" Text="Temp：[RegisterPatientInfo.Temp]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text11" Left="103.95" Top="85.05" Width="66.15" Height="18.9" Text="P：[RegisterPatientInfo.HeartRate]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text12" Left="18.9" Top="113.4" Width="113.4" Height="18.9" Text="BP：[RegisterPatientInfo.BP]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text13" Left="132.3" Top="113.4" Width="103.95" Height="18.9" Text="SPO2：[RegisterPatientInfo.SpO2]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text15" Left="18.9" Top="141.75" Width="217.35" Border.Lines="Bottom" WordWrap="false" Font="宋体, 8pt"/>
+      <TextObject Name="Text16" Left="170.1" Top="85.05" Width="66.15" Height="18.9" Text="R：[RegisterPatientInfo.BreathRate]" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text18" Left="18.9" Top="151.2" Width="217.35" Height="18.9" Text="分诊时间：[RegisterPatientInfo.TriageTime]" Format="Date" Format.Format="D" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text19" Left="18.9" Top="207.9" Width="75.6" Height="18.9" Text="排 队 号：" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text20" Left="18.9" Top="236.25" Width="75.6" Height="18.9" Text="科    室：" VertAlign="Center" WordWrap="false" Font="宋体, 9pt"/>
+      <TextObject Name="Text21" Left="94.5" Top="207.9" Width="141.75" Height="18.9" Text="[RegisterPatientInfo.CallingSn]" VertAlign="Center" WordWrap="false" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text22" Left="94.5" Top="236.25" Width="141.75" Height="18.9" Text="[RegisterPatientInfo.TriageDeptName]" VertAlign="Center" WordWrap="false" Font="宋体, 12pt, style=Bold"/>
+      <TextObject Name="Text23" Left="66.15" Top="179.55" Width="151.2" Height="18.9" Text="您前面有[RegisterPatientInfo.WaittingForNumber]位患者" Font="宋体, 9pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>
